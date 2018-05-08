@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info"/>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            如何将页脚固定在页面底部 | 
+        
+        爱尚|轻博客
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="http://7xjdah.com1.z0.glb.clouddn.com/favicon.ico">
+    <link rel="icon" href="http://7xjdah.com1.z0.glb.clouddn.com/favicon.ico">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="作为一个Web的前端攻城师，在制作页面效果时肯定有碰到下面这种现象：当一个HTML页面中含有较少的内容时，Web页面的“footer”部分随着飘上来，处在页面的半腰中间，给视觉效果带来极大的影响，让你的页面看上去很不好看，特别是现在宽屏越来越多，这种现象更是常见。">
+    <meta name="keywords" content=",奇技淫巧">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <style>
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 300;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.svg#Roboto) format('svg')
+        }
+
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: regular;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.svg#Roboto) format('svg')
+        }
+
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.svg#Roboto) format('svg')
+        }
+    </style>
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="爱尚|轻博客">
+    <meta name="msapplication-starturl" content="http://www.awebman.cn/2016/11/18/如何将页脚固定在页面底部/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="爱尚|轻博客">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="http://7xjdah.com1.z0.glb.clouddn.com/favicon.ico">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://www.awebman.cn/2016/11/18/如何将页脚固定在页面底部/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="如何将页脚固定在页面底部 | 爱尚|轻博客">
+    <meta property="og:image" content="http://7xjdah.com1.z0.glb.clouddn.com/favicon.ico">
+    <meta property="og:description" content="作为一个Web的前端攻城师，在制作页面效果时肯定有碰到下面这种现象：当一个HTML页面中含有较少的内容时，Web页面的“footer”部分随着飘上来，处在页面的半腰中间，给视觉效果带来极大的影响，让你的页面看上去很不好看，特别是现在宽屏越来越多，这种现象更是常见。">
+    <meta property="og:article:tag" content="奇技淫巧"> 
+
+    
+        <meta property="article:published_time" content="Fri Nov 18 2016 12:59:29 GMT+0800">
+        <meta property="article:modified_time" content="Sun Apr 08 2018 13:29:05 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://www.awebman.cn/2016/11/18/如何将页脚固定在页面底部/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://www.awebman.cn/2016/11/18/如何将页脚固定在页面底部/index.html",
+    "headline": "如何将页脚固定在页面底部",
+    "datePublished": "Fri Nov 18 2016 12:59:29 GMT+0800",
+    "dateModified": "Sun Apr 08 2018 13:29:05 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "AppleSun",
+        "image": {
+            "@type": "ImageObject",
+            "url": "http://7xjdah.com1.z0.glb.clouddn.com/pic2016051107.jpg"
+        },
+        "description": "间歇性凌云壮志,持续性混吃等死"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "爱尚|轻博客",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "http://7xjdah.com1.z0.glb.clouddn.com/favicon.ico"
+        }
+    },
+    "keywords": ",奇技淫巧",
+    "description": "作为一个Web的前端攻城师，在制作页面效果时肯定有碰到下面这种现象：当一个HTML页面中含有较少的内容时，Web页面的“footer”部分随着飘上来，处在页面的半腰中间，给视觉效果带来极大的影响，让你的页面看上去很不好看，特别是现在宽屏越来越多，这种现象更是常见。",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#作为一个Web的前端攻城师，在制作页面效果时肯定有碰到下面这种现象：当一个HTML页面中含有较少的内容时，Web页面的“footer”部分随着飘上来，处在页面的半腰中间，给视觉效果带来极大的影响，让你的页面看上去很不好看，特别是现在宽屏越来越多，这种现象更是常见。"><span class="post-toc-number">1.</span> <span class="post-toc-text">作为一个Web的前端攻城师，在制作页面效果时肯定有碰到下面这种现象：当一个HTML页面中含有较少的内容时，Web页面的“footer”部分随着飘上来，处在页面的半腰中间，给视觉效果带来极大的影响，让你的页面看上去很不好看，特别是现在宽屏越来越多，这种现象更是常见。</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#方法一"><span class="post-toc-number"></span> <span class="post-toc-text">方法一</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#HTML-Markup"><span class="post-toc-number"></span> <span class="post-toc-text">HTML Markup</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#真正来说，实现这页脚永远固定在页面的底部，我们只需要四个div，其中div-container是一个容器，在这个容器之中，我们包含了div-header（头部），div-page（页面主体部分，我们可以在这个div中增加更多的div结构，如上面的代码所示），div-footer（页脚部分）"><span class="post-toc-number">1.</span> <span class="post-toc-text">真正来说，实现这页脚永远固定在页面的底部，我们只需要四个div，其中div#container是一个容器，在这个容器之中，我们包含了div#header（头部），div#page（页面主体部分，我们可以在这个div中增加更多的div结构，如上面的代码所示），div#footer（页脚部分）</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#CSS-Code"><span class="post-toc-number"></span> <span class="post-toc-text">CSS Code</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#下面我们一起来看看这种方法的实现原理："><span class="post-toc-number"></span> <span class="post-toc-text">下面我们一起来看看这种方法的实现原理：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#优点："><span class="post-toc-number"></span> <span class="post-toc-text">优点：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#缺点："><span class="post-toc-number"></span> <span class="post-toc-text">缺点：</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#上面就是Matthew-James-Taylor介绍的如何实现页脚永远固定在页面的底部，如果大家感兴趣可以阅读原文，也可以直接点击这里查看Demo。"><span class="post-toc-number"></span> <span class="post-toc-text">上面就是Matthew James Taylor介绍的如何实现页脚永远固定在页面的底部，如果大家感兴趣可以阅读原文，也可以直接点击这里查看Demo。</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#方法二："><span class="post-toc-number"></span> <span class="post-toc-text">方法二：</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#HTML-Markup-1"><span class="post-toc-number"></span> <span class="post-toc-text">HTML Markup</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#CSS-Code-1"><span class="post-toc-number"></span> <span class="post-toc-text">CSS Code</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#优点：-1"><span class="post-toc-number"></span> <span class="post-toc-text">优点：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#缺点：-1"><span class="post-toc-number"></span> <span class="post-toc-text">缺点：</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#大家要是对这种方法感兴趣，你也可以浏览一下《CSS-Sticky-Footer》和《Pure-Css-Sticky-Footer》，或者直接点击Demo查看其源代码。"><span class="post-toc-number"></span> <span class="post-toc-text">大家要是对这种方法感兴趣，你也可以浏览一下《CSS Sticky Footer》和《Pure Css Sticky Footer》，或者直接点击Demo查看其源代码。</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#方法三："><span class="post-toc-number"></span> <span class="post-toc-text">方法三：</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#HTML-Code"><span class="post-toc-number"></span> <span class="post-toc-text">HTML Code</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#HTML-Code-1"><span class="post-toc-number"></span> <span class="post-toc-text">HTML Code</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#CSS-Code-2"><span class="post-toc-number"></span> <span class="post-toc-text">CSS Code</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#优点：-2"><span class="post-toc-number"></span> <span class="post-toc-text">优点：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#缺点：-2"><span class="post-toc-number"></span> <span class="post-toc-text">缺点：</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#如果大家对方法三想了解更多可以点击这里或者直接从DEMO中下载代码自己研究一下。"><span class="post-toc-number"></span> <span class="post-toc-text">如果大家对方法三想了解更多可以点击这里或者直接从DEMO中下载代码自己研究一下。</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#方法四："><span class="post-toc-number"></span> <span class="post-toc-text">方法四：</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#HTML-Markup-2"><span class="post-toc-number"></span> <span class="post-toc-text">HTML Markup</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#CSS-Code-3"><span class="post-toc-number"></span> <span class="post-toc-text">CSS Code</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#jQuery-Code"><span class="post-toc-number"></span> <span class="post-toc-text">jQuery Code</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#优点：-3"><span class="post-toc-number"></span> <span class="post-toc-text">优点：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#缺点：-3"><span class="post-toc-number"></span> <span class="post-toc-text">缺点：</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#转载自：W3CPLUS"><span class="post-toc-number"></span> <span class="post-toc-text">转载自：W3CPLUS</span></a>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                如何将页脚固定在页面底部
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051107.jpg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>AppleSun</strong>
+        <span>11月 18, 2016</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/奇技淫巧/">奇技淫巧</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+
+    <!-- Share Twitter -->
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h5 id="作为一个Web的前端攻城师，在制作页面效果时肯定有碰到下面这种现象：当一个HTML页面中含有较少的内容时，Web页面的“footer”部分随着飘上来，处在页面的半腰中间，给视觉效果带来极大的影响，让你的页面看上去很不好看，特别是现在宽屏越来越多，这种现象更是常见。"><a href="#作为一个Web的前端攻城师，在制作页面效果时肯定有碰到下面这种现象：当一个HTML页面中含有较少的内容时，Web页面的“footer”部分随着飘上来，处在页面的半腰中间，给视觉效果带来极大的影响，让你的页面看上去很不好看，特别是现在宽屏越来越多，这种现象更是常见。" class="headerlink" title="作为一个Web的前端攻城师，在制作页面效果时肯定有碰到下面这种现象：当一个HTML页面中含有较少的内容时，Web页面的“footer”部分随着飘上来，处在页面的半腰中间，给视觉效果带来极大的影响，让你的页面看上去很不好看，特别是现在宽屏越来越多，这种现象更是常见。"></a>作为一个Web的前端攻城师，在制作页面效果时肯定有碰到下面这种现象：当一个HTML页面中含有较少的内容时，Web页面的“footer”部分随着飘上来，处在页面的半腰中间，给视觉效果带来极大的影响，让你的页面看上去很不好看，特别是现在宽屏越来越多，这种现象更是常见。</h5><a id="more"></a>
+<p>如何将Web页面的“footer”部分永远固定在页面的底部呢？注意了这里所说的是<code>页脚footer永远固定在页面的底部，而不是永远固定在显示器屏幕的底部</code>，换句话说，就是当内容只有一点点时，Web页面显示在浏览器底部，当内容高度超过浏览器高度时，Web页面的footer部分在页面的底部，总而言之<code>Web页面的footer部分永远在页面的底部，换句说，Footer部分永远沉底</code>。如下图所示：<br><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016062301.png" alt="img"><br>那么今天主要和大家一起学习如何将页脚固定在页面的底部？</p>
+<h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><p>首先我们来看第一种方法，这种方法是来自于<a href="http://matthewjamestaylor.com/about" target="_blank" rel="noopener">Matthew James Taylor</a>的《<a href="http://matthewjamestaylor.com/blog/keeping-footers-at-the-bottom-of-the-page" target="_blank" rel="noopener">How to keep footers at the bottom of the page</a>》。下面我们就一起来看看Matthew James Taylor介绍的方法。</p>
+<h4 id="HTML-Markup"><a href="#HTML-Markup" class="headerlink" title="HTML Markup"></a>HTML Markup</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"> &lt;div id=&quot;container&quot;&gt;</span><br><span class="line">   &lt;div id=&quot;header&quot;&gt;Header Section&lt;/div&gt;</span><br><span class="line">    &lt;div id=&quot;page&quot; class=&quot;clearfix&quot;&gt;</span><br><span class="line">      页面容容部分</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;div id=&quot;footer&quot;&gt;Footer Section&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p>其实我们可以在div#page增加所需的内容结构，如下所示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">    &lt;div id=&quot;container&quot;&gt;</span><br><span class="line">       &lt;div id=&quot;header&quot;&gt;Header Section&lt;/div&gt;</span><br><span class="line">      &lt;div id=&quot;page&quot; class=&quot;clearfix&quot;&gt;</span><br><span class="line">       &lt;div id=&quot;left&quot;&gt;Left Sidebar&lt;/div&gt;</span><br><span class="line">       &lt;div id=&quot;content&quot;&gt;Main content&lt;/div&gt;</span><br><span class="line">       &lt;div id=&quot;right&quot;&gt;Right sidebar&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;div id=&quot;footer&quot;&gt;Footer Section&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<h5 id="真正来说，实现这页脚永远固定在页面的底部，我们只需要四个div，其中div-container是一个容器，在这个容器之中，我们包含了div-header（头部），div-page（页面主体部分，我们可以在这个div中增加更多的div结构，如上面的代码所示），div-footer（页脚部分）"><a href="#真正来说，实现这页脚永远固定在页面的底部，我们只需要四个div，其中div-container是一个容器，在这个容器之中，我们包含了div-header（头部），div-page（页面主体部分，我们可以在这个div中增加更多的div结构，如上面的代码所示），div-footer（页脚部分）" class="headerlink" title="真正来说，实现这页脚永远固定在页面的底部，我们只需要四个div，其中div#container是一个容器，在这个容器之中，我们包含了div#header（头部），div#page（页面主体部分，我们可以在这个div中增加更多的div结构，如上面的代码所示），div#footer（页脚部分）"></a>真正来说，实现这页脚永远固定在页面的底部，我们只需要四个div，其中div#container是一个容器，在这个容器之中，我们包含了div#header（头部），div#page（页面主体部分，我们可以在这个div中增加更多的div结构，如上面的代码所示），div#footer（页脚部分）</h5><h4 id="CSS-Code"><a href="#CSS-Code" class="headerlink" title="CSS Code"></a>CSS Code</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">html,body &#123;</span><br><span class="line">  margin: 0;</span><br><span class="line">  padding:0;</span><br><span class="line">  height: 100%;</span><br><span class="line">&#125;</span><br><span class="line">#container &#123;</span><br><span class="line">  min-height:100%;</span><br><span class="line">  height: auto !important;</span><br><span class="line">  height: 100%; /*IE6不识别min-height*/</span><br><span class="line">  position: relative;</span><br><span class="line">&#125;</span><br><span class="line">#header &#123;</span><br><span class="line">	background: #ff0;</span><br><span class="line">	padding: 10px;</span><br><span class="line">&#125;</span><br><span class="line">#page &#123;</span><br><span class="line">	width: 960px;</span><br><span class="line">	margin: 0 auto;</span><br><span class="line">	padding-bottom: 60px;/*等于footer的高度*/</span><br><span class="line">&#125;	</span><br><span class="line">#footer &#123;</span><br><span class="line">	position: absolute;</span><br><span class="line">	bottom: 0;</span><br><span class="line">	width: 100%;</span><br><span class="line">	height: 60px;/*脚部的高度*/</span><br><span class="line">	background: #6cf;</span><br><span class="line">	clear:both;</span><br><span class="line">&#125;</span><br><span class="line">/*=======主体内容部分=======*/</span><br><span class="line">#left &#123;</span><br><span class="line">	width: 220px;</span><br><span class="line">	float: left;</span><br><span class="line">	margin-right: 20px;</span><br><span class="line">	background: lime;</span><br><span class="line">&#125;</span><br><span class="line">#content &#123;</span><br><span class="line">	background: orange;</span><br><span class="line">	float: left;</span><br><span class="line">	width: 480px;</span><br><span class="line">	margin-right: 20px;</span><br><span class="line">&#125;</span><br><span class="line">#right&#123;</span><br><span class="line">	background: green;</span><br><span class="line">	float: right;</span><br><span class="line">	width: 220px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="下面我们一起来看看这种方法的实现原理："><a href="#下面我们一起来看看这种方法的实现原理：" class="headerlink" title="下面我们一起来看看这种方法的实现原理："></a>下面我们一起来看看这种方法的实现原理：</h3><ul>
+<li><code>&amp;lt;html&gt;和&amp;lt;body&gt;标签</code>：html和body标签中必须将高度(height)设置为“100%”,这样我们就可以在容器上设置百分比高度，同时需要将html,body的margin和padding都移除，也就是html,body的margin和padding都为0；</li>
+<li><code>div#container容器</code>：div#container容器必须设置一个最小高度(min-height)为100％；这主要使他在内容很少（或没有内容）情况下，能保持100％的高度，不过在IE6是不支持min-height的，所以为了兼容IE6，我们需要对min-height做一定的兼容处理，具体可以看前面的代码，或者阅读Min-Height Fast Hack了解如何解决min-height在Ie6下的bug问题。另外我们还需要在div#container容器中设置一个”position:relative”以便于里面的元素进行绝对定位后不会跑了div#container容器；</li>
+<li><code>div#page容器</code>：div#page这个容器有一个很关键的设置，需要在这个容器上设置一个padding-bottom值，而且这个值要等于（或略大于）页脚div#footer的高度（height）值，当然你在div#page中可以使用border-bottom人水-width来替代padding-bottom，但有一点需要注意，此处你<code>千万不能使用margin-bottom来代替padding-bottom，不然会无法实现效果</code>；</li>
+<li><code>div#footer容器</code>：div#footer容器必须设置一个固定高度，单位可以是px(或em)。div#footer还需要进行绝对定位，并且设置bottom:0；让div#footer固定在容器div#container的底部，这样就可以实现我们前面所说的效果，当内容只有一点时，div#footer固定在屏幕的底部（因为div#container设置了一个min-height:100%），当内容高度超过屏幕的高度，div#footer也固定在div#container底部，也就是固定在页面的底部。你也可以给div#footer加设一个”width:100%”，让他在整个页面上得到延伸；</li>
+<li><code>其他div</code>：至于其他容器可以根据自己需求进行设置，比如说前面的div#header,div#left,div#content,div#right等。</li>
+</ul>
+<h3 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h3><p>结构简单清晰，无需js和任何hack能实现各浏览器下的兼容，并且也适应iphone。</p>
+<h3 id="缺点："><a href="#缺点：" class="headerlink" title="缺点："></a>缺点：</h3><p>不足之处就是需要给div#footer容器设置一个固定高度，这个高度可以根据你的需求进行设置，其单位可以是px也可以是em，而且还需要将div#page容器的padding-bottom（或border-bottom-width）设置大小等于（或略大于）div#footer的高度，才能正常运行。</p>
+<h2 id="上面就是Matthew-James-Taylor介绍的如何实现页脚永远固定在页面的底部，如果大家感兴趣可以阅读原文，也可以直接点击这里查看Demo。"><a href="#上面就是Matthew-James-Taylor介绍的如何实现页脚永远固定在页面的底部，如果大家感兴趣可以阅读原文，也可以直接点击这里查看Demo。" class="headerlink" title="上面就是Matthew James Taylor介绍的如何实现页脚永远固定在页面的底部，如果大家感兴趣可以阅读原文，也可以直接点击这里查看Demo。"></a>上面就是Matthew James Taylor介绍的如何实现页脚永远固定在页面的底部，如果大家感兴趣可以阅读原文，也可以直接点击这里查看<a href="http://matthewjamestaylor.com/blog/bottom-footer-demo.htm" target="_blank" rel="noopener">Demo</a>。</h2><h2 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h2><p>这种方法是利用footer的margin-top负值来实现footer永远固定在页面的底部效果，下面我们具体看是如何实现的。</p>
+<h4 id="HTML-Markup-1"><a href="#HTML-Markup-1" class="headerlink" title="HTML Markup"></a>HTML Markup</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;container&quot;&gt;</span><br><span class="line">  &lt;div id=&quot;page&quot;&gt;Main Content&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;div id=&quot;footer&quot;&gt;footer&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p>上面的代码是最基本的HTML Code，同时你也发现了div#footer和div#container是同辈关系，不像方法一，div#footer在div#container容器内部。当然你也可以根据你的需要把内容增加在div#container容器中，如：一个三列布局，而且还带有header部分，请看下面的代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;container&quot;&gt;</span><br><span class="line">  &lt;div id=&quot;header&quot;&gt;Header Section&lt;/div&gt;</span><br><span class="line">  &lt;div id=&quot;page&quot; class=&quot;clearfix&quot;&gt;</span><br><span class="line">    &lt;div id=&quot;left&quot;&gt;Left sidebar&lt;/div&gt;</span><br><span class="line">    &lt;div id=&quot;content&quot;&gt;Main content&lt;/div&gt;</span><br><span class="line">    &lt;div id=&quot;right&quot;&gt;Right sidebar&lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;div id=&quot;footer&quot;&gt;Footer section&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="CSS-Code-1"><a href="#CSS-Code-1" class="headerlink" title="CSS Code"></a>CSS Code</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">html,body &#123;</span><br><span class="line">	height: 100%;</span><br><span class="line">	margin: 0;</span><br><span class="line">	padding: 0;</span><br><span class="line">&#125;</span><br><span class="line">#container &#123;</span><br><span class="line">	min-height: 100%;</span><br><span class="line">	height: auto !important;</span><br><span class="line">	height: 100%;</span><br><span class="line">&#125;</span><br><span class="line">#page &#123;</span><br><span class="line">	padding-bottom: 60px;/*高度等于footer的高度*/</span><br><span class="line">&#125;</span><br><span class="line">#footer &#123;</span><br><span class="line">	position: relative;</span><br><span class="line">	margin-top: -60px;/*等于footer的高度*/</span><br><span class="line">	height: 60px;</span><br><span class="line">	clear:both;</span><br><span class="line">	background: #c6f;</span><br><span class="line">&#125;</span><br><span class="line">/*==========其他div==========*/</span><br><span class="line">#header &#123;</span><br><span class="line">	padding: 10px;</span><br><span class="line">	background: lime;</span><br><span class="line">&#125;</span><br><span class="line">#left &#123;</span><br><span class="line">	width: 18%;</span><br><span class="line">	float: left;</span><br><span class="line">	margin-right: 2%;</span><br><span class="line">	background: orange;</span><br><span class="line">&#125;</span><br><span class="line">#content&#123;</span><br><span class="line">	width: 60%;</span><br><span class="line">	float: left;</span><br><span class="line">	margin-right: 2%;</span><br><span class="line">	background: green;</span><br><span class="line">&#125;</span><br><span class="line">#right &#123;</span><br><span class="line">	width: 18%;</span><br><span class="line">	float: left;</span><br><span class="line">	background: yellow;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>方法一和方法二有几点是完全相同的，比如说方法一中的1-3三点，在方法二中都一样，换句话说，方法二中也需要把<code>html,body高度设置为100%,并重置margin,padding为0；其二div#container也需要设置min-height:100%,并处理好IE6下的min-height兼容问题；其三也需要在div#page容器上设置一个padding-bottom或border-bottom-width值等于div#footer高度值（或略大于）</code>。那么两种方法不同之处是：</p>
+<ul>
+<li>div#footer放在div#container容器外面，也就是说两者是同级关系，如果你有新元素需要放置在与div#container容器同级，那你需要将此元素进行绝对定位，不然将会破坏div#container容器的min-height值；</li>
+<li>div#footer进行margin-top的负值设置，并且此值等于div#footer的高度值，而且也要和div#page容器的padding-bottom(或border-bottom-width)值相等。</li>
+</ul>
+<h3 id="优点：-1"><a href="#优点：-1" class="headerlink" title="优点："></a>优点：</h3><p>结构简单清晰，无需js和任何hack能实现各浏览器下的兼容</p>
+<h3 id="缺点：-1"><a href="#缺点：-1" class="headerlink" title="缺点："></a>缺点：</h3><p>要给footer设置固定值，因此无法让footer部分自适应高度。</p>
+<h2 id="大家要是对这种方法感兴趣，你也可以浏览一下《CSS-Sticky-Footer》和《Pure-Css-Sticky-Footer》，或者直接点击Demo查看其源代码。"><a href="#大家要是对这种方法感兴趣，你也可以浏览一下《CSS-Sticky-Footer》和《Pure-Css-Sticky-Footer》，或者直接点击Demo查看其源代码。" class="headerlink" title="大家要是对这种方法感兴趣，你也可以浏览一下《CSS Sticky Footer》和《Pure Css Sticky Footer》，或者直接点击Demo查看其源代码。"></a>大家要是对这种方法感兴趣，你也可以浏览一下《<a href="http://www.cssstickyfooter.com/" target="_blank" rel="noopener">CSS Sticky Footer</a>》和《<a href="http://www.lwis.net/journal/2008/02/08/pure-css-sticky-footer/" target="_blank" rel="noopener">Pure Css Sticky Footer</a>》，或者直接点击<a href="http://www.lwis.net/profile/CSS/sticky-footer.html" target="_blank" rel="noopener">Demo</a>查看其源代码。</h2><h2 id="方法三："><a href="#方法三：" class="headerlink" title="方法三："></a>方法三：</h2><p>实现在页脚永远固定在页面底部的方法有很多，但是有很多方法是需要使用一些hack或借助javaScrip来实现，那么接下来要说的方法三，仅仅使用了15行的样式代码和一个简单明了的HTML结构实现了效果，并且兼容性强，别的不多说，先看代码。</p>
+<h4 id="HTML-Code"><a href="#HTML-Code" class="headerlink" title="HTML Code"></a>HTML Code</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;container&quot;&gt;</span><br><span class="line">    &lt;div id=&quot;page&quot;&gt;Your Website content here.&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;push&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;div id=&quot;footer&quot;&gt;Footer Section&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p>上面是最基本的HTML Markup，当然你也可以加上新的内容，不过有一点需要注意如果你在div#container和div#footer容器外增加内容的话，新加进徕的元素需要进行绝对定位。如如说你可以在div#container容器中加上你页面所需的元素</p>
+<h4 id="HTML-Code-1"><a href="#HTML-Code-1" class="headerlink" title="HTML Code"></a>HTML Code</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;container&quot;&gt;</span><br><span class="line">    &lt;div id=&quot;header&quot;&gt;Header Section&lt;/div&gt;</span><br><span class="line">    &lt;div id=&quot;page&quot; class=&quot;clearfix&quot;&gt;</span><br><span class="line">        &lt;div id=&quot;left&quot;&gt;Left sidebar&lt;/div&gt;</span><br><span class="line">        &lt;div id=&quot;content&quot;&gt;Main Content&lt;/div&gt;</span><br><span class="line">        &lt;div id=&quot;right&quot;&gt;Right Content&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;push&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;div id=&quot;footer&quot;&gt;Footer Section&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="CSS-Code-2"><a href="#CSS-Code-2" class="headerlink" title="CSS Code"></a>CSS Code</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">html,</span><br><span class="line">	body&#123;</span><br><span class="line">		height: 100%;</span><br><span class="line">		margin:0;</span><br><span class="line">		padding:0;</span><br><span class="line">	&#125;</span><br><span class="line">	#container &#123;</span><br><span class="line">		min-height: 100%;</span><br><span class="line">		height: auto !important;</span><br><span class="line">		height: 100%;</span><br><span class="line">		margin: 0 auto -60px;</span><br><span class="line">		/*margin-bottom的负值等于footer高度*/</span><br><span class="line">	&#125;</span><br><span class="line">	.push,</span><br><span class="line">	#footer &#123;</span><br><span class="line">		height: 60px;</span><br><span class="line">		clear:both;</span><br><span class="line">	&#125;</span><br><span class="line">	/*==========其他div效果==========*/</span><br><span class="line">	#header &#123;</span><br><span class="line">		padding: 10px;</span><br><span class="line">		background: lime;</span><br><span class="line">	&#125;</span><br><span class="line">	#left &#123;</span><br><span class="line">		width: 18%;</span><br><span class="line">		float: left;</span><br><span class="line">		margin-right: 2%;</span><br><span class="line">		background: orange;</span><br><span class="line">	&#125;</span><br><span class="line">	#content&#123;</span><br><span class="line">		width: 60%;</span><br><span class="line">		float: left;</span><br><span class="line">		margin-right: 2%;</span><br><span class="line">		background: green;</span><br><span class="line">	&#125;</span><br><span class="line">	#right &#123;</span><br><span class="line">		width: 18%;</span><br><span class="line">		float: left;</span><br><span class="line">		background: yellow;</span><br><span class="line">	&#125;</span><br><span class="line">	#footer &#123;</span><br><span class="line">		background: #f6c;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<p>跟前面两种方法相比较，方法三更类似于方法二，他们都将div#footer放在div#container容器之外，而且这个方法在div#container容器中还增加了一个div.push用来把div#footer推下去，下面我们就一起看看这种方法是怎么实现页脚永远固定在页面底部的。</p>
+<ul>
+<li><code>&lt;html&gt;和&lt;body&gt;标签</code>：html,body标签和前两种方法一样，需要设置“height:100%”并重置“margin”和“padding”为0；</li>
+<li><code>div#container</code>:方法三关键部分就在于div#container的设置，首先需要设置其最小高度（min-height）为100％,为了能兼容好IE6，需要对min-height进行兼容处理（具体处理方法看前面或代码）另外这里还有一个关键点在<code>div#container容器上需要设置一个margin-bottom，并且给其取负值，而且值的大小等于div#footer和div.push的高度，如果div#footer和div.push设置了padding和border值，那么div#container的margin-bottom负值需要加上div#footer和div.push的padding和border值。也就是说“div#container{margin-bottom:-[div#footer的height+padding+border]或者-[div.push的height+padding+border]}”。一句话来说：div#container的margin-bottom负值需要和div#footer以及div.push的高度一致（如果有padding或border时，高度值需要加上他们）</code>；</li>
+<li><code>div.push</code>:在div.push中我们不应该放置任何内容，而且这个div必须放置在div#container容器中，而且是最底部，并且需要设置其高度值等于div#footer的值，最好加上clear:both来清除浮动。div.push容器在此处所起的作用就是将footer往下推。</li>
+<li><code>div#footer容器</code>：div#footer容器和方法二一样，不能放到div#container内部，而和div#container容器同级，如果需要设置元素和footer之间的间距，最好使用padding来代替margin值。</li>
+</ul>
+<h3 id="优点：-2"><a href="#优点：-2" class="headerlink" title="优点："></a>优点：</h3><p>简单明了，易于理解，兼容所有浏览器。</p>
+<h3 id="缺点：-2"><a href="#缺点：-2" class="headerlink" title="缺点："></a>缺点：</h3><p>较之前面的两种方法，多使用了一个div.push容器，同样此方法限制了footer部分高度，无法达到自适应高度效果。</p>
+<h2 id="如果大家对方法三想了解更多可以点击这里或者直接从DEMO中下载代码自己研究一下。"><a href="#如果大家对方法三想了解更多可以点击这里或者直接从DEMO中下载代码自己研究一下。" class="headerlink" title="如果大家对方法三想了解更多可以点击这里或者直接从DEMO中下载代码自己研究一下。"></a>如果大家对方法三想了解更多可以点击<a href="http://ryanfait.com/resources/footer-stick-to-bottom-of-page/" target="_blank" rel="noopener">这里</a>或者直接从<a href="http://ryanfait.com/sticky-footer/" target="_blank" rel="noopener">DEMO</a>中下载代码自己研究一下。</h2><h2 id="方法四："><a href="#方法四：" class="headerlink" title="方法四："></a>方法四：</h2><p>前面三种方法我们都不需要任何javaScript或jQuery的帮助，让我们实现了页脚永远固定在页面底部的效果，前面三种方法虽然没有使用jQuery等帮助，但我们都额外增加了HTML标签来实现效果。如果你省略了这些HTML标签，再要实现效果就比较困难了，那么此时使用jQuery或javaScript方法来帮助实现是一种很好的办法，下面我们就一起来看第四种方法，通过jQuery来实现页脚永远固定在页面底部的效果。</p>
+<h4 id="HTML-Markup-2"><a href="#HTML-Markup-2" class="headerlink" title="HTML Markup"></a>HTML Markup</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;header&quot;&gt;Header Section&lt;/div&gt;</span><br><span class="line">&lt;div id=&quot;page&quot; class=&quot;clearfix&quot;&gt;</span><br><span class="line">    &lt;div id=&quot;left&quot;&gt;Left sidebar&lt;/div&gt;</span><br><span class="line">    &lt;div id=&quot;content&quot;&gt;Main Content&lt;/div&gt;</span><br><span class="line">    &lt;div id=&quot;right&quot;&gt;Right Content&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;div id=&quot;footer&quot;&gt;Footer Section&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="CSS-Code-3"><a href="#CSS-Code-3" class="headerlink" title="CSS Code"></a>CSS Code</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">*&#123;margin: 0;padding:0;&#125;</span><br><span class="line">	.clearfix:before,</span><br><span class="line">   .clearfix:after &#123;</span><br><span class="line">      content:&quot;&quot;;</span><br><span class="line">      display:table;</span><br><span class="line">   &#125;</span><br><span class="line">   .clearfix:after &#123;</span><br><span class="line">     clear:both;</span><br><span class="line">   &#125;</span><br><span class="line">  .clearfix &#123;</span><br><span class="line">     zoom:1; /* IE &lt;8 */</span><br><span class="line">  &#125;</span><br><span class="line">	#footer&#123;</span><br><span class="line">		height: 60px;</span><br><span class="line">		background: #fc6;</span><br><span class="line">		width: 100%;</span><br><span class="line">	&#125;</span><br><span class="line">	/*==========其他div==========*/</span><br><span class="line">	#header &#123;</span><br><span class="line">		padding: 10px;</span><br><span class="line">		background: lime;</span><br><span class="line">	&#125;</span><br><span class="line">	#left &#123;</span><br><span class="line">		width: 18%;</span><br><span class="line">		float: left;</span><br><span class="line">		margin-right: 2%;</span><br><span class="line">		background: orange;</span><br><span class="line">	&#125;</span><br><span class="line">	#content&#123;</span><br><span class="line">		width: 60%;</span><br><span class="line">		float: left;</span><br><span class="line">		margin-right: 2%;</span><br><span class="line">		background: green;</span><br><span class="line">	&#125;</span><br><span class="line">	#right &#123;</span><br><span class="line">		width: 18%;</span><br><span class="line">		float: left;</span><br><span class="line">		background: yellow;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<p>这个方法不像前面三种方法靠CSS来实现效果，这里只需要按正常的样式需求写样式，不过有一点需要特别注意在html,body中不可以设置高度height为100%，否则此方法无法正常运行，如果你在div#footer中设置了一个高度并把宽度设置为100%将更是万无一失了。</p>
+<h4 id="jQuery-Code"><a href="#jQuery-Code" class="headerlink" title="jQuery Code"></a>jQuery Code</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">// Window load event used just in case window height is dependant upon images</span><br><span class="line">$(window).bind(&quot;load&quot;, function() &#123;</span><br><span class="line">	var footerHeight = 0,</span><br><span class="line">			footerTop = 0,</span><br><span class="line">			$footer = $(&quot;#footer&quot;);</span><br><span class="line">	positionFooter();</span><br><span class="line">	//定义positionFooter function</span><br><span class="line">	function positionFooter() &#123;</span><br><span class="line">		//取到div#footer高度</span><br><span class="line">		footerHeight = $footer.height();</span><br><span class="line">		//div#footer离屏幕顶部的距离</span><br><span class="line">		footerTop = ($(window).scrollTop()+$(window).height()-footerHeight)+&quot;px&quot;;</span><br><span class="line">		/* DEBUGGING STUFF</span><br><span class="line">			console.log(&quot;Document height: &quot;, $(document.body).height());</span><br><span class="line">			console.log(&quot;Window height: &quot;, $(window).height());</span><br><span class="line">			console.log(&quot;Window scroll: &quot;, $(window).scrollTop());</span><br><span class="line">			console.log(&quot;Footer height: &quot;, footerHeight);</span><br><span class="line">			console.log(&quot;Footer top: &quot;, footerTop);</span><br><span class="line">			console.log(&quot;-----------&quot;)</span><br><span class="line">		*/</span><br><span class="line">		//如果页面内容高度小于屏幕高度，div#footer将绝对定位到屏幕底部，否则div#footer保留它的正常静态定位</span><br><span class="line">		if ( ($(document.body).height()+footerHeight) &lt; $(window).height()) &#123;</span><br><span class="line">			$footer.css(&#123;</span><br><span class="line">				position: &quot;absolute&quot;</span><br><span class="line">			&#125;).stop().animate(&#123;</span><br><span class="line">				top: footerTop</span><br><span class="line">			&#125;);</span><br><span class="line">		&#125; else &#123;</span><br><span class="line">			$footer.css(&#123;</span><br><span class="line">				position: &quot;static&quot;</span><br><span class="line">			&#125;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	$(window).scroll(positionFooter).resize(positionFooter);</span><br><span class="line">&#125;);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>使用上面的jQuery代码，可以轻松的帮我们实现页脚永远固定在页面底部，使用这种方法有几个地方需要注意</p>
+<ul>
+<li><p>确保正常引入了jQuery版本库，并正常调入了上面那段jQuery代码；</p>
+</li>
+<li><p>确保</p>
+<p>是在body中最后；</p>
+<p>​</p>
+</li>
+<li><p>确保在html,body中没有设置高度为100%。</p>
+</li>
+</ul>
+<h3 id="优点：-3"><a href="#优点：-3" class="headerlink" title="优点："></a>优点：</h3><p>结构简单，无需外加无用标签，兼容所有浏览器，不用另外写特别样式。页脚可以不固定高度。</p>
+<h3 id="缺点：-3"><a href="#缺点：-3" class="headerlink" title="缺点："></a>缺点：</h3><p>在不支持js的浏览器中无法正常显示，另外每次改变浏览器大小会闪动一下。</p>
+<p>今天主要和大家一起探讨和学习了四种方法，用来实现Web页面脚部永远固定在页面的底，这里在着得说清楚一下，<code>是页脚永远固定在页面的底部，而不是永远固定在浏览器窗口的底部，换句话说，就说当页面主内容没有显示屏幕高时，页脚固定在显示器屏幕的底部，但当页面内容超过显示器屏幕高度时，页脚又会跟随内容往下沉，但页脚都永远固定在页的底部</code>。前面三种都是纯CSS实现，最后一种采用的是jQuery方法实现，四种方法各有各的利弊，大家使用时可以根据自己的需求来定夺，希望这篇文章能给大家带来一定的帮助。如果大家有更好的方法，希望能和我一起分享，如果您愿意，可以直接给我留言，我会一直和您在一起，一起学习和讨论这方面的知识。</p>
+<h4 id="转载自：W3CPLUS"><a href="#转载自：W3CPLUS" class="headerlink" title="转载自：W3CPLUS"></a>转载自：<a href="http://www.w3cplus.com/" target="_blank" rel="noopener">W3CPLUS</a></h4>
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2016/11/22/FLEX布局模式的理解/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            下一篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2016/10/29/Get与Post的区别到底是啥/" id="post_nav-older" class="next-content">
+            上一篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051107.jpg" alt="AppleSun's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        1160948478@qq.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:1160948478@qq.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    文章
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2017/05/">五月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">三月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/02/">二月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/12/">十二月 2016<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">十一月 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/10/">十月 2016<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">八月 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">七月 2016<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">六月 2016<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/05/">五月 2016<span class="sidebar_archives-count">6</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">43</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/DragonKnightLOL" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Weibo -->
+    
+        <a href="http://weibo.com/crackerme" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-weibo">
+                <span class="visuallyhidden">Weibo</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/CracKerMe" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Zhihu -->
+    
+        <a href="https://www.zhihu.com/people/awebman" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-zhihu">
+                <span class="visuallyhidden">Zhihu</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>爱尚|轻博客
+            
+                <br>
+                
+                    Hello EveryOne
+                
+            
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+    
+        <script>lsloader.load("sm_js","/js/smoothscroll.js?lOy/ACj5suSNi7ZVFVbpFQ==", true)</script>
+    
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>

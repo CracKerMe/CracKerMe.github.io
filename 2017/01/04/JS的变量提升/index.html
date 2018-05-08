@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info"/>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            JS的变量提升 | 
+        
+        爱尚|轻博客
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="http://7xjdah.com1.z0.glb.clouddn.com/favicon.ico">
+    <link rel="icon" href="http://7xjdah.com1.z0.glb.clouddn.com/favicon.ico">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="很多面试题喜欢在函数执行这一块下功夫，作为 开发者如果不能很好滴 掌握js的执行原理，在面试过程中肯定会被秀的体无完肤，基于此我去找了变量提升相关内容，一起学习。">
+    <meta name="keywords" content=",js,面试题">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <style>
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 300;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.svg#Roboto) format('svg')
+        }
+
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: regular;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.svg#Roboto) format('svg')
+        }
+
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.svg#Roboto) format('svg')
+        }
+    </style>
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="爱尚|轻博客">
+    <meta name="msapplication-starturl" content="http://www.awebman.cn/2017/01/04/JS的变量提升/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="爱尚|轻博客">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="http://7xjdah.com1.z0.glb.clouddn.com/favicon.ico">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://www.awebman.cn/2017/01/04/JS的变量提升/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="JS的变量提升 | 爱尚|轻博客">
+    <meta property="og:image" content="http://7xjdah.com1.z0.glb.clouddn.com/favicon.ico">
+    <meta property="og:description" content="很多面试题喜欢在函数执行这一块下功夫，作为 开发者如果不能很好滴 掌握js的执行原理，在面试过程中肯定会被秀的体无完肤，基于此我去找了变量提升相关内容，一起学习。">
+    <meta property="og:article:tag" content="js"> <meta property="og:article:tag" content="面试题"> 
+
+    
+        <meta property="article:published_time" content="Wed Jan 04 2017 13:26:49 GMT+0800">
+        <meta property="article:modified_time" content="Sun Apr 08 2018 13:29:05 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://www.awebman.cn/2017/01/04/JS的变量提升/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://www.awebman.cn/2017/01/04/JS的变量提升/index.html",
+    "headline": "JS的变量提升",
+    "datePublished": "Wed Jan 04 2017 13:26:49 GMT+0800",
+    "dateModified": "Sun Apr 08 2018 13:29:05 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "AppleSun",
+        "image": {
+            "@type": "ImageObject",
+            "url": "http://7xjdah.com1.z0.glb.clouddn.com/pic2016051107.jpg"
+        },
+        "description": "间歇性凌云壮志,持续性混吃等死"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "爱尚|轻博客",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "http://7xjdah.com1.z0.glb.clouddn.com/favicon.ico"
+        }
+    },
+    "keywords": ",js,面试题",
+    "description": "很多面试题喜欢在函数执行这一块下功夫，作为 开发者如果不能很好滴 掌握js的执行原理，在面试过程中肯定会被秀的体无完肤，基于此我去找了变量提升相关内容，一起学习。",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#JavaScript代码的运行规则"><span class="post-toc-number">1.</span> <span class="post-toc-text">JavaScript代码的运行规则</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#JavaScript变量作用域"><span class="post-toc-number">2.</span> <span class="post-toc-text">JavaScript变量作用域</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#在JavaScript中，变量有4种基本方式进入作用域："><span class="post-toc-number">2.0.1.</span> <span class="post-toc-text">在JavaScript中，变量有4种基本方式进入作用域：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#有关于JavaScript作用域更多的介绍可以阅读下面这些文章："><span class="post-toc-number">2.0.2.</span> <span class="post-toc-text">有关于JavaScript作用域更多的介绍可以阅读下面这些文章：</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#JavaScript变量提升"><span class="post-toc-number">3.</span> <span class="post-toc-text">JavaScript变量提升</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#JavaScript的提升将会影响一个变量的生命周期，JavaScript中的一个变量，其生命周期主要包含三个阶段："><span class="post-toc-number">3.0.1.</span> <span class="post-toc-text">JavaScript的提升将会影响一个变量的生命周期，JavaScript中的一个变量，其生命周期主要包含三个阶段：</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#理解变量提升"><span class="post-toc-number">4.</span> <span class="post-toc-text">理解变量提升</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#上面的事例比较简单，咱们来一个稍微复杂的示例："><span class="post-toc-number">4.0.0.1.</span> <span class="post-toc-text">上面的事例比较简单，咱们来一个稍微复杂的示例：</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#函数声明提升"><span class="post-toc-number">5.</span> <span class="post-toc-text">函数声明提升</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#函数声明"><span class="post-toc-number">6.</span> <span class="post-toc-text">函数声明</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#函数表达式"><span class="post-toc-number">7.</span> <span class="post-toc-text">函数表达式</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#函数优先"><span class="post-toc-number">8.</span> <span class="post-toc-text">函数优先</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#通过上面的介绍之后，简单的总结一下："><span class="post-toc-number">8.0.1.</span> <span class="post-toc-text">通过上面的介绍之后，简单的总结一下：</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#总结"><span class="post-toc-number">9.</span> <span class="post-toc-text">总结</span></a></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                JS的变量提升
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051107.jpg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>AppleSun</strong>
+        <span>1月 04, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/js/">js</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/面试题/">面试题</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+
+    <!-- Share Twitter -->
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>很多面试题喜欢在函数执行这一块下功夫，作为 开发者如果不能很好滴 掌握js的执行原理，在面试过程中肯定会被秀的体无完肤，基于此我去找了变量提升相关内容，一起学习。</p>
+<a id="more"></a>
+<h2 id="JavaScript代码的运行规则"><a href="#JavaScript代码的运行规则" class="headerlink" title="JavaScript代码的运行规则"></a>JavaScript代码的运行规则</h2><p>在JavaScript代码运行之前其实是有一个<em>编译阶段</em>的。编译之后才是<strong>从上到下，一行一行解释执行</strong>。这样一来也给初学者造成很大的误解。初学者会觉得JavaScript的代码是从上到下，一行一行的解释执行的。按这样的思路，在有些情况下就会造成惨案：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">name = &quot;AppleSun&quot;;</span><br><span class="line">var name;</span><br><span class="line">console.log(name);</span><br></pre></td></tr></table></figure>
+<p>按照代码从上到下一行一行解释执行的说法，有些同学可能会觉得<code>console.log(name)</code>输出的值是<code>undefined</code>。那是因为<code>name = &quot;AppleSun&quot;</code>在<code>var name</code>之前，变量<code>name</code>被重新定义了，而且没有给其赋值，所以认为此时<code>name</code>的值是<code>undefined</code>。输出的也应该是undefined。但事实上输出的值是<code>&quot;AppleSun&quot;</code>。下图是Chrome浏览器调试器下的输出结果：<br><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016071901.png" alt="img"></p>
+<p><strong>在看一段代码</strong>:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">console.log(name);</span><br><span class="line">var name = &quot;AppleSun&quot;;</span><br></pre></td></tr></table></figure>
+<p>当初我就以为它输出的结果是<code>Uncaught ReferenceError: name is not defined(…)</code>。因为变量<code>name</code>在没有声明的情况下就被使用了。而事实上呢，并如如此，它输出的结果是<code>undefined</code>。如下图所示：<br><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016071902.png" alt="img"></p>
+<p>为什么会这样呢？因为JavaScript代码运行时，它把变量和函数的声明提升至作用域的顶端。而这个阶段就发生了变量提升。同时JavaScript在编译阶段的工作之一就是将变量与其作用域进行关联。那么要彻底的理解JavaScript声明提升，需要对JavaScript的变量作用域有一定的了解。</p>
+<h2 id="JavaScript变量作用域"><a href="#JavaScript变量作用域" class="headerlink" title="JavaScript变量作用域"></a>JavaScript变量作用域</h2><p>对于JavaScript的初学者来说，变量作用域是最令人感到困惑的一部分。有关于JavaScript中变量的作用域，本文不做介绍，因为要说清楚它，需要大幅篇幅，而且对于我这样的新手也道不清说不明。拿张图向大家简单的展示一下：<br><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016071903.png" alt="img"></p>
+<h4 id="在JavaScript中，变量有4种基本方式进入作用域："><a href="#在JavaScript中，变量有4种基本方式进入作用域：" class="headerlink" title="在JavaScript中，变量有4种基本方式进入作用域："></a>在JavaScript中，变量有4种基本方式进入作用域：</h4><ul>
+<li>语言自身定义(Language-defined)：所有的作用域默认都会包含<code>this</code>和<code>arguments</code></li>
+<li>函数形参(Formal parameters)：函数有名字的形参会进入到函数体的作用域中</li>
+<li>函数声明(Function decalrations)：通过<code>function foo() {...}</code>方式实现函数声明</li>
+<li>变量声明(Variable declarations)：通过<code>var foo</code>;形式声明变量，当然在ES6中还增加了<code>let</code>和<code>const</code>声明变量</li>
+</ul>
+<h4 id="有关于JavaScript作用域更多的介绍可以阅读下面这些文章："><a href="#有关于JavaScript作用域更多的介绍可以阅读下面这些文章：" class="headerlink" title="有关于JavaScript作用域更多的介绍可以阅读下面这些文章："></a>有关于JavaScript作用域更多的介绍可以阅读下面这些文章：</h4><ul>
+<li><a href="http://www.w3cplus.com/javascript/the-basics-of-variable-scope-in-javascript.html" target="_blank" rel="noopener">JavaScript学习笔记： 局部变量和全局变量</a></li>
+<li><a href="https://segmentfault.com/a/1190000002960647" target="_blank" rel="noopener">理解 Javascript 中变量的作用域</a></li>
+<li><a href="http://www.w3cplus.com/javascript/variables-and-scoping-in-es6.html" target="_blank" rel="noopener">ES6中的变量和作用域</a></li>
+<li><a href="http://www.cnblogs.com/rainman/archive/2009/04/28/1445687.html" target="_blank" rel="noopener">深入理解JavaScript的变量作用域</a></li>
+</ul>
+<p>可能你跟我一样，对变量作用域并没有理解透彻，但我们不能因为这个原因而不继续。</p>
+<h2 id="JavaScript变量提升"><a href="#JavaScript变量提升" class="headerlink" title="JavaScript变量提升"></a>JavaScript变量提升</h2><p>在JavaScript中，变量的声明可以放在它的使用之后。换句话说，变量可以先使用后声明。这主要是因为JavaScript的提升(hoisting)机制在作怪。简单点说，提升(hoisting)是JavaScript中默认就具有的一种机制，它将当用作用域内的所有声明都提升到最顶部。如此一来，可以把变量提升归纳为：</p>
+<p><strong>JavaScript引擎的工作方式是，先解析代码，获取所有被声明的变量，然后再一行一行地运行。这造成的结果，就是所有的变量的声明语句，都会被提升到代码的头部，这就叫做变量提升（hoisting）。</strong></p>
+<p>为了理解上面的含义，我们来看一个简单的示例。下面的代码中定义了一个函数<code>foo()</code>:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function foo () &#123;</span><br><span class="line">    var name = &quot;AWebMan&quot;;</span><br><span class="line">    var address = &quot;http://www.awebman.cn&quot;;</span><br><span class="line">    var age = 1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>其实他会变成这样：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function foo () &#123;</span><br><span class="line">    var name,address,age;</span><br><span class="line">    name = &quot;AWebMan&quot;;</span><br><span class="line">    address = &quot;http://www.awebman.cn&quot;;</span><br><span class="line">    age = 1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="JavaScript的提升将会影响一个变量的生命周期，JavaScript中的一个变量，其生命周期主要包含三个阶段："><a href="#JavaScript的提升将会影响一个变量的生命周期，JavaScript中的一个变量，其生命周期主要包含三个阶段：" class="headerlink" title="JavaScript的提升将会影响一个变量的生命周期，JavaScript中的一个变量，其生命周期主要包含三个阶段："></a>JavaScript的提升将会影响一个变量的生命周期，JavaScript中的一个变量，其生命周期主要包含三个阶段：</h4><ul>
+<li>声明变量：创建一个新变量，如<code>var name</code>;</li>
+<li>变量初始化：给变量初始化一个值，如<code>name = &quot;AppleSun&quot;</code>;</li>
+<li>变量使用： 使用变量的值，如<code>console.log(name)</code>;</li>
+</ul>
+<p>知道这个概念之后，再回过头来看文章开头的示例代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">name = &quot;AppleSun&quot;;</span><br><span class="line">var name;</span><br><span class="line">console.log(name);</span><br></pre></td></tr></table></figure>
+<p>在编写代码时应该这样做处理：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var name;    //代码编译阶段</span><br><span class="line">name = &quot;AppleSun&quot;;  //代码运行阶段</span><br><span class="line">console.log(name);  //代码运行阶段</span><br></pre></td></tr></table></figure>
+<p>所以这段代码最终输出的结果将会是<code>AppleSun</code>。</p>
+<p><strong>第二个示例代码</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">console.log(name);</span><br><span class="line">var name = &quot;AppleSun&quot;;</span><br></pre></td></tr></table></figure>
+<p>我们应该这样处理：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var name;    //代码编译阶段</span><br><span class="line">console.log(name);  // 代码运行阶段</span><br><span class="line">name = &quot;AppleSun&quot;;  // 代码运行阶段</span><br></pre></td></tr></table></figure>
+<p>所以代码最终结果是<code>undefined</code>.</p>
+<h2 id="理解变量提升"><a href="#理解变量提升" class="headerlink" title="理解变量提升"></a>理解变量提升</h2><p>变量提升就是把变量提升到函数的顶部。需要特别说明的是：变量提升只是提升变量的声明，并不会把赋值也提升上来。</p>
+<p>其实前面的示例已经说明了这一切，咱们重新来看看这个<code>foo()</code>函数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function foo () &#123;</span><br><span class="line">    var name = &quot;AppleSun&quot;;</span><br><span class="line">    var address = &quot;http://www.awebman.cn&quot;;</span><br><span class="line">    var age = 1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>实际上foo()函数是这样子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var name,address,age;</span><br><span class="line">name = &quot;AppleSun&quot;;</span><br><span class="line">address = &quot;http://www.awebman.cn&quot;;</span><br><span class="line">age = 1;</span><br></pre></td></tr></table></figure>
+<p>这时候酒吧变量提升了。</p>
+<h5 id="上面的事例比较简单，咱们来一个稍微复杂的示例："><a href="#上面的事例比较简单，咱们来一个稍微复杂的示例：" class="headerlink" title="上面的事例比较简单，咱们来一个稍微复杂的示例："></a>上面的事例比较简单，咱们来一个稍微复杂的示例：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var foo = 1;</span><br><span class="line">function bar () &#123;</span><br><span class="line">    if (!foo) &#123;</span><br><span class="line">        var foo = 10;</span><br><span class="line">    &#125;</span><br><span class="line">    console.log(foo);</span><br><span class="line">&#125;</span><br><span class="line">bar();</span><br><span class="line">var foo = 1;</span><br></pre></td></tr></table></figure>
+<p>答案是<code>10</code>。你一定觉得非常奇怪，<code>foo</code>等于<code>1</code>,if条件<code>!foo</code>应该是<code>false</code>，也就是说if代码块的代码是不会被执行。返回的值应该是<code>undefined</code>呀，怎么就变成<code>10</code>了呢？实际上，正如前面所说，变量<code>foo</code>被提升到了<code>bar()</code>函数最顶部，那么程序就变成这样：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function bar () &#123;</span><br><span class="line">    console.log(foo); // =&gt; undefined</span><br><span class="line">    if (!foo) &#123;</span><br><span class="line">        var foo = 10;</span><br><span class="line">        console.log(foo); // =&gt; 10</span><br><span class="line">    &#125;</span><br><span class="line">    console.log(foo); // =&gt; 10</span><br><span class="line">&#125;</span><br><span class="line">bar();</span><br></pre></td></tr></table></figure>
+<p><code>bar()</code>函数运行后，输出的值是<code>undefined</code> <code>10</code> <code>10</code>,如下图所示：<br><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016071904.png" alt="img"></p>
+<p>说明当在函数内使用var声明变量的时候，这个变量的声明被提升到了bar()函数的最顶部（最开始处），所以这个例子等同于：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var foo = 1;</span><br><span class="line">function bar () &#123;</span><br><span class="line">    var foo; // 定义局部变量foo</span><br><span class="line">    if (!foo) &#123; // foo是undefined (false),那么!foo就是true，所以会执行if语句块</span><br><span class="line">        foo = 10;</span><br><span class="line">    &#125;</span><br><span class="line">    console.log(foo);</span><br><span class="line">&#125;</span><br><span class="line">bar(); // =&gt; 输出的结果是10</span><br></pre></td></tr></table></figure>
+<p>这样一来就明白了，结果为啥会是10了吧。</p>
+<p>接着往下看，如果把<code>bar()</code>函数内的<code>var foo = 10</code>;换成<code>foo = 10</code>，其结果又将是如何呢？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">function bar()&#123;</span><br><span class="line">    if(!foo)&#123;</span><br><span class="line">        foo=10;</span><br><span class="line">    &#125;</span><br><span class="line">    console.log(foo);</span><br><span class="line">&#125;</span><br><span class="line">bar();</span><br><span class="line">var foo=1;</span><br></pre></td></tr></table></figure>
+<p>其上面的代码变成：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var foo=1;</span><br><span class="line">function bar()&#123;</span><br><span class="line">    if(!foo)&#123;</span><br><span class="line">        foo=10;</span><br><span class="line">    &#125;</span><br><span class="line">    console.log(foo);</span><br><span class="line">&#125;</span><br><span class="line">bar(); // =&gt; 1</span><br></pre></td></tr></table></figure>
+<p>因为<code>bar()</code>中的变量<code>foo</code>没有使用<code>var</code>声明，变量不再提升。所以<code>(!foo)</code>会到函数外寻找定义的合局变量<code>foo</code>，结果是<code>1</code>，那<code>!foo</code>返回的值是<code>false</code>，也就不会执行if语句块内的代码。最终得到的结果是<code>1</code>。如果这个时候没有定义全局变量<code>foo</code>，就会报错。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function bar()&#123;</span><br><span class="line">    if(!foo)&#123;</span><br><span class="line">        foo=10;</span><br><span class="line">    &#125;</span><br><span class="line">    console.log(foo);</span><br><span class="line">&#125;</span><br><span class="line">bar(); // =&gt; Uncaught ReferenceError: foo is not defined(…)</span><br></pre></td></tr></table></figure>
+<p>如下图所示：<br><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016071905.png" alt="img"><br>也就是说，只有在有var声明的变量才会被提升到函数最顶部。</p>
+<h2 id="函数声明提升"><a href="#函数声明提升" class="headerlink" title="函数声明提升"></a>函数声明提升</h2><p>函数在声明时也会像变量一样被提升。不同的是，函数表达式不会被提升。</p>
+<h2 id="函数声明"><a href="#函数声明" class="headerlink" title="函数声明"></a>函数声明</h2><p>函数声明提升</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">foo();</span><br><span class="line">function foo() &#123;</span><br><span class="line">    console.log(n);</span><br><span class="line">    var n = 2;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>实际上上面的代码将会按下面的形式执行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function foo () &#123;</span><br><span class="line">    var n;</span><br><span class="line">    console.log(n);</span><br><span class="line">    n = 2;</span><br><span class="line">&#125;</span><br><span class="line">foo(); // =&gt; undefined</span><br></pre></td></tr></table></figure>
+<p>函数foo()的作用域内的变量n提升到了作用域顶部，全局作用域里的foo()函数声明民会被提前到所处的作用域顶部，即全局作用域的顶部。但是函数表达式的话只有变量被声明，但是赋值给变量的函数不会被提升。</p>
+<h2 id="函数表达式"><a href="#函数表达式" class="headerlink" title="函数表达式"></a>函数表达式</h2><p>函数表达式不会被提长：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">foo();</span><br><span class="line">var foo = function bar () &#123;</span><br><span class="line">    console.log(foo);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>函数表达式的提升类似于变量的提升：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var foo;</span><br><span class="line">foo(); // =&gt; Uncaught TypeError: foo is not a function(…)</span><br><span class="line">foo = function bar () &#123;</span><br><span class="line">    console.log(foo);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这样会引发TypeError异常，因为当时的foo并没有赋值，对undefined进行函数调用会导致非法操作抛出异常。</p>
+<h2 id="函数优先"><a href="#函数优先" class="headerlink" title="函数优先"></a>函数优先</h2><p>函数会首先被提升，然后跟着才是变量。也就是说同时存在函数声明与函数表达式时，函数声明会优先于函数表达式提升。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">foo();</span><br><span class="line">function foo() &#123;</span><br><span class="line">  console.log(&apos;1&apos;);</span><br><span class="line">&#125;</span><br><span class="line">var foo = function () &#123;</span><br><span class="line">  console.log(&apos;2&apos;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面的代码将会被理解成下面的形式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">function foo() &#123;</span><br><span class="line">  console.log(&apos;1&apos;);</span><br><span class="line">&#125;</span><br><span class="line">var foo;</span><br><span class="line">foo(); // 1</span><br><span class="line">foo = function () &#123;</span><br><span class="line">    console.log(&apos;2&apos;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>所以实际上的输出是 1，因为函数表达式的赋值操作会在原来的位置，而声明操作则是提升到作用域顶部，但是优先级低于函数声明。</p>
+<p>重复声明同名变量在 JavaScript 非严格模式中将会被忽略，所以实际上函数表达式的位置并没有改变。</p>
+<h4 id="通过上面的介绍之后，简单的总结一下："><a href="#通过上面的介绍之后，简单的总结一下：" class="headerlink" title="通过上面的介绍之后，简单的总结一下："></a>通过上面的介绍之后，简单的总结一下：</h4><ul>
+<li>使用var声明的变量（包括函数）其声明会被提升到方法体最顶部，而赋值不会被提升；</li>
+<li>未使用var声明的变量，不会被提升；</li>
+<li>使用函数表达式function bar(){}定义的函数会函数声明连带函数体提升到方法体最顶部；</li>
+<li>注意JavaScript中的作用域问题，JavaScript中没有块作用域(在ES6中改变了这一格局，使用let和const声明的变量，作用于块用域)</li>
+</ul>
+<p>事实上，变量提升在不同方面的影响也不同：</p>
+<ul>
+<li>变量声明: 使用var, let或const关键字</li>
+<li>函数声明: 使用function () {…}语法</li>
+<li>类声明: 使用class关键字</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>看到这里，是不是有点晕了，说真的，我自己都晕了。不过理解清楚下面这段话，你理解JavaScript中的变量提升会有很大的帮助：</p>
+<p><strong>如果变量在函数体内声明，它的作用域是函数作用域。否则，它就是全局作用域。变量将会在执行进入作用域时被创建。块不会定义新的作用域，只有函数声明和程序才可以。变量在创建的时候会被初始化为undefined。如果变量声明语句带有赋值操作，则赋值操作只有在被执行的时候才会发生，而不是创建的时候。如果文章中有不对之处，或者你有更好的意见欢迎在下面的评论中与我们分享。</strong></p>
+<hr>
+<p>本博文已得到作者授权，如需转载，请联系W3cplus 大漠本人<br><a href="http://www.w3cplus.com/javascript/javascript-hoisting-in-details.html" target="_blank" rel="noopener">如需转载出处</a></p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2017/01/16/web开发不经意跳进的坑/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            下一篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2016/12/30/HTML5标准事件/" id="post_nav-older" class="next-content">
+            上一篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051107.jpg" alt="AppleSun's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        1160948478@qq.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:1160948478@qq.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    文章
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2017/05/">五月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">三月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/02/">二月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/12/">十二月 2016<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">十一月 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/10/">十月 2016<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">八月 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">七月 2016<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">六月 2016<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/05/">五月 2016<span class="sidebar_archives-count">6</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">43</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/DragonKnightLOL" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Weibo -->
+    
+        <a href="http://weibo.com/crackerme" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-weibo">
+                <span class="visuallyhidden">Weibo</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/CracKerMe" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Zhihu -->
+    
+        <a href="https://www.zhihu.com/people/awebman" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-zhihu">
+                <span class="visuallyhidden">Zhihu</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>爱尚|轻博客
+            
+                <br>
+                
+                    Hello EveryOne
+                
+            
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+    
+        <script>lsloader.load("sm_js","/js/smoothscroll.js?lOy/ACj5suSNi7ZVFVbpFQ==", true)</script>
+    
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>

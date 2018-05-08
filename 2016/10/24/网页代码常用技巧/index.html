@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info"/>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            网页代码常用技巧 | 
+        
+        爱尚|轻博客
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="http://7xjdah.com1.z0.glb.clouddn.com/favicon.ico">
+    <link rel="icon" href="http://7xjdah.com1.z0.glb.clouddn.com/favicon.ico">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="在网页编辑开发过程中，一些常用的 功能会被开发者 留心并汇集起来。本文汇集了近100多例常用技巧。与大家共学习。">
+    <meta name="keywords" content=",奇技淫巧">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <style>
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 300;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.svg#Roboto) format('svg')
+        }
+
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: regular;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.svg#Roboto) format('svg')
+        }
+
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.svg#Roboto) format('svg')
+        }
+    </style>
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="爱尚|轻博客">
+    <meta name="msapplication-starturl" content="http://www.awebman.cn/2016/10/24/网页代码常用技巧/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="爱尚|轻博客">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="http://7xjdah.com1.z0.glb.clouddn.com/favicon.ico">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://www.awebman.cn/2016/10/24/网页代码常用技巧/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="网页代码常用技巧 | 爱尚|轻博客">
+    <meta property="og:image" content="http://7xjdah.com1.z0.glb.clouddn.com/favicon.ico">
+    <meta property="og:description" content="在网页编辑开发过程中，一些常用的 功能会被开发者 留心并汇集起来。本文汇集了近100多例常用技巧。与大家共学习。">
+    <meta property="og:article:tag" content="奇技淫巧"> 
+
+    
+        <meta property="article:published_time" content="Mon Oct 24 2016 08:38:13 GMT+0800">
+        <meta property="article:modified_time" content="Sun Apr 08 2018 13:29:05 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://www.awebman.cn/2016/10/24/网页代码常用技巧/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://www.awebman.cn/2016/10/24/网页代码常用技巧/index.html",
+    "headline": "网页代码常用技巧",
+    "datePublished": "Mon Oct 24 2016 08:38:13 GMT+0800",
+    "dateModified": "Sun Apr 08 2018 13:29:05 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "AppleSun",
+        "image": {
+            "@type": "ImageObject",
+            "url": "http://7xjdah.com1.z0.glb.clouddn.com/pic2016051107.jpg"
+        },
+        "description": "间歇性凌云壮志,持续性混吃等死"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "爱尚|轻博客",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "http://7xjdah.com1.z0.glb.clouddn.com/favicon.ico"
+        }
+    },
+    "keywords": ",奇技淫巧",
+    "description": "在网页编辑开发过程中，一些常用的 功能会被开发者 留心并汇集起来。本文汇集了近100多例常用技巧。与大家共学习。",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#【1、最基本的弹出窗口代码】"><span class="post-toc-number">1.</span> <span class="post-toc-text">【1、最基本的弹出窗口代码】</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#【2、经过设置后的弹出窗口】"><span class="post-toc-number">2.</span> <span class="post-toc-text">【2、经过设置后的弹出窗口】</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#【3、用函数控制弹出窗口】"><span class="post-toc-number">3.</span> <span class="post-toc-text">【3、用函数控制弹出窗口】</span></a></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                网页代码常用技巧
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051107.jpg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>AppleSun</strong>
+        <span>10月 24, 2016</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/奇技淫巧/">奇技淫巧</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+
+    <!-- Share Twitter -->
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>在网页编辑开发过程中，一些常用的 功能会被开发者 留心并汇集起来。本文汇集了近100多例常用技巧。与大家共学习。</p>
+<a id="more"></a>
+<p>1.oncontextmenu=window.event.returnvalue=false 将彻底屏蔽鼠标右键</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">〈table border oncontextmenu=return(false)〉〈td〉no〈/table〉 可用于Table</span><br></pre></td></tr></table></figure>
+<p>2.〈body onselectstart=return false〉 取消选取、防止复制</p>
+<p>3.onpaste=return false 不准粘贴</p>
+<p>4.oncopy=return false; oncut=return false; 防止复制</p>
+<p>5.〈link rel=Shortcut Icon href=favicon.ico〉 IE地址栏前换成自己的图标</p>
+<p>6.〈link rel=Bookmark href=favicon.ico〉 可以在收藏夹中显示出你的图标</p>
+<p>7.〈input style=ime-mode:-Disabled〉 关闭输入法</p>
+<p>8.永远都会带着框架</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">〈script language=javascript〉〈!--</span><br><span class="line">if (window == top)top.location.href = frames.htm; //frames.htm为框架网页</span><br><span class="line">// --〉〈/script〉</span><br></pre></td></tr></table></figure>
+<p>9.防止被人frame</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">〈SCRIPT LANGUAGE=javascript〉〈!-- </span><br><span class="line">if (top.location != self.location)top.location=self.location;</span><br><span class="line">// --〉〈/SCRIPT〉</span><br></pre></td></tr></table></figure>
+<p>10.网页将不能被另存为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">〈noscript〉〈iframe src=*.html〉〈/iframe〉〈/noscript〉</span><br></pre></td></tr></table></figure>
+<p>11.〈input type=button value=查看网页源代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">onclick=window.location = `view-source:`+ http://www.51js.com/`;〉</span><br></pre></td></tr></table></figure>
+<p>12.删除时确认</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">〈a href=&apos;javascript:if(confirm(确实要删除吗?))location=boos.asp?&amp;areyou=删除&amp;page=1&apos;〉删</span><br><span class="line">除〈/a〉</span><br></pre></td></tr></table></figure>
+<p>13.取得控件的绝对位置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">//javascript</span><br><span class="line">〈script language=javascript〉</span><br><span class="line">function getIE(E)&#123;</span><br><span class="line">var t=e.offsetTop;</span><br><span class="line">var l=e.offsetLeft;</span><br><span class="line">while(e=e.offsetParent)&#123;</span><br><span class="line">t+=e.offsetTop;</span><br><span class="line">l+=e.offsetLeft;</span><br><span class="line">&#125;</span><br><span class="line">alert(top=+t+/nleft=+l);</span><br><span class="line">&#125;</span><br><span class="line">〈/script〉</span><br><span class="line">=====我是分割线======</span><br><span class="line">//VBScript</span><br><span class="line">〈script language=VBScript〉〈!--</span><br><span class="line">function getIE()</span><br><span class="line">dim t,l,a,b</span><br><span class="line">set a=document.all.img1</span><br><span class="line">t=document.all.img1.offsetTop</span><br><span class="line">l=document.all.img1.offsetLeft</span><br><span class="line">while a.tagName〈〉BODY</span><br><span class="line">set a = a.offsetParent</span><br><span class="line">t=t+a.offsetTop</span><br><span class="line">l=l+a.offsetLeft</span><br><span class="line">wend</span><br><span class="line">msgbox top=&amp;t&amp;chr(13)&amp;left=&amp;l,64,得到控件的位置</span><br><span class="line">end function</span><br><span class="line">--〉〈/script〉</span><br></pre></td></tr></table></figure>
+<p>14.光标是停在文本框文字的最后</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">〈script language=javascript〉</span><br><span class="line">function cc()</span><br><span class="line">&#123;</span><br><span class="line">var e = event.srcElement;</span><br><span class="line">var r =e.createTextRange();</span><br><span class="line">r.moveStart(`character`,e.value.length);</span><br><span class="line">r.collapse(true);</span><br><span class="line">r.select();</span><br><span class="line">&#125;</span><br><span class="line">〈/script〉</span><br><span class="line">〈input type=text name=text1 value=123 onfocus=cc()〉</span><br></pre></td></tr></table></figure>
+<p>15.判断上一页的来源</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javascript:document.referrer</span><br></pre></td></tr></table></figure>
+<p>16.最小化、最大化、关闭窗口 （本例子只适用于ie）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">〈object id=hh1 classid=clsid:ADB880A6-D8FF-11CF-9377-00AA003B7A11〉 </span><br><span class="line">〈param name=Command value=Minimize〉〈/object〉</span><br><span class="line">〈object id=hh2 classid=clsid:ADB880A6-D8FF-11CF-9377-00AA003B7A11〉 </span><br><span class="line">〈param name=Command value=Maximize〉〈/object〉</span><br><span class="line">〈OBJECT id=hh3 classid=clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11〉</span><br><span class="line">〈PARAM NAME=Command value=Close〉〈/OBJECT〉</span><br><span class="line">〈input type=button value=最小化 onclick=hh1.Click()〉</span><br><span class="line">〈input type=button value=最大化 onclick=hh2.Click()〉</span><br><span class="line">〈input type=button value=关闭 onclick=hh3.Click()〉</span><br></pre></td></tr></table></figure>
+<p>17.屏蔽功能键Shift,Alt,Ctrl</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">〈script〉</span><br><span class="line">function look()&#123; </span><br><span class="line">if(event.shiftKey) </span><br><span class="line">alert(禁止按Shift键!); //可以换成ALT　CTRL</span><br><span class="line">&#125; </span><br><span class="line">document.onkeydown=look; </span><br><span class="line">〈/script〉</span><br></pre></td></tr></table></figure>
+<p>18.网页不会被缓存</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">〈META HTTP-EQUIV=pragma CONTENT=no-cache〉</span><br><span class="line">〈META HTTP-EQUIV=Cache-Control CONTENT=no-cache, must-revalidate〉</span><br><span class="line">〈META HTTP-EQUIV=expires CONTENT=Wed, 26 Feb 1997 08:21:57 GMT〉</span><br><span class="line">或者〈META HTTP-EQUIV=expires CONTENT=0〉</span><br></pre></td></tr></table></figure>
+<p>19.怎样让表单没有凹凸感？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">〈input type=text style=border:1 solid #000000〉 </span><br><span class="line">或</span><br><span class="line">〈input type=text style=border-left:none; border-right:none; border-top:none; border-bottom: </span><br><span class="line">1 solid #000000〉〈/textarea〉</span><br></pre></td></tr></table></figure>
+<p>20.〈div〉〈span〉&amp;〈layer〉的区别？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">〈div〉(division)用来定义大段的页面元素，会产生转行 </span><br><span class="line">〈span〉用来定义同一行内的元素，跟〈div〉的唯一区别是不产生转行 </span><br><span class="line">〈layer〉是ns的标记，ie不支持，相当于〈div〉</span><br></pre></td></tr></table></figure>
+<p>21.让弹出窗口总是在最上面:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">〈body onblur=this.focus();〉</span><br></pre></td></tr></table></figure>
+<p>22.不要滚动条?</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//让竖条没有: </span><br><span class="line">〈body style=’overflow:-Scroll;overflow-y:hidden‘〉 </span><br><span class="line">〈/body〉 </span><br><span class="line">//让横条没有: </span><br><span class="line">〈body style=‘overflow:-Scroll;overflow-x:hidden’〉 </span><br><span class="line">〈/body〉 </span><br><span class="line">//两个都去掉？更简单了 </span><br><span class="line">〈body scroll=no〉 </span><br><span class="line">〈/body〉</span><br></pre></td></tr></table></figure>
+<p>23.怎样去掉图片链接点击后，图片周围的虚线？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">〈a href=# onFocus=this.blur()〉〈img src=logo.jpg border=0〉〈/a〉</span><br></pre></td></tr></table></figure>
+<p>24.电子邮件处理提交表单</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">〈form name=form1 method=post action=mailto:****@***.com enctype=text/plain〉 </span><br><span class="line">〈input type=submit〉</span><br><span class="line">〈/form〉</span><br></pre></td></tr></table></figure>
+<p>25.在打开的子窗口刷新父窗口的代码里如何写？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">window.opener.location.reload()</span><br></pre></td></tr></table></figure>
+<p>26.如何设定打开页面的大小</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">〈body onload=top.resizeTo(300,200);〉</span><br><span class="line">〈body onload=top.moveBy(300,200);〉//打开页面的位置</span><br></pre></td></tr></table></figure>
+<p>27.在页面中如何加入不是满铺的背景图片,拉动页面时背景图不动</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">〈style〉 </span><br><span class="line">body </span><br><span class="line">&#123;background-image:url(logo.gif); background-repeat:no-repeat; </span><br><span class="line">background-position:center;background-attachment: fixed&#125; </span><br><span class="line">〈/style〉</span><br></pre></td></tr></table></figure>
+<p>28.检查一段字符串是否全由数字组成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">〈script language=javascript〉〈!--</span><br><span class="line">function checkNum(str)&#123;return str.match(//D/)==null&#125;</span><br><span class="line">alert(checkNum(1232142141))</span><br><span class="line">alert(checkNum(123214214a1))</span><br><span class="line">// --〉〈/script〉</span><br></pre></td></tr></table></figure>
+<p>29.获得一个窗口的大小</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.body.clientWidth; document.body.clientHeight</span><br></pre></td></tr></table></figure>
+<p>30.怎么判断是否是字符</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">if (/[^/x00-/xff]/g.test(s)) alert(含有汉字);</span><br><span class="line">else alert(全是字符);</span><br></pre></td></tr></table></figure>
+<p>31.TEXTAREA自适应文字行数的多少</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">〈textarea rows=1 name=s1 cols=27 onpropertychange=this.style.posHeight=this.scrollHeight〉</span><br><span class="line">〈/textarea〉</span><br></pre></td></tr></table></figure>
+<p>32.日期减去天数等于第二个日期</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">〈script language=javascript〉</span><br><span class="line">function cc(dd,dadd)</span><br><span class="line">&#123;</span><br><span class="line">//可以加上错误处理</span><br><span class="line">var a = new Date(dd)</span><br><span class="line">a = a.valueOf()</span><br><span class="line">a = a - dadd * 24 * 60 * 60 * 1000</span><br><span class="line">a = new Date(A)</span><br><span class="line">alert(a.getFullYear() + 年 + (a.getMonth() + 1) + 月 + a.getDate() + 日)</span><br><span class="line">&#125;</span><br><span class="line">cc(12/23/2002,2)</span><br><span class="line">〈/script〉</span><br></pre></td></tr></table></figure>
+<p>33.选择了哪一个Radio</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">〈HTML〉〈script language=vbscript〉</span><br><span class="line">function checkme()</span><br><span class="line">for each ob in radio1</span><br><span class="line">if ob.checked then window.alert ob.value</span><br><span class="line">next</span><br><span class="line">end function</span><br><span class="line">〈/script〉〈BODY〉</span><br><span class="line">〈INPUT name=radio1 type=radio value=style checked〉style</span><br><span class="line">〈INPUT name=radio1 type=radio value=barcode〉Barcode</span><br><span class="line">〈INPUT type=button value=check onclick=checkme()〉</span><br><span class="line">〈/BODY〉〈/HTML〉</span><br></pre></td></tr></table></figure>
+<p>34.脚本永不出错</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">〈SCRIPT LANGUAGE=javascript〉 </span><br><span class="line">〈!-- Hide </span><br><span class="line">function killErrors() &#123; </span><br><span class="line">return true; </span><br><span class="line">&#125; </span><br><span class="line">window.onerror = killErrors; </span><br><span class="line">// --〉 </span><br><span class="line">〈/SCRIPT〉</span><br></pre></td></tr></table></figure>
+<p>35.ENTER键可以让光标移到下一个输入框</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">〈input onkeydown=if(event.keyCode==13)event.keyCode=9〉</span><br></pre></td></tr></table></figure>
+<p>36.检测某个网站的链接速度：<br>把如下代码加入〈body〉区域中:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">〈script language=javascript〉</span><br><span class="line">tim=1</span><br><span class="line">setInterval(tim++,100)</span><br><span class="line">b=1</span><br><span class="line">var autourl=new Array()</span><br><span class="line">autourl[1]=http://www.njcatv.net/;</span><br><span class="line">autourl[2]=javacool.3322.net</span><br><span class="line">autourl[3]=http://www.sina.com.cn/;</span><br><span class="line">autourl[4]=http://www.nuaa.edu.cn/;</span><br><span class="line">autourl[5]=http://www.cctv.com/;</span><br><span class="line">function butt()&#123;</span><br><span class="line">document.write(〈form name=autof〉)</span><br><span class="line">for(var i=1;i〈autourl.length;i++)</span><br><span class="line">document.write(〈input type=text name=txt+i+ size=10 value=测试中……〉 =》〈input type=text </span><br><span class="line">name=url+i+ size=40〉 =》〈input type=button value=GO </span><br><span class="line">onclick=window.open(this.form.url+i+.value)〉〈br〉)</span><br><span class="line">document.write(〈input type=submit value=刷新〉〈/form〉)</span><br><span class="line">&#125;</span><br><span class="line">butt()</span><br><span class="line">function auto(url)&#123;</span><br><span class="line">document.forms[0][url+b].value=url</span><br><span class="line">if(tim〉200)</span><br><span class="line">&#123;document.forms[0][txt+b].value=链接超时&#125;</span><br><span class="line">else</span><br><span class="line">&#123;document.forms[0][txt+b].value=时间+tim/10+秒&#125;</span><br><span class="line">b++</span><br><span class="line">&#125;</span><br><span class="line">function run()&#123;for(var i=1;i〈autourl.length;i++)document.write(〈img </span><br><span class="line">src=http://+autourl+/+Math.random()+ width=1 height=1 </span><br><span class="line">onerror=auto(http://;+autourl+`)〉)&#125;</span><br><span class="line">run()〈/script〉</span><br></pre></td></tr></table></figure>
+<p>37.各种样式的光标</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">auto ：标准光标</span><br><span class="line">default ：标准箭头</span><br><span class="line">hand ：手形光标</span><br><span class="line">wait ：等待光标</span><br><span class="line">text ：I形光标</span><br><span class="line">vertical-text ：水平I形光标</span><br><span class="line">no-drop ：不可拖动光标</span><br><span class="line">not-allowed ：无效光标</span><br><span class="line">help ：?帮助光标</span><br><span class="line">all-scroll ：三角方向标</span><br><span class="line">move ：移动标</span><br><span class="line">crosshair ：十字标</span><br><span class="line">e-resize</span><br><span class="line">n-resize</span><br><span class="line">nw-resize</span><br><span class="line">w-resize</span><br><span class="line">s-resize</span><br><span class="line">se-resize</span><br><span class="line">sw-resize</span><br></pre></td></tr></table></figure>
+<p>38.页面进入和退出的特效</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">进入页面〈meta http-equiv=Page-Enter content=revealTrans(duration=x, transition=y)〉</span><br><span class="line">推出页面〈meta http-equiv=Page-Exit content=revealTrans(duration=x, transition=y)〉 </span><br><span class="line">这个是页面被载入和调出时的一些特效。Duration表示特效的持续时间，以秒为单位。Transition表示使</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">用哪种特效，取值为1-23:</span><br><span class="line">　　0 矩形缩小 </span><br><span class="line">　　1 矩形扩大 </span><br><span class="line">　　2 圆形缩小</span><br><span class="line">　　3 圆形扩大 </span><br><span class="line">　　4 下到上刷新 </span><br><span class="line">　　5 上到下刷新</span><br><span class="line">　　6 左到右刷新 </span><br><span class="line">　　7 右到左刷新 </span><br><span class="line">　　8 竖百叶窗</span><br><span class="line">　　9 横百叶窗 </span><br><span class="line">　　10 错位横百叶窗 </span><br><span class="line">　　11 错位竖百叶窗</span><br><span class="line">　　12 点扩散 </span><br><span class="line">　　13 左右到中间刷新 </span><br><span class="line">　　14 中间到左右刷新</span><br><span class="line">　　15 中间到上下</span><br><span class="line">　　16 上下到中间 </span><br><span class="line">　　17 右下到左上</span><br><span class="line">　　18 右上到左下 </span><br><span class="line">　　19 左上到右下 </span><br><span class="line">　　20 左下到右上</span><br><span class="line">　　21 横条 </span><br><span class="line">　　22 竖条 </span><br><span class="line">　　23 以上22种随机选择一种</span><br></pre></td></tr></table></figure>
+<p>39.在规定时间内跳转</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">〈META http-equiv=V=REFRESH content=5;URL=http://www.51js.com〉</span><br></pre></td></tr></table></figure>
+<p>40.网页是否被检索</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">〈meta name=ROBOTS content=属性值〉</span><br><span class="line">　　其中属性值有以下一些:</span><br><span class="line">　　属性值为all: 文件将被检索，且页上链接可被查询；</span><br><span class="line">　　属性值为none: 文件不被检索，而且不查询页上的链接；</span><br><span class="line">　　属性值为index: 文件将被检索；</span><br><span class="line">　　属性值为follow: 查询页上的链接；</span><br><span class="line">　　属性值为noindex: 文件不检索，但可被查询链接；</span><br><span class="line">　　属性值为nofollow: 文件不被检索，但可查询页上的链接。</span><br></pre></td></tr></table></figure>
+<p>41.变换网页的鼠标光标</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">〈BODY style=CURSOR: url(http://203.73.125.205/~liangmi2/farmfrog01.cur`)〉</span><br></pre></td></tr></table></figure>
+<p>42.怎样实现在任务栏显示小图标的效果？ (要使用绝对地址)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">有些站点，访问时会在地址栏地址前显出小图标，添加到收藏夹后也在收藏栏中显示图标，</span><br><span class="line">这样很好的与其它站点有了区别。 </span><br><span class="line">要达到这个效果，先需做出这个图标文件，图像为16*16像素，不要超过16色。文件格式为ico，然后上传至你的网站。</span><br><span class="line">然后，在需要的页面中，加上以下html语句到文件的〈head〉和〈/head〉之间（假设以上ico文件的地址http://happyisland.126.com/icon.ico）。</span><br><span class="line">〈link REL=SHORTCUT ICONhref=http:〖砺剑〗打了个大揖 笑呵呵地说道：大家好，恭喜发财 ! .island.126.com/icon.ico;〉 </span><br><span class="line">如果访问者的浏览器是IE5.0，就不需加任何代码，只要将图标文件上传到网站的根目录下即可。</span><br></pre></td></tr></table></figure>
+<p>43.META标签里的代码是什么意思？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">〈META〉是放于〈HEAD〉与〈/HEAD〉之间的标记.以下是我总结它在网页中最常见的几种。 </span><br><span class="line">〈meta name=Keywords content=图片, 新闻, 音乐, 软件〉 </span><br><span class="line">该网页的关键字，作用于搜索引擎的登录，事实上它在现在的网站中并没什么用。 </span><br><span class="line">〈meta http-equiv=Content-Type content=text/html; charset=gb2312〉 </span><br><span class="line">〈meta http-equiv=Content-Type content=text/html; charset=iso-8859-1〉 </span><br><span class="line">设定这是 HTML 文件及其编码语系，简体中文网页使用charset=gb2312，繁体中文使用charset=big5，或者不设编码也可，纯英文网页建议使用 iso-8859-1。 </span><br><span class="line">〈meta name=GENERATOR content=Microsoft FrontPage 5.0〉 </span><br><span class="line">这只表示该网页由什么编辑器写的。 </span><br><span class="line">〈meta http-equiv=refresh content=10; url=http://www.hkiwc.com〉 </span><br><span class="line">这行较为实用，能于预定秒数内自动转到指定网址。原代码中 10 表示 10秒。</span><br></pre></td></tr></table></figure>
+<p>44.怎么改变滚动条的颜色，只有ie5.5版本以上才能支持。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">这是使用CSS语言，在次说明一下，它和我的浏览器版本有一定的关系。 </span><br><span class="line">scrollbar-arrow-color：上下按钮上三角箭头的颜色。 </span><br><span class="line">scrollbar-base-color：滚动条的基本颜色。 </span><br><span class="line">scrollbar-dark-shadow-color：立体滚动条强阴影的颜色 </span><br><span class="line">scrollbar-face-color：立体滚动条凸出部分的颜色 </span><br><span class="line">scrollbar-highlight-color：滚动条空白部分的颜色 </span><br><span class="line">scrollbar-shadow-color立体滚动条阴影的颜色。</span><br><span class="line">scrollbar-track-color:#99CC33;</span><br><span class="line">scrollbar-3dlight-color:#A8CBF1; </span><br><span class="line">代码如下： </span><br><span class="line">〈style〉 </span><br><span class="line">〈!-- </span><br><span class="line">BODY &#123;</span><br><span class="line">scrollbar-face-color:#99CC33;//(立体滚动条凸出部分的颜色) </span><br><span class="line">scrollbar-highlight-color:#A8CBF1;//(滚动条空白部分的颜色) </span><br><span class="line">scrollbar-shadow-color:#A8CBF1;//(立体滚动条阴影的颜色) </span><br><span class="line">scrollbar-arrow-color:#FF9966;//(上下按钮上三角箭头的颜色) </span><br><span class="line">scrollbar-base-color:#A8CBF1; //(滚动条的基本颜色) </span><br><span class="line">scrollbar-darkshadow-color:#A8CBF1; //(立体滚动条强阴影的颜色)</span><br><span class="line">scrollbar-track-color:#99CC33;</span><br><span class="line">scrollbar-3dlight-color:#A8CBF1; </span><br><span class="line">&#125; </span><br><span class="line">--〉 </span><br><span class="line">〈/style〉</span><br></pre></td></tr></table></figure>
+<p>在这我补充几点：</p>
+<ol>
+<li>让浏览器窗口永远都不出现滚动条。<br>〈body style=overflow-x:hidden;overflow-y:hidden〉或〈body style=overflow:hidden〉 或〈body scroll=no〉</li>
+<li>没有水平滚动条<br>〈body style=overflow-x:hidden〉</li>
+<li>没有垂直滚动条<br>〈body style=overflow-y:hidden〉</li>
+</ol>
+<ol>
+<li>如何给图片抖动怎做的.</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">〈SCRIPT language=javascript1.2〉 </span><br><span class="line">〈!-- </span><br><span class="line">var rector=2 </span><br><span class="line">var stopit=0 </span><br><span class="line">var a=1 </span><br><span class="line">var count=0 </span><br><span class="line">function init(which)&#123; </span><br><span class="line">stopit=0 </span><br><span class="line">shake=which </span><br><span class="line">shake.style.left=0 </span><br><span class="line">shake.style.top=0 </span><br><span class="line">&#125; </span><br><span class="line">function rattleimage()&#123; </span><br><span class="line">if ((!document.all&amp;&amp;!document.getElementById)||stopit==1||count==100) </span><br><span class="line">return </span><br><span class="line">count++ </span><br><span class="line">if (a==1)&#123; </span><br><span class="line">shake.style.top=parseInt(shake.style.top)+rector </span><br><span class="line">&#125; </span><br><span class="line">else if (a==2)&#123; </span><br><span class="line">shake.style.left=parseInt(shake.style.left)+rector </span><br><span class="line">&#125; </span><br><span class="line">else if (a==3)&#123; </span><br><span class="line">shake.style.top=parseInt(shake.style.top)-rector </span><br><span class="line">&#125; </span><br><span class="line">else&#123; </span><br><span class="line">shake.style.left=parseInt(shake.style.left)-rector </span><br><span class="line">&#125; </span><br><span class="line">if (a〈4) </span><br><span class="line">a++ </span><br><span class="line">else </span><br><span class="line">a=1 </span><br><span class="line">setTimeout(rattleimage(),50) </span><br><span class="line">&#125; </span><br><span class="line">function stoprattle(which)&#123; </span><br><span class="line">stopit=1 </span><br><span class="line">count=0 </span><br><span class="line">which.style.left=0 </span><br><span class="line">which.style.top=0 </span><br><span class="line">&#125; </span><br><span class="line">//--〉 </span><br><span class="line">〈/SCRIPT〉 </span><br><span class="line">〈style〉.shakeimage &#123;POSITION: relative&#125; </span><br><span class="line">〈/style〉 </span><br><span class="line">〈img src=图片的路径 onmouseout=stoprattle(this) onmouseover=init(this);rattleimage() class=shakeimage〉</span><br></pre></td></tr></table></figure>
+<p>5.在DW如何给水平线加颜色。<br>在DW中没有此项设置，你只能在HTML中加入代码：〈hr color=red noshade〉按F12的预览在能看到。由于在NC中不支持〈hr〉的COLOR属性，所以在DW中没有此项设置。<br>6.如何在网页中实现flash的全屏播放？<br>只要在调用swf文件的HTML中将WIDTH和HEIGHT的参数设为100％即可，当然也可以在Flash导出HTML文件的设置中进行设置，方法是：打开File菜单；选Publish Settings弹出导出设置对话框；在HTML标签下的Dimensions选项,下拉后选中Percent（百分比）,并在WIDTH 和HEIGHT框中填100.就行了。</p>
+<p>7.为什么我在DW中插入的Flash动画缺看不找！</p>
+<p>如果你没有正确地安装Dreamweaver和Flash，那么在你预览的时候，Dreamweaver会提示你缺少播放的插件，请你按装InstallAXFlash.exe 并从新启动计算机。现在IE6已经捆绑这个程序。</p>
+<p>8.在Flash中，如果屏蔽鼠标右键?FS命令都是什么意思?</p>
+<p>fscommand (fullscreen, true/false);（全屏设置，TRUE开，FALSE关）<br>fscommand (showmenu, true/false);（右键菜单设置，TRUE显示，FALSE不显示）<br>fscommand (allowscale, true/false);（缩放设置，TRUE自由缩放，FALSE调整画面不影响影片本身的尺寸）<br>fscommand (trapallkeys, true/false);（快捷键设置，TRUE快捷键开，FALSE快捷键关）<br>fscommand (exec);（EXE程序调用）<br>fscommand (quit);（退出关闭窗口）</p>
+<p>9.Flash中什么是隐形按钮。<br>利用button中的hit帧来制作只有感应区域而完全透明的按钮。</p>
+<p>10.如何给Flash动画做链接。<br>Dreamweaver是不能给Flash制作链接的，只能在Flash中用geturl()加链接，然后再插入Dreamweaver中。</p>
+<p>11，DW中的层的技巧。<br>层是可以嵌套的，我个人给大家一个技巧，在层面板中按住CTRL再拖放层到你想去成为其子层的地方就行了，我认为这是最简单直观的方法了。</p>
+<p>12，如何改变鼠标的形状？<br>在Dreamweaver4中CSS样式面板：<br>按CTR+SHIFT+E–出现样式表对话框,点击NEW，出现编辑对话框,在左边最后一项extensions-cursor 选择你要改的指针形式就可以了，然后把你要想改变的地方运用样式表，如果整页都有在〈body bgcolor=#003063 text=#ffffff id=all〉中加入就行了。<br>〈span style=cursor:X`〉样例〈/span〉<br>这里选择（文本）作为对象，还可以自己改为其他的，如link等。</p>
+<p>x可以等于=hand（手形）、</p>
+<p>crosshair（十字）、</p>
+<p>text（文本光标）、</p>
+<p>wait（顾名思义啦）、</p>
+<p>default（默认效果）、</p>
+<p>help（问号）、</p>
+<p>e-size（向右箭头）、</p>
+<p>ne-resize（向右上的箭头）、</p>
+<p>nw-resize（向左上的箭头）、</p>
+<p>w-resize（向左的箭头）、</p>
+<p>sw-resize（左下箭头）、</p>
+<p>s-resize（向下箭头）、</p>
+<p>se-resize（向右下箭头）、</p>
+<p>auto（系统自动给出效果）。</p>
+<p>13.用CSS做邮票，看看吧！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">〈input type=button value=我象不象邮票？ style=height:80px;border:2px dashed #cccccc〉</span><br></pre></td></tr></table></figure>
+<p>14.经常上网的朋友可能会到过这样一些网站，一进入首页立刻会弹出一个窗口，怎么做呢！</p>
+<h6 id="【1、最基本的弹出窗口代码】"><a href="#【1、最基本的弹出窗口代码】" class="headerlink" title="【1、最基本的弹出窗口代码】"></a>【1、最基本的弹出窗口代码】</h6><p>其实代码非常简单：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">〈SCRIPT LANGUAGE=javascript〉 </span><br><span class="line">〈!-- </span><br><span class="line">window.open (`page.html`) </span><br><span class="line">--〉 </span><br><span class="line">〈/SCRIPT〉</span><br></pre></td></tr></table></figure>
+<p>因为着是一段javascripts代码，所以它们应该放?lt;SCRIPT LANGUAGE=javascript〉标签和〈/script〉之间。〈!– 和 –〉是对一些版本低的浏览器起作用，在这些老浏览器中不会将标签中的代码作为文本显示出来。要养成这个好习惯啊。<br>window.open (<code>page.html</code>) 用于控制弹出新的窗口page.html，如果page.html不与主窗口在同一路径下，前面应写明路径，绝对路径(<a href="http://" target="_blank" rel="noopener">http://)和相对路径(../)均可。用单引号和双引号都可以，只是不要混用。</a>%E5%92%8C%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84(../)%E5%9D%87%E5%8F%AF%E3%80%82%E7%94%A8%E5%8D%95%E5%BC%95%E5%8F%B7%E5%92%8C%E5%8F%8C%E5%BC%95%E5%8F%B7%E9%83%BD%E5%8F%AF%E4%BB%A5%EF%BC%8C%E5%8F%AA%E6%98%AF%E4%B8%8D%E8%A6%81%E6%B7%B7%E7%94%A8%E3%80%82)<br>这一段代码可以加入HTML的任意位置，〈head〉和〈/head〉之间可以，〈body bgcolor=#003063 text=#ffffff id=all〉间〈/body〉也可以，越前越早执行，尤其是页面代码长，又想使页面早点弹出就尽量往前放。</p>
+<h6 id="【2、经过设置后的弹出窗口】"><a href="#【2、经过设置后的弹出窗口】" class="headerlink" title="【2、经过设置后的弹出窗口】"></a>【2、经过设置后的弹出窗口】</h6><p>下面再说一说弹出窗口的设置。只要再往上面的代码中加一点东西就可以了。<br>我们来定制这个弹出的窗口的外观，尺寸大小，弹出的位置以适应该页面的具体情况。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">〈SCRIPT LANGUAGE=javascript〉 </span><br><span class="line">〈!-- </span><br><span class="line">window.open (`page.html`, `newwindow`, `height=100, width=400, top=0,left=0, toolbar=no, menubar=no, scrollbars=no, resizable=no,location=no, status=no`) </span><br><span class="line">//写成一行 </span><br><span class="line">--〉 </span><br><span class="line">〈/SCRIPT〉</span><br></pre></td></tr></table></figure>
+<p>参数解释：</p>
+<p>〈SCRIPT LANGUAGE=javascript〉 js脚本开始；</p>
+<p>window.open 弹出新窗口的命令；</p>
+<p><code>page.html</code> 弹出窗口的文件名；</p>
+<p><code>newwindow</code> 弹出窗口的名字（不是文件名），非必须，可用空<code></code>代替；</p>
+<p>height=100 窗口高度；</p>
+<p>width=400 窗口宽度；</p>
+<p>top=0 窗口距离屏幕上方的象素值；</p>
+<p>left=0 窗口距离屏幕左侧的象素值；</p>
+<p>toolbar=no 是否显示工具栏，yes为显示；</p>
+<p>menubar，scrollbars 表示菜单栏和滚动栏。</p>
+<p>resizable=no 是否允许改变窗口大小，yes为允许；</p>
+<p>location=no 是否显示地址栏，yes为允许；</p>
+<p>status=no 是否显示状态栏内的信息（通常是文件已经打开），yes为允许；</p>
+<p>〈/SCRIPT〉 js脚本结束</p>
+<h6 id="【3、用函数控制弹出窗口】"><a href="#【3、用函数控制弹出窗口】" class="headerlink" title="【3、用函数控制弹出窗口】"></a>【3、用函数控制弹出窗口】</h6><p>下面是一个完整的代码。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">〈html〉 </span><br><span class="line">〈head〉 </span><br><span class="line">〈script LANGUAGE=javascript〉 </span><br><span class="line">〈!-- </span><br><span class="line">function openwin() &#123; window.open (page.html, newwindow, height=100, width=400, toolbar= </span><br><span class="line">no, menubar=no, scrollbars=no, resizable=no, location=no, status=no) </span><br><span class="line">//写成一行 </span><br><span class="line">&#125; </span><br><span class="line">//--〉 </span><br><span class="line">〈/script〉 </span><br><span class="line">〈/head〉 </span><br><span class="line">〈body onload=openwin()〉 </span><br><span class="line">…任意的页面内容… </span><br><span class="line">〈/body〉 </span><br><span class="line">〈/html〉</span><br></pre></td></tr></table></figure>
+<p>这里定义了一个函数openwin(),函数内容就是打开一个窗口。在调用它之前没有任何用途。<br>怎么调用呢？</p>
+<p>方法一：〈body onload=openwin()〉 浏览器读页面时弹出窗口；</p>
+<p>方法二：〈body onunload=openwin()〉 浏览器离开页面时弹出窗口；</p>
+<p>方法三：用一个连接调用：</p>
+<p>〈a href=# onclick=openwin()〉打开一个窗口〈/a〉<br>注意：使用的“#”是虚连接。<br>方法四：用一个按钮调用：</p>
+<p>〈input type=button onclick=openwin() value=打开窗口〉</p>
+<p>15.没有用表格写的，让大家随便看看，没什么。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">〈html〉 </span><br><span class="line">〈head〉 </span><br><span class="line">〈title〉江南荷花扇面〈/title〉 </span><br><span class="line">〈meta http-equiv=Content-Type content=text/html; charset=gb2312〉 </span><br><span class="line">〈style type=text/css〉 </span><br><span class="line">〈!-- </span><br><span class="line">.font1 &#123; font-size: 12px; color: #999999; text-decoration: none&#125; </span><br><span class="line">a &#123; font-size: 12px; color: #999999; text-decoration: none&#125; </span><br><span class="line">a:hover &#123; font-size: 12px; color: #000000; text-decoration: none&#125; </span><br><span class="line">--〉 </span><br><span class="line">〈/style〉 </span><br><span class="line">〈/head〉 </span><br><span class="line">〈body bgcolor=#FFFFFF text=#000000〉 </span><br><span class="line">〈div class=font1 style=writing-mode=tb-rl;height:200px width=300〉 </span><br><span class="line">〈p〉盛夏　　　　　　尚　涛　 </span><br><span class="line">〈p〉〈a href=index.htm〉一夜露痕黄粉香　袁运甫 〈/a〉 </span><br><span class="line">〈p〉瑶池昨夜新凉　　王金岭 </span><br><span class="line">〈p〉一朵白莲随意开　吴冠南 </span><br><span class="line">〈p〉新雨迎秋欲满塘　齐辛民 </span><br><span class="line">〈p〉十里荷香　　　　齐辛民 </span><br><span class="line">〈p〉濯清莲而不妖　　卢世曙 </span><br><span class="line">〈/div〉 </span><br><span class="line">〈/body〉 </span><br><span class="line">〈/html〉</span><br></pre></td></tr></table></figure>
+<p>16.IE6已支持自定义cursor!</p>
+<p>语法格式 cursor:url(图标) //cur或是ani文件.<br>cur就是WINDOWS中的光标(cursor)文件，光标文件与图标（ICON)文件除了文件头有一个位置的值不同外，实际是一样的。<br>ani是WINDOWS中的动画光标（图标）文件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">〈style type=text/css〉 </span><br><span class="line">〈!-- </span><br><span class="line">.unnamed1 &#123; cursor:url(arrow2c.cur)&#125; </span><br><span class="line">--〉 </span><br><span class="line">〈/style〉</span><br></pre></td></tr></table></figure>
+<p>17.用marquee做的滚动字幕.这也我刚看到论坛的朋友在问。<br>语法：</p>
+<p>align=# | top | middle| bottom //对齐方式)</p>
+<p>BEHAVIOR=ALTERNATE | SCROLL | SLIDE //移动的方式</p>
+<p>BGCOLOR=color//底色区域颜色</p>
+<p>DIRECTION=DOWN | LEFT | RIGHT | UP //移动的方向</p>
+<p>Loop=n //循环次数（默认是循环不止）</p>
+<p>Scrolldelay=milliseconds//延时</p>
+<p>height=# width=# //区域面积</p>
+<p>hspace=# vspace=# //空白区域</p>
+<p>scrollamount=# //移动的速度</p>
+<p>〈marquee align=top behavior=ALTERNATE BGCOLOR=#000000 height=60 width=433 scrollamount=5〉〈/marquee〉</p>
+<p>18.在FLASH5中也存在一些字体，打散后变成一团的事是为什么？有解决的办法吗。<br>这是大家很常见的问题！可能是对字库支持的不好！我个是做成透明的gif图片格式，然后倒入。</p>
+<p>19.flash的网页里“加入收藏夹”功能怎么实现？</p>
+<p>在as中加getUrl(java script:window.external.addFavorite(<a href="http://skydesigner.51.xn--net%60%2C%60%60-fy7xd14myqi0tupp7g/" target="_blank" rel="noopener">http://skydesigner.51.net<code>,</code>我的工作室`</a>))</p>
+<p>20.在Flash中，文本的动态属性和输入属性的区别。<br>input text在运行时可被用户或程序改变其值。<br>ynamic text仅允许被程序修改。</p>
+<p>21.怎样在IE中调用Dreamweaver进行编辑.<br>相信很多在使用WinME或Window2000的朋友，会遇见是个问题。很简单，把我们笔记本程序打开，保存为一个 *.reg 文件。双击它将信息添加到注册表即可。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">REGEDIT4 </span><br><span class="line">[HKEY_CLASSES_ROOT\.htm\OpenWithList\Dreamweaver] </span><br><span class="line">[HKEY_CLASSES_ROOT\.htm\OpenWithList\Dreamweaver\shell] </span><br><span class="line">[HKEY_CLASSES_ROOT\.htm\OpenWithList\Dreamweaver\shell\edit] </span><br><span class="line">[HKEY_CLASSES_ROOT\.htm\OpenWithList\Dreamweaver\shell\edit\command] </span><br><span class="line">@=\c:\\Program Files\\Macromedia\\Dreamweaver 4\\dreamweaver.exe\ \%1\</span><br></pre></td></tr></table></figure>
+<p>22.设置表格虚线。<br>方法一：作一个1X2的图。半黑半白，再利用表格作成线。<br>方法二：在css里面设，要IE5。5才支持这种效果。<br>style=BORDER-LEFT: #000000 1PX DASHED; BORDER-RIGHT: #000000 1PX DASHED; BORDER-TOP: #000000 1PX DASHED; BORDER-BOTTOM: #000000 1PX DASHED</p>
+<p>23.看看在网页中调用HHCtrl控件效果。<br>代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">〈object id=HHC type=application/x-oleobject classid=clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11〉〈/object〉〈script〉HHC.TextPopup(哈哈,大家好,我是闪梦!,,50,5,128255,346751);〈/script〉</span><br></pre></td></tr></table></figure>
+<p>24.如何让一张图片有浅到深的渐变。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">〈SCRIPT language=javascript1.2〉 </span><br><span class="line">〈!-- </span><br><span class="line">function high(which2)&#123; </span><br><span class="line">theobject=which2 </span><br><span class="line">highlighting=setInterval(highlightit(theobject),50) </span><br><span class="line">&#125; </span><br><span class="line">function low(which2)&#123; </span><br><span class="line">clearInterval(highlighting) </span><br><span class="line">which2.filters.alpha.opacity=40 </span><br><span class="line">&#125; </span><br><span class="line">function highlightit(cur2)&#123; </span><br><span class="line">if (cur2.filters.alpha.opacity〈100) </span><br><span class="line">cur2.filters.alpha.opacity+=10 </span><br><span class="line">else if (window.highlighting) </span><br><span class="line">clearInterval(highlighting) </span><br><span class="line">&#125; </span><br><span class="line">〈/script〉 </span><br><span class="line">〈img onmouseout=low(this) onmouseover=high(this) style=FILTER: alpha(opacity=40)src=logo.gif 〉</span><br><span class="line">​``` </span><br><span class="line"></span><br><span class="line">25.双击鼠标左键来滚动背景，单击停止。</span><br></pre></td></tr></table></figure>
+<p>〈SCRIPT language=javascript〉<br>var currentpos,timer;<br>function initialize()<br>{<br>timer=setInterval(scrollwindow(),16);<br>}<br>function sc(){<br>clearInterval(timer);<br>}<br>function scrollwindow()<br>{<br>currentpos=document.body.scrollTop;<br>window.scroll(0,++currentpos);<br>if (currentpos != document.body.scrollTop)<br>sc();<br>}<br>document.onmousedown=sc<br>document.ondblclick=initialize<br>〈/SCRIPT〉</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">26.如何在同一页面设置不同文字链接效果的样式. </span><br><span class="line">代码如下：</span><br></pre></td></tr></table></figure>
+<p>〈HTML〉〈HEAD〉〈TITLE〉如何在同一页面设置不同文字链接效果的样式〈/TITLE〉<br>〈meta http-equiv=Content-Type content=text/html; charset=gb2312〉<br>〈style type=text/css〉<br>〈!–<br>a:hover { font-size: 9pt; color: #FF0000; text-decoration: underline}<br>a:link { font-size: 9pt; color: #006699; text-decoration: underline}<br>a:visited { font-size: 9pt; color: #006699; text-decoration: underline}<br>a:active { font-size: 9pt; color: #FF0000; text-decoration: none}<br>a.r1:hover { font-size: 9pt; color: #FF0000; text-decoration: underline overline}<br>a.r1:link { font-size: 9pt; color: #000000; text-decoration: underline overline}<br>a.r1:visited { font-size: 9pt; color: #99CC00; text-decoration: underline overline}<br>a.r1:active { font-size: 9pt; color: #000000; text-decoration: underline overline}<br>–〉<br>〈/style〉<br>〈/head〉<br>〈body bgcolor=#FFFFFF text=#000000〉<br>〈a href=#〉下划线链接 〈/a〉<br>〈p〉〈/p〉<br>〈a href=# class=r1〉双下划线链接〈/a〉<br>〈/BODY〉<br>〈/HTML〉</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">补充说明： </span><br><span class="line">a:hover 表示鼠标划过时的样式. </span><br><span class="line">a:link 表示链接的样式. </span><br><span class="line">a:active 表示当前活动连接的样式. </span><br><span class="line">a:visited 表示已经访问过的连接的样式. </span><br><span class="line"></span><br><span class="line">27.用CSS给文字加入阴影效果和文字描边效果。</span><br></pre></td></tr></table></figure>
+<p>.glow{FONT-SIZE: 9pt; FILTER: Glow(Color=#000000, Strength=1)}<br>//文字描边效果<br>.shadow {FONT-SIZE: 9pt; FILTER: DropShadow(OffX=1, OffY=1, DropShadow(OffX=1, OffY=1, color:#111111); COLOR: #ffffff; FONT-FAMILY: 宋体} //加入阴影效果</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">补充说明： </span><br><span class="line">　　这两种滤镜要想实现效果，必须加在如：〈td class=glow或shadow 〉〈div〉xxxxxxxxx〈/div〉〈/td〉上 </span><br><span class="line">，并且要留有足够的空间能够显示阴影或描边，否则会出现半截的阴影或描边现象。 </span><br><span class="line"></span><br><span class="line">28.如何给做带颜色的下拉菜单。</span><br></pre></td></tr></table></figure>
+<p>〈select style=FONT-SIZE: 10px; COLOR: #ffffff; FONT-FAMILY: Verdana;BACKGROUND-COLOR: #ff6600; size=1 〉<br>〈option selected〉:: Dreamweaver4 ::〈/option〉<br>〈option〉::Flash5::〈/option〉<br>〈option〉::Firewoks4::〈/option〉<br>〈/select〉</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">29.关于DW4的表格中的亮边框和暗边框问题。 </span><br><span class="line">在DW4的表格面板中并没有亮边框和暗边框的属性设置，因为NC不支持,只有你在代码中添加了。</span><br><span class="line"></span><br><span class="line">​``` </span><br><span class="line">bordercolorlight=#999999 bordercolordark=#000000</span><br><span class="line">　　你也可以用Css定义一个class。例如： </span><br><span class="line">〈style〉 </span><br><span class="line">.bordercolor &#123; bordercolorlight: #999999; bordercolordark: #000000 &#125; </span><br><span class="line">〈/style〉</span><br></pre></td></tr></table></figure>
+<p>　　然后在要加效果的表格里加?lt;table class=bordercolor〉</p>
+<p>30.自动显示主页最后更新日期.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">〈script〉 </span><br><span class="line">document.write(最后更新日期：+document.lastModified+) </span><br><span class="line">〈/script〉</span><br></pre></td></tr></table></figure>
+<p>31.如何让滚动条出现在左边？<br>我想居然在论坛中有人发表了这段代码，很有意思，它的确照顾一些左撇子，呵呵！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">〈html dir=rtl〉 </span><br><span class="line">〈body bgcolor=#000000 text=#FFFFFF〉 </span><br><span class="line">〈table height=18 width=212 align=center bgcolor=#FFFFFF dir=ltr cellspacing=1 　cellpadding=0〉 </span><br><span class="line">〈tr〉 </span><br><span class="line">〈td bgcolor=#FF0000 〉是不是你的滚动条在左边啊〈/td〉 </span><br><span class="line">〈/tr〉 </span><br><span class="line">〈/table〉 </span><br><span class="line">〈/body〉 </span><br><span class="line">〈/html〉</span><br></pre></td></tr></table></figure>
+<p>32.如何加入网址前面的小图标？</p>
+<p>　　首先,您必须了解所谓的图标（Icon）是一种特殊的图形文件格式，它是以 .ico 作为扩展名。你可用在网上找一个制作图标软件，它具有特有的规格：图标的大小为 16 * 16（以像素为单位）；颜色不得超过 16 色。 在该网页文件的 HEAD 部分加入下面的内容：〈LINK REL=SHORTCUT ICON HREF= <a href="http://skydesigner.51.net/%E5%9B%BE%E6%A0%87%E6%96%87%E4%BB%B6%E5%90%8D%E3%80%89,%E5%B9%B6%E6%94%BE%E5%9C%A8%E8%AF%A5%E7%BD%91%E9%A1%B5%E7%9A%84%E6%A0%B9%E7%9B%AE%E5%BD%95%E4%B8%8B%E3%80%82" target="_blank" rel="noopener">http://skydesigner.51.net/图标文件名〉,并放在该网页的根目录下。</a></p>
+<p>33.在800*600显示器中，如何不让网页水平出现滚动条！</p>
+<p>设至〈body leftmargin=0 topmargin=0〉，网页中的表格宽度为778。</p>
+<p>34.关于〈!DOTYPE〉的说明解释。</p>
+<p>在网页中，经常会看到〈!DOCTYPE HTML PUBLIC<code>-//W3C//DTD HTML 4.01//EN</code>〉，是声明HTML文件的版本信息。</p>
+<p>35.用图片来关闭窗体.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">〈A href=java script:window.close()〉〈IMG height=20 width=20 alt=关闭窗口 src=close.gif border=0〉〈/A〉</span><br></pre></td></tr></table></figure>
+<p>补充说明：如何使用了ACTIVEX！,不再警告窗口？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">〈html〉 </span><br><span class="line">〈head〉 </span><br><span class="line">〈object id=closes type=application/x-oleobject </span><br><span class="line">classid=clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11〉 </span><br><span class="line">〈param name=Command value=Close〉〈/object〉 </span><br><span class="line">〈/head〉 </span><br><span class="line">〈body bgcolor=#003063 text=#ffffff id=all〉 〈a href=# onclick=closes.Click();〉关闭窗口无提示〈/a〉 </span><br><span class="line">〈/body〉 </span><br><span class="line">〈/html〉</span><br></pre></td></tr></table></figure>
+<p>36.禁止鼠标右键查看网页源代码。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">〈SCRIPT language=javascript〉 </span><br><span class="line">function click() </span><br><span class="line">&#123;if (event.button==2) &#123;alert(`你好,欢迎光临！`) &#125;&#125; </span><br><span class="line">document.onmousedown=click </span><br><span class="line">〈/SCRIPT〉</span><br></pre></td></tr></table></figure>
+<p>补充说明：<br>鼠标完全被封锁,可以屏蔽鼠标右键和网页文字。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">〈 body oncontextmenu=return false ondragstart=return false onselectstart=return false〉</span><br></pre></td></tr></table></figure>
+<p>37.通过按钮来查看网页源代码。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">〈input type=BUTTON value=查看源代码 onClick= `window.location = view-source: + window.location.href` name=BUTTON〉</span><br></pre></td></tr></table></figure>
+<p>38.怎么用文字联结实现按钮的SUBMIT功能？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">〈a href=# onclick=formname.submit()〉OK〈/a〉 </span><br><span class="line">这段文字要放在form里。formname是这里要写在form中的name,〈form name=form111〉那么就应该是form111.submit()</span><br></pre></td></tr></table></figure>
+<p>39.如何做一个空链接？</p>
+<p>加#</p>
+<p>40.利用〈IFRAME〉来给网页中插入网页。</p>
+<p>　　经常我看到很多网页中又有一个网页，还以为是用了框架，其实不然，是用了〈IFRAME〉,它只适用于IE，NS可是不支持〈IFRAME〉的，但围着的字句只有在浏览器不支援 iframe 标记时才会显示，如〈noframes〉一样，可以放些提醒字句之类的话。</p>
+<p>你注意啊！下面请和我学习它的用法。<br>分析代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">〈iframe src=iframe.html name=test align=MIDDLE width=300 height=100 marginwidth=1 marginheight=1 frameborder=1 scrolling=Yes〉 〈/iframe〉</span><br><span class="line">　　src=iframe.html </span><br><span class="line">　　用来显示〈IFRAME〉中的网页来源，必要加上相对或绝对路径。 </span><br><span class="line">　　name=test </span><br><span class="line">　　这是连结标记的 target 参数所需要的。 </span><br><span class="line">　　align=MIDDLE </span><br><span class="line">　　可选值为 left, right, top, middle, bottom，作用不大 。 </span><br><span class="line">　　width=300 height=100 </span><br><span class="line">　　框窗的宽及长，以 pixels 为单位。 </span><br><span class="line">　　marginwidth=1 marginheight=1 </span><br><span class="line">　　该插入的文件与框边所保留的空间。 </span><br><span class="line">　　frameborder=1 </span><br><span class="line">　　使用 1 表示显示边框， 0 则不显示。（可以是 yes 或 no） </span><br><span class="line">　　scrolling=Yes </span><br><span class="line">　　使用 Yes 表示容许卷动（内定）， No 则不容许卷动。</span><br></pre></td></tr></table></figure>
+<p>41.请问＜tbody＞的用法？<br>tbody用法据说是加强对表格的控制能力的.例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">　〈table〉〈tbody〉……..〈/tbody〉〈/table〉</span><br></pre></td></tr></table></figure>
+<p>　　tbody代码如果不是你用手写的话,只有在你用IE5打开一个网页的时候， 把它另存为<br>一下，你的另存为的文件在表格中就会生成tbody代码。(即便你的表格根本就没有<br>tbody代码，IE5另存为的时候也会给你生成)。</p>
+<p>42.Alt和Title都是提示性语言标签，请注意它们之间的区别。<br>　　在我们浏览网页时，当鼠标停留在图片对象或文字链接上时，在鼠标的右下角有时会出现一个提示信息框。对目标进行一定的注释说明。在一些场合，它的作用是很重要的。<br>alt 用来给图片来提示的。Title用来给链接文字或普通文字提示的。<br>用法如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">　　　〈p Title=给链接文字提示〉文字〈/p〉 </span><br><span class="line">　　　〈a href=# Title=给链接文字提示〉文字〈/a〉 </span><br><span class="line">　　　〈img src=图片.gif alt=给图片提示〉 </span><br><span class="line">补充知识：〈TITLE〉〈ALT〉里面如何多行换行？在源代码里Enter回车。 </span><br><span class="line">〈a href=# Title=个人简历 </span><br><span class="line">姓名：张培 </span><br><span class="line">网名：我是闪梦 </span><br><span class="line">性别：男的，不是女的。 </span><br><span class="line">爱好：网页制作，软件开发〉个人简历〈/a〉 </span><br><span class="line">例如：个人简历</span><br></pre></td></tr></table></figure>
+<p>43.用javascript代码来实现闪烁按钮。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">〈body〉 </span><br><span class="line">〈form method=POST action=--WEBBOT-SELF--〉 </span><br><span class="line">〈input type=button name=SUB value=闪烁 id=flashit style=BORDER: 1px solid ;BACKGROUND-COLOR: #FFFFFF〉 </span><br><span class="line">〈/form〉 </span><br><span class="line">〈script〉 </span><br><span class="line">if (document.all&amp;&amp;document.all.flashit) </span><br><span class="line">&#123; </span><br><span class="line">var flashelement=document.all.flashit </span><br><span class="line">if (flashelement.length==null) </span><br><span class="line">flashelement[0]=document.all.flashit </span><br><span class="line">function changecolor(which) </span><br><span class="line">&#123; </span><br><span class="line">if (flashelement[which].style.color==`#800000`) </span><br><span class="line">flashelement[which].style.color=#0063A4 </span><br><span class="line">else </span><br><span class="line">flashelement[which].style.color=#800000 </span><br><span class="line">&#125; </span><br><span class="line">if (flashelement.length==null) </span><br><span class="line">setInterval(changecolor(0),1000) </span><br><span class="line">else </span><br><span class="line">for (i=0;i〈flashelement.length;i++) </span><br><span class="line">&#123; </span><br><span class="line">var tempvariable=`setInterval(changecolor(`+i+`),`+`1000)` </span><br><span class="line">eval(tempvariable) </span><br><span class="line">&#125; </span><br><span class="line">&#125; </span><br><span class="line">〈/script〉 </span><br><span class="line">〈/body〉</span><br></pre></td></tr></table></figure>
+<p>44.CSS给图片定义颜色边框。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">img &#123; border: 1px solid red&#125;</span><br></pre></td></tr></table></figure>
+<p>45.在DW中如何使插入的FLASH透明。</p>
+<p>方法一：选中swf,打开原代码窗口，在〈/object〉前输入:〈param name=wmode value=transparent〉<br>方法二：在Flash中的Flie→Publist Settings→HTML→Window Mode选择transparent</p>
+<p>46.在DW编辑文本中，如何输入一个空格呢？</p>
+<p>输入空格的问题，在DW似乎已成了一个老生常谈的问题。通过将输入法调整到全角模式就可以避免了。本以人工智能ABC为例.按Shift+Space切换到全角状态。</p>
+<p>47.为何我的DW中图形显示不正常。</p>
+<p>第一种：可能是因为你定义并正在使用一个site，而你的HTML文件或者图片不在这个site包含的区域之内，因此dreamweaver使用file协议来<br>描述图象的绝对路径，可惜IE不支持src中使用file协议，所以图象就显示不出来了。<br>第二种：可能是放图片的文件夹或图片名为中文，也显示不到网页中去。</p>
+<p>48.如何在本地机器上测试flash影片的loading？<br>我想这可能是很多人在问的题了，其实很简单，在Test时，选选View-〉Show Streaming就可以看到了。</p>
+<p>49.在网页中做出一根竖的线有几种办法.<br>第一种方法：用一个像素图的办法！<br>如果你用Dreamwever的Edit→Preferences…→Layout View中的Spacer Image给你创建了一个缺省名为：spacer.gif的一个像素图文件 。<br>代码中：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">〈table border=0 cellspacing=0 cellpadding=0〉 </span><br><span class="line">〈tr〉 </span><br><span class="line">〈td bgcolor=#FF0000 height=200 〉〈img src=spacer.gif width=1 height=1〉〈/td〉 </span><br><span class="line">〈/tr〉 </span><br><span class="line">〈/table〉</span><br></pre></td></tr></table></figure>
+<p>第二种方法：用表格填颜色的办法！把〈td〉 〈/td〉中的 删掉 .</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">〈table border=0 cellspacing=0 cellpadding=0〉 </span><br><span class="line">〈tr〉 </span><br><span class="line">〈td bgcolor=#FF0000 height=200 width=1〉〈/td〉 </span><br><span class="line">〈/tr〉 </span><br><span class="line">〈/table〉</span><br></pre></td></tr></table></figure>
+<p>第三种方法：用水平条。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">〈hr color=red width=1 size=100%〉</span><br></pre></td></tr></table></figure>
+<p>50.关于鼠标拖动,改变层大小。──看看微软的做法.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">〈script〉 </span><br><span class="line">document.execCommand(2D-position,false,true); </span><br><span class="line">〈/script〉 </span><br><span class="line">〈DIV contentEditable=true〉 </span><br><span class="line">〈DIV style=WIDTH: 300px; POSITION: absolute; HEIGHT: 100px; BACKGROUND-COLOR: red〉移动层〈/DIV〉 </span><br><span class="line">〈/DIV〉</span><br></pre></td></tr></table></figure>
+<p>51.点击连接文字加入收藏夹。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">〈a href=java script:window.external.AddFavorite(http://www.263.net`, `269家园`)〉点击加入收藏夹〈/a〉</span><br></pre></td></tr></table></figure>
+<p>转载自优秀微信公共号平台</p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2016/10/29/Get与Post的区别到底是啥/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            下一篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2016/10/14/JS数组操作方法2/" id="post_nav-older" class="next-content">
+            上一篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051107.jpg" alt="AppleSun's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        1160948478@qq.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:1160948478@qq.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    文章
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2017/05/">五月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">三月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/02/">二月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/12/">十二月 2016<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">十一月 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/10/">十月 2016<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">八月 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">七月 2016<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">六月 2016<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/05/">五月 2016<span class="sidebar_archives-count">6</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">43</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/DragonKnightLOL" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Weibo -->
+    
+        <a href="http://weibo.com/crackerme" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-weibo">
+                <span class="visuallyhidden">Weibo</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/CracKerMe" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Zhihu -->
+    
+        <a href="https://www.zhihu.com/people/awebman" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-zhihu">
+                <span class="visuallyhidden">Zhihu</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>爱尚|轻博客
+            
+                <br>
+                
+                    Hello EveryOne
+                
+            
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+    
+        <script>lsloader.load("sm_js","/js/smoothscroll.js?lOy/ACj5suSNi7ZVFVbpFQ==", true)</script>
+    
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>

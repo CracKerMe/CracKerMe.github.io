@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info"/>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            CSS自适应汇总 | 
+        
+        爱尚|轻博客
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="http://7xjdah.com1.z0.glb.clouddn.com/favicon.ico">
+    <link rel="icon" href="http://7xjdah.com1.z0.glb.clouddn.com/favicon.ico">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="所谓布局，其实包含两个含义：尺寸与定位。也就是说，所有与尺寸和定位相关的属性，都可以用来布局.大体上，布局中会用到的有：尺寸相关的盒子模型，普通流、浮动、绝对定位三种定位机制，CSS3中的transform、弹性盒子模块、试验中的grid模块。逛园子的时候经常可以看到浮动布局，inline-block布局，弹性盒布局这几个名词。现在对布局也算有一点了解，做个总结巩固一下。如果你也看了很多资料，但是实际动手时对布局还是无从下手的话，希望本文可以帮你理清思路。">
+    <meta name="keywords" content=",css">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <style>
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 300;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.svg#Roboto) format('svg')
+        }
+
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: regular;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.svg#Roboto) format('svg')
+        }
+
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.svg#Roboto) format('svg')
+        }
+    </style>
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="爱尚|轻博客">
+    <meta name="msapplication-starturl" content="http://www.awebman.cn/2016/05/16/CSS自适应汇总/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="爱尚|轻博客">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="http://7xjdah.com1.z0.glb.clouddn.com/favicon.ico">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://www.awebman.cn/2016/05/16/CSS自适应汇总/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="CSS自适应汇总 | 爱尚|轻博客">
+    <meta property="og:image" content="http://7xjdah.com1.z0.glb.clouddn.com/favicon.ico">
+    <meta property="og:description" content="所谓布局，其实包含两个含义：尺寸与定位。也就是说，所有与尺寸和定位相关的属性，都可以用来布局.大体上，布局中会用到的有：尺寸相关的盒子模型，普通流、浮动、绝对定位三种定位机制，CSS3中的transform、弹性盒子模块、试验中的grid模块。逛园子的时候经常可以看到浮动布局，inline-block布局，弹性盒布局这几个名词。现在对布局也算有一点了解，做个总结巩固一下。如果你也看了很多资料，但是实际动手时对布局还是无从下手的话，希望本文可以帮你理清思路。">
+    <meta property="og:article:tag" content="css"> 
+
+    
+        <meta property="article:published_time" content="Mon May 16 2016 22:18:23 GMT+0800">
+        <meta property="article:modified_time" content="Sun Apr 08 2018 13:29:05 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://www.awebman.cn/2016/05/16/CSS自适应汇总/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://www.awebman.cn/2016/05/16/CSS自适应汇总/index.html",
+    "headline": "CSS自适应汇总",
+    "datePublished": "Mon May 16 2016 22:18:23 GMT+0800",
+    "dateModified": "Sun Apr 08 2018 13:29:05 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "AppleSun",
+        "image": {
+            "@type": "ImageObject",
+            "url": "http://7xjdah.com1.z0.glb.clouddn.com/pic2016051107.jpg"
+        },
+        "description": "间歇性凌云壮志,持续性混吃等死"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "爱尚|轻博客",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "http://7xjdah.com1.z0.glb.clouddn.com/favicon.ico"
+        }
+    },
+    "keywords": ",css",
+    "description": "所谓布局，其实包含两个含义：尺寸与定位。也就是说，所有与尺寸和定位相关的属性，都可以用来布局.大体上，布局中会用到的有：尺寸相关的盒子模型，普通流、浮动、绝对定位三种定位机制，CSS3中的transform、弹性盒子模块、试验中的grid模块。逛园子的时候经常可以看到浮动布局，inline-block布局，弹性盒布局这几个名词。现在对布局也算有一点了解，做个总结巩固一下。如果你也看了很多资料，但是实际动手时对布局还是无从下手的话，希望本文可以帮你理清思路。",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#所谓布局，其实包含两个含义：尺寸与定位。也就是说，所有与尺寸和定位相关的属性，都可以用来布局"><span class="post-toc-number">1.</span> <span class="post-toc-text">所谓布局，其实包含两个含义：尺寸与定位。也就是说，所有与尺寸和定位相关的属性，都可以用来布局.</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#尺寸相关"><span class="post-toc-number"></span> <span class="post-toc-text">尺寸相关</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#先说说百分比，百分比是相对父对象的，这里特性非常好用，很多时候会用在自适应布局上面。浏览器尺寸的改变，就是根节点html的长宽改变，我们可以用-来将浏览器尺寸和元素尺寸联系起来，做到自适应。"><span class="post-toc-number">1.</span> <span class="post-toc-text">先说说百分比，百分比是相对父对象的，这里特性非常好用，很多时候会用在自适应布局上面。浏览器尺寸的改变，就是根节点html的长宽改变，我们可以用%来将浏览器尺寸和元素尺寸联系起来，做到自适应。</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#浮动"><span class="post-toc-number"></span> <span class="post-toc-text">浮动</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#思路："><span class="post-toc-number">1.</span> <span class="post-toc-text">思路：</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#普通流布局"><span class="post-toc-number"></span> <span class="post-toc-text">普通流布局</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#警示：inline-block的基线是最后一行文字的底部，flex里面的基线是第一行文字的底部（请看下文阮一峰老师的文章）"><span class="post-toc-number">0.1.</span> <span class="post-toc-text">警示：inline-block的基线是最后一行文字的底部，flex里面的基线是第一行文字的底部（请看下文阮一峰老师的文章）</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#总结：相比浮动inline-block更加容易理解，也更符合我们的认知，结合盒子模型的几个控制属性就可以进行布局了。对于元素高度不同的情况，目前浮动布局的做法都是将元素做成等高元素进行展现，这从美学上看也符合整齐的要求，不过牺牲了一部分内容。但inline-block有vertical-align属性，可以很好地解决元素高度不同而带来的布局问题。用过之后，你也会喜欢上inline-block的。。。至少我会！"><span class="post-toc-number">0.2.</span> <span class="post-toc-text">总结：相比浮动inline-block更加容易理解，也更符合我们的认知，结合盒子模型的几个控制属性就可以进行布局了。对于元素高度不同的情况，目前浮动布局的做法都是将元素做成等高元素进行展现，这从美学上看也符合整齐的要求，不过牺牲了一部分内容。但inline-block有vertical-align属性，可以很好地解决元素高度不同而带来的布局问题。用过之后，你也会喜欢上inline-block的。。。至少我会！</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#绝对定位"><span class="post-toc-number"></span> <span class="post-toc-text">绝对定位</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#效果如下："><span class="post-toc-number">0.1.</span> <span class="post-toc-text">效果如下：</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#弹性盒子"><span class="post-toc-number"></span> <span class="post-toc-text">弹性盒子</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#其他"><span class="post-toc-number"></span> <span class="post-toc-text">其他</span></a>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                CSS自适应汇总
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051107.jpg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>AppleSun</strong>
+        <span>5月 16, 2016</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/css/">css</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+
+    <!-- Share Twitter -->
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h4 id="所谓布局，其实包含两个含义：尺寸与定位。也就是说，所有与尺寸和定位相关的属性，都可以用来布局"><a href="#所谓布局，其实包含两个含义：尺寸与定位。也就是说，所有与尺寸和定位相关的属性，都可以用来布局" class="headerlink" title="所谓布局，其实包含两个含义：尺寸与定位。也就是说，所有与尺寸和定位相关的属性，都可以用来布局."></a>所谓布局，其实包含两个含义：尺寸与定位。也就是说，所有与尺寸和定位相关的属性，都可以用来布局.</h4><p>大体上，布局中会用到的有：<strong>尺寸相关的盒子模型</strong>，<strong>普通流</strong>、<strong>浮动</strong>、<strong>绝对定位</strong>三种定位机制，CSS3中的<strong>transform</strong>、<strong>弹性盒子模块</strong>、<strong>试验中的grid模块</strong>。逛园子的时候经常可以看到<strong>浮动布局</strong>，<strong>inline-block布局</strong>，<strong>弹性盒布局</strong>这几个名词。现在对布局也算有一点了解，做个总结巩固一下。如果你也看了很多资料，但是实际动手时对布局还是无从下手的话，希望本文可以帮你理清思路。</p>
+<a id="more"></a>
+<p>唠叨一句：看到一个效果图的时候，千万不要急着手贱去敲代码！先思考清楚页面的构造，理清各元素之间的关系，特别需要注意的是在不同的设备下需要有怎样的展现，当你思路清晰找到最好的布局方案时，coding其实真的不需要多少时间。</p>
+<ul>
+<li><h3 id="尺寸相关"><a href="#尺寸相关" class="headerlink" title="尺寸相关"></a>尺寸相关</h3></li>
+</ul>
+<p>为什么要先说尺寸呢？因为尺寸在布局中的作用非常核心，布局方式定位这些只是改变了元素之间的关系，没有尺寸就什么也不是。比如我们通常会用margin来控制跟其他元素的距离，这就是布局。</p>
+<p>很多人都会觉得，什么width、margin太简单了，早就掌握了。这种心态我一开始学习CSS的时候也有，觉得很好理解很简单，但是后面才发现自己原来很多东西都没真正掌握。看看张鑫旭大神给我们上的政治课：<a href="http://www.zhangxinxu.com/wordpress/2012/07/bottleneck-css-study/" target="_blank" rel="noopener">张鑫旭的博客</a></p>
+<h4 id="先说说百分比，百分比是相对父对象的，这里特性非常好用，很多时候会用在自适应布局上面。浏览器尺寸的改变，就是根节点html的长宽改变，我们可以用-来将浏览器尺寸和元素尺寸联系起来，做到自适应。"><a href="#先说说百分比，百分比是相对父对象的，这里特性非常好用，很多时候会用在自适应布局上面。浏览器尺寸的改变，就是根节点html的长宽改变，我们可以用-来将浏览器尺寸和元素尺寸联系起来，做到自适应。" class="headerlink" title="先说说百分比，百分比是相对父对象的，这里特性非常好用，很多时候会用在自适应布局上面。浏览器尺寸的改变，就是根节点html的长宽改变，我们可以用%来将浏览器尺寸和元素尺寸联系起来，做到自适应。"></a>先说说百分比，百分比是相对父对象的，这里特性非常好用，很多时候会用在自适应布局上面。浏览器尺寸的改变，就是根节点html的长宽改变，我们可以用%来将浏览器尺寸和元素尺寸联系起来，做到自适应。</h4><p>另外一个比较有意思的是<strong>auto</strong>，auto是很多尺寸值的默认值，也就是由浏览器自动计算。首先是块级元素水平方向的auto，块级元素的margin、border、padding以及content宽度之和等于父元素width。使用auto属性在父元素宽度变化的时候，该元素的宽度也会随之变化。</p>
+<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051117.png" alt="img"></p>
+<p>但是当该元素被设为浮动时，该元素的width就变成了内容的宽度了，由内容撑开，也就是所谓的有了包裹性。overflow | position:absolute | float:left/right都可以产生包裹性，替换元素也同样具有包裹性。在具有包裹性的元素上想利用width : auto；来让元素宽度自适应浏览器宽是不行的。</p>
+<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051118.png" alt="img"></p>
+<p>高度方向：外边距重叠，外边距auto为0，这两点需要注意。书写方向什么的，接触比较少就不扯了。</p>
+<p>那为什么margin：auto对不能计算垂直方向的值呢？很简单，垂直方向是被设计成可以无限扩展的，内容越多浏览器便产生滚动条来扩展，所以垂直方向都找不到一个计算基准，以此返回一个false，便成了0。</p>
+<p>用处：通过width、height控制大小，各个方向的margin值控制与边界或者其他元素的距离来定位。</p>
+<ul>
+<li><h3 id="浮动"><a href="#浮动" class="headerlink" title="浮动"></a>浮动</h3></li>
+</ul>
+<p>目前PC网站大多使用float布局，从成本上考虑大改的概率很小，所以不要说浮动无用，总是会有机会让你维护的！代表网站：淘宝、腾讯、百度，好吧BAT都到齐了。</p>
+<p>浮动听得多了，博客园上关于用浮动布局的介绍也非常的多。浮动原本用于文本环绕，但却在布局被发扬光大，这就是命！我的理解：浮动布局的核心就是让元素脱离普通流，然后使用width/height，margin/padding将元素定位。脱离普通流的元素，就像脱离地心引力一样，与普通流不在一个高度上。这个跟图层的概念类似。高度不同所以可以<strong>叠</strong>在其他元素上面产生重<strong>叠</strong>或者使用负边距跑到父元素外，理解了这一点浮动布局就很好理解了。<br><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051119.png" alt="img"></p>
+<p>下面用个圣杯布局的例子说明一下，理解了这个之后其他布局更加简单：</p>
+<p>left，宽度固定,高度可固定也可由内容撑开<br>right，宽度固定，高度可固定也可由内容撑开<br>center，可以自适应浏览器宽度，高度可固定也可由内容撑开。<br>HTML &amp; CSS：</p>
+<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051120.png" alt="img"></p>
+<p>原理非常简单，左右侧边栏定宽并浮动，中部内容区放最后不浮动、默认width：auto并设置相应外边距，让左右侧边栏浮动到上面。注意：子元素设置为浮动之后，父对象的高度就坍塌了，需要设置父对象后的元素清除浮动，这样父对象的高度才能被浮动子元素撑起来了。</p>
+<p>当然，我们也要问一下，为啥父对象高度会坍塌呢？上面也说过了，浮动元素已经脱离了普通流，父对象所在的普通流比喻成地表，那浮动元素就已经上天了。但是父对象还在地表啊，从外太空看浮动元素在父对象里面，但是其实并不在，又怎么能撑开父对象呢？宽度如果我们不设置的话，其实也是为0的，因为父对象里面空空如也，所以宽高为0。</p>
+<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051121.png" alt="img"></p>
+<p>要撑开的办法就两个，1是让父对象也上天（。。。你咋不上天呢），2是把浮动元素的边框边界拉下来。</p>
+<p>父对象也上天（即浮动）的话，那就不能实现宽度自适应了。因为float元素的width：auto是包裹内容的，参考前面说的！</p>
+<p>办法2就是在后面的元素里加一个clear语句。说到这个问题就要扯到clear与BFC了，我就不献丑了。传送门：<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/clear" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/CSS/clear</a></p>
+<p>这个三列布局还有个双飞（是双飞翼！想啥呢）的变种，就是在HTML中center部分也就是内容区提到最前面，也就是内容先行渲染。在网络不好的时候，左右双翼能不能出来不要紧，先让主体内容出来！这种想法，明显的优秀工程师思维，但，尼玛的双翼都是广告啊。广告不出来，哪能赚钱养你们这群工程师？所以提出双飞的玉伯才离开了淘宝？？？（纯属意淫，如真属实，当我扯淡，哈哈哈！）</p>
+<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051121.gif" alt="img"></p>
+<p>一言不合就上代码</p>
+<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051122.png" alt="img"></p>
+<h4 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h4><p>1)既然HTML里面要让center放前面，为了让left跑到center前面，那center也必须浮动了，否则因为都是块元素他们会分两行。</p>
+<p>2)浮动之后还要让center宽度自适应，那明显width只能100%，然后在父元素中设width:auto，还有两侧margin，其实也就是父对象宽度自适应，center只是继承content的宽度。</p>
+<p>3)对left使用负的margin让他们浮动到上方去。</p>
+<p>代码里面我用到了一个calc()，这个CSS3带来的计算函数简直酷毙了！本例里如果不使用calc函数，那么就需要wrap左边距为0，left左边距-100%，然后center多加一层子块DIV设置margin-left：100px，可以达到同样的效果！calc函数与百分比配合就足以实现自适应的要求！目前所有的自适应布局都在利用浏览器来为我们计算尺寸，但是有了calc之后我们就可以自己制定规则！单是想想都高潮了吧？</p>
+<p>总结：使用浮动来进行布局，一个比较大的问题是清除浮动。这个可以使用一个after伪类来清除。更大的问题是浮动性像水一样向上流动，难以把握。在元素较多而且元素高度尺寸不一的情况下，单纯使用浮动只能实现上端对齐，这对于适应多种设备的布局就显得力不从心了。目前的做法是牺牲一部分内容，将元素做成等高排列，从美观上看也当然也是极好的，比参差不齐的排列要美观。</p>
+<ul>
+<li><h3 id="普通流布局"><a href="#普通流布局" class="headerlink" title="普通流布局"></a>普通流布局</h3></li>
+</ul>
+<p>普通流布局：display : inline-block！这是一个传说中取代float布局的存在。看了一些网站，PC端浮动为主，移动端的也用的不多啊，已经有些使用flex的了，说好的inline-block一统江湖呢？</p>
+<p>使用inline-block之前先处理点小障碍：inline-block元素会有4px左右的空隙，这个是因为我们写代码时候的换行符所致。</p>
+<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051123.png" alt="img"></p>
+<p>解决办法很简单：在inline-block的父元素中设置样式font-size：0；letter-spacing: -4px; 然后设置inline-block的所有兄弟元素 font-size：值；letter-spacing: 值px; 恢复正常的显示。</p>
+<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051124.png" alt="img"></p>
+<p>另外还有一点需要注意的是inline-block默认是基线对齐的，而inline-block的基线又跟文本基线一致，所以在内容不同的时候并不能水平对齐。只需要用vertical-align显式声明一下top/bottom/middle对齐即可。这里补充一下基线的内容，没你想的那么简单哦。分有文字和无文字两种情况：</p>
+<p>1）无文字：容器的margin-bottom下边缘。与容器内部的元素没一毛钱关系。</p>
+<p>2）有文字：最后一行文字的下边缘，跟文字块（p,h等）的margin、padding没关系！注意是最后一行，无论文字在什么子对象容器内在什么位置都没关系，浏览器会找到最后一行文字对齐底部。</p>
+<p>你们感受一下：</p>
+<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051125.png" alt="img"></p>
+<h5 id="警示：inline-block的基线是最后一行文字的底部，flex里面的基线是第一行文字的底部（请看下文阮一峰老师的文章）"><a href="#警示：inline-block的基线是最后一行文字的底部，flex里面的基线是第一行文字的底部（请看下文阮一峰老师的文章）" class="headerlink" title="警示：inline-block的基线是最后一行文字的底部，flex里面的基线是第一行文字的底部（请看下文阮一峰老师的文章）"></a>警示：inline-block的基线是最后一行文字的底部，flex里面的基线是第一行文字的底部（请看下文阮一峰老师的文章）</h5><p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051126.png" alt="img"></p>
+<p>使用inline-block进行圣杯布局：</p>
+<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051127.png" alt="img"></p>
+<p>这里也没什么好说的，用到的也是width：auto和width：100%这两点，简单知识点的简单用法。</p>
+<p>双飞的话，代码跟圣杯的基本相同，注意在html的顺序变为center&gt;right&gt;left，只改左栏移动的margin-left: calc(-100% – 100px)到预定位置即可。不能用calc的话可以在center里面再加一层，跟浮动一样的处理方式。更简单的方法是使用CSS3带给我们的box-sizing属性。请看代码：</p>
+<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051128.png" alt="img"></p>
+<h5 id="总结：相比浮动inline-block更加容易理解，也更符合我们的认知，结合盒子模型的几个控制属性就可以进行布局了。对于元素高度不同的情况，目前浮动布局的做法都是将元素做成等高元素进行展现，这从美学上看也符合整齐的要求，不过牺牲了一部分内容。但inline-block有vertical-align属性，可以很好地解决元素高度不同而带来的布局问题。用过之后，你也会喜欢上inline-block的。。。至少我会！"><a href="#总结：相比浮动inline-block更加容易理解，也更符合我们的认知，结合盒子模型的几个控制属性就可以进行布局了。对于元素高度不同的情况，目前浮动布局的做法都是将元素做成等高元素进行展现，这从美学上看也符合整齐的要求，不过牺牲了一部分内容。但inline-block有vertical-align属性，可以很好地解决元素高度不同而带来的布局问题。用过之后，你也会喜欢上inline-block的。。。至少我会！" class="headerlink" title="总结：相比浮动inline-block更加容易理解，也更符合我们的认知，结合盒子模型的几个控制属性就可以进行布局了。对于元素高度不同的情况，目前浮动布局的做法都是将元素做成等高元素进行展现，这从美学上看也符合整齐的要求，不过牺牲了一部分内容。但inline-block有vertical-align属性，可以很好地解决元素高度不同而带来的布局问题。用过之后，你也会喜欢上inline-block的。。。至少我会！"></a>总结：相比浮动inline-block更加容易理解，也更符合我们的认知，结合盒子模型的几个控制属性就可以进行布局了。对于元素高度不同的情况，目前浮动布局的做法都是将元素做成等高元素进行展现，这从美学上看也符合整齐的要求，不过牺牲了一部分内容。但inline-block有vertical-align属性，可以很好地解决元素高度不同而带来的布局问题。用过之后，你也会喜欢上inline-block的。。。至少我会！</h5><ul>
+<li><h3 id="绝对定位"><a href="#绝对定位" class="headerlink" title="绝对定位"></a>绝对定位</h3></li>
+</ul>
+<p>前面的浮动和普通流中其实定位都是靠盒子模型控制的，与我们常说的定位还是有差别的。而绝对定位就是我们平常所说的定位，给定参考坐标系+坐标确定位置。关于绝对定位的资料太多，我就不说了。提一点就是absolute定位的基准是最近的非static定位父对象，而fixed是相对html根节点的定位。两种定位都会脱离普通流，跟之前说的浮动一样，上天了。</p>
+<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051121.png" alt="img"></p>
+<p>当然，他们跟浮动在空间中的位置还是有差别的，项目中有遇到这个问题的请参考张大婶的文章： <a href="http://www.zhangxinxu.com/wordpress/2016/01/understand-css-stacking-context-order-z-index/" target="_blank" rel="noopener">张鑫旭understand-css-stacking-context-order-z-index</a> 还是要结合项目来看，否则看过也只是看过而已，并不会存到你的脑子里，毕竟还是相当抽象相当理论性的东西。借用张大神的一个总结图：</p>
+<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051129.png" alt="img"></p>
+<p>使用绝对定位（特指absolute）做自适应布局跟前面两种方式没太大差别，宽度自适应还是在auto和100%上做文章，而位置则由top/bottom/left/right等控制。还是以圣杯布局来举例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;meta charset=&quot;utf-8&quot; /&gt;</span><br><span class="line">        &lt;title&gt;宽度自适应布局&lt;/title&gt;</span><br><span class="line">        &lt;style&gt;</span><br><span class="line">            .wrap &#123;</span><br><span class="line">                position: relative;</span><br><span class="line">                background-color: #FBD570;</span><br><span class="line">                margin-left: 100px;</span><br><span class="line">                margin-right: 150px;</span><br><span class="line">                height: 250px;</span><br><span class="line">            &#125;</span><br><span class="line">            .left &#123;</span><br><span class="line">                position: absolute;</span><br><span class="line">                top: 0;</span><br><span class="line">                left: -100px;</span><br><span class="line">                width: 100px;</span><br><span class="line">                background: #00f;</span><br><span class="line">                height: 180px;</span><br><span class="line">            &#125;</span><br><span class="line">            .right &#123;</span><br><span class="line">                position: absolute;</span><br><span class="line">                top: 0;</span><br><span class="line">                right: 0;</span><br><span class="line">                   width: 150px;</span><br><span class="line">                background: #0f0;</span><br><span class="line">                height: 200px;</span><br><span class="line">                margin-right: -150px;</span><br><span class="line">            &#125;</span><br><span class="line">            .center &#123;</span><br><span class="line">                position: absolute;</span><br><span class="line">                top: 0;</span><br><span class="line">                left: 0;</span><br><span class="line">                background: #B373DA;</span><br><span class="line">                height: 150px;</span><br><span class="line">                min-width: 150px;</span><br><span class="line">                width: 100%;</span><br><span class="line">            &#125;</span><br><span class="line">        &lt;/style&gt;</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;div class=&quot;wrap&quot;&gt;</span><br><span class="line">            &lt;div class=&quot;center&quot;&gt;</span><br><span class="line">                center，可以自适应浏览器宽度，高度固定。</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;div class=&quot;left&quot;&gt;left，宽度高度固定&lt;/div&gt;</span><br><span class="line">            &lt;div class=&quot;right&quot;&gt;right，宽度高度固定&lt;/div&gt;</span><br><span class="line">       &lt;/div&gt;</span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h5 id="效果如下："><a href="#效果如下：" class="headerlink" title="效果如下："></a>效果如下：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">                center，可以自适应浏览器宽度，高度固定。</span><br><span class="line">            </span><br><span class="line">            </span><br><span class="line">left，宽度高度固定</span><br><span class="line">            </span><br><span class="line">right，宽度高度固定</span><br></pre></td></tr></table></figure>
+<p>父元素为relative，子元素为absolute，这样的话，又会出现跟浮动一样的问题：父对象高度坍塌，子元素不能撑起父对象。原因也跟浮动一样，解决办法的话目前我知道的只有给父对象指定一个确定height值，大家如果有更好的办法，请联系我！</p>
+<p>总结：单纯使用绝对定位进行自适应布局的情况很少，一般绝对定位都用在尺寸固定的元素定位上。而且fixed定位的渲染效率很低，因为它会频繁触发浏览器的重排。另外提一点：CSS3的transform会对绝对定位产生影响哦~比如说让fixed定位不再固定在浏览器视窗的黑魔法：<a href="http://www.zhangxinxu.com/wordpress/2015/05/css3-transform-affect/" target="_blank" rel="noopener">张鑫旭css3-transform-affect/</a></p>
+<ul>
+<li><h3 id="弹性盒子"><a href="#弹性盒子" class="headerlink" title="弹性盒子"></a>弹性盒子</h3></li>
+</ul>
+<p>CSS3中对布局影响最大的莫过于弹性盒子模块了，这是一套区别于以往盒子模型布局的全新方案。上面几种方法你可以看到，为了实现自适应我们用的都是width：auto和100%的嵌套以及各种边距的移动定位，这套规则并不符合我们的认知。为什么不能开拓出一块区域，横竖排列都可以，内部所有元素的尺寸可以按照一个规则和这个区域的大小联系起来？终于CSS3做出了改变，引入了flex弹性布局方案，弹性盒布局有如下优势：<br>1.独立的高度控制与对齐。<br>2.独立的元素顺序。<br>3.指定元素之间的关系。<br>4.灵活的尺寸与对齐方式。</p>
+<p>在MDN上有非常简单易懂的基础教程：<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes" target="_blank" rel="noopener">Using_CSS_flexible_boxes</a></p>
+<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051130.png" alt="img"></p>
+<p>上面也已经给出了圣杯布局的自适应布局方案，所以代码就不贴了不过这个例子实现的是3栏成比例缩放，左右栏如果需要固定值的话可以写成 flex: 0 0 150px; 的样式。</p>
+<p>但是上面的教程没有给出各个属性的详细解释，建议看看阮一峰的博文，详细易懂而且配图超漂亮的有木有：<a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html</a></p>
+<p>总结：弹性盒子在移动端的应用会越来越普遍，这套模型值得去好好研究。语法规则都是非常贴近人性，非常灵活，浏览器兼容性也非常好，当然国内百花齐放的移动浏览器会有哪些大坑呢？我们拭目以待~</p>
+<ul>
+<li><h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3></li>
+</ul>
+<p>其他包括<strong>position：relative</strong>和CSS3中的<strong>transform</strong>都可以实现定位，但是由于他们在原来的普通流中还占着一个坑，所以很少用来布局啥的。transform是个很酷炫的东西，可以用平面的素材做出很多3D的效果，而且不需要js就可以做，非常好玩。此文已经很长，就不多说了，以后会写一篇文章来专门说说她的故事。</p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2016/05/20/HEXO博客优化/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            下一篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2016/05/16/打开本站的正确方式/" id="post_nav-older" class="next-content">
+            上一篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051107.jpg" alt="AppleSun's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        1160948478@qq.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:1160948478@qq.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    文章
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2017/05/">五月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">三月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/02/">二月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/12/">十二月 2016<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">十一月 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/10/">十月 2016<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">八月 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">七月 2016<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">六月 2016<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/05/">五月 2016<span class="sidebar_archives-count">6</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">43</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/DragonKnightLOL" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Weibo -->
+    
+        <a href="http://weibo.com/crackerme" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-weibo">
+                <span class="visuallyhidden">Weibo</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/CracKerMe" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Zhihu -->
+    
+        <a href="https://www.zhihu.com/people/awebman" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-zhihu">
+                <span class="visuallyhidden">Zhihu</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>爱尚|轻博客
+            
+                <br>
+                
+                    Hello EveryOne
+                
+            
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+    
+        <script>lsloader.load("sm_js","/js/smoothscroll.js?lOy/ACj5suSNi7ZVFVbpFQ==", true)</script>
+    
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>

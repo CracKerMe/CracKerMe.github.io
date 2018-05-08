@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info"/>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            JS数组操作方法2 | 
+        
+        爱尚|轻博客
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="http://7xjdah.com1.z0.glb.clouddn.com/favicon.ico">
+    <link rel="icon" href="http://7xjdah.com1.z0.glb.clouddn.com/favicon.ico">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="JavaScript为操作已经包含在数组中的项提供了很多方法。比如push()、pop()、shift()和unshift()实现数组的增删操作、sort()和reverse()对数组项进行排序操作。今天学习操作数组的其他方法：concat()、slice()和splice()。">
+    <meta name="keywords" content=",js">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?MKetZV3cUTfDxvMffaOezg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <style>
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 300;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.svg#Roboto) format('svg')
+        }
+
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: regular;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.svg#Roboto) format('svg')
+        }
+
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.svg#Roboto) format('svg')
+        }
+    </style>
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="爱尚|轻博客">
+    <meta name="msapplication-starturl" content="http://www.awebman.cn/2016/10/14/JS数组操作方法2/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="爱尚|轻博客">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="http://7xjdah.com1.z0.glb.clouddn.com/favicon.ico">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://www.awebman.cn/2016/10/14/JS数组操作方法2/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="JS数组操作方法2 | 爱尚|轻博客">
+    <meta property="og:image" content="http://7xjdah.com1.z0.glb.clouddn.com/favicon.ico">
+    <meta property="og:description" content="JavaScript为操作已经包含在数组中的项提供了很多方法。比如push()、pop()、shift()和unshift()实现数组的增删操作、sort()和reverse()对数组项进行排序操作。今天学习操作数组的其他方法：concat()、slice()和splice()。">
+    <meta property="og:article:tag" content="js"> 
+
+    
+        <meta property="article:published_time" content="Fri Oct 14 2016 19:24:47 GMT+0800">
+        <meta property="article:modified_time" content="Sun Apr 08 2018 13:29:05 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://www.awebman.cn/2016/10/14/JS数组操作方法2/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://www.awebman.cn/2016/10/14/JS数组操作方法2/index.html",
+    "headline": "JS数组操作方法2",
+    "datePublished": "Fri Oct 14 2016 19:24:47 GMT+0800",
+    "dateModified": "Sun Apr 08 2018 13:29:05 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "AppleSun",
+        "image": {
+            "@type": "ImageObject",
+            "url": "http://7xjdah.com1.z0.glb.clouddn.com/pic2016051107.jpg"
+        },
+        "description": "间歇性凌云壮志,持续性混吃等死"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "爱尚|轻博客",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "http://7xjdah.com1.z0.glb.clouddn.com/favicon.ico"
+        }
+    },
+    "keywords": ",js",
+    "description": "JavaScript为操作已经包含在数组中的项提供了很多方法。比如push()、pop()、shift()和unshift()实现数组的增删操作、sort()和reverse()对数组项进行排序操作。今天学习操作数组的其他方法：concat()、slice()和splice()。",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#JavaScript为操作已经包含在数组中的项提供了很多方法。比如push-、pop-、shift-和unshift-实现数组的增删操作、sort-和reverse-对数组项进行排序操作。今天学习操作数组的其他方法：concat-、slice-和splice-。"><span class="post-toc-number">1.</span> <span class="post-toc-text">JavaScript为操作已经包含在数组中的项提供了很多方法。比如push()、pop()、shift()和unshift()实现数组的增删操作、sort()和reverse()对数组项进行排序操作。今天学习操作数组的其他方法：concat()、slice()和splice()。</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#concat-方法"><span class="post-toc-number"></span> <span class="post-toc-text">concat()方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#concat-vs-push"><span class="post-toc-number"></span> <span class="post-toc-text">concat() vs. push()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#slice-方法"><span class="post-toc-number"></span> <span class="post-toc-text">slice()方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#删除"><span class="post-toc-number"></span> <span class="post-toc-text">删除</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#插入"><span class="post-toc-number"></span> <span class="post-toc-text">插入</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#替换"><span class="post-toc-number"></span> <span class="post-toc-text">替换</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#总结"><span class="post-toc-number"></span> <span class="post-toc-text">总结</span></a>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                JS数组操作方法2
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051107.jpg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>AppleSun</strong>
+        <span>10月 14, 2016</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/js/">js</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+
+    <!-- Share Twitter -->
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h4 id="JavaScript为操作已经包含在数组中的项提供了很多方法。比如push-、pop-、shift-和unshift-实现数组的增删操作、sort-和reverse-对数组项进行排序操作。今天学习操作数组的其他方法：concat-、slice-和splice-。"><a href="#JavaScript为操作已经包含在数组中的项提供了很多方法。比如push-、pop-、shift-和unshift-实现数组的增删操作、sort-和reverse-对数组项进行排序操作。今天学习操作数组的其他方法：concat-、slice-和splice-。" class="headerlink" title="JavaScript为操作已经包含在数组中的项提供了很多方法。比如push()、pop()、shift()和unshift()实现数组的增删操作、sort()和reverse()对数组项进行排序操作。今天学习操作数组的其他方法：concat()、slice()和splice()。"></a>JavaScript为操作已经包含在数组中的项提供了很多方法。比如push()、pop()、shift()和unshift()实现数组的增删操作、sort()和reverse()对数组项进行排序操作。今天学习操作数组的其他方法：concat()、slice()和splice()。</h4><a id="more"></a>
+<h3 id="concat-方法"><a href="#concat-方法" class="headerlink" title="concat()方法"></a>concat()方法</h3><p>concat()方法可以简单的将其理解为合并数组。基于当前数组中的所有项创建一个新数组。简单的说，concat()先给当前数组创建一个副本，然后将接收到的参数添加到这个副本（数组）的末尾，最后返回一个新的数组。来看个简单的示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var arr = [`大漠`,&apos;30&apos;,&apos;W3cplus&apos;];</span><br><span class="line">console.log(arr); // [&quot;大漠&quot;, &quot;30&quot;, &quot;W3cplus&quot;]</span><br><span class="line">var arr2 = arr.concat(&apos;Blog&apos;,&apos;2014&apos;);</span><br><span class="line">console.log(arr2); // [&quot;大漠&quot;, &quot;30&quot;, &quot;W3cplus&quot;, &quot;Blog&quot;, &quot;2014&quot;]</span><br></pre></td></tr></table></figure>
+<p>上面代码演示的concat()方法传递的值不是数组，这些值就会简单添加到结果数组(arr2)的末尾。</p>
+<p>除此之外，concat()传递的值还有其他的使用方法：同时传递一个或多个数组，如下所示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var arr = [&quot;大漠&quot;,&quot;30&quot;];</span><br><span class="line">console.log(arr); // [&quot;大漠&quot;, &quot;30&quot;]</span><br><span class="line">var arr2 = arr.concat(1,[&quot;blog&quot;,&quot;w3cplus&quot;],[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]);</span><br><span class="line">console.log(arr2); // [&quot;大漠&quot;, &quot;30&quot;, 1, &quot;blog&quot;, &quot;w3cplus&quot;, &quot;a&quot;, &quot;b&quot;, &quot;c&quot;]</span><br></pre></td></tr></table></figure>
+<p>另外,concat()还可以传递空值（也就是说没有传递参数），此时它只是复制当前数组，并且返回一个副本。如下所示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1,2];</span><br><span class="line">console.log(arr); // [1, 2]</span><br><span class="line">var arr2 = arr.concat();</span><br><span class="line">console.log(arr2); // [1, 2]</span><br></pre></td></tr></table></figure>
+<p>从上面几个示例，不难看出：concat()方法是在数组的副本上进行操作并返回新构建的数组，所以并不会影响到原来的数组。</p>
+<h3 id="concat-vs-push"><a href="#concat-vs-push" class="headerlink" title="concat() vs. push()"></a>concat() vs. push()</h3><p>前面说过push()方法可以也可以给数组传参数，同样是在数组的末尾添加一个或多个值（数组）。那么与concat()有什么不同之处呢？别的先不多说，先来看一个示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// push()方法</span><br><span class="line">var arr = [&apos;a&apos;,&apos;b&apos;];</span><br><span class="line">console.log(arr); // [&quot;a&quot;, &quot;b&quot;]</span><br><span class="line">arr.push(&apos;c&apos;,&apos;d&apos;);</span><br><span class="line">console.log(arr); // [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;]</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// concat()方法</span><br><span class="line">var arr = [&apos;a&apos;,&apos;b&apos;];</span><br><span class="line">console.log(arr); // [&quot;a&quot;, &quot;b&quot;]</span><br><span class="line">arr.concat(&apos;c&apos;,&apos;d&apos;);</span><br><span class="line">console.log(arr); // [&quot;a&quot;, &quot;b&quot;]</span><br><span class="line">var arr2 = arr.concat(&apos;c&apos;,&apos;d&apos;);</span><br><span class="line">console.log(arr2); // [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;]</span><br></pre></td></tr></table></figure>
+<p>Chrome输出的结果告诉我们：push()和concat()方法都可以将传的参数添加到数组的后面，只不过push()是在原数组上操作（改变的是原数组），concat()不会改变原数组，创建原数组的副本，并且把传的参数添加到新数组后面。</p>
+<p>如果传的是数组又将是一个什么情形呢？还是看实例吧。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// push()方法</span><br><span class="line">var arr = [&apos;a&apos;,&apos;b&apos;];</span><br><span class="line">console.log(arr); // [&quot;a&quot;, &quot;b&quot;]</span><br><span class="line">arr.push([&apos;c&apos;,&apos;d&apos;],[1,2,3]);</span><br><span class="line">console.log(arr); // [&quot;a&quot;, &quot;b&quot;, Array[2], Array[3]]</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// concat()</span><br><span class="line">var arr = [&apos;a&apos;,&apos;b&apos;];</span><br><span class="line">console.log(arr); // [&quot;a&quot;, &quot;b&quot;]</span><br><span class="line">var arr2 = arr.concat([&apos;c&apos;,&apos;d&apos;],[1,2,3]);</span><br><span class="line">console.log(arr2); // [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, 1, 2, 3]</span><br></pre></td></tr></table></figure>
+<p>Chrome输出的结果（push() vs. concat()）:</p>
+<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016061528.png" alt="img"></p>
+<p>push()传递的参数是数组时，将整个数组传给原数组末尾，如示例中得到的结果[“a”, “b”, Array[2], Array[3]]，而concat()传递的参数是数组时，将参数中数组的每一个数组项添加到原数组的末尾，如示例中得到的结果[“a”, “b”, “c”, “d”, 1, 2, 3]。</p>
+<h3 id="slice-方法"><a href="#slice-方法" class="headerlink" title="slice()方法"></a>slice()方法</h3><p>concat()方法可以在原数组基础上创建一个副本数组，其实slice()方法它也能基于当前数组创建一个新数组，而且对原数组也并不会有任何影响。</p>
+<p>slice()接受一个或两个参数，即要返回项的起始和结束位置。当只给slice()传递一个参数时，该方法返回从该参数指定位置开始到当前数组末尾的所有项。如下面示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// 测试数组函数，将输出数组的length和第个key:value</span><br><span class="line">var test = function(array) &#123;</span><br><span class="line">  console.log(&apos;length:&apos;+ array.length);</span><br><span class="line">  array.forEach(function(element, index, array) &#123;</span><br><span class="line">    console.log(index + &apos;:&apos; + element);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br><span class="line">var arr = [0,1,2,3,4,5,6];</span><br><span class="line">test(arr); </span><br><span class="line">var arr2 = arr.slice(3);</span><br><span class="line">test(arr);</span><br><span class="line">test(arr2);</span><br></pre></td></tr></table></figure>
+<p>Chrome输出的结果如下：</p>
+<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016061529.png" alt="img"></p>
+<p>假设将数组arr的每个数组项存放在一个小格子中，并且按数组的索引号从左向右存放。slice()方法执行之后，将会按传递的参数之前的值从格子中移除，如下图所示：</p>
+<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016061530.png" alt="img"></p>
+<p>slice()还可以传两个参数，该方法返回起始和结束位置之间的项，但不包括结束位置的项，如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var arr = [0,1,2,3,4,5,6];</span><br><span class="line">test(arr);</span><br><span class="line">var arr2 = arr.slice(2,5);</span><br><span class="line">test(arr);</span><br><span class="line">test(arr2);</span><br></pre></td></tr></table></figure>
+<p>Chrome输出的结果如下：</p>
+<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016061531.png" alt="img"></p>
+<p>同样使用小格子存放的方式来演示整个处理过程：</p>
+<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016061532.png" alt="img"></p>
+<p>slice()传递的参数还可以是负值。当参数中有一个负值时，则用数组长度加上该数来确定相应的位置。比如传递的值是-3，数组的length为6，此时slice(-3)对应的就是slice(3)。或者可以从数组的末尾开始计算起，最末尾的是-1。来看看示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var arr = [0,1,2,3,4,5,6];</span><br><span class="line">test(arr);</span><br><span class="line">var arr2 = arr.slice(-3);</span><br><span class="line">test(arr);</span><br><span class="line">test(arr2);</span><br></pre></td></tr></table></figure>
+<p>Chrome输出的结果如下：</p>
+<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016061533.png" alt="img"></p>
+<p>同样使用小格子存放的方式来演示整个处理过程：</p>
+<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016061534.png" alt="img"></p>
+<p>当然第二个参数也可以是负数，而且还可以正数和负数混合使用。但有一点需要特别注意：slice()传递的两个参数时，第一个参数和第二个参数位置相同或者第一个参数在第二个参数之后时，得到的新数组是一个空值（负值也是类似，但负值与数值长度之和再作对比）。简言之，结束位置小于或等于开始位置，将返回一个空数组。如下面的示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var arr = [0,1,2,3,4,5,6];</span><br><span class="line">test(arr);</span><br><span class="line">var arr2 = arr.slice(-3,4);</span><br><span class="line">test(arr);</span><br><span class="line">test(arr2);</span><br></pre></td></tr></table></figure>
+<p>Chrome输出的结果如下：</p>
+<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016061535.png" alt="img"></p>
+<p>slice()方法和concat()方法类似，会在原数组上构建一个新数组，并不会影响原数组。</p>
+<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016061536.png" alt="img"></p>
+<p>splice()方法在处理数组的各方法中恐怕是最强大的了，它有很多种用法：</p>
+<p>删除： 可以删除任意数量的数组项<br>插入： 可以向指定位置插入任意数量的数组项<br>替换： 可以向指定位置插入任意数量的数组项，且同时删除任意数量的数组项</p>
+<h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><p>在splice()方法中指定两个参数，第一个参数是指定开始删除数组项位置，第二个数是指删除数组项的个数。如下面这个示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var arr = [0,2,3,4,5,6];</span><br><span class="line">test(arr);</span><br><span class="line">var arr2 = arr.splice(2,3);</span><br><span class="line">test(arr);</span><br><span class="line">test(arr2);</span><br></pre></td></tr></table></figure>
+<p>Chrome输出的结果如下：</p>
+<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016061537.png" alt="img"></p>
+<p>从示例中不难看出，splice()方法做删除动作之后，将会影响原数组(比如示例中的arr)，并且将原数组中删除掉的数组项重构成一个新数组(比如示例中新得到的数组arr2)。</p>
+<h3 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h3><p>splice()方法指定三个参数，第一个参数为插入的起始位置，第二个参数为0(要删除的数组项数量，因为删除数量是为0，所以不做删除)，第三个参数是要插入的数组项。如果要插入多个项，可以再传入第四、第五、以至任意多个项。如下面的示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var arr = [0,1,2,3,4,5,6];</span><br><span class="line">test(arr);</span><br><span class="line">var arr2 = arr.splice(2,0,&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,&apos;d&apos;);</span><br><span class="line">test(arr);</span><br><span class="line">test(arr2);</span><br></pre></td></tr></table></figure>
+<p>Chrome输出的结果如下：</p>
+<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016061538.png" alt="img"></p>
+<p>上例从第二个位置开始插入字符串a、b、c、d字符串。从而原数组增加新的四个数组项，数组arr的length就变成了11；由于删除数量是0，所以返回给新数组arr2是空值（也就是一个空数组）。</p>
+<h3 id="替换"><a href="#替换" class="headerlink" title="替换"></a>替换</h3><p>splice()方法做替换其实和做插入非常类似，只是将第二参数设置为大于0（删除数的数量）。如下例所示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var arr = [0,1,2,3,4,5,6];</span><br><span class="line">test(arr);</span><br><span class="line">var arr2 = arr.splice(2,4,&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,&apos;d&apos;);</span><br><span class="line">test(arr);</span><br><span class="line">test(arr2);</span><br></pre></td></tr></table></figure>
+<p>Chrome输出的结果如下：</p>
+<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016061539.png" alt="img"></p>
+<p>结果告诉我们，在原数组arr上第二个位置开始删除了2、3、4和5个数组项，并且用a、b、c、d这几个值替换到删除掉的几个数组项的位置。同时把删除掉的几个数组项重新构成了新数组arr2。</p>
+<p>splice()方法始终会返回一个数组，该数组中包含从原始数组中删除的项（如果没有删除任何项，则返回一个空数组）。</p>
+<p>splice()方法和slice()方法类似，起始位置可以是负值，当起始位置为负值时，则用数组长度length加上该数来确定相应的位置。如下所示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var arr = [0,1,2,3,4,5,6];</span><br><span class="line">test(arr);</span><br><span class="line">var arr2 = arr.splice(-2,4,&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,&apos;d&apos;);</span><br><span class="line">test(arr);</span><br><span class="line">test(arr2);</span><br></pre></td></tr></table></figure>
+<p>Chrome输出的结果如下：</p>
+<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016061540.png" alt="img"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>文章介绍了数组的三个操作方法concat()、slice()和splice()。concat()和slice()方法都不会影响原数组，会在原数组上构建出一个新数组。其中concat()方法在原数组末尾添加所传的数组项（简单点看有类似于push()方法），构建一个新数组；slice()方法可以从指定的位置开始删除指定的数组项，并且将删除的数组项构建成一个新数组。splice()方法就更强大了，可以对一个数组做删除、插入和替换。而且splice()方法还会影响原数组，并且将返回的值构建出一个新数组。</p>
+<p><strong>Yours Sincerely SunPing</strong></p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2016/10/24/网页代码常用技巧/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            下一篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2016/10/11/JS数组操作方法1/" id="post_nav-older" class="next-content">
+            上一篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051107.jpg" alt="AppleSun's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        1160948478@qq.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:1160948478@qq.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    文章
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2017/05/">五月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">三月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/02/">二月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/12/">十二月 2016<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">十一月 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/10/">十月 2016<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">八月 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">七月 2016<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">六月 2016<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/05/">五月 2016<span class="sidebar_archives-count">6</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">43</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/DragonKnightLOL" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Weibo -->
+    
+        <a href="http://weibo.com/crackerme" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-weibo">
+                <span class="visuallyhidden">Weibo</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/CracKerMe" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Zhihu -->
+    
+        <a href="https://www.zhihu.com/people/awebman" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-zhihu">
+                <span class="visuallyhidden">Zhihu</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+    
+    <!-- V2EX -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>爱尚|轻博客
+            
+                <br>
+                
+                    Hello EveryOne
+                
+            
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+    
+        <script>lsloader.load("sm_js","/js/smoothscroll.js?lOy/ACj5suSNi7ZVFVbpFQ==", true)</script>
+    
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
