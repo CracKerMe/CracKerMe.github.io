@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.4.0 -->
+    <script>window.materialVersion = "1.4.0"</script>
+
+    <!-- Title -->
+    
+    <title>
+        
+            21 top vueJS libs | 
+        
+        爱尚|轻博客
+    </title>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="AppleSun">
+    <meta name="description" itemprop="description" content="21 Top Vue.js UI Libraries For Your App As the star-wars are raging, Vue.js recently passed React in the number of GitHub stars. Although still behind React in the sheer number of downloads according to NPM, the popularity of Vue.js seems to be growing.
+Like React, one of Vue’s best features is the ability to compose your UI using isolated and modular components. To help build your next application faster, here are some of the best UI component libraries out there in 2018.">
+    <meta name="keywords" content="null,vue,js">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" sizes="192x192" href="/img/favicon.png">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!--iOS -->
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="爱尚|轻博客">
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="https://crackerme.github.io">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="21 top vueJS libs | 爱尚|轻博客">
+    <meta property="og:image" content="/img/favicon.png" />
+    <meta property="og:description" content="21 Top Vue.js UI Libraries For Your App As the star-wars are raging, Vue.js recently passed React in the number of GitHub stars. Although still behind React in the sheer number of downloads according to NPM, the popularity of Vue.js seems to be growing.
+Like React, one of Vue’s best features is the ability to compose your UI using isolated and modular components. To help build your next application faster, here are some of the best UI component libraries out there in 2018.">
+    <meta property="og:article:tag" content="vue"> <meta property="og:article:tag" content="js"> 
+
+    
+        <meta property="article:published_time" content="7月 02, 2018" />
+        <meta property="article:modified_time" content="7月 02, 2018" />
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:title" content="21 top vueJS libs | 爱尚|轻博客">
+    <meta name="twitter:description" content="21 Top Vue.js UI Libraries For Your App As the star-wars are raging, Vue.js recently passed React in the number of GitHub stars. Although still behind React in the sheer number of downloads according to NPM, the popularity of Vue.js seems to be growing.
+Like React, one of Vue’s best features is the ability to compose your UI using isolated and modular components. To help build your next application faster, here are some of the best UI component libraries out there in 2018.">
+    <meta name="twitter:image" content="/img/favicon.png">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://crackerme.github.io" />
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="https://crackerme.github.io/2018/07/02/21-top-vueJS-libs/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "爱尚|轻博客",
+        "logo": "/img/favicon.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "AppleSun",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/favicon.png"
+        },
+        "description": "间歇性凌云壮志，持续性混吃等死"
+    },
+    "headline": "21 top vueJS libs",
+    "url": "https://crackerme.github.io/2018/07/02/21-top-vueJS-libs/index.html",
+    "datePublished": "7月 02, 2018",
+    "dateModified": "7月 02, 2018",
+    "description": "21 Top Vue.js UI Libraries For Your App As the star-wars are raging, Vue.js recently passed React in the number of GitHub stars. Although still behind React in the sheer number of downloads according to NPM, the popularity of Vue.js seems to be growing.
+Like React, one of Vue’s best features is the ability to compose your UI using isolated and modular components. To help build your next application faster, here are some of the best UI component libraries out there in 2018.",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://crackerme.github.io"
+    }
+}
+</script>
+
+
+    
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+materialVersion+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(data&&data.indexOf(versionString)===-1){lsloader.removeLS(key)}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload){cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}code=code.split(versionString)[1];if(/\.js?.+$/.test(versionNumber)){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload)}};lsloader.requestResource=function(name,path,cssonload){var that=this;if(/\.js?.+$/.test(path)){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else if(/\.css?.+$/.test(path)){this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
+
+    <!-- Import CSS & jQuery -->
+    
+        <style id="css/material.min.css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("css/material.min.css","/css/material.min.css?5NJL1sdpBtsc9zuAD6Ib0w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";})</script>
+        <style id="css/style.min.css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("css/style.min.css","/css/style.min.css?oCSEO3ST+aEypEwttTDI9g==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";})</script>
+        
+        
+            <style>
+    
+    
+    .footer-sns-twitter {
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgY2xhc3M9Imljb24iIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiPjxwYXRoIGQ9Ik0xMzguNiA3OGMtMjIuNCA1LjItNTUuOCA0MC4yLTYwLjYgNjMuNC0xLjQgNi40LTIgMTI5LjgtMS42IDM2Ny42LjYgMjk4LjYgMSAzNTguOCAzLjQgMzYzIDExIDIwLjIgMjEuNiAzMi40IDM3LjIgNDMgMTUgMTAuMiAxNy40IDExLjIgMzMgMTMgMTEuMiAxLjQgMTM2IDIgMzY1IDEuNiAzMTQtLjYgMzQ4LjYtMSAzNTUtMy44IDE1LjgtNy4yIDMzLjgtMjIgNDMuMi0zNS40IDUuMi03LjQgMTAuOC0xNi42IDEyLjYtMjAuNCAyLjgtNi40IDMuMi00MC44IDMuOC0zNTQgLjQtMjIzLS4yLTM1My40LTEuNC0zNjUtMi0xNy0yLjYtMTguNi0xMy0zNC04LjYtMTIuNi0xNC4yLTE4LjQtMjUuMi0yNS44LTcuOC01LjQtMTcuNC0xMS0yMS42LTEyLjQtNi0yLjItNzIuOC0yLjYtMzY1LjQtMi42LTE5Ni44LjItMzYxIC44LTM2NC40IDEuOHptNTMyLjggMjA1YzEwIDQgMjMgMTAuOCAyOC44IDE1LjIgMTIuNiA5LjIgMTYuNiAxMC42IDI5LjQgOS40IDYuNi0uNiAxMy0zLjIgMjAuNC04LjIgMTEuMi03LjYgMTkuNC05LjIgMjMuNi01IDMuNiAzLjYgMi44IDktMi44IDE4LjYtNy4yIDEyLjQtNiAxOC44IDQuMiAyNC4yIDQuNCAyLjIgOC4yIDUuNiA4LjYgNy40IDEgNC44LTEyLjYgMjQuMi0yMiAzMS44LTExLjggOS4yLTE3LjIgMjIuNi0xOS42IDQ3LjgtNC44IDUwLjQtNy44IDY2LjYtMTYuNCA4NS40LTMgNy03IDE3LjgtOC44IDI0LTEuOCA2LjQtNSAxNC42LTcuNCAxOC40LTIuMiAzLjgtNy40IDEzLTExLjQgMjAuNC0xNy4yIDMwLjgtNDMuNCA2MS40LTcxLjQgODMuOC0yNS42IDIwLjQtNDYgMzMuMi02NC4yIDQwLjItOC40IDMuMi0xOCA3LjYtMjEuNCA5LjYtNy40IDQuNi0yMi40IDguNi01Ny4yIDE1LTYyLjIgMTEuNi03OS4yIDExLjQtMTM1LjYtMS0zMi40LTctMzguNi05LTUyLTE2LjgtMjEuNC0xMi42LTI0LjItMTQuOC0yNC4yLTE5LjQgMC02LjIgMTAuMi05LjIgMzUtMTAuNCAyMi40LTEgMjguNi0yLjYgNTctMTQuMiAyMy44LTkuOCAyOS40LTEyLjggMzAuNC0xNi44IDIuMi04LjItMy0xMy4yLTI2LjgtMjUuNC0yNS44LTEzLjItMzIuMi0xOC40LTQzLjgtMzUuOC05LTEzLjYtMTAtMjEuMi0zLjYtMzMuNiA1LjQtMTAuOCAzLjYtMTUtMTEuOC0yNS40LTktNi0xNC0xMS42LTIwLjgtMjIuNi0yMy40LTM3LjgtMjUtNTAuOC03LjItNTkuOCA0LjgtMi40IDkuNC01LjQgMTAuMi02LjYgMi44LTQuMi0uNC0xNS42LTguNC0yOS0xMS42LTE5LjYtMTMuMi0yNS44LTEzLjItNTUuMiAwLTI4LjggMi42LTM3LjggMTItNDAuMiA5LTIuMiAxNC44IDEgMzUuNiAyMC4yIDI0LjggMjIuOCA0My42IDM2LjYgNjIuOCA0NS44IDggMy44IDE3LjggOS4yIDIyIDEyIDQuMiAyLjggMTQuOCA3IDIzLjQgOS4yIDguNiAyLjIgMjQuMiA2LjggMzQuOCAxMC4yIDEzLjQgNC40IDIzLjYgNi40IDMzIDYuNiAxMi44LjIgMTQuMi0uMiAxOC42LTUuNCA0LTQuOCA0LjgtNy44IDQuOC0xOS4yIDAtMTQuNCA1LjYtMzkuNiAxMS4yLTUwLjYgNC4yLTguNCAyOS4yLTM0LjIgMzkuOC00MS40IDcuOC01LjQgMzUuNi0xNiA1Mi0yMCAxNC4yLTMuNiAzMi42LTEuMiA1Mi40IDYuOHoiLz48L3N2Zz4=);
+    }
+    
+    
+    
+    .footer-sns-weibo {
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgY2xhc3M9Imljb24iIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiPjxwYXRoIGQ9Ik0xMzUuMiA3OWMtOC42IDMtMjIuOCAxMi40LTMyLjggMjEuOC04LjIgNy44LTIyLjIgMzEtMjQuNiA0MC42LTEgNC4yLTEuNiAxNjctMS42IDM2NC42IDAgMjg0LjguNCAzNTguNCAyLjYgMzY0IDEuNCAzLjggNi44IDEzIDEyIDIwLjQgOC44IDEyLjggMjQgMjUuNCA0MS44IDM1IDYgMy40IDI3IDMuNiAzNjcuNCAzLjYgMjg2LjIgMCAzNjIuNi0uNiAzNjktMi42IDE5LjgtNi4yIDUxLjItMzcuNiA1Ny40LTU3LjQgMi02LjQgMi42LTgyLjYgMi42LTM2OFYxNDFsLTQuMi05Yy0xMS42LTI0LTM5LjItNDkuOC01OC4yLTU0LjItNC4yLTEtMTY4LjYtMS42LTM2NS42LTEuNi0zMDAgMC0zNTkuMi40LTM2NS44IDIuOHptNTU4LjYgMTY5YzguNiAxLjIgMTYuNCA0IDI0IDguNiA2LjIgMy42IDE1LjIgOC4yIDIwLjIgMTAuMiA1LjggMi4yIDE0LjYgOC44IDI1IDE4LjggMjUuNCAyNC44IDMyLjggMzQuOCAzNy44IDUxIDIuNiA4IDcuNCAxOS44IDEwLjggMjYuNCA3LjggMTQuNiAxMS42IDQyLjYgOS40IDY5LTEgMTQuMi0yLjIgMTguNi03LjQgMjYuNC0zLjIgNS4yLTkgMTIuMi0xMi44IDE1LjYtMTMuOCAxMi0zNCA1LjgtMzguOC0xMi0xLjYtNi0xLjQtMTEuNCAxLjItMjMuNCA0LjItMjAgMy00Ni0yLjYtNTguNi0yLjItNS04LTEyLjYtMTIuOC0xNi44LTQuOC00LjItMTQuNi0xNi40LTIxLjgtMjYuOC03LjItMTAuNi0xNS4yLTIwLjgtMTgtMjIuOC0yLjgtMi0xMi42LTYtMjItOS0xNC40LTQuNC0yMC44LTUuNC00My01LjYtMjgtLjItMzEuNC0xLjItNDIuNC0xMS42LTcuNC03LTguNi0xNS42LTMuOC0yNS4yIDctMTMuMiAxNi40LTE2IDU0LjItMTYgMTYuNiAwIDM1LjguOCA0Mi44IDEuOHptLTIxMy42IDc1LjZjMjAuMiAxNS40IDIwLjYgMTYuNCAyMiA0OCAuNiAxNSAxLjggMjkgMi42IDMxIDIuOCA2LjIgMTEgNi42IDIxLjYuNiA1LjQtMy4yIDE0LTUuOCAyMC02LjQgNS44LS42IDE4LjgtMi40IDI5LTQuMiAxNy4yLTMgMTkuNC0zIDM2IC40IDMyIDYuNiAzNS44IDkuMiA0NC4yIDMxLjYgNS4yIDE0IDUuNCAyMS40IDEuMiAzMi44LTIuMiA1LjQtMi44IDExLTIgMTUuNCAxLjggMTAgMTcuNiAyMy40IDM1IDMwLjIgMTEuMiA0LjIgMTYuMiA3LjYgMjcgMTkgMTkuMiAxOS44IDIwLjIgMjMgMjAgNTktLjIgMzUtLjQgMzUuNC0xOS44IDYzLjYtMTMuOCAxOS44LTMyLjQgMzguNi00OSA1MC01IDMuNC0xMi4yIDguOC0xNS44IDEyLTMuOCAzLjItMTEuNiA4LTE3LjIgMTAuNC01LjYgMi42LTE0LjYgNy40LTE5LjggMTAuNi01LjIgMy40LTE1LjggNy42LTIzLjggOS40LTggMi0yMS4yIDYuNi0yOS42IDEwLjItMjIuNCAxMC0zNi4yIDExLjItMTIxLjggMTAuNGwtNzUtLjYtMTktOC40Yy0xMC42LTQuNi0yNS40LTkuOC0zMy0xMS42LTcuNi0xLjYtMTgtNS44LTIzLTlzLTE0LjItOC0yMC40LTEwLjhjLTE4LTgtNTkuNC00Ni4yLTY2LTYxLjItMi4yLTUtNy40LTE0LjQtMTEuNC0yMC44bC03LjItMTJWNTQ5bDcuNi0xMy42YzQuMi03LjQgOS40LTE4LjYgMTEuNi0yNC44IDMuOC0xMS40IDEzLjQtMjcuOCAyNC44LTQyLjYgMjAuMi0yNi4yIDM4LjQtNDYuOCA1My02MCA5LjItOC4yIDIxLTE4LjYgMjYtMjMuMiA1LTQuNCAxMy4yLTExIDE4LjYtMTQuNiA1LjItMy40IDkuNC03LjIgOS40LTggMC0xIDUuNi00LjYgMTIuNi04LjIgNi44LTMuOCAxNi40LTkuNiAyMS40LTEzLjIgNS0zLjYgMTQuNC04IDIxLTkuOCA2LjYtMiAxNy44LTYuNiAyNS0xMC4yIDEyLTYuMiAxNC40LTYuOCAzMi40LTYuOGgxOS40bDEyLjQgOS42em0yMDMuNiAxMy4yYzMgMS42IDYuNiA0LjQgOCA2IDEuNiAxLjggOS40IDcgMTcuNCAxMS42IDE3IDkuNiAxOSAxMyAyNCA0MiAzLjQgMjAuNCAyLjYgMzIuMi0zLjQgNDMuOC03LjYgMTUuMi0yMi44IDIwLjYtMzEuMiAxMS4yLTctNy42LTkuMi0xMy44LTEwLjYtMjkuNi0xLjItMTMuMi0yLjQtMTYuNC05LjYtMjcuMi0xMS0xNi0xNi44LTIwLjYtMjcuMi0yMC42LTEwIDAtMjQtNi4yLTI3LTExLjYtNS44LTEwLjguNC0yNC42IDEyLjQtMjguNCA4LjYtMi42IDQwLjItLjggNDcuMiAyLjh6Ii8+PHBhdGggZD0iTTQyNCA0NzcuNGMtMzIuNiAzLjYtNDcuOCA3LTYxLjggMTMuOC04IDQtMTkgOC40LTI0LjIgMTAtNS4yIDEuNi0xMi40IDUtMTYuMiA3LjgtMy44IDIuNi0xMSA3LjYtMTYuMiAxMS0xMy40IDguOC0zNSAzMy4yLTM4LjggNDQtMS44IDUtNS40IDE0LjQtOC4yIDIxLTguOCAyMS4yLTguMiAyNi44IDQgNTMgMTAuNiAyMi42IDExIDIzLjIgMjcuNiAzNi40IDIxIDE2LjggMjMuNiAxOC40IDUwLjggMjguMiAyMC4yIDcuMiAyNC42IDggNTQgMTAgMTcuNiAxLjIgNDUuNiAyLjIgNjIgMi4ybDMwIC4yIDE3LjQtOC40YzkuNi00LjYgMjIuNC05LjYgMjguMi0xMS40IDYtMS44IDE1LjQtNi4yIDIwLjgtMTAgNS40LTMuNiAxMy40LTguNiAxNy42LTEwLjggOS4yLTQuNiAzOS0zNC40IDM5LTM5IDAtMS42IDMuOC0xMC4yIDguNC0xOC44IDcuOC0xNC4yIDguNi0xNi44IDguNC0yOS42LS4yLTEyLjgtMS0xNS44LTEwLjYtMzQuNi0xMy40LTI2LjItMzAuNC00My42LTUwLjItNTEuNC03LjItMi44LTE2LjItNy0yMC05LjYtMTEuNC03LjYtMTcuNi05LjItNDguOC0xMi40LTI3LjYtMi44LTU2LjYtMy40LTczLjItMS42em0zOS40IDQ0LjRjMTEuMiAyLjIgMjIuNiA1IDI1IDYuNCA3IDMuNiAyNiAyMS44IDMwLjggMjkuNCA4LjYgMTMuNCAxMSA1NCA0LjYgNzctMi42IDkuNi0xOC44IDI3LjYtMzkuNCA0NC4yLTE1LjYgMTIuNC0xNyAxMy0yOS44IDE0LTcuNi44LTIyLjQgMi4yLTMzIDMuNi0yMi42IDIuNi00NS42IDEtNTMuOC0zLjgtMy4yLTItOC02LjgtMTAuOC0xMC44LTIuNi00LjItOC40LTEwLjQtMTIuOC0xMy44LTguMi02LjgtMTMuNC0xNi40LTE5LjQtMzctMy44LTEzLjItMi44LTIxLjggNS4yLTQ3LjYgMy4yLTEwLjQgNi0xNC42IDE3LjQtMjUuOCAxMi40LTEyLjIgMjMuOC0yMi4yIDMzLjItMjkuNiA0LTMgMzguNi05LjQgNTMuNC05LjggNSAwIDE4LjIgMS42IDI5LjQgMy42eiIvPjxwYXRoIGQ9Ik0zODcuMiA2MDZjLTEyLjIgMy44LTE4LjIgMTMuNC0xNSAyNC42IDUuOCAyMS4yIDI3LjggMjUuOCA0MC42IDguNiA2LjYtOC44IDcuOC0xNi4yIDQuMi0yNC00LjgtMTAuMi0xNS40LTEzLjQtMjkuOC05LjJ6Ii8+PC9zdmc+);
+    }
+    
+    
+    
+    
+    .footer-sns-github {
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgY2xhc3M9Imljb24iIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiPjxwYXRoIGQ9Ik0xMzguNCA3OGMtNi40IDEuNC0yNi40IDE0LjItMzYgMjIuOC04IDcuMi0yMiAyOS44LTI0LjQgMzkuMi0xLjYgNi40LTIgMTEzLjItMS42IDM2OCAuNiAyOTkuNCAxIDM1OS44IDMuNCAzNjQgMTEgMjAuMiAyMS42IDMyLjQgMzcuMiA0MyAxNS42IDEwLjYgMTcuMiAxMS4yIDM0LjIgMTMuMiAxMC42IDEuMiA2My40IDEuNiAxMjcuNiAxLjRsMTA5LjYtLjYgNi02LjggNi4yLTYuOC0xLjItMjUuMmMtLjgtMTUuOC0uMi0zMy40IDEuNC00Ny4yIDMtMjUuNCAxLjQtMzYuMi02LTQzLjItNS00LjYtNi4yLTQuOC0zMC42LTQuMi0yNy42LjgtMjQgMS42LTY4LjgtMTYtOC42LTMuNC0yMi42LTE4LTI4LjQtMjkuOC0xMS40LTIyLjgtMjctNDUtMzkuMi01NS42LTE0LTEyLjItMTkuOC0yMC44LTE5LjgtMjguNiAwLTExLjYgMTMuNi0xMi42IDMzLjItMi40IDE2LjYgOC44IDIwLjggMTIuNCA0MC44IDM2LjIgMjQuMiAyOC42IDMxIDMzLjYgNTQgMzkuNiAxNS4yIDQgNDIuMiAzIDUxLjQtMS44IDktNC42IDE4LTE1LjIgMjQuNC0yOS4yIDExLjQtMjQuMiA3LjQtMzEuMi0yMC42LTM2LjgtOS44LTItMjkuMi04LTQzLjQtMTMuNC00MC40LTE1LjgtNjQuNi0zNy40LTg1LjQtNzYuMi0xMS42LTIxLjgtMTUuNC0zMy0xOC4yLTUzLjYtNC4yLTMyLjItNC44LTYwLjItMS40LTg0IDMuNC0yMy44IDYuOC0zMi44IDIwLjItNTQgNC02IDguOC0xNS42IDExLTIxLjQgMy44LTEwIDMuOC0xMS42IDEtMzAtNS4yLTM0LjItMy4yLTUyLjQgNy42LTcwLjIgNy4yLTEyLjIgMTUtMTcuMiAyNC4yLTE1LjggMTIuOCAyLjIgNTIgMTcuNCA2Ni44IDI2LjIgMjYgMTUgMjkgMTUuNCA4Mi40IDcuMiAyNC42LTMuOCAzMy44LTQuMiA2MC0zLjIgMTcgLjYgNDEuNCAzIDU0IDUuMiAzOC40IDYuNiA0OS42IDUuMiA3My0xMCA2LjYtNC4yIDE3LjQtOS40IDI0LTExLjYgNi42LTIuMiAxNi01LjggMjEtOC4yIDEzLTYgMjgtNS42IDM1LjYuOCAxMi40IDEwLjQgMTguNiA0MS40IDE0LjQgNzEuNi00LjQgMzAuNi0zIDM5LjQgOC40IDUzLjggMy40IDQuNCAxMS4yIDE5LjIgMTcuNCAzMy4yTDc3NSA0NDN2NzhsLTEwIDI4Yy0xNS4yIDQzLjItMzYuOCA3My4yLTY2LjIgOTIuOC0xMy40IDguOC01NyAyNS40LTc2LjggMjktMjguMiA1LjItMzMuMiAxMi42LTIyIDMyLjIgMTEuMiAxOS40IDEyLjQgMzIuOCAxMS42IDEyOS42bC0uNiA4NS44IDUuNCA0LjZjMy42IDMgOS4yIDUuMiAxNiA2IDUuOC44IDYwLjIgMSAxMjAuNi42IDEwOC40LS42IDExMC4yLS42IDExOS01IDI0LTExLjYgNDAtMjcuNCA1MS42LTUwLjZsNS40LTExIC42LTM0N2MuNC0yMjMtLjItMzUzLjQtMS40LTM2NS0yLTE3LTIuNi0xOC42LTEzLTM0LTEwLjYtMTUuNC0yMi44LTI2LjItNDMuMi0zNy4yLTQuMi0yLjQtNjQuNi0yLjgtMzY2LTMuMi0xOTguNiAwLTM2NCAuNC0zNjcuNiAxLjR6Ii8+PC9zdmc+);
+    }
+    
+    
+    
+    .footer-sns-zhihu {
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgY2xhc3M9Imljb24iIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiPjxwYXRoIGQ9Ik0xMzYuOCA3OC44Yy04LjYgMi44LTI0IDEyLjQtMzMuNiAyMS04LjYgNy44LTIxLjQgMjcuOC0yNC40IDM3LjgtNC4yIDE0LTQgNzIzLjQgMCA3MzMuNCA4LjYgMjAuNiAzNi44IDQ4LjYgNTYgNTUuNiA5IDMuNCA3NDcuNCAzLjQgNzU2LjQgMCAxOS44LTcuMiA0OS0zNi42IDU2LTU2LjIgMi4yLTYgMi42LTc1LjYgMi44LTM2Ni40IDAtMjMzLjgtLjYtMzYxLjQtMi0zNjYtMS4yLTMuOC02LjYtMTMuOC0xMi4yLTIyLjItOC4yLTEyLjItMTMuNC0xNy40LTI1LjgtMjUuNi04LjQtNS44LTE5LTExLjQtMjMuMi0xMi4yLTQuNi0xLjItMTYzLjItMS44LTM3NC44LTEuOC0yOTMgMC0zNjguNi42LTM3NS4yIDIuNnptMTkwIDE0NS42YzUuNCA3LjYgNCAxNy40LTQuOCAzMS42LTkuOCAxNi0xMC44IDI3LjQtMyAzNSAyLjYgMi44IDYuNCA1IDguNCA1czM3LjguNCA3OS42LjZjNjggLjQgNzYuNi44IDgyLjQgMy44IDkuMiA1IDEyLjYgMTEgMTIuNiAyMiAwIDctMS4yIDEwLjgtNC44IDE1bC00LjggNS40LTM4IC4yYy01My44IDAtNTMuOCAwLTU1LjQgNTEuMi0uNiAxOC0xLjYgNDIuOC0yLjIgNTUtMS4yIDIyLjguNiAzMS42IDcuNiAzNi4yIDEuNC44IDIyLjIgMiA0NiAyLjZsNDMuMiAxIDguOCA2YzE1LjQgMTAuOCAxNy44IDI5LjIgNSAzNy01LjggMy42LTEwLjIgNC01MS44IDQtMzEgMC00NyAuOC01MC42IDIuNC03IDMuMi0xNC4yIDE3LjYtMTcuMiAzNC40LTMuMiAxNi42LTEgMjEuOCA5LjYgMjUuMiAxMy40IDQuMiAyMS44IDExLjIgNDkgNDEuNCAzNSAzOC44IDM2LjYgNDEgNDEuOCA1OC44IDcgMjMuOCAyLjIgNDEuOC0xMS40IDQxLjgtNy42IDAtMTItMy0yMS0xNC42LTEzLjgtMTcuNC01NC40LTY1LjgtNjItNzMuOC0xNS4yLTE2LTI5LjQtNS44LTM4LjggMjcuNC0xLjggNi42LTguOCAyMy4yLTE1LjYgMzctMTAuOCAyMi0xNCAyNi44LTI3LjQgMzkuNi0xOS42IDE5LjItMjYuNCAyMy01My42IDI5LjYtMjcuMiA2LjQtMzcgNS42LTM4LTMuNi0xLTguNCA0LjQtMTYuNCAyMC0yOSAxNi0xMyAzNi44LTM2LjYgNDUuMi01MS40IDMtNS4yIDguMi0xMy44IDExLjYtMTkgMy40LTUgMTEuOC0yMC40IDE4LjYtMzQuMiAxMC0yMCAxMy42LTI5LjQgMTcuMi00NyAyLjYtMTIuMiA2LjItMjUuNCA3LjgtMjkuNCA0LTkuNCA0LTIxLjQuMi0yNy01LjItNy40LTE2LTguOC02Mi42LTguNC01MC40LjQtNTUuMi0uOC01Ny42LTEzLjItMS44LTEwLjQgNS44LTI0LjQgMTYuMi0yOS44IDcuNC0zLjggMTEuOC00LjIgNTYuMi00LjhsNDguNC0uOCA0LjYtNWM0LjgtNSA0LjgtNSA1LTYxLjYgMC0zNS4yLS44LTU5LjItMi02My4yLTMuOC0xMS4yLTExLTE0LjgtMzAuMi0xNC44cy0yMS40IDEuNC0zMS4yIDE4LjJjLTguMiAxNC40LTIwLjYgMjguOC0zMy4yIDM4LjgtMTMuMiAxMC40LTIxLjYgMTMtMjggOS04LjQtNS42LTUuMi0yMy4yIDguMi00My4yIDQtNi40IDkuMi0xOC42IDEyLjItMjkuNiAzLTEwLjIgNy40LTIzLjIgMTAtMjkgMi40LTUuNiA2LTE2LjggOC0yNC42IDUuNi0yMy42IDI0LTUwLjggMzkuNC01OC40IDExLjItNS40IDE4LjYtNS40IDIyLjQuMnptNDUyIDY4LjJjMTEuOCA3LjggMTEuNC0uOCAxMC44IDIxNi0uNiAxODEtLjggMTk4LjgtNCAyMDMtNy42IDEwLjgtOS44IDExLjQtNTMuNiAxMi40bC00MSAxLTE0IDcuOGMtNy42IDQuMi0yMS4yIDEzLTI5LjggMTkuNC0yNS44IDE5LjItMzUgMTkuOC00My40IDMuMi0xMS44LTIzLjItMjMuNi0zMy4yLTM5LjQtMzMuNC04LjggMC0xMy42LTIuOC0xNy4yLTkuOC0yLjYtNC44LTMtMzMuOC0yLjYtMjA4LjguNC0xOTkuOC40LTIwMyA0LjQtMjA3LjQgMi4yLTIuNCA1LjgtNS4yIDgtNi4yIDIuMi0uOCA1MS44LTEuNCAxMTAtMS4yIDk5IC40IDEwNi42LjYgMTExLjggNHoiLz48cGF0aCBkPSJNNjA2LjggMzM3LjRjLTIuNC40LTYuNCAzLTkgNS44bC00LjggNS4yLS42IDE1Ni40LS40IDE1Ni40IDYuNCA5LjRjMy42IDUuMiA5LjggMTUuMiAxMy42IDIxLjggOCAxNC4yIDE2LjggMjAuNiAyNS42IDE4LjYgMy4yLS42IDEzLjgtNyAyMy42LTE0LjIgMjMtMTcgMjcuOC0xOSA1MC4yLTIwLjIgMTYuNC0xIDE5LjItMS44IDIzLjYtNi4yIDIuOC0yLjggNS02LjQgNS4yLTguMlY1MDUuNmMwLTExNi0uNi0xNTQuNC0yLjYtMTU4LjYtNC44LTEwLjQtOC40LTExLTcwLTEwLjgtMzEuMi4yLTU4LjYuOC02MC44IDEuMnoiLz48L3N2Zz4=);
+    }
+    
+    
+    
+</style>
+
+        
+        <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+
+
+        <script>lsloader.load("js/jquery.min.js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==")</script>
+    
+    
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Analytics -->
+    
+
+    <!-- Custom Head -->
+    
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#21-Top-Vue-js-UI-Libraries-For-Your-App"><span class="post-toc-number">1.</span> <span class="post-toc-text">21 Top Vue.js UI Libraries For Your App</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#"><span class="post-toc-number">1.1.</span> <span class="post-toc-text"> </span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-Vuetify"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">1. Vuetify</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-Quasar-framework"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">2. Quasar framework</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-Element"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">3. Element</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-Vue-material"><span class="post-toc-number">1.1.4.</span> <span class="post-toc-text">4. Vue material</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-Keen-UI"><span class="post-toc-number">1.1.5.</span> <span class="post-toc-text">5. Keen-UI</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-Buefy"><span class="post-toc-number">1.1.6.</span> <span class="post-toc-text">6. Buefy</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-Bootstrap-Vue"><span class="post-toc-number">1.1.7.</span> <span class="post-toc-text">7. Bootstrap Vue</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#8-Muse-UI"><span class="post-toc-number">1.1.8.</span> <span class="post-toc-text">8. Muse-UI</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#9-AT-UI"><span class="post-toc-number">1.1.9.</span> <span class="post-toc-text">9. AT-UI</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#10-Vux"><span class="post-toc-number">1.1.10.</span> <span class="post-toc-text">10. Vux</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#11-iView"><span class="post-toc-number">1.1.11.</span> <span class="post-toc-text">11. iView</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#12-Uiv"><span class="post-toc-number">1.1.12.</span> <span class="post-toc-text">12. Uiv</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#13-Vuikit"><span class="post-toc-number">1.1.13.</span> <span class="post-toc-text">13. Vuikit</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#14-Onsen-UI-Vue"><span class="post-toc-number">1.1.14.</span> <span class="post-toc-text">14. Onsen UI + Vue</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#15-Semantic-Ui-Vue"><span class="post-toc-number">1.1.15.</span> <span class="post-toc-text">15. Semantic Ui + Vue</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#16-Fish-UI"><span class="post-toc-number">1.1.16.</span> <span class="post-toc-text">16. Fish-UI</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#17-Mint-UI"><span class="post-toc-number">1.1.17.</span> <span class="post-toc-text">17. Mint UI</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#18-Framework-7-Vue"><span class="post-toc-number">1.1.18.</span> <span class="post-toc-text">18. Framework 7 Vue</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#19-Cube-UI"><span class="post-toc-number">1.1.19.</span> <span class="post-toc-text">19. Cube UI</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#20-Vueblu"><span class="post-toc-number">1.1.20.</span> <span class="post-toc-text">20. Vueblu</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#21-Ant-design-Vue"><span class="post-toc-number">1.1.21.</span> <span class="post-toc-text">21. Ant design Vue</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Honorable-mentions-⭐️"><span class="post-toc-number">1.1.22.</span> <span class="post-toc-text">Honorable mentions ⭐️</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#转载自：https-hackernoon-com-21-top-vue-js-ui-libraries-for-your-app-4556e5a9060e"><span class="post-toc-number">1.1.23.</span> <span class="post-toc-text">转载自：https://hackernoon.com/21-top-vue-js-ui-libraries-for-your-app-4556e5a9060e</span></a></li></ol></li></ol></li></ol>
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+    
+
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                21 top vueJS libs
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051107.jpg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>AppleSun</strong>
+        <span>7月 02, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" title="标签">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/js/">js</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/vue/">vue</a>
+    </ul>
+    
+
+    <!-- Share -->
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="21-Top-Vue-js-UI-Libraries-For-Your-App"><a href="#21-Top-Vue-js-UI-Libraries-For-Your-App" class="headerlink" title="21 Top Vue.js UI Libraries For Your App"></a>21 Top Vue.js UI Libraries For Your App</h1><h2 id=""><a href="#" class="headerlink" title=" "></a> </h2><p>As the star-wars are raging, Vue.js recently passed React in the number of GitHub stars. Although still behind React in the sheer number of downloads according to NPM, the popularity of Vue.js seems to be growing.</p>
+<p>Like React, one of Vue’s best features is the ability to compose your UI using isolated and modular components. To help build your next application faster, here are some of the best UI component libraries out there in 2018.</p>
+<a id="more"></a>
+<p><strong>Tip</strong>: Using <a href="https://bitsrc.io/" target="_blank" rel="noopener"><strong>Bit’s component platform</strong></a> you can turn any component into an API that you can use from other projects, and even install with NPM, with 0 refactoring. You can also collaborate and share collections with your team.</p>
+<p><a href="https://bitsrc.io/" target="_blank" rel="noopener"><strong>Bit - Share and build with code components*</strong>Bit helps you share, discover and use code components between projects and applications to build new features and…*bitsrc.io</a></p>
+<h3 id="1-Vuetify"><a href="#1-Vuetify" class="headerlink" title="1. Vuetify"></a>1. Vuetify</h3><p><img src="https://cdn-images-1.medium.com/max/1600/1*vBqs23J5OX_Lfn-E08Zqlg.png" alt="img"></p>
+<p>This 11K stars popular library provides over 80 Vue.js components implemented according to Google’s material design guidelines. Vuetify supports all modern browsers across platforms, including IE11 and Safari 9+ (using polyfills), and comes with 8 vue-cli templates out of the box.</p>
+<p><a href="https://github.com/vuetifyjs/vuetify" target="_blank" rel="noopener"><strong>vuetifyjs/vuetify*</strong>vuetify - Material Component Framework for Vue.js 2*github.com</a></p>
+<h3 id="2-Quasar-framework"><a href="#2-Quasar-framework" class="headerlink" title="2. Quasar framework"></a>2. Quasar framework</h3><p>At over 6K stars, Quasar is a popular framework for building Vue.js powered responsive websites, PWAs, hybrid mobile Apps and Electron apps. Quasar also supports features such as HTML/CSS/JS minification, cache busting, tree shaking, sourcemapping, code-splitting &amp; lazy loading, ES6 transpiling, linting andaccessibility out of the box.</p>
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*IoJLTmP4zITUlE46vysDXA.png" alt="img"></p>
+<p><a href="https://github.com/quasarframework/quasar" target="_blank" rel="noopener"><strong>quasarframework/quasar*</strong>quasar - Quasar Framework*github.com</a></p>
+<h3 id="3-Element"><a href="#3-Element" class="headerlink" title="3. Element"></a>3. Element</h3><p><img src="https://cdn-images-1.medium.com/max/1600/1*YAO02FspgmOADcy87Iixqw.png" alt="img"></p>
+<p>At nearly 28K stars, Element is a Vue.js 2.0 UI Toolkit for Web. With a strong community and 350 contributors, the library provides a rich selection of customizable components along with a full style-guide and more resources.</p>
+<p><a href="https://github.com/ElemeFE/element" target="_blank" rel="noopener"><strong>ElemeFE/element*</strong>element — A Vue.js 2.0 UI Toolkit for Web*github.com</a></p>
+<h3 id="4-Vue-material"><a href="#4-Vue-material" class="headerlink" title="4. Vue material"></a>4. Vue material</h3><p><img src="https://cdn-images-1.medium.com/max/1600/1*_YSaE0xAWJkAGXFmU8efRA.png" alt="img"></p>
+<p>At 6K stars vue-material is a simple library implementing Googles material design. The library also provides a webpack boilerplate, SSR template for Nuxt.js and a single HTML file to start with the framework. Here are some <a href="https://codesandbox.io/s/github/vuematerial/examples/tree/master/examples/quick-start" target="_blank" rel="noopener">CodeSandBox examples</a> to help you get started.</p>
+<p><a href="https://github.com/vuematerial/vue-material" target="_blank" rel="noopener"><strong>vuematerial/vue-material*</strong>vue-material - Material design for Vue.js*github.com</a></p>
+<h3 id="5-Keen-UI"><a href="#5-Keen-UI" class="headerlink" title="5. Keen-UI"></a>5. Keen-UI</h3><p><img src="https://cdn-images-1.medium.com/max/1600/1*Xog3Jc4OYNPhJSb3Zhs6bw.png" alt="img"></p>
+<p>At nearly 3.5K stars, keen-ui is a collection of Vue components inspired by material design. Keen UI is not a CSS framework. As such, it doesn’t include a grid system, typography styles, etc. Instead, the focus is on interactive components that require Javascript.</p>
+<p><a href="https://github.com/JosephusPaye/Keen-UI" target="_blank" rel="noopener"><strong>JosephusPaye/Keen-UI*</strong>Keen-UI - A lightweight collection of essential UI components written with Vue and inspired by Material Design*github.com</a></p>
+<h3 id="6-Buefy"><a href="#6-Buefy" class="headerlink" title="6. Buefy"></a>6. Buefy</h3><p><img src="https://cdn-images-1.medium.com/max/1600/1*c2LjkzDmWQlhuMFJyCSYlw.png" alt="img"></p>
+<p>At 3k stars this library provides Lightweight UI components for Vue.js based on <a href="https://bulma.io/" target="_blank" rel="noopener">Bulma</a>, which are the library’s only two internal dependancies. The library’s size is about 60KB min+gzip (with Bulma included). You can check out the <a href="https://buefy.github.io/#/documentation/start" target="_blank" rel="noopener">live docs site</a> and play with the code on Codepen.</p>
+<p><a href="https://github.com/buefy/buefy" target="_blank" rel="noopener"><strong>buefy/buefy*</strong>buefy - Lightweight UI components for Vue.js based on Bulma*github.com</a></p>
+<h3 id="7-Bootstrap-Vue"><a href="#7-Bootstrap-Vue" class="headerlink" title="7. Bootstrap Vue"></a>7. Bootstrap Vue</h3><p><img src="https://cdn-images-1.medium.com/max/1600/1*IVko2W7nOdHbZVc7wAeHsw.png" alt="img"></p>
+<p>At over 5K stars, bootstrap-vue provides implementations of Bootstrap 4 components and grid system for Vue.js and with an automated WAI-ARIA accessibility markup. Here’s a quick link for <a href="https://bootstrap-vue.js.org/docs/components/alert" target="_blank" rel="noopener">browsing components</a> in the docs.</p>
+<p><a href="https://github.com/bootstrap-vue/bootstrap-vue" target="_blank" rel="noopener"><strong>bootstrap-vue/bootstrap-vue*</strong>bootstrap-vue - BootstrapVue provides one of the most comprehensive implementations of Bootstrap 4 components and grid…*github.com</a></p>
+<h3 id="8-Muse-UI"><a href="#8-Muse-UI" class="headerlink" title="8. Muse-UI"></a>8. Muse-UI</h3><p><img src="https://cdn-images-1.medium.com/max/1600/1*38_fcGwYVGciNfgtC4l7Hg.png" alt="img"></p>
+<p>At over 6K stars, Muse is yet another MD library for Vue 2.0, providing over 40 UI components and customizable themes. The docs are mainly in Chinese, but most is self explanatory. The project is actively developed and maintained.</p>
+<p><a href="https://github.com/museui/muse-ui" target="_blank" rel="noopener"><strong>museui/muse-ui*</strong>muse-ui — Material Design UI library for Vuejs 2.0*github.com</a></p>
+<h3 id="9-AT-UI"><a href="#9-AT-UI" class="headerlink" title="9. AT-UI"></a>9. AT-UI</h3><p><img src="https://cdn-images-1.medium.com/max/1600/1*PXgHth-Ged07hzt69azTZw.png" alt="img"></p>
+<p>At nearly 1.5K stars, AT-UI provides a modular front-end UI framework for developing fast web interfaces based on Vue.js, suited for desktop apps. With an NPM + Webpack + Babel Front-End development workflow and independent CSS styling, this library is worth checking out.</p>
+<p><a href="https://github.com/at-ui/at-ui" target="_blank" rel="noopener"><strong>AT-UI/at-ui*</strong>at-ui - A fresh and flat UI-Kit specially for desktop application, made with ♥ by Vue.js 2.0*github.com</a></p>
+<h3 id="10-Vux"><a href="#10-Vux" class="headerlink" title="10. Vux"></a>10. Vux</h3><p><img src="https://cdn-images-1.medium.com/max/1600/1*Eu0n2QMCIwuT_Xr1JxJvRQ.png" alt="img"></p>
+<p>At over 13K stars, Vux is a popular community library is based on WeUI and Vue 2.0. The library also supports a webpack + vue-loader + vux workflow. The <a href="https://vux.li/" target="_blank" rel="noopener">docs</a> here are also in Chinese, and so is the live <a href="http://webpack%20+%20vue-loader%20+%20vux/" target="_blank" rel="noopener">community hub</a>.</p>
+<p><a href="https://github.com/airyland/vux" target="_blank" rel="noopener"><strong>airyland/vux*</strong>vux - Mobile UI Components based on Vue &amp; WeUI*github.com</a></p>
+<h3 id="11-iView"><a href="#11-iView" class="headerlink" title="11. iView"></a>11. iView</h3><p><img src="https://cdn-images-1.medium.com/max/1600/1*38SwfE3d5VYbQvEHiqibmQ.png" alt="img"></p>
+<p>At nearly 16K stars, iView provides dozens of UI components and widgets built with Vue.js and styled with a clean and elegant design. iView is widely adopted and <a href="https://www.iviewui.com/docs/guide/update-en" target="_blank" rel="noopener">actively maintained</a>, and comes with its own <a href="https://github.com/iview/iview-cli" target="_blank" rel="noopener">CLI tool</a> to help create projects in a visual way. This one is worth trying out.</p>
+<p><a href="https://github.com/iview/iview" target="_blank" rel="noopener"><strong>iview/iview*</strong>iview - A high quality UI Toolkit built on Vue.js 2.0*github.com</a></p>
+<h3 id="12-Uiv"><a href="#12-Uiv" class="headerlink" title="12. Uiv"></a>12. Uiv</h3><p><img src="https://cdn-images-1.medium.com/max/1600/1*V_KnONx546iNzv2VGkHtDg.png" alt="img"></p>
+<p>At “only” 550 stars, Uiv is a Bootstrap 3 component library for Vue 2. All component combined are ~20KB, and the only external dependencies are Vue and Bootstrap CSS. A Webpack-based workflow is supported.</p>
+<p><a href="https://github.com/wxsms/uiv" target="_blank" rel="noopener"><strong>wxsms/uiv*</strong>uiv - Bootstrap 3 components implemented by Vue 2.*github.com</a></p>
+<h3 id="13-Vuikit"><a href="#13-Vuikit" class="headerlink" title="13. Vuikit"></a>13. Vuikit</h3><p><img src="https://cdn-images-1.medium.com/max/1600/1*ETLKgIZzDV-neyYVy4XYYg.png" alt="img"></p>
+<p>At 1K stars vuikit is a responsive Vue UI library for web site interfaces, with a clean and consistent design. The library is build as a “monorepo” managed by Yarn workspaces, when icons and themes are published as separate packages.</p>
+<p><a href="https://github.com/vuikit/vuikit" target="_blank" rel="noopener"><strong>vuikit/vuikit*</strong>vuikit - A responsive Vue UI library for web site interfaces*github.com</a></p>
+<h3 id="14-Onsen-UI-Vue"><a href="#14-Onsen-UI-Vue" class="headerlink" title="14. Onsen UI + Vue"></a>14. Onsen UI + Vue</h3><p><img src="https://cdn-images-1.medium.com/max/1600/1*ZP90JwrPt6s_j9t9uDaZsg.png" alt="img"></p>
+<p>Based on the popular Onsen-UI frameworks, These Vue bindings for the provide components that wrap the core web Components and expose a Vue-like API. Onsen UI Components are also designed to act reactively to props.</p>
+<p><a href="https://onsen.io/v2/guide/vue/" target="_blank" rel="noopener"><strong>Vue.js 2+ - Onsen UI*</strong>Learn how to use Vue.js with Onsen UI.*onsen.io</a></p>
+<h3 id="15-Semantic-Ui-Vue"><a href="#15-Semantic-Ui-Vue" class="headerlink" title="15. Semantic Ui + Vue"></a>15. Semantic Ui + Vue</h3><p><img src="https://cdn-images-1.medium.com/max/1600/1*zqJozxf9mrotZzWoLDfR3g.png" alt="img"></p>
+<p>This project is basically a Vue.js integration for the popular Semantic-UI framework. Still under development, the library provides an API similar to that of Semantic-UI as well as a set of customizable themes. See <a href="https://jsfiddle.net/pvjvekce/" target="_blank" rel="noopener">example</a>.</p>
+<p><a href="https://semantic-ui-vue.github.io/" target="_blank" rel="noopener"><strong>Semantic UI Vue*</strong>Semantic UI Vue is the Vue integration for Semantic UI*semantic-ui-vue.github.io</a></p>
+<h3 id="16-Fish-UI"><a href="#16-Fish-UI" class="headerlink" title="16. Fish-UI"></a>16. Fish-UI</h3><p><img src="https://cdn-images-1.medium.com/max/1600/1*UwRSKStHBv9D9w5-_u5KaA.png" alt="img"></p>
+<p>Although “only” at 500 stars and 3 contributors, fish-ui provides a Vue-based web toolkit with neat and clean looking components. The library supports a ES2015 + Webpack workflow. The documentation isn’t great, but the design is not to be overlooked. Your’e welcome to take a peek.</p>
+<p><a href="https://github.com/myliang/fish-ui" target="_blank" rel="noopener"><strong>myliang/fish-ui*</strong>fish-ui - A Vue.js 2.0 UI Toolkit for Web*github.com</a></p>
+<h3 id="17-Mint-UI"><a href="#17-Mint-UI" class="headerlink" title="17. Mint UI"></a>17. Mint UI</h3><p><img src="https://cdn-images-1.medium.com/max/1600/1*Vhi9yaFiA-9Ze3x633zf5g.png" alt="img"></p>
+<p>At over 11K stars, Mint-UI provides UI elements for Vue.js, with CSS and JS components for building mobile applications. When all imported, the compressed code takes only ~30kb (JS + CSS) gzip space. Import for individual components is supported. Here’s a <a href="http://elemefe.github.io/mint-ui/#/" target="_blank" rel="noopener">quick demo</a>.</p>
+<p><a href="https://github.com/ElemeFE/mint-ui/" target="_blank" rel="noopener"><strong>ElemeFE/mint-ui*</strong>mint-ui - Mobile UI elements for Vue.js*github.com</a></p>
+<h3 id="18-Framework-7-Vue"><a href="#18-Framework-7-Vue" class="headerlink" title="18. Framework 7 Vue"></a>18. Framework 7 Vue</h3><p><img src="https://cdn-images-1.medium.com/max/1600/1*da0nWX_EzxYEDh6eUCSIcA.png" alt="img"></p>
+<p>This integration provides almost all of Framework7’s elements and components with integration of Framework7 Router to render pages in a Vue completable way. The library is under <a href="https://github.com/framework7io/framework7-vue" target="_blank" rel="noopener">active development</a> and maintenance.</p>
+<p><a href="https://framework7.io/vue/" target="_blank" rel="noopener"><strong>Framework7 Vue*</strong>Bring components-syntax, structured data and data bindings to Framework7 with power and simplicity of Vue.js*framework7.io</a></p>
+<h3 id="19-Cube-UI"><a href="#19-Cube-UI" class="headerlink" title="19. Cube UI"></a>19. Cube UI</h3><p><img src="https://cdn-images-1.medium.com/max/1600/1*6qKODS1dDpj5oWV869Gjsw.png" alt="img"></p>
+<p>At over 3K stars cube-ui is a UI component library for Vue.js mobile apps. All components are unit-tested, and the library also supports <a href="https://didi.github.io/cube-ui/#/en-US/docs/post-compile" target="_blank" rel="noopener">post-compile</a> and component import on demand. Cube-UI is still under active development.</p>
+<p><a href="https://github.com/didi/cube-ui" target="_blank" rel="noopener"><strong>didi/cube-ui*</strong>cube-ui - 🔶 A fantastic mobile ui lib implement by Vue*github.com</a></p>
+<h3 id="20-Vueblu"><a href="#20-Vueblu" class="headerlink" title="20. Vueblu"></a>20. Vueblu</h3><p><img src="https://cdn-images-1.medium.com/max/1600/1*Q_GwdA-OC_5MJKYN7Eir3g.png" alt="img"></p>
+<p>At 1.5K stars, vueblu is a UI component library based on Vue 2.0 and <a href="https://bulma.io/" target="_blank" rel="noopener">Bulma</a>, made for building middle and back office products. It supports ES2015 and an NPM+Webpack+Babel workflow, and provides customizable themes.</p>
+<p><a href="https://github.com/chenz24/vue-blu" target="_blank" rel="noopener"><strong>chenz24/vue-blu*</strong>vue-blu - UI Component Library Base on Vue.js(2.x) and Bulma*github.com</a></p>
+<h3 id="21-Ant-design-Vue"><a href="#21-Ant-design-Vue" class="headerlink" title="21. Ant design Vue"></a>21. Ant design Vue</h3><p><img src="https://cdn-images-1.medium.com/max/1600/1*9nIeU_MdGEn4uJiKYAwOPg.png" alt="img"></p>
+<p>At 1.5K stars, this Vue.js integration for <a href="https://ant.design/" target="_blank" rel="noopener">Ant design</a> is built for developing enterprise-level back-end products with dozens of components implementing Ant design, and supports a Webpack-based debug build solution that supports ES6. Note that it hasn’t been developed for a while.</p>
+<p><a href="https://github.com/okoala/vue-antd" target="_blank" rel="noopener"><strong>okoala/vue-antd*</strong>vue-antd - Vue UI Component &amp; Ant.Design*github.com</a></p>
+<hr>
+<h3 id="Honorable-mentions-⭐️"><a href="#Honorable-mentions-⭐️" class="headerlink" title="Honorable mentions ⭐️"></a>Honorable mentions ⭐️</h3><p><a href="https://github.com/N3-components/N3-components" target="_blank" rel="noopener">n3-components</a>, <a href="https://vuikit.js.org/" target="_blank" rel="noopener">vuikit</a>, <a href="https://www.telerik.com/kendo-vue-ui" target="_blank" rel="noopener">Kendu UI Vue</a>, <a href="https://github.com/aidewoode/office-ui-fabric-vue" target="_blank" rel="noopener">Office Fabric-Vue</a>, <a href="http://kzima.github.io/vuestrap-base-components/#/" target="_blank" rel="noopener">vuestrap</a>, <a href="http://morgul.github.io/vueboot/" target="_blank" rel="noopener">vueboot</a>, <a href="http://framevuerk.com/" target="_blank" rel="noopener">framevuerk</a>, <a href="http://aidenzou.github.io/vue-weui/#!/" target="_blank" rel="noopener">Vue WeUI</a>, <a href="https://github.com/posva/vue-mdc" target="_blank" rel="noopener">Vue-MDC</a>… comment to add more! :)</p>
+<h3 id="转载自：https-hackernoon-com-21-top-vue-js-ui-libraries-for-your-app-4556e5a9060e"><a href="#转载自：https-hackernoon-com-21-top-vue-js-ui-libraries-for-your-app-4556e5a9060e" class="headerlink" title="转载自：https://hackernoon.com/21-top-vue-js-ui-libraries-for-your-app-4556e5a9060e"></a>转载自：<a href="https://hackernoon.com/21-top-vue-js-ui-libraries-for-your-app-4556e5a9060e" target="_blank" rel="noopener">https://hackernoon.com/21-top-vue-js-ui-libraries-for-your-app-4556e5a9060e</a></h3>
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2018/07/02/how-to-download-videos-from-acFun/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            下一篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2018/07/02/some-tricks/" id="post_nav-older" class="next-content">
+            上一篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051107.jpg" alt="AppleSun's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        If they can do it, so can you
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:1160948478@qq.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="https://github.com/CracKerMe" target="_blank" title="Github">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">phone</i>
+                        
+                        Github
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1160948478&amp;site=qq&amp;menu=yes" target="_blank" title="QQ">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">send</i>
+                        
+                        QQ
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2018/07/">七月 2018<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/05/">五月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">三月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/02/">二月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/12/">十二月 2016<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">十一月 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/10/">十月 2016<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">八月 2016<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">七月 2016<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/06/">六月 2016<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/05/">五月 2016<span class="sidebar_archives-count">6</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/about" title="关于我">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                关于我
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+<!--  -->
+
+<!-- Theme Material -->
+<!--  -->
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/DragonKnightLOL" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+        <a href="http://weibo.com/crackerme" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-weibo">
+                <span class="visuallyhidden">Weibo</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/CracKerMe" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+        <a href="https://www.zhihu.com/people/awebman" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-zhihu">
+                <span class="visuallyhidden">Zhihu</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+</div>
+
+
+            <!--Copyright-->
+            <div id="copyright">
+                Copyright&nbsp;©
+                
+                            <script type="text/javascript">var fd = new Date(); document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>
+                            爱尚|轻博客
+            </div>
+
+            <div class="mdl-mini-footer--right-section">
+                <div>
+                    <!-- <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div> -->
+                </div>
+            </div>
+            
+</footer>
+
+                    <!-- Import File -->
+
+
+    <script>lsloader.load("js/lazyload.min.js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==")</script>
+    <script>lsloader.load("js/js.min.js","/js/js.min.js?oAl/+lvaqTFV31JXTmbrNA==")</script>
+
+
+
+    <script>lsloader.load("js/nprogress.js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==")</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+    
+        <script>lsloader.load("js/smoothscroll.js","/js/smoothscroll.js?lOy/ACj5suSNi7ZVFVbpFQ==")</script>
+    
+
+
+
+
+
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Window Load-->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+</script>
+
+<!-- MathJax Load-->
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Bing Background -->
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.4.0 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
