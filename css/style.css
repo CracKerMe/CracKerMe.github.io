@@ -467,10 +467,10 @@ a {
         margin-bottom: 47.59px
     }
     #scheme-Paradox .material-layout .daily-pic {
-        width: calc(66.6666666667% - 16px)
+        width: 100%
     }
     #scheme-Paradox .material-layout .something-else {
-        width: calc(33.3333333333% - 16px)
+        width: 100%
     }
 }
 #scheme-Paradox .index-top-block-slogan {
