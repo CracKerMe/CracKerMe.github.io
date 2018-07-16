@@ -12,7 +12,7 @@
     
     <title>
         
-            时间戳timestamp与字符串输出转换 | 
+            JavaScript数组方法对比 | 
         
         爱尚|轻博客
     </title>
@@ -35,7 +35,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="AppleSun">
-    <meta name="description" itemprop="description" content="在前后端数据处理过程中，常常会和 时间戳打交道，并且 有规定格式去输出，为此 收集了一些常用的 timestamp的 输出，供大家参考">
+    <meta name="description" itemprop="description" content="Javascript提供了多种新增，移除，替换数组元素的方法，但是有些会影响原来的数组；有些则不会，它是新建了一个数组。">
     <meta name="keywords" content="null,js">
 
     <!-- Site Verification -->
@@ -65,26 +65,26 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://crackerme.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="时间戳timestamp与字符串输出转换 | 爱尚|轻博客">
+    <meta property="og:title" content="JavaScript数组方法对比 | 爱尚|轻博客">
     <meta property="og:image" content="/img/favicon.png" />
-    <meta property="og:description" content="在前后端数据处理过程中，常常会和 时间戳打交道，并且 有规定格式去输出，为此 收集了一些常用的 timestamp的 输出，供大家参考">
+    <meta property="og:description" content="Javascript提供了多种新增，移除，替换数组元素的方法，但是有些会影响原来的数组；有些则不会，它是新建了一个数组。">
     <meta property="og:article:tag" content="js"> 
 
     
-        <meta property="article:published_time" content="2月 20, 2017" />
-        <meta property="article:modified_time" content="4月 28, 2017" />
+        <meta property="article:published_time" content="7月 17, 2018" />
+        <meta property="article:modified_time" content="7月 17, 2018" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="时间戳timestamp与字符串输出转换 | 爱尚|轻博客">
-    <meta name="twitter:description" content="在前后端数据处理过程中，常常会和 时间戳打交道，并且 有规定格式去输出，为此 收集了一些常用的 timestamp的 输出，供大家参考">
+    <meta name="twitter:title" content="JavaScript数组方法对比 | 爱尚|轻博客">
+    <meta name="twitter:description" content="Javascript提供了多种新增，移除，替换数组元素的方法，但是有些会影响原来的数组；有些则不会，它是新建了一个数组。">
     <meta name="twitter:image" content="/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://crackerme.github.io" />
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://crackerme.github.io/2017/02/20/时间戳timestamp与字符串输出转换/index.html" />
+        <link rel="canonical" href="https://crackerme.github.io/2018/07/17/JavaScript数组方法对比/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -110,11 +110,11 @@
         },
         "description": "间歇性凌云壮志，持续性混吃等死"
     },
-    "headline": "时间戳timestamp与字符串输出转换",
-    "url": "https://crackerme.github.io/2017/02/20/时间戳timestamp与字符串输出转换/index.html",
-    "datePublished": "2月 20, 2017",
-    "dateModified": "4月 28, 2017",
-    "description": "在前后端数据处理过程中，常常会和 时间戳打交道，并且 有规定格式去输出，为此 收集了一些常用的 timestamp的 输出，供大家参考",
+    "headline": "JavaScript数组方法对比",
+    "url": "https://crackerme.github.io/2018/07/17/JavaScript数组方法对比/index.html",
+    "datePublished": "7月 17, 2018",
+    "dateModified": "7月 17, 2018",
+    "description": "Javascript提供了多种新增，移除，替换数组元素的方法，但是有些会影响原来的数组；有些则不会，它是新建了一个数组。",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://crackerme.github.io"
@@ -339,7 +339,7 @@
 
     
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Javascript提供了多种新增，移除，替换数组元素的方法，但是有些会影响原来的数组；有些则不会，它是新建了一个数组。"><span class="post-toc-number">1.</span> <span class="post-toc-text">Javascript提供了多种新增，移除，替换数组元素的方法，但是有些会影响原来的数组；有些则不会，它是新建了一个数组。</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#I-新增：影响原数组"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">I. 新增：影响原数组</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#II-新增：不影响原数组"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">II. 新增：不影响原数组</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#III-移除：影响原数组"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">III. 移除：影响原数组</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#IV-移除：不影响原数组"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">IV. 移除：不影响原数组</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#V-替换：影响原数组"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">V. 替换：影响原数组</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#VI-替换：不影响原数组"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">VI. 替换：不影响原数组</span></a></li></ol></li></ol>
         <!--
         <li class="mdl-menu__item">
             Some Action
@@ -377,7 +377,7 @@
         
     
             <p class="article-headline-p">
-                时间戳timestamp与字符串输出转换
+                JavaScript数组方法对比
             </p>
         </div>
 
@@ -396,7 +396,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>AppleSun</strong>
-        <span>2月 20, 2017</span>
+        <span>7月 17, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -432,16 +432,44 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>在前后端数据处理过程中，常常会和 时间戳打交道，并且 有规定格式去输出，为此 收集了一些常用的 timestamp的 输出，供大家参考</p>
-<a id="more"></a>
-<p>废话不多说，直接分析例子</p>
-<p>如果json传输过来的是 这样的数据</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var timestamp1 = 1403058804；</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">var newDate = new Date();</span><br><span class="line">newDate.setTime(timestamp3 * 1000);</span><br><span class="line">//把时间戳转换为标准时间</span><br><span class="line">------------------------------------</span><br><span class="line">// Wed Jun 18 2014 </span><br><span class="line">console.log(newDate.toDateString());</span><br><span class="line">------------------------------------</span><br><span class="line">// Wed, 18 Jun 2014 02:33:24 GMT </span><br><span class="line">console.log(newDate.toGMTString());</span><br><span class="line">------------------------------------</span><br><span class="line">// 2014-06-18T02:33:24.000Z</span><br><span class="line">console.log(newDate.toISOString());</span><br><span class="line">------------------------------------</span><br><span class="line">// 2014-06-18T02:33:24.000Z </span><br><span class="line">console.log(newDate.toJSON());</span><br><span class="line">------------------------------------</span><br><span class="line">// 2014年6月18日 </span><br><span class="line">console.log(newDate.toLocaleDateString());</span><br><span class="line">------------------------------------</span><br><span class="line">// 2014年6月18日 上午10:33:24 </span><br><span class="line">console.log(newDate.toLocaleString());</span><br><span class="line">------------------------------------</span><br><span class="line">// 上午10:33:24 </span><br><span class="line">console.log(newDate.toLocaleTimeString());</span><br><span class="line">------------------------------------</span><br><span class="line">// Wed Jun 18 2014 10:33:24 GMT+0800 (中国标准时间)</span><br><span class="line">console.log(newDate.toString());</span><br><span class="line">------------------------------------</span><br><span class="line">// 10:33:24 GMT+0800 (中国标准时间) </span><br><span class="line">console.log(newDate.toTimeString());</span><br><span class="line">-------------------------------------</span><br><span class="line">// Wed, 18 Jun 2014 02:33:24 GMT</span><br><span class="line">console.log(newDate.toUTCString());</span><br></pre></td></tr></table></figure>
-<p>以上可以根据您的需求进行 转换，需要注意的是，看清楚你的timestamp的位数。</p>
-<p>我这里 示例的 <code>timestamp是 10位</code>，如果后端给你返回的是<code>13位数</code>，请 在setTime里面<code>不要在*1000</code></p>
-<p><strong>Yours Sincerely AppleSun</strong></p>
-
+        <h3 id="Javascript提供了多种新增，移除，替换数组元素的方法，但是有些会影响原来的数组；有些则不会，它是新建了一个数组。"><a href="#Javascript提供了多种新增，移除，替换数组元素的方法，但是有些会影响原来的数组；有些则不会，它是新建了一个数组。" class="headerlink" title="Javascript提供了多种新增，移除，替换数组元素的方法，但是有些会影响原来的数组；有些则不会，它是新建了一个数组。"></a>Javascript提供了多种新增，移除，替换数组元素的方法，但是有些会影响原来的数组；有些则不会，它是新建了一个数组。</h3><a id="more"></a>
+<p><strong>注意</strong>：区分以下两个方法的不同点：</p>
+<ol>
+<li><code>array.splice()</code> 影响原来的数组</li>
+<li><code>array.slice()</code> 不影响原来的数组</li>
+</ol>
+<h4 id="I-新增：影响原数组"><a href="#I-新增：影响原数组" class="headerlink" title="I. 新增：影响原数组"></a>I. 新增：影响原数组</h4><p>使用 <code>array.push()</code> 和 <code>array.ushift()</code> 新增元素会影响原来的数组。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> mutatingAdd = [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>, <span class="string">'e'</span>];</span><br><span class="line">mutatingAdd.push(<span class="string">'f'</span>); <span class="comment">// ['a', 'b', 'c', 'd', 'e', 'f']</span></span><br><span class="line">mutatingAdd.unshift(<span class="string">'z'</span>); <span class="comment">// ['z', 'b', 'c', 'd', 'e' 'f']</span></span><br></pre></td></tr></table></figure>
+<h4 id="II-新增：不影响原数组"><a href="#II-新增：不影响原数组" class="headerlink" title="II. 新增：不影响原数组"></a>II. 新增：不影响原数组</h4><p>两种方式新增元素不会影响原数组，第一种是 <code>array.concat()</code> 。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr1 = [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>, <span class="string">'e'</span>];</span><br><span class="line"><span class="keyword">const</span> arr2 = arr1.concat(<span class="string">'f'</span>); <span class="comment">// ['a', 'b', 'c', 'd', 'e', 'f']</span></span><br><span class="line"><span class="built_in">console</span>.log(arr1); <span class="comment">// ['a', 'b', 'c', 'd', 'e']</span></span><br></pre></td></tr></table></figure>
+<p>第二种方法是使用   的展开（spread）操作符，展开操作符是三个点（…）</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr1 = [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>, <span class="string">'e'</span>];</span><br><span class="line"><span class="keyword">const</span> arr2 = [...arr1, <span class="string">'f'</span>]; <span class="comment">// ['a', 'b', 'c', 'd', 'e', 'f']</span></span><br><span class="line"><span class="keyword">const</span> arr3 = [<span class="string">'z'</span>, ...arr1]; <span class="comment">// ['z', 'a', 'b', 'c', 'd', 'e']</span></span><br></pre></td></tr></table></figure>
+<p>展开操作符会复制原来的数组，从原数组取出所有元素，然后存入新的环境。</p>
+<h4 id="III-移除：影响原数组"><a href="#III-移除：影响原数组" class="headerlink" title="III. 移除：影响原数组"></a>III. 移除：影响原数组</h4><p>使用 <code>array.pop()</code> 和 <code>array.shift()</code> 移除数组元素时，会影响原来的数组。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> mutatingRemove = [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>, <span class="string">'e'</span>];</span><br><span class="line">mutatingRemove.pop(); <span class="comment">// ['a', 'b', 'c', 'd']</span></span><br><span class="line">mutatingRemove.shift(); <span class="comment">// ['b', 'c', 'd']</span></span><br></pre></td></tr></table></figure>
+<p><code>array.pop()</code> 和 <code>array.shift()</code> 返回被移除的元素，你可以通过一个变量获取被移除的元素。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> mutatingRemove = [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>, <span class="string">'e'</span>];</span><br><span class="line"><span class="keyword">const</span> returnedValue1 = mutatingRemove.pop();</span><br><span class="line"><span class="built_in">console</span>.log(mutatingRemove); <span class="comment">// ['a', 'b', 'c', 'd']</span></span><br><span class="line"><span class="built_in">console</span>.log(returnedValue1); <span class="comment">// 'e'</span></span><br><span class="line"><span class="keyword">const</span> returnedValue2 = mutatingRemove.shift();</span><br><span class="line"><span class="built_in">console</span>.log(mutatingRemove); <span class="comment">// ['b', 'c', 'd']</span></span><br><span class="line"><span class="built_in">console</span>.log(returnedValue2); <span class="comment">// 'a'</span></span><br></pre></td></tr></table></figure>
+<p><code>array.splice()</code> 也可以删除数组的元素。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> mutatingRemove = [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>, <span class="string">'e'</span>];</span><br><span class="line">mutatingRemove.splice(<span class="number">0</span>, <span class="number">2</span>); <span class="comment">// ['c', 'd', 'e']</span></span><br></pre></td></tr></table></figure>
+<p>像 <code>array.pop()</code> 和 <code>array.shift()</code> 一样，<code>array.splice()</code> 同样返回移除的元素。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> mutatingRemove = [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>, <span class="string">'e'</span>];</span><br><span class="line"><span class="keyword">let</span> returnedItems = mutatingRemove.splice(<span class="number">0</span>, <span class="number">2</span>);</span><br><span class="line"><span class="built_in">console</span>.log(mutatingRemove); <span class="comment">// ['c', 'd', 'e']</span></span><br><span class="line"><span class="built_in">console</span>.log(returnedItems) <span class="comment">// ['a', 'b']</span></span><br></pre></td></tr></table></figure>
+<h4 id="IV-移除：不影响原数组"><a href="#IV-移除：不影响原数组" class="headerlink" title="IV. 移除：不影响原数组"></a>IV. 移除：不影响原数组</h4><p>  的 <code>array.filter()</code> 方法基于原数组创建一个新数组，新数组仅包含匹配特定条件的元素。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr1 = [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>, <span class="string">'e'</span>];</span><br><span class="line"><span class="keyword">const</span> arr2 = arr1.filter(<span class="function"><span class="params">a</span> =&gt;</span> a !== <span class="string">'e'</span>); <span class="comment">// ['a', 'b', 'c', 'd']  </span></span><br><span class="line"><span class="comment">// 或者const arr2 = arr1.filter(a =&gt; &#123;return a !== 'e';&#125;); // ['a', 'b', 'c', 'd']</span></span><br></pre></td></tr></table></figure>
+<p>以上代码的条件是“不等于 ‘e’ ”，因此新数组（<code>arr2</code>）里面没有包含 ‘e’。</p>
+<hr>
+<p><strong>箭头函数的独特性</strong>：</p>
+<p><strong>单行箭头函数</strong>，’return’ 关键字是默认自带的，不需要手动书写。</p>
+<p>可是，<strong>多行箭头函数</strong>就需要明确地返回一个值。</p>
+<hr>
+<p>另一种不影响原数组的方式是 <code>array.slice()</code>（不要与 <code>array.splice()</code> 混淆）。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr1 = [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>, <span class="string">'e'</span>];</span><br><span class="line"><span class="keyword">const</span> arr2 = arr1.slice(<span class="number">1</span>, <span class="number">5</span>) <span class="comment">// ['b', 'c', 'd', 'e']</span></span><br><span class="line"><span class="keyword">const</span> arr3 = arr1.slice(<span class="number">2</span>) <span class="comment">// ['c', 'd', 'e']</span></span><br></pre></td></tr></table></figure>
+<h4 id="V-替换：影响原数组"><a href="#V-替换：影响原数组" class="headerlink" title="V. 替换：影响原数组"></a>V. 替换：影响原数组</h4><p>如果知道替换哪一个元素，可以使用 <code>array.splice()</code> 。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> mutatingReplace = [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>, <span class="string">'e'</span>];</span><br><span class="line">mutatingReplace.splice(<span class="number">2</span>, <span class="number">1</span>, <span class="number">30</span>); <span class="comment">// ['a', 'b', 30, 'd', 'e']  </span></span><br><span class="line"><span class="comment">// 或者mutatingReplace.splice(2, 1, 30, 31); // ['a', 'b', 30, 31, 'd', 'e']</span></span><br></pre></td></tr></table></figure>
+<h4 id="VI-替换：不影响原数组"><a href="#VI-替换：不影响原数组" class="headerlink" title="VI. 替换：不影响原数组"></a>VI. 替换：不影响原数组</h4><p>可以使用 <code>array.map()</code> 创建一个新数组，并且可以检查每一个元素，根据特定的条件替换它们。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr1 = [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>, <span class="string">'e'</span>]</span><br><span class="line"><span class="keyword">const</span> arr2 = arr1.map(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span>(item === <span class="string">'c'</span>) &#123;</span><br><span class="line">        item = <span class="string">'CAT'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> item;</span><br><span class="line">&#125;); <span class="comment">// ['a', 'b', 'CAT', 'd', 'e']</span></span><br></pre></td></tr></table></figure>
+<p><strong>使用 array.map() 转换数据</strong></p>
+<p><code>array.map()</code> 是个强力方法，可以用于转换数据，而不污染原先的数据源。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> origArr = [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>, <span class="string">'e'</span>];</span><br><span class="line"><span class="keyword">const</span> transformedArr = origArr.map(<span class="function"><span class="params">n</span> =&gt;</span> n + <span class="string">'Hi!'</span>);<span class="comment">// ['aHi!', 'bHi!', 'cHi!', 'dHi!', 'eHi!']  </span></span><br><span class="line"><span class="built_in">console</span>.log(origArr); <span class="comment">// ['a', 'b', 'c', 'd', 'e']; // 原数组毫发无损</span></span><br></pre></td></tr></table></figure>
     
 
     
@@ -460,21 +488,13 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2017/03/27/便携式网络服务器工具分享/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            下一篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2017/02/18/经典JS闭包分析/" id="post_nav-older" class="next-content">
+        <a href="/2018/07/13/settimeout-fn-0-与Promise的执行顺序/" id="post_nav-older" class="next-content">
             上一篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
