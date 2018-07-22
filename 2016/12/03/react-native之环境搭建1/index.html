@@ -277,8 +277,8 @@
 
 <!-- Import Font -->
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link href="https://fonts.proxy.ustclug.org/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link href="https://fonts.proxy.ustclug.org/icon?family=Material+Icons"rel="stylesheet">
 
 
         <script>lsloader.load("js/jquery.min.js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==")</script>
@@ -358,7 +358,7 @@
     <div class="material-post_container">
 
         <div class="material-post mdl-grid">
-            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+            <div id="main_article" class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
 
                 <!-- Post Header(Thumbnail & Title) -->
                 
@@ -519,7 +519,50 @@
                     
                 
             </div>
+            <script>lsloader.load("js/html2canvas.min.js","/js/html2canvas.min.js?bnh3ambAY4wm0ftd49CxCg==")</script>
+            <button id="save_img">保存为图片并分享</button>
+            <style>
+                #save_img {display: inline-block;line-height: 1;white-space: nowrap;cursor: pointer;background: #fff;border: 1px solid #dcdfe6;border-color: #dcdfe6;color: #606266;-webkit-appearance: none;text-align: center;box-sizing: border-box;outline: none;margin: 0;transition: .1s;font-weight: 500;-moz-user-select: none;-webkit-user-select: none;-ms-user-select: none;padding: 12px 20px;font-size: 14px;border-radius: 6px;color: #fff;background-color: #409eff;border-color: #409eff;margin: 0 auto;}
+                #save_img:hover {background: #66b1ff;border-color: #66b1ff;
+                    color: #fff;}
+            </style>
+            <script>
+                var save_img = document.getElementById('save_img');
+                var main_article = document.getElementById('main_article');
+                save_img.onclick = function () {
+                    html2canvas(main_article, {
+                        useCORS: true,
+                        logging: false
+                    }).then(function (canvas) {
+                        var imgBlob = canvas.toDataURL();
+                        downloadFile(decodeURI(location.pathname).split('/')[4], imgBlob)
+                    })
+                    function base64Img2Blob(code) {
+                        var parts = code.split(';base64,');
+                        var contentType = parts[0].split(':')[1];
+                        var raw = window.atob(parts[1]);
+                        var rawLength = raw.length;
 
+                        var uInt8Array = new Uint8Array(rawLength);
+
+                        for (var i = 0; i < rawLength; ++i) {
+                            uInt8Array[i] = raw.charCodeAt(i);
+                        }
+
+                        return new Blob([uInt8Array], { type: contentType });
+                    }
+                    function downloadFile(fileName, content) {
+                        var aLink = document.createElement('a');
+                        var blob = base64Img2Blob(content);
+                        var evt = document.createEvent("MouseEvents");
+                        evt.initEvent("click", false, false);//initEvent 不加后两个参数在FF下会报错
+                        aLink.download = fileName;
+                        aLink.href = URL.createObjectURL(blob);
+                        console.log()
+                        aLink.dispatchEvent(evt);
+                    }
+                }
+            </script>
             <!-- Post Prev & Next Nav -->
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
@@ -901,7 +944,7 @@ It will not impact the appearance and can give developers a lot of support :)
             lsloader.runInlineScript(item.id,item.id);
         }
     })()
-console.log('\n %c © Material Theme | Version: 1.4.0 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+console.log('\n %c 本人求职中,中级前端开发,联系QQ: 1160948478 \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-radius:5px;');
 </script>
 
                 </main>
