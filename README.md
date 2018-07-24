@@ -1,5 +1,9 @@
 # CracKerMe.github.io
 a blog build with hexo, 
+- 2018-07-25 00:56:07：
+
+add two articles about Ali  interview
+
 - 2018-07-22 23:41:07：
 
 add bolg boottom save as image button for sharing  && add a new console for hiring
