@@ -12,7 +12,7 @@
     
     <title>
         
-            JS语法特性试题 | 
+            vue.set操作 | 
         
         爱尚|轻博客
     </title>
@@ -35,8 +35,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="AppleSun">
-    <meta name="description" itemprop="description" content="看完了我的前一篇博文，很多人觉得自己学的很懂了，想来操练操练，看看自己究竟学的多扎实了.这不，我就搞来了13道题目，给各位试（打）炼（击）我真的只是想来打击你的信心的">
-    <meta name="keywords" content="null,js,面试题">
+    <meta name="description" itemprop="description" content="基础｜交流｜成长｜走心｜前端｜学习">
+    <meta name="keywords" content="null,vue">
 
     <!-- Site Verification -->
     
@@ -65,26 +65,26 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://crackerme.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="JS语法特性试题 | 爱尚|轻博客">
+    <meta property="og:title" content="vue.set操作 | 爱尚|轻博客">
     <meta property="og:image" content="/img/favicon.png" />
-    <meta property="og:description" content="看完了我的前一篇博文，很多人觉得自己学的很懂了，想来操练操练，看看自己究竟学的多扎实了.这不，我就搞来了13道题目，给各位试（打）炼（击）我真的只是想来打击你的信心的">
-    <meta property="og:article:tag" content="js"> <meta property="og:article:tag" content="面试题"> 
+    <meta property="og:description" content="基础｜交流｜成长｜走心｜前端｜学习">
+    <meta property="og:article:tag" content="vue"> 
 
     
-        <meta property="article:published_time" content="7月 03, 2016" />
-        <meta property="article:modified_time" content="4月 28, 2017" />
+        <meta property="article:published_time" content="7月 25, 2018" />
+        <meta property="article:modified_time" content="7月 25, 2018" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="JS语法特性试题 | 爱尚|轻博客">
-    <meta name="twitter:description" content="看完了我的前一篇博文，很多人觉得自己学的很懂了，想来操练操练，看看自己究竟学的多扎实了.这不，我就搞来了13道题目，给各位试（打）炼（击）我真的只是想来打击你的信心的">
+    <meta name="twitter:title" content="vue.set操作 | 爱尚|轻博客">
+    <meta name="twitter:description" content="基础｜交流｜成长｜走心｜前端｜学习">
     <meta name="twitter:image" content="/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://crackerme.github.io" />
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://crackerme.github.io/2016/07/03/JS语法特性试题/index.html" />
+        <link rel="canonical" href="https://crackerme.github.io/2018/07/25/vue-set操作/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -110,11 +110,11 @@
         },
         "description": "间歇性凌云壮志，持续性混吃等死"
     },
-    "headline": "JS语法特性试题",
-    "url": "https://crackerme.github.io/2016/07/03/JS语法特性试题/index.html",
-    "datePublished": "7月 03, 2016",
-    "dateModified": "4月 28, 2017",
-    "description": "看完了我的前一篇博文，很多人觉得自己学的很懂了，想来操练操练，看看自己究竟学的多扎实了.这不，我就搞来了13道题目，给各位试（打）炼（击）我真的只是想来打击你的信心的",
+    "headline": "vue.set操作",
+    "url": "https://crackerme.github.io/2018/07/25/vue-set操作/index.html",
+    "datePublished": "7月 25, 2018",
+    "dateModified": "7月 25, 2018",
+    "description": "基础｜交流｜成长｜走心｜前端｜学习",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://crackerme.github.io"
@@ -339,7 +339,7 @@
 
     
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#看完了我的前一篇博文，很多人觉得自己学的很懂了，想来操练操练，看看自己究竟学的多扎实了-这不，我就搞来了13道题目，给各位试（打）炼（击）"><span class="post-toc-number">1.</span> <span class="post-toc-text">看完了我的前一篇博文，很多人觉得自己学的很懂了，想来操练操练，看看自己究竟学的多扎实了.这不，我就搞来了13道题目，给各位试（打）炼（击）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#不信你往下看："><span class="post-toc-number">1.1.</span> <span class="post-toc-text">不信你往下看：</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#A-D-A-D-A-A-A-B-C-B-A-B-B"><span class="post-toc-number"></span> <span class="post-toc-text">A D A D A A A B C B A B B</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#具体答案大家可以自己运行得出，为什么会得出这样的结果，我也有一些不懂的地方，怕误人子弟，所以这里就不解答这里的问题了。"><span class="post-toc-number"></span> <span class="post-toc-text">具体答案大家可以自己运行得出，为什么会得出这样的结果，我也有一些不懂的地方，怕误人子弟，所以这里就不解答这里的问题了。</span></a>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Vue-set全局操作"><span class="post-toc-number">1.</span> <span class="post-toc-text">Vue.set全局操作</span></a></li></ol>
         <!--
         <li class="mdl-menu__item">
             Some Action
@@ -377,7 +377,7 @@
         
     
             <p class="article-headline-p">
-                JS语法特性试题
+                vue.set操作
             </p>
         </div>
 
@@ -396,7 +396,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>AppleSun</strong>
-        <span>7月 03, 2016</span>
+        <span>7月 25, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -420,7 +420,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/js/">js</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/面试题/">面试题</a>
+        <a class="post_tag-link" href="/tags/vue/">vue</a>
     </ul>
     
 
@@ -432,187 +432,34 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h4 id="看完了我的前一篇博文，很多人觉得自己学的很懂了，想来操练操练，看看自己究竟学的多扎实了-这不，我就搞来了13道题目，给各位试（打）炼（击）"><a href="#看完了我的前一篇博文，很多人觉得自己学的很懂了，想来操练操练，看看自己究竟学的多扎实了-这不，我就搞来了13道题目，给各位试（打）炼（击）" class="headerlink" title="看完了我的前一篇博文，很多人觉得自己学的很懂了，想来操练操练，看看自己究竟学的多扎实了.这不，我就搞来了13道题目，给各位试（打）炼（击）"></a>看完了我的前一篇博文，很多人觉得自己学的很懂了，想来操练操练，看看自己究竟学的多扎实了.这不，我就搞来了13道题目，给各位试（打）炼（击）</h4><p><del>我真的只是想来打击你的信心的</del></p>
-<a id="more"></a>
-<h5 id="不信你往下看："><a href="#不信你往下看：" class="headerlink" title="不信你往下看："></a>不信你往下看：</h5><ul>
-<li><p>(一)</p>
-<p>​</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(function () &#123;</span><br><span class="line">return typeof arguments;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
-<p>​</p>
-<p>A. “object”</p>
-<p>​</p>
-<p>B. “array”</p>
-<p>​</p>
-<p>C. “arguments”</p>
-<p>​</p>
-<p>D. “undefined”</p>
-</li>
-</ul>
-<ul>
-<li><p>(二)</p>
-<p>​</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var f = function g() &#123;</span><br><span class="line">return 23;</span><br><span class="line">&#125;;</span><br><span class="line">typeof g();</span><br></pre></td></tr></table></figure>
-<p>​</p>
-<p>A. “number”</p>
-<p>​</p>
-<p>B. “undefined”</p>
-<p>​</p>
-<p>C. “function”</p>
-<p>​</p>
-<p>D. Eorror</p>
-</li>
-</ul>
-<ul>
-<li><p>(三)</p>
-<p>​</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(function (x) &#123;</span><br><span class="line">delete x;</span><br><span class="line">return x;</span><br><span class="line">&#125;)(1);</span><br></pre></td></tr></table></figure>
-<p>​</p>
-<p>A. 1</p>
-<p>​</p>
-<p>B. null</p>
-<p>​</p>
-<p>C. undefined</p>
-<p>​</p>
-<p>D. Error</p>
-</li>
-</ul>
-<ul>
-<li><p>(四)</p>
-<p>​</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var y = 1,</span><br><span class="line">x = y = typeof x;</span><br><span class="line">x;</span><br></pre></td></tr></table></figure>
-<p>​</p>
-<p>A. 1</p>
-<p>​</p>
-<p>B. “number”</p>
-<p>​</p>
-<p>C. undefined</p>
-<p>​</p>
-<p>D. “undefined”</p>
-</li>
-</ul>
-<ul>
-<li><p>(五)</p>
-<p>​</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(function f(f) &#123;</span><br><span class="line">  return typeof f();</span><br><span class="line">&#125;)(function () &#123;</span><br><span class="line">  return 1;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>​</p>
-<p>A. “number”</p>
-<p>​</p>
-<p>B. “undefined”</p>
-<p>​</p>
-<p>C. “function”</p>
-<p>​</p>
-<p>D. Error</p>
-</li>
-</ul>
-<ul>
-<li><p>(六)</p>
-<p>​</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var foo = &#123;</span><br><span class="line">  bar: function () &#123;</span><br><span class="line"> return this.baz;</span><br><span class="line">  &#125;,</span><br><span class="line">  baz: 1</span><br><span class="line">&#125;;</span><br><span class="line">(function () &#123;</span><br><span class="line">  return typeof arguments0;</span><br><span class="line">&#125;)(foo.bar);</span><br></pre></td></tr></table></figure>
-<p>​</p>
-<p>A. “undefined”</p>
-<p>​</p>
-<p>B. “object”</p>
-<p>​</p>
-<p>C. “number”</p>
-<p>​</p>
-<p>D. “function”</p>
-</li>
-</ul>
-<ul>
-<li><p>(七)</p>
-<p>​</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var foo = &#123;</span><br><span class="line">  bar: function () &#123;</span><br><span class="line">   return this.baz;</span><br><span class="line">  &#125;,</span><br><span class="line">  baz: 1</span><br><span class="line">&#125;;</span><br><span class="line">typeof (f = foo.bar)();</span><br></pre></td></tr></table></figure>
-<p>​</p>
-<p>A. “undefined”</p>
-<p>​</p>
-<p>B. “object”</p>
-<p>​</p>
-<p>C. “number”</p>
-<p>​</p>
-<p>D. “function”</p>
-</li>
-</ul>
-<ul>
-<li><p>(八)</p>
-<p>​</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var f = (function f() &#123;</span><br><span class="line">  return “1”;</span><br><span class="line">&#125;, function g() &#123;</span><br><span class="line">  return 2;</span><br><span class="line">&#125;)();</span><br><span class="line">typeof f;</span><br></pre></td></tr></table></figure>
-<p>​</p>
-<p>A. “string”</p>
-<p>​</p>
-<p>B. “number”</p>
-<p>​</p>
-<p>C. “function”</p>
-<p>​</p>
-<p>D. “undefined”</p>
-</li>
-</ul>
-<ul>
-<li><p>(九)</p>
-<p>​</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var x = 1;</span><br><span class="line">if (function f() &#123;&#125;) &#123;</span><br><span class="line">  x += typeof f;</span><br><span class="line">&#125;</span><br><span class="line">x;</span><br></pre></td></tr></table></figure>
-<p>​</p>
-<p>A. 1</p>
-<p>​</p>
-<p>B. “1function”</p>
-<p>​</p>
-<p>C. “1undefined”</p>
-<p>​</p>
-<p>D. NaN</p>
-</li>
-</ul>
-<ul>
-<li><p>(十)</p>
-<p>​</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var x = [typeof x, typeof y][1];</span><br><span class="line">typeof typeof x;</span><br></pre></td></tr></table></figure>
-<p>​</p>
-<p>A. “number”</p>
-<p>​</p>
-<p>B. “string”</p>
-<p>​</p>
-<p>C. “undefined”</p>
-<p>​</p>
-<p>D. “object”</p>
-</li>
-</ul>
-<ul>
-<li><p>(十一)</p>
-<p>​</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">(function (foo) &#123;</span><br><span class="line">  return typeof foo.bar;</span><br><span class="line">&#125;)(&#123;</span><br><span class="line">  foo: &#123;</span><br><span class="line">  bar: 1</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>​</p>
-<p>A. “undefined”</p>
-<p>​</p>
-<p>B. “object”</p>
-<p>​</p>
-<p>C. “number”</p>
-<p>​</p>
-<p>D. Error</p>
-</li>
-</ul>
-<ul>
-<li><p>(十二)</p>
-<p>​</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">(function f() &#123;</span><br><span class="line">  function f() &#123;</span><br><span class="line">  return 1;</span><br><span class="line">  &#125;</span><br><span class="line">  return f();</span><br><span class="line">  function f() &#123;</span><br><span class="line">  return 2;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
-<p>​</p>
-<p>A、1</p>
-<p>​</p>
-<p>B、2</p>
-<p>​</p>
-<p>C、Error (e.g. “Too much recursion”)</p>
-<p>​</p>
-<p>D、undefined</p>
-</li>
-</ul>
-<ul>
-<li><p>(十三)</p>
-<p>​</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function f() &#123;</span><br><span class="line">  return f;</span><br><span class="line">&#125;</span><br><span class="line">new f() instanceof f;</span><br></pre></td></tr></table></figure>
-<p>​</p>
-<p>A、true</p>
-<p>​</p>
-<p>B、false</p>
-</li>
-</ul>
-<h2 id="A-D-A-D-A-A-A-B-C-B-A-B-B"><a href="#A-D-A-D-A-A-A-B-C-B-A-B-B" class="headerlink" title="A D A D A A A B C B A B B"></a>A D A D A A A B C B A B B</h2><h3 id="具体答案大家可以自己运行得出，为什么会得出这样的结果，我也有一些不懂的地方，怕误人子弟，所以这里就不解答这里的问题了。"><a href="#具体答案大家可以自己运行得出，为什么会得出这样的结果，我也有一些不懂的地方，怕误人子弟，所以这里就不解答这里的问题了。" class="headerlink" title="具体答案大家可以自己运行得出，为什么会得出这样的结果，我也有一些不懂的地方，怕误人子弟，所以这里就不解答这里的问题了。"></a>具体答案大家可以自己运行得出，为什么会得出这样的结果，我也有一些不懂的地方，怕误人子弟，所以这里就不解答这里的问题了。</h3>
+        <h3 id="Vue-set全局操作"><a href="#Vue-set全局操作" class="headerlink" title="Vue.set全局操作"></a>Vue.set全局操作</h3><p><code>Vue.set( target, key, value )</code></p>
+<p><strong>参数：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;Object | Array&#125; target</span><br><span class="line">&#123;string | number&#125; key</span><br><span class="line">&#123;any&#125; value</span><br></pre></td></tr></table></figure>
+<p><strong>返回值:</strong> 设置的值。</p>
+<p><strong>用法：</strong><br>设置对象的属性。如果对象是响应式的，确保属性被创建后也是响应式的，同时触发视图更新。这个方法主要用于避开 Vue 不能检测属性被添加的限制。</p>
+<blockquote>
+<p>注意对象不能是 Vue 实例，或者 Vue 实例的根数据对象。<br>一、引用构造器外部数据：</p>
+</blockquote>
+<p>什么是外部数据，就是不在Vue构造器里里的data处声明，而是在构造器外部声明，然后在data处引用就可以了。外部数据的加入让程序更加灵活，我们可以在外部获取任何想要的数据形式，然后让data引用。</p>
+<p>看一个简单的代码：<br>//在构造器外部声明数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> var outData=&#123;</span><br><span class="line">    count:1,</span><br><span class="line">    goodName:&apos;car&apos;</span><br><span class="line">&#125;;</span><br><span class="line">var app=new Vue(&#123;</span><br><span class="line">    el:&apos;#app&apos;,</span><br><span class="line">    //引用外部数据</span><br><span class="line">    data:outData</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>二、在外部改变数据的三种方法：</p>
+<p>1、用Vue.set改变</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function add()&#123;</span><br><span class="line">      Vue.set(outData,&apos;count&apos;,4);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2、用Vue对象的方法添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app.count++;</span><br></pre></td></tr></table></figure>
+<p>3、直接操作外部数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">outData.count++;</span><br></pre></td></tr></table></figure>
+<p>其实这三种方式都可以操作外部的数据，Vue也给我们增加了一种操作外部数据的方法。</p>
+<p>三、为什么要有Vue.set的存在?</p>
+<p>由于Javascript的限制，Vue不能自动检测以下变动的数组。</p>
+<p>*当你利用索引直接设置一个项时，vue不会为我们自动更新。</p>
+<p>*当你修改数组的长度时，vue不会为我们自动更新。</p>
+<p>看一段代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;script type=&quot;text/javascript&quot; src=&quot;../assets/js/vue.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;title&gt;Vue.set 全局操作&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;h1&gt;Vue.set 全局操作&lt;/h1&gt;</span><br><span class="line">    &lt;hr&gt;</span><br><span class="line">    &lt;div id=&quot;app&quot;&gt;</span><br><span class="line">        &lt;ul&gt;</span><br><span class="line">            &lt;li v-for=&quot; aa in arr&quot;&gt;&#123;&#123;aa&#125;&#125;&lt;/li&gt;</span><br><span class="line">        &lt;/ul&gt;</span><br><span class="line">       </span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;button onclick=&quot;add()&quot;&gt;外部添加&lt;/button&gt;</span><br><span class="line"> </span><br><span class="line">    &lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">     </span><br><span class="line">        function add()&#123;</span><br><span class="line">            console.log(&quot;我已经执行了&quot;);</span><br><span class="line">           app.arr[1]=&apos;ddd&apos;;</span><br><span class="line">           //Vue.set(app.arr,1,&apos;ddd&apos;);</span><br><span class="line">        &#125;</span><br><span class="line">        var outData=&#123;</span><br><span class="line">            arr:[&apos;aaa&apos;,&apos;bbb&apos;,&apos;ccc&apos;]</span><br><span class="line">        &#125;;</span><br><span class="line">        var app=new Vue(&#123;</span><br><span class="line">            el:&apos;#app&apos;,</span><br><span class="line">            data:outData</span><br><span class="line">        &#125;)</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p>这时我们的界面是不会自动跟新数组的，我们需要用Vue.set(app.arr,1,’ddd’)来设置改变，vue才会给我们自动更新，这就是Vue.set存在的意义。</p>
+<p>转载自 <a href="https://www.kancloud.cn/bizzbee/vue/490311" target="_blank" rel="noopener">https://www.kancloud.cn/bizzbee/vue/490311</a></p>
+
     
 
     
@@ -674,7 +521,7 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2016/07/16/JS面向对象基本知识/" id="post_nav-newer" class="prev-content">
+        <a href="/2018/07/26/vue组件通信/" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -688,7 +535,7 @@
 
     <!-- Next Nav -->
     
-        <a href="/2016/07/01/JS面向对象面试题1/" id="post_nav-older" class="next-content">
+        <a href="/2018/07/25/阿里第一次电面试题记录/" id="post_nav-older" class="next-content">
             上一篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">

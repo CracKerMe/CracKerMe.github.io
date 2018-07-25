@@ -12,7 +12,7 @@
     
     <title>
         
-            JS语法特性试题 | 
+            vue组件通信 | 
         
         爱尚|轻博客
     </title>
@@ -35,8 +35,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="AppleSun">
-    <meta name="description" itemprop="description" content="看完了我的前一篇博文，很多人觉得自己学的很懂了，想来操练操练，看看自己究竟学的多扎实了.这不，我就搞来了13道题目，给各位试（打）炼（击）我真的只是想来打击你的信心的">
-    <meta name="keywords" content="null,js,面试题">
+    <meta name="description" itemprop="description" content="基础｜交流｜成长｜走心｜前端｜学习">
+    <meta name="keywords" content="null,vue">
 
     <!-- Site Verification -->
     
@@ -65,26 +65,26 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://crackerme.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="JS语法特性试题 | 爱尚|轻博客">
+    <meta property="og:title" content="vue组件通信 | 爱尚|轻博客">
     <meta property="og:image" content="/img/favicon.png" />
-    <meta property="og:description" content="看完了我的前一篇博文，很多人觉得自己学的很懂了，想来操练操练，看看自己究竟学的多扎实了.这不，我就搞来了13道题目，给各位试（打）炼（击）我真的只是想来打击你的信心的">
-    <meta property="og:article:tag" content="js"> <meta property="og:article:tag" content="面试题"> 
+    <meta property="og:description" content="基础｜交流｜成长｜走心｜前端｜学习">
+    <meta property="og:article:tag" content="vue"> 
 
     
-        <meta property="article:published_time" content="7月 03, 2016" />
-        <meta property="article:modified_time" content="4月 28, 2017" />
+        <meta property="article:published_time" content="7月 26, 2018" />
+        <meta property="article:modified_time" content="7月 26, 2018" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="JS语法特性试题 | 爱尚|轻博客">
-    <meta name="twitter:description" content="看完了我的前一篇博文，很多人觉得自己学的很懂了，想来操练操练，看看自己究竟学的多扎实了.这不，我就搞来了13道题目，给各位试（打）炼（击）我真的只是想来打击你的信心的">
+    <meta name="twitter:title" content="vue组件通信 | 爱尚|轻博客">
+    <meta name="twitter:description" content="基础｜交流｜成长｜走心｜前端｜学习">
     <meta name="twitter:image" content="/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://crackerme.github.io" />
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://crackerme.github.io/2016/07/03/JS语法特性试题/index.html" />
+        <link rel="canonical" href="https://crackerme.github.io/2018/07/26/vue组件通信/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -110,11 +110,11 @@
         },
         "description": "间歇性凌云壮志，持续性混吃等死"
     },
-    "headline": "JS语法特性试题",
-    "url": "https://crackerme.github.io/2016/07/03/JS语法特性试题/index.html",
-    "datePublished": "7月 03, 2016",
-    "dateModified": "4月 28, 2017",
-    "description": "看完了我的前一篇博文，很多人觉得自己学的很懂了，想来操练操练，看看自己究竟学的多扎实了.这不，我就搞来了13道题目，给各位试（打）炼（击）我真的只是想来打击你的信心的",
+    "headline": "vue组件通信",
+    "url": "https://crackerme.github.io/2018/07/26/vue组件通信/index.html",
+    "datePublished": "7月 26, 2018",
+    "dateModified": "7月 26, 2018",
+    "description": "基础｜交流｜成长｜走心｜前端｜学习",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://crackerme.github.io"
@@ -339,7 +339,7 @@
 
     
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#看完了我的前一篇博文，很多人觉得自己学的很懂了，想来操练操练，看看自己究竟学的多扎实了-这不，我就搞来了13道题目，给各位试（打）炼（击）"><span class="post-toc-number">1.</span> <span class="post-toc-text">看完了我的前一篇博文，很多人觉得自己学的很懂了，想来操练操练，看看自己究竟学的多扎实了.这不，我就搞来了13道题目，给各位试（打）炼（击）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#不信你往下看："><span class="post-toc-number">1.1.</span> <span class="post-toc-text">不信你往下看：</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#A-D-A-D-A-A-A-B-C-B-A-B-B"><span class="post-toc-number"></span> <span class="post-toc-text">A D A D A A A B C B A B B</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#具体答案大家可以自己运行得出，为什么会得出这样的结果，我也有一些不懂的地方，怕误人子弟，所以这里就不解答这里的问题了。"><span class="post-toc-number"></span> <span class="post-toc-text">具体答案大家可以自己运行得出，为什么会得出这样的结果，我也有一些不懂的地方，怕误人子弟，所以这里就不解答这里的问题了。</span></a>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Vue-组件通信"><span class="post-toc-number">1.</span> <span class="post-toc-text">Vue 组件通信</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#父组件向子组件通信："><span class="post-toc-number">1.1.</span> <span class="post-toc-text">父组件向子组件通信：</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#方法一：props"><span class="post-toc-number">1.1.0.1.</span> <span class="post-toc-text">方法一：props</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#方法二-使用-children"><span class="post-toc-number">1.1.0.2.</span> <span class="post-toc-text">方法二 使用$children</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#子组件向父组件通信："><span class="post-toc-number">1.2.</span> <span class="post-toc-text">子组件向父组件通信：</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#方法一-使用vue事件"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">方法一:使用vue事件</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#方法二：-通过修改父组件传递的props来修改父组件数据"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">方法二： 通过修改父组件传递的props来修改父组件数据</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#方法三：使用-parent"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">方法三：使用$parent</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#非父子组件、兄弟组件之间的数据传递："><span class="post-toc-number">1.3.</span> <span class="post-toc-text">非父子组件、兄弟组件之间的数据传递：</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#非父子组件通信，Vue官方推荐使用一个Vue实例作为中央事件总线。"><span class="post-toc-number">1.3.0.1.</span> <span class="post-toc-text">非父子组件通信，Vue官方推荐使用一个Vue实例作为中央事件总线。</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#多层级父子组件通信："><span class="post-toc-number">1.4.</span> <span class="post-toc-text">多层级父子组件通信：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#复杂的单页应用数据管理："><span class="post-toc-number">1.5.</span> <span class="post-toc-text">复杂的单页应用数据管理：</span></a></li></ol></li></ol>
         <!--
         <li class="mdl-menu__item">
             Some Action
@@ -377,7 +377,7 @@
         
     
             <p class="article-headline-p">
-                JS语法特性试题
+                vue组件通信
             </p>
         </div>
 
@@ -396,7 +396,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>AppleSun</strong>
-        <span>7月 03, 2016</span>
+        <span>7月 26, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -420,7 +420,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/js/">js</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/面试题/">面试题</a>
+        <a class="post_tag-link" href="/tags/vue/">vue</a>
     </ul>
     
 
@@ -432,187 +432,30 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h4 id="看完了我的前一篇博文，很多人觉得自己学的很懂了，想来操练操练，看看自己究竟学的多扎实了-这不，我就搞来了13道题目，给各位试（打）炼（击）"><a href="#看完了我的前一篇博文，很多人觉得自己学的很懂了，想来操练操练，看看自己究竟学的多扎实了-这不，我就搞来了13道题目，给各位试（打）炼（击）" class="headerlink" title="看完了我的前一篇博文，很多人觉得自己学的很懂了，想来操练操练，看看自己究竟学的多扎实了.这不，我就搞来了13道题目，给各位试（打）炼（击）"></a>看完了我的前一篇博文，很多人觉得自己学的很懂了，想来操练操练，看看自己究竟学的多扎实了.这不，我就搞来了13道题目，给各位试（打）炼（击）</h4><p><del>我真的只是想来打击你的信心的</del></p>
-<a id="more"></a>
-<h5 id="不信你往下看："><a href="#不信你往下看：" class="headerlink" title="不信你往下看："></a>不信你往下看：</h5><ul>
-<li><p>(一)</p>
-<p>​</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(function () &#123;</span><br><span class="line">return typeof arguments;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
-<p>​</p>
-<p>A. “object”</p>
-<p>​</p>
-<p>B. “array”</p>
-<p>​</p>
-<p>C. “arguments”</p>
-<p>​</p>
-<p>D. “undefined”</p>
-</li>
-</ul>
-<ul>
-<li><p>(二)</p>
-<p>​</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var f = function g() &#123;</span><br><span class="line">return 23;</span><br><span class="line">&#125;;</span><br><span class="line">typeof g();</span><br></pre></td></tr></table></figure>
-<p>​</p>
-<p>A. “number”</p>
-<p>​</p>
-<p>B. “undefined”</p>
-<p>​</p>
-<p>C. “function”</p>
-<p>​</p>
-<p>D. Eorror</p>
-</li>
-</ul>
-<ul>
-<li><p>(三)</p>
-<p>​</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(function (x) &#123;</span><br><span class="line">delete x;</span><br><span class="line">return x;</span><br><span class="line">&#125;)(1);</span><br></pre></td></tr></table></figure>
-<p>​</p>
-<p>A. 1</p>
-<p>​</p>
-<p>B. null</p>
-<p>​</p>
-<p>C. undefined</p>
-<p>​</p>
-<p>D. Error</p>
-</li>
-</ul>
-<ul>
-<li><p>(四)</p>
-<p>​</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var y = 1,</span><br><span class="line">x = y = typeof x;</span><br><span class="line">x;</span><br></pre></td></tr></table></figure>
-<p>​</p>
-<p>A. 1</p>
-<p>​</p>
-<p>B. “number”</p>
-<p>​</p>
-<p>C. undefined</p>
-<p>​</p>
-<p>D. “undefined”</p>
-</li>
-</ul>
-<ul>
-<li><p>(五)</p>
-<p>​</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(function f(f) &#123;</span><br><span class="line">  return typeof f();</span><br><span class="line">&#125;)(function () &#123;</span><br><span class="line">  return 1;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>​</p>
-<p>A. “number”</p>
-<p>​</p>
-<p>B. “undefined”</p>
-<p>​</p>
-<p>C. “function”</p>
-<p>​</p>
-<p>D. Error</p>
-</li>
-</ul>
-<ul>
-<li><p>(六)</p>
-<p>​</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var foo = &#123;</span><br><span class="line">  bar: function () &#123;</span><br><span class="line"> return this.baz;</span><br><span class="line">  &#125;,</span><br><span class="line">  baz: 1</span><br><span class="line">&#125;;</span><br><span class="line">(function () &#123;</span><br><span class="line">  return typeof arguments0;</span><br><span class="line">&#125;)(foo.bar);</span><br></pre></td></tr></table></figure>
-<p>​</p>
-<p>A. “undefined”</p>
-<p>​</p>
-<p>B. “object”</p>
-<p>​</p>
-<p>C. “number”</p>
-<p>​</p>
-<p>D. “function”</p>
-</li>
-</ul>
-<ul>
-<li><p>(七)</p>
-<p>​</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var foo = &#123;</span><br><span class="line">  bar: function () &#123;</span><br><span class="line">   return this.baz;</span><br><span class="line">  &#125;,</span><br><span class="line">  baz: 1</span><br><span class="line">&#125;;</span><br><span class="line">typeof (f = foo.bar)();</span><br></pre></td></tr></table></figure>
-<p>​</p>
-<p>A. “undefined”</p>
-<p>​</p>
-<p>B. “object”</p>
-<p>​</p>
-<p>C. “number”</p>
-<p>​</p>
-<p>D. “function”</p>
-</li>
-</ul>
-<ul>
-<li><p>(八)</p>
-<p>​</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var f = (function f() &#123;</span><br><span class="line">  return “1”;</span><br><span class="line">&#125;, function g() &#123;</span><br><span class="line">  return 2;</span><br><span class="line">&#125;)();</span><br><span class="line">typeof f;</span><br></pre></td></tr></table></figure>
-<p>​</p>
-<p>A. “string”</p>
-<p>​</p>
-<p>B. “number”</p>
-<p>​</p>
-<p>C. “function”</p>
-<p>​</p>
-<p>D. “undefined”</p>
-</li>
-</ul>
-<ul>
-<li><p>(九)</p>
-<p>​</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var x = 1;</span><br><span class="line">if (function f() &#123;&#125;) &#123;</span><br><span class="line">  x += typeof f;</span><br><span class="line">&#125;</span><br><span class="line">x;</span><br></pre></td></tr></table></figure>
-<p>​</p>
-<p>A. 1</p>
-<p>​</p>
-<p>B. “1function”</p>
-<p>​</p>
-<p>C. “1undefined”</p>
-<p>​</p>
-<p>D. NaN</p>
-</li>
-</ul>
-<ul>
-<li><p>(十)</p>
-<p>​</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var x = [typeof x, typeof y][1];</span><br><span class="line">typeof typeof x;</span><br></pre></td></tr></table></figure>
-<p>​</p>
-<p>A. “number”</p>
-<p>​</p>
-<p>B. “string”</p>
-<p>​</p>
-<p>C. “undefined”</p>
-<p>​</p>
-<p>D. “object”</p>
-</li>
-</ul>
-<ul>
-<li><p>(十一)</p>
-<p>​</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">(function (foo) &#123;</span><br><span class="line">  return typeof foo.bar;</span><br><span class="line">&#125;)(&#123;</span><br><span class="line">  foo: &#123;</span><br><span class="line">  bar: 1</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>​</p>
-<p>A. “undefined”</p>
-<p>​</p>
-<p>B. “object”</p>
-<p>​</p>
-<p>C. “number”</p>
-<p>​</p>
-<p>D. Error</p>
-</li>
-</ul>
-<ul>
-<li><p>(十二)</p>
-<p>​</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">(function f() &#123;</span><br><span class="line">  function f() &#123;</span><br><span class="line">  return 1;</span><br><span class="line">  &#125;</span><br><span class="line">  return f();</span><br><span class="line">  function f() &#123;</span><br><span class="line">  return 2;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
-<p>​</p>
-<p>A、1</p>
-<p>​</p>
-<p>B、2</p>
-<p>​</p>
-<p>C、Error (e.g. “Too much recursion”)</p>
-<p>​</p>
-<p>D、undefined</p>
-</li>
-</ul>
-<ul>
-<li><p>(十三)</p>
-<p>​</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function f() &#123;</span><br><span class="line">  return f;</span><br><span class="line">&#125;</span><br><span class="line">new f() instanceof f;</span><br></pre></td></tr></table></figure>
-<p>​</p>
-<p>A、true</p>
-<p>​</p>
-<p>B、false</p>
-</li>
-</ul>
-<h2 id="A-D-A-D-A-A-A-B-C-B-A-B-B"><a href="#A-D-A-D-A-A-A-B-C-B-A-B-B" class="headerlink" title="A D A D A A A B C B A B B"></a>A D A D A A A B C B A B B</h2><h3 id="具体答案大家可以自己运行得出，为什么会得出这样的结果，我也有一些不懂的地方，怕误人子弟，所以这里就不解答这里的问题了。"><a href="#具体答案大家可以自己运行得出，为什么会得出这样的结果，我也有一些不懂的地方，怕误人子弟，所以这里就不解答这里的问题了。" class="headerlink" title="具体答案大家可以自己运行得出，为什么会得出这样的结果，我也有一些不懂的地方，怕误人子弟，所以这里就不解答这里的问题了。"></a>具体答案大家可以自己运行得出，为什么会得出这样的结果，我也有一些不懂的地方，怕误人子弟，所以这里就不解答这里的问题了。</h3>
+        <h2 id="Vue-组件通信"><a href="#Vue-组件通信" class="headerlink" title="Vue 组件通信"></a>Vue 组件通信</h2><h3 id="父组件向子组件通信："><a href="#父组件向子组件通信：" class="headerlink" title="父组件向子组件通信："></a>父组件向子组件通信：</h3><h5 id="方法一：props"><a href="#方法一：props" class="headerlink" title="方法一：props"></a>方法一：props</h5><p>使用<a href="https://link.juejin.im/?target=https%3A%2F%2Fcn.vuejs.org%2Fv2%2Fguide%2Fcomponents.html%23Prop" target="_blank" rel="noopener">props</a>，父组件可以使用props向子组件传递数据。</p>
+<p>父组件vue模板father.vue</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;child :msg=&quot;message&quot;&gt;&lt;/child&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line"></span><br><span class="line">import child from &apos;./child.vue&apos;</span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">    components: &#123;</span><br><span class="line">        child</span><br><span class="line">    &#125;,</span><br><span class="line">    data () &#123;</span><br><span class="line">        return &#123;</span><br><span class="line">            message: &apos;message from father&apos;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>子组件vue模板child.vue</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div&gt;&#123;&#123;msg&#125;&#125;&lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">    props: &#123;</span><br><span class="line">        msg: &#123;</span><br><span class="line">            type: String,</span><br><span class="line">            required: true</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h5 id="方法二-使用-children"><a href="#方法二-使用-children" class="headerlink" title="方法二 使用$children"></a>方法二 使用$children</h5><p>使用<a href="https://cn.vuejs.org/v2/api/#vm-children" target="_blank" rel="noopener">$children</a>可以在父组件中访问子组件。</p>
+<h3 id="子组件向父组件通信："><a href="#子组件向父组件通信：" class="headerlink" title="子组件向父组件通信："></a>子组件向父组件通信：</h3><h4 id="方法一-使用vue事件"><a href="#方法一-使用vue事件" class="headerlink" title="方法一:使用vue事件"></a>方法一:使用<a href="https://cn.vuejs.org/v2/guide/components.html#%E9%80%9A%E8%BF%87%E4%BA%8B%E4%BB%B6%E5%90%91%E7%88%B6%E7%BA%A7%E7%BB%84%E4%BB%B6%E5%8F%91%E9%80%81%E6%B6%88%E6%81%AF" target="_blank" rel="noopener">vue事件</a></h4><p>父组件向子组件传递事件方法，子组件通过$emit触发事件，回调给父组件。</p>
+<p>父组件vue模板father.vue</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;child @msgFunc=&quot;func&quot;&gt;&lt;/child&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line"></span><br><span class="line">import child from &apos;./child.vue&apos;;</span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">    components: &#123;</span><br><span class="line">        child</span><br><span class="line">    &#125;,</span><br><span class="line">    methods: &#123;</span><br><span class="line">        func (msg) &#123;</span><br><span class="line">            console.log(msg);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>子组件vue模板child.vue</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;button @click=&quot;handleClick&quot;&gt;点我&lt;/button&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">    props: &#123;</span><br><span class="line">        msg: &#123;</span><br><span class="line">            type: String,</span><br><span class="line">            required: true</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    methods () &#123;</span><br><span class="line">        handleClick () &#123;</span><br><span class="line">            //........</span><br><span class="line">            this.$emit(&apos;msgFunc&apos;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="方法二：-通过修改父组件传递的props来修改父组件数据"><a href="#方法二：-通过修改父组件传递的props来修改父组件数据" class="headerlink" title="方法二： 通过修改父组件传递的props来修改父组件数据"></a>方法二： 通过修改父组件传递的props来修改父组件数据</h4><p>这种方法只能在父组件传递一个引用变量时可以使用，字面变量无法达到相应效果。因为饮用变量最终无论是父组件中的数据还是子组件得到的props中的数据都是指向同一块内存地址，所以修改了子组件中props的数据即修改了父组件的数据。</p>
+<p>但是并不推荐这么做，并不建议直接修改props的值，如果数据是用于显示修改的，在实际开发中我经常会将其放入data中，在需要回传给父组件的时候再用事件回传数据。这样做保持了组件独立以及解耦，不会因为使用同一份数据而导致数据流异常混乱，只通过特定的接口传递数据来达到修改数据的目的，而内部数据状态由专门的data负责管理。</p>
+<h4 id="方法三：使用-parent"><a href="#方法三：使用-parent" class="headerlink" title="方法三：使用$parent"></a>方法三：使用$parent</h4><p>使用<a href="https://cn.vuejs.org/v2/api/#vm-parent" target="_blank" rel="noopener">$parent</a>可以访问父组件的数据。</p>
+<h3 id="非父子组件、兄弟组件之间的数据传递："><a href="#非父子组件、兄弟组件之间的数据传递：" class="headerlink" title="非父子组件、兄弟组件之间的数据传递："></a>非父子组件、兄弟组件之间的数据传递：</h3><h5 id="非父子组件通信，Vue官方推荐使用一个Vue实例作为中央事件总线。"><a href="#非父子组件通信，Vue官方推荐使用一个Vue实例作为中央事件总线。" class="headerlink" title="非父子组件通信，Vue官方推荐使用一个Vue实例作为中央事件总线。"></a>非父子组件通信，Vue官方推荐<a href="https://cn.vuejs.org/v2/guide/components.html#%E5%8A%A8%E6%80%81%E7%BB%84%E4%BB%B6" target="_blank" rel="noopener">使用一个Vue实例作为中央事件总线</a>。</h5><p>Vue内部有一个事件机制，可以参考<a href="https://github.com/vuejs/vue/blob/dev/src/core/instance/events.js" target="_blank" rel="noopener">源码</a>。</p>
+<p><strong>$on</strong>方法用来监听一个事件。</p>
+<p><strong>$emit</strong>用来触发一个事件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">/*新建一个Vue实例作为中央事件总嫌*/</span><br><span class="line">let event = new Vue();</span><br><span class="line"></span><br><span class="line">/*监听事件*/</span><br><span class="line">event.$on(&apos;eventName&apos;, (val) =&gt; &#123;</span><br><span class="line">    //......do something</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">/*触发事件*/</span><br><span class="line">event.$emit(&apos;eventName&apos;, &apos;this is a message.&apos;);</span><br></pre></td></tr></table></figure>
+<h3 id="多层级父子组件通信："><a href="#多层级父子组件通信：" class="headerlink" title="多层级父子组件通信："></a>多层级父子组件通信：</h3><p>在Vue1.0中实现了$broadcast与$dispatch两个方法用来向子组件（或父组件）广播（或派发），当子组件（或父组件）上监听了事件并返回true的时候会向爷孙级组件继续广播（或派发）事件。但是这个方法在Vue2.0里面已经被移除了。</p>
+<p>之前在学习饿了么的开源组件库<a href="https://github.com/ElemeFE/element" target="_blank" rel="noopener">element</a>的时候发现他们重新实现了broadcast以及dispatch的方法，以mixin的方式引入，具体可以参考<a href="https://github.com/answershuto/learnVue/blob/master/docs/%E8%AF%B4%E8%AF%B4element%E7%BB%84%E4%BB%B6%E5%BA%93broadcast%E4%B8%8Edispatch.MarkDown" target="_blank" rel="noopener">《说说element组件库broadcast与dispatch》</a>。但是跟Vue1.0的两个方法实现有略微的不同。这两个方法实现了向子孙组件事件广播以及向多层级父组件事件派发的功能。但是并非广义上的事件广播，它需要指定一个commentName进行向指定组件名组件定向广播（派发）事件。</p>
+<p>其实这两个方法内部实现还是用到的还是$parent以及$children，用以遍历子节点或是逐级向上查询父节点，访问到指定组件名的时候，调用$emit触发指定事件。</p>
+<h3 id="复杂的单页应用数据管理："><a href="#复杂的单页应用数据管理：" class="headerlink" title="复杂的单页应用数据管理："></a>复杂的单页应用数据管理：</h3><p>当应用足够复杂情况下，请使用<a href="https://vuex.vuejs.org/zh/" target="_blank" rel="noopener">vuex</a>进行数据管理。</p>
+<p>  转载自 <a href="https://juejin.im/post/59ec95006fb9a0451c398b1a" target="_blank" rel="noopener">https://juejin.im/post/59ec95006fb9a0451c398b1a</a></p>
+
     
 
     
@@ -674,21 +517,13 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2016/07/16/JS面向对象基本知识/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            下一篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2016/07/01/JS面向对象面试题1/" id="post_nav-older" class="next-content">
+        <a href="/2018/07/25/vue-set操作/" id="post_nav-older" class="next-content">
             上一篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
