@@ -35,7 +35,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="AppleSun">
-    <meta name="description" itemprop="description" content="基础｜交流｜成长｜走心｜前端｜学习">
+    <meta name="description" itemprop="description" content="Vue.set全局操作在我们使用vue进行开发的过程中，可能会遇到一种情况：当生成vue实例后，当再次给数据赋值时，有时候并不会自动更新到视图上去；
+当我们去看vue文档的时候，会发现有这么一句话：如果在实例创建之后添加新的属性到实例上，它不会触发视图更新
+1、通过Vue.set方法设置data属性
+2、您还可以使用 vm.$set实例方法，这也是全局 Vue.set方法的别名">
     <meta name="keywords" content="null,vue">
 
     <!-- Site Verification -->
@@ -67,17 +70,23 @@
     <meta property="og:type" content="blog">
     <meta property="og:title" content="vue.set操作 | 爱尚|轻博客">
     <meta property="og:image" content="/img/favicon.png" />
-    <meta property="og:description" content="基础｜交流｜成长｜走心｜前端｜学习">
+    <meta property="og:description" content="Vue.set全局操作在我们使用vue进行开发的过程中，可能会遇到一种情况：当生成vue实例后，当再次给数据赋值时，有时候并不会自动更新到视图上去；
+当我们去看vue文档的时候，会发现有这么一句话：如果在实例创建之后添加新的属性到实例上，它不会触发视图更新
+1、通过Vue.set方法设置data属性
+2、您还可以使用 vm.$set实例方法，这也是全局 Vue.set方法的别名">
     <meta property="og:article:tag" content="vue"> 
 
     
         <meta property="article:published_time" content="7月 25, 2018" />
-        <meta property="article:modified_time" content="7月 25, 2018" />
+        <meta property="article:modified_time" content="7月 26, 2018" />
     
 
     <!-- The Twitter Card protocol -->
     <meta name="twitter:title" content="vue.set操作 | 爱尚|轻博客">
-    <meta name="twitter:description" content="基础｜交流｜成长｜走心｜前端｜学习">
+    <meta name="twitter:description" content="Vue.set全局操作在我们使用vue进行开发的过程中，可能会遇到一种情况：当生成vue实例后，当再次给数据赋值时，有时候并不会自动更新到视图上去；
+当我们去看vue文档的时候，会发现有这么一句话：如果在实例创建之后添加新的属性到实例上，它不会触发视图更新
+1、通过Vue.set方法设置data属性
+2、您还可以使用 vm.$set实例方法，这也是全局 Vue.set方法的别名">
     <meta name="twitter:image" content="/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://crackerme.github.io" />
@@ -113,8 +122,11 @@
     "headline": "vue.set操作",
     "url": "https://crackerme.github.io/2018/07/25/vue-set操作/index.html",
     "datePublished": "7月 25, 2018",
-    "dateModified": "7月 25, 2018",
-    "description": "基础｜交流｜成长｜走心｜前端｜学习",
+    "dateModified": "7月 26, 2018",
+    "description": "Vue.set全局操作在我们使用vue进行开发的过程中，可能会遇到一种情况：当生成vue实例后，当再次给数据赋值时，有时候并不会自动更新到视图上去；
+当我们去看vue文档的时候，会发现有这么一句话：如果在实例创建之后添加新的属性到实例上，它不会触发视图更新
+1、通过Vue.set方法设置data属性
+2、您还可以使用 vm.$set实例方法，这也是全局 Vue.set方法的别名",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://crackerme.github.io"
@@ -432,7 +444,12 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h3 id="Vue-set全局操作"><a href="#Vue-set全局操作" class="headerlink" title="Vue.set全局操作"></a>Vue.set全局操作</h3><p><code>Vue.set( target, key, value )</code></p>
+        <h3 id="Vue-set全局操作"><a href="#Vue-set全局操作" class="headerlink" title="Vue.set全局操作"></a>Vue.set全局操作</h3><p>在我们使用vue进行开发的过程中，可能会遇到一种情况：当生成vue实例后，当再次给数据赋值时，有时候并不会自动更新到视图上去；</p>
+<p>当我们去看vue文档的时候，会发现有这么一句话：<strong>如果在实例创建之后添加新的属性到实例上，它不会触发视图更新</strong></p>
+<p>1、通过Vue.set方法设置data属性</p>
+<p>2、您还可以使用 vm.$set实例方法，这也是全局 Vue.set方法的别名</p>
+<a id="more"></a>
+<p><code>Vue.set( target, key, value )</code></p>
 <p><strong>参数：</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;Object | Array&#125; target</span><br><span class="line">&#123;string | number&#125; key</span><br><span class="line">&#123;any&#125; value</span><br></pre></td></tr></table></figure>
 <p><strong>返回值:</strong> 设置的值。</p>
