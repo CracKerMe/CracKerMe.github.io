@@ -12,8 +12,6 @@
     
     <title>
         
-            react native之环境搭建1 | 
-        
         爱尚|轻博客
     </title>
 
@@ -35,8 +33,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="AppleSun">
-    <meta name="description" itemprop="description" content="React Native 是facebook 旗下的一款开源项目，由于媲美原生的APP的性能(比当前native主流框架好很多),组件化编程，可以采用js(参考ES6语法)编写IOS与Android的APP，备受市场关注。支持热更新(可以绕过app store的审核机制),以及他的宣传“Learn once,write everywhere”看着都让人兴奋。">
-    <meta name="keywords" content="null,js">
+    <meta name="description" itemprop="description" content="基础｜交流｜成长｜走心｜前端｜学习">
+    <meta name="keywords" content="null">
 
     <!-- Site Verification -->
     
@@ -65,62 +63,29 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://crackerme.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="react native之环境搭建1 | 爱尚|轻博客">
+    <meta property="og:title" content="爱尚|轻博客">
     <meta property="og:image" content="/img/favicon.png" />
-    <meta property="og:description" content="React Native 是facebook 旗下的一款开源项目，由于媲美原生的APP的性能(比当前native主流框架好很多),组件化编程，可以采用js(参考ES6语法)编写IOS与Android的APP，备受市场关注。支持热更新(可以绕过app store的审核机制),以及他的宣传“Learn once,write everywhere”看着都让人兴奋。">
-    <meta property="og:article:tag" content="js"> 
-
+    <meta property="og:description" content="基础｜交流｜成长｜走心｜前端｜学习">
     
-        <meta property="article:published_time" content="12月 03, 2016" />
-        <meta property="article:modified_time" content="4月 28, 2017" />
+
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="react native之环境搭建1 | 爱尚|轻博客">
-    <meta name="twitter:description" content="React Native 是facebook 旗下的一款开源项目，由于媲美原生的APP的性能(比当前native主流框架好很多),组件化编程，可以采用js(参考ES6语法)编写IOS与Android的APP，备受市场关注。支持热更新(可以绕过app store的审核机制),以及他的宣传“Learn once,write everywhere”看着都让人兴奋。">
+    <meta name="twitter:title" content="爱尚|轻博客">
+    <meta name="twitter:description" content="基础｜交流｜成长｜走心｜前端｜学习">
     <meta name="twitter:image" content="/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://crackerme.github.io" />
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://crackerme.github.io/2016/12/03/react-native之环境搭建1/index.html" />
+        <link rel="canonical" href="https://crackerme.github.io/page/7/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
-
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "publisher": {
-        "@type": "Organization",
-        "name": "爱尚|轻博客",
-        "logo": "/img/favicon.png"
-    },
-    "author": {
-        "@type": "Person",
-        "name": "AppleSun",
-        "image": {
-            "@type": "ImageObject",
-            "url": "/img/favicon.png"
-        },
-        "description": "间歇性凌云壮志，持续性混吃等死"
-    },
-    "headline": "react native之环境搭建1",
-    "url": "https://crackerme.github.io/2016/12/03/react-native之环境搭建1/index.html",
-    "datePublished": "12月 03, 2016",
-    "dateModified": "4月 28, 2017",
-    "description": "React Native 是facebook 旗下的一款开源项目，由于媲美原生的APP的性能(比当前native主流框架好很多),组件化编程，可以采用js(参考ES6语法)编写IOS与Android的APP，备受市场关注。支持热更新(可以绕过app store的审核机制),以及他的宣传“Learn once,write everywhere”看着都让人兴奋。",
-    "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://crackerme.github.io"
-    }
-}
-</script>
 
 
     
@@ -312,288 +277,101 @@
                         </button>
                     
 
-                    <!-- Post TOC -->
-
+                    <!-- Index Module -->
+<div class="material-index mdl-grid">
     
-    <!-- Back Button -->
-    <!--
-    <div class="material-back" id="backhome-div" tabindex="0">
-        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
-           href="#" onclick="window.history.back();return false;"
-           target="_self"
-           role="button"
-           data-upgraded=",MaterialButton,MaterialRipple">
-            <i class="material-icons" role="presentation">arrow_back</i>
-            <span class="mdl-button__ripple-container">
-                <span class="mdl-ripple"></span>
-            </span>
-        </a>
-    </div>
-    -->
+    <div class="locate-thumbnail-symbol"></div>
 
-    <!-- Left aligned menu below button -->
-    <button id="post-toc-trigger-btn"
-        class="mdl-button mdl-js-button mdl-button--icon">
-        <i class="material-icons">format_list_numbered</i>
-    </button>
-
-    
-    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#MAC-如何配置IOS环境（win请往下戳）"><span class="post-toc-number">1.</span> <span class="post-toc-text">MAC 如何配置IOS环境（win请往下戳）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#强烈安利：使用-Webstorm-EAP-版本进行编辑，理由：正版、对ES6语法支持高，react提示好。"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">强烈安利：使用 Webstorm EAP 版本进行编辑，理由：正版、对ES6语法支持高，react提示好。</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#MAC-下环境配置完毕"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">MAC 下环境配置完毕</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Windows-如何配置Android环境-以win7举例"><span class="post-toc-number">2.</span> <span class="post-toc-text">Windows 如何配置Android环境(以win7举例)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#至此-所有的-环境变量配置结束："><span class="post-toc-number">2.1.</span> <span class="post-toc-text">至此 所有的 环境变量配置结束：</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#创建React-Native-项目"><span class="post-toc-number"></span> <span class="post-toc-text">创建React Native 项目</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#初始化-AwesomeProject为项目名称，自己随便取"><span class="post-toc-number">0.1.</span> <span class="post-toc-text">初始化 AwesomeProject为项目名称，自己随便取</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#修改项目"><span class="post-toc-number">0.2.</span> <span class="post-toc-text">修改项目</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#恭喜你完成了最基础的学习，请关注我，会带来更多-RN的学习内容"><span class="post-toc-number">1.</span> <span class="post-toc-text">恭喜你完成了最基础的学习，请关注我，会带来更多 RN的学习内容</span></a></li></ol>
-        <!--
-        <li class="mdl-menu__item">
-            Some Action
-        </li>
-        -->
-    </ul>
+    <!-- Pin on top -->
     
 
-
-
-
-
-<!-- Layouts -->
-
-    <!-- Post Module -->
-    <div class="material-post_container">
-
-        <div class="material-post mdl-grid">
-            <div id="main_article" class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
-
-                <!-- Post Header(Thumbnail & Title) -->
-                
-    <!-- Paradox Post Header -->
+    <!-- Normal Post -->
+    
+        
+            
+                <!-- Paradox Thumbnail -->
+                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
+    <!-- Post Thumbnail -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-            <script type="text/ls-javascript" id="post-thumbnail-script">
-    var randomNum = Math.floor(Math.random() * 19 + 1);
-
-    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
-    $('.post_thumbnail-random').addClass('lazy');
-</script>
-
         
     
-            <p class="article-headline-p">
-                react native之环境搭建1
-            </p>
-        </div>
 
-
-
-
-
-                
-                    <!-- Paradox Post Info -->
-                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
-
-    <!-- Author Avatar -->
-    <div id="author-avatar">
-        <img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051107.jpg" width="44px" height="44px" alt="Author Avatar"/>
-    </div>
-    <!-- Author Name & Date -->
-    <div>
-        <strong>AppleSun</strong>
-        <span>12月 03, 2016</span>
+        <!-- Post Title -->
+        <p class="article-headline-p"><a href="/2016/05/08/本地HEXO博客搭建/">本地HEXO博客搭建</a></p>
     </div>
 
-    <div class="section-spacer"></div>
-
-    <!-- Favorite -->
-    <!--
-        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
-            <i class="material-icons" role="presentation">favorite</i>
-            <span class="visuallyhidden">favorites</span>
-        </button>
-    -->
-
-    <!-- Qrcode -->
-    
-
-    <!-- Tags (bookmark) -->
-    
-    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" title="标签">
-        <i class="material-icons" role="presentation">bookmark</i>
-        <span class="visuallyhidden">bookmark</span>
-    </button>
-    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
-        <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/js/">js</a>
-    </ul>
-    
-
-    <!-- Share -->
-</div>
-
-                
-
-                <!-- Post Content -->
-                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
-    
-        <p>React Native 是facebook 旗下的一款开源项目，由于媲美原生的APP的性能(比当前native主流框架好很多),组件化编程，可以采用js(参考ES6语法)编写IOS与Android的APP，备受市场关注。支持热更新(可以绕过app store的审核机制),以及他的宣传“Learn once,write everywhere”看着都让人兴奋。</p>
-<a id="more"></a>
-<p>本来在前端的路上的我 根本不会遇见他。因为一次面试，雇主说叫我用react native(后面统称“RN”)写一个DEMO。要实现的功能可不少：登录注册、爬数据库、列表展示、图文展示、底栏导航器、数据处理、页面交互。只给了我一周。鄙人先前不造这些知识啊。各种博客、文档书籍…翻翻翻，无果，遂走向自我提升学习的道路。—-好了废话不多说没开始最基础的学习(前面都是题外话，可以不用看的。)</p>
-<h2 id="MAC-如何配置IOS环境（win请往下戳）"><a href="#MAC-如何配置IOS环境（win请往下戳）" class="headerlink" title="MAC 如何配置IOS环境（win请往下戳）"></a>MAC 如何配置IOS环境（win请往下戳）</h2><ul>
-<li>一台Mac电脑，建议入一个；</li>
-<li>Mac需安装好 Xcode，且版本不得低于 6.3；</li>
-<li>安装 <strong>Homebrew</strong> mac的包管理器，用于安装NodeJS和其他工具；</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>安装Node，需要NodeJS 4.0或更高版本。本文Homebrew默认安装的是6.x版本，完全满足要求。</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install node</span><br></pre></td></tr></table></figure>
-<ul>
-<li>React Native的命令行工具（react-native-cli）</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g react-native-cli</span><br></pre></td></tr></table></figure>
-<ul>
-<li>建议安装watchman，用来监视文件并且记录文件的改动情况</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install watchman</span><br></pre></td></tr></table></figure>
-<p>tips:如果在命令安装过程中出现“access”或者“permission denied”等关键字眼的报错，大多为权限问题，可是通过在命令前面在 sudo 的形式 或者 用以下代码修复</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chown -R `whoami` /usr/local</span><br></pre></td></tr></table></figure>
-<h4 id="强烈安利：使用-Webstorm-EAP-版本进行编辑，理由：正版、对ES6语法支持高，react提示好。"><a href="#强烈安利：使用-Webstorm-EAP-版本进行编辑，理由：正版、对ES6语法支持高，react提示好。" class="headerlink" title="强烈安利：使用 Webstorm EAP 版本进行编辑，理由：正版、对ES6语法支持高，react提示好。"></a>强烈安利：使用 <a href="https://confluence.jetbrains.com/display/WI/WebStorm+EAP" target="_blank" rel="noopener">Webstorm EAP</a> 版本进行编辑，理由：正版、对ES6语法支持高，react提示好。</h4><h3 id="MAC-下环境配置完毕"><a href="#MAC-下环境配置完毕" class="headerlink" title="MAC 下环境配置完毕"></a>MAC 下环境配置完毕</h3><h2 id="Windows-如何配置Android环境-以win7举例"><a href="#Windows-如何配置Android环境-以win7举例" class="headerlink" title="Windows 如何配置Android环境(以win7举例)"></a>Windows 如何配置Android环境(以win7举例)</h2><p>（题外话：确认自己的电脑版本是X86的就安装32位的，X64就安装64位系统，不懂的可以咨询您的电脑购买方，总之要确保以下安装的文件的一致性）<br><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016062313.png" alt="img"></p>
-<p>tips:打开控制面板 -&gt; 系统和安全 -&gt; 系统 -&gt; 高级系统设置 -&gt; 高级 -&gt; 环境变量 -&gt; 选中PATH -&gt; 双击进行编辑</p>
-<ul>
-<li><p>下载安装JDK <a href="http://www.androiddevtools.cn/" target="_blank" rel="noopener">下载地址</a></p>
-<ul>
-<li>JAVA_HOME的设置：<ul>
-<li>JAVA_HOME=C:\Program Files\Java\jdk1.8.0_45（JDK安装所在目录）</li>
-<li>在 path 中加入 %JAVA_HOME%in</li>
-</ul>
-</li>
-</ul>
-<p>tips: 命令提示行中 输入 java -version 出现您的版本号 证明 JDK配置正确</p>
-</li>
-</ul>
-<ul>
-<li><p>安装SDK 不用翻墙的<a href="http://www.androiddevtools.cn/" target="_blank" rel="noopener">下载地址同上</a>在此处直接解压 您的ADT Bundle到C://Program Files文件夹下</p>
-<ul>
-<li>ANDROID_HOME的设置：<ul>
-<li>ANDROID_HOME=C:\Program Files\android-sdk（android sdk所在目录）</li>
-<li>在 path 中加入 %ANDROID_HOME% ools与%ANDROID_HOME%platform-tools(用 ; 分割开)</li>
-</ul>
-</li>
-<li>CLASSPATH的设置：<ul>
-<li>CLASSPATH=.;%JAVA_HOME%\lib\tools.jar</li>
-</ul>
-</li>
-</ul>
-<p>tips: 命令提示行中 输入 android 没有出现“android不是可用的程序”，即证明成功</p>
-<ul>
-<li>安装NodeJS，建议去<a href="https://nodejs.org/en/" target="_blank" rel="noopener">官网下载</a></li>
-<li><a href="https://git-for-windows.github.io/" target="_blank" rel="noopener">安装GIT</a></li>
-<li>安装React Native命令行工具</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g react-native-cli</span><br></pre></td></tr></table></figure>
-<p>tips:npm仓库源替换为国内镜像以加速后面的过程，<br>设置全局使用指定的镜像命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry https://registry.npm.taobao.org --global 	</span><br><span class="line">npm config set disturl https://npm.taobao.org/dist --global</span><br></pre></td></tr></table></figure>
-<p>注意：SDK需要保证以下内容均已安装—在 Android 6.0 (Marshmallow) 中勾选 Google APIs 、 Intel x86 Atom System Image 、Intel x86 Atom_64 System Image 以及 Google APIs Intel x86 Atom_64 System Image 。以及在 Android SDK Build Tools 中勾选 Android SDK Build-Tools 23.0.1</p>
-<h3 id="至此-所有的-环境变量配置结束："><a href="#至此-所有的-环境变量配置结束：" class="headerlink" title="至此 所有的 环境变量配置结束："></a>至此 所有的 环境变量配置结束：</h3><hr>
-<h1 id="创建React-Native-项目"><a href="#创建React-Native-项目" class="headerlink" title="创建React Native 项目"></a>创建React Native 项目</h1><h3 id="初始化-AwesomeProject为项目名称，自己随便取"><a href="#初始化-AwesomeProject为项目名称，自己随便取" class="headerlink" title="初始化 AwesomeProject为项目名称，自己随便取"></a>初始化 AwesomeProject为项目名称，自己随便取</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">react-native init AwesomeProject</span><br></pre></td></tr></table></figure>
-<p>耗时特别久，网速好的话 1~3分钟，下载一个预计400M的包，如果你等不了，建议去github上直接down一个包进行react native 的学习，<a href="https://github.com/facebook/react-native" target="_blank" rel="noopener">地址在这里</a></p>
-<p>初始化好之后，cd 进入项目所在位置，执行以下命令 即可 开始跑 项目了。</p>
-<h3 id="修改项目"><a href="#修改项目" class="headerlink" title="修改项目"></a>修改项目</h3><p>现在你已经成功运行了项目，我们可以开始尝试动手改一改了：</p>
-<ul>
-<li>使用你喜欢的编辑器打开index.ios.js并随便改上几行。</li>
-<li>在iOS Emulator中按下⌘-R就可以刷新APP并看到你的最新修改！</li>
-</ul>
-<h2 id="恭喜你完成了最基础的学习，请关注我，会带来更多-RN的学习内容"><a href="#恭喜你完成了最基础的学习，请关注我，会带来更多-RN的学习内容" class="headerlink" title="恭喜你完成了最基础的学习，请关注我，会带来更多 RN的学习内容"></a>恭喜你完成了最基础的学习，请关注我，会带来更多 RN的学习内容</h2><p>PS：当前RN版本0.27，如果您需要在Mac系统下配置Android环境，或者 win虚拟机下配置IOS，可以借助百度或者联系本人：<a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1160948478&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener">QQ：1160948478</a></p>
-<p><strong>Yours Sincerely SunPing</strong></p>
-
-    
-
-    
-</div>
-
-
-                
-
-                <!-- Post Comments -->
-                
-                    
-                
+    <!-- Post Excerpt -->
+    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
+        
+            一个看起来高大上的课题，大家一定认为很困难，可是其实通过学习，你就会发现真的很简单，今天就来一起快速入门HEXO你需要做以下的准备工作（以mac为列）
+        
+        &nbsp;&nbsp;&nbsp;
+        <span>
+            <a href="/2016/05/08/本地HEXO博客搭建/" target="_self">阅读全文</a>
+        </span>
+    </div>
+    <!-- Post_entry Info-->
+    <div id="post_entry-info">
+        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
+            <!-- Author Avatar -->
+            <div id="author-avatar">
+                <img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051107.jpg" width="44px" height="44px" alt="AppleSun's avatar">
             </div>
-            <script>lsloader.load("js/html2canvas.min.js","/js/html2canvas.min.js?bnh3ambAY4wm0ftd49CxCg==")</script>
-            <button id="save_img">保存为图片并分享</button>
-            <style>
-                #save_img {display: inline-block;line-height: 1;white-space: nowrap;cursor: pointer;background: #fff;border: 1px solid #dcdfe6;border-color: #dcdfe6;color: #606266;-webkit-appearance: none;text-align: center;box-sizing: border-box;outline: none;margin: 0;transition: .1s;font-weight: 500;-moz-user-select: none;-webkit-user-select: none;-ms-user-select: none;padding: 12px 20px;font-size: 14px;border-radius: 6px;color: #fff;background-color: #409eff;border-color: #409eff;margin: 10px auto 0;}
-                #save_img:hover {background: #66b1ff;border-color: #66b1ff;
-                    color: #fff;}
-            </style>
-            <script>
-                var save_img = document.getElementById('save_img');
-                var main_article = document.getElementById('main_article');
-                save_img.onclick = function () {
-                    html2canvas(main_article, {
-                        useCORS: true,
-                        logging: false
-                    }).then(function (canvas) {
-                        var imgBlob = canvas.toDataURL();
-                        downloadFile(decodeURI(location.pathname).split('/')[4], imgBlob)
-                    })
-                    function base64Img2Blob(code) {
-                        var parts = code.split(';base64,');
-                        var contentType = parts[0].split(':')[1];
-                        var raw = window.atob(parts[1]);
-                        var rawLength = raw.length;
+            <div>
+                <strong>AppleSun</strong>
+                <span>5月 08, 2016</span>
+            </div>
+        </div>
+        <div id="post_entry-right-info">
+            <!-- Category -->
+            <span class="post_entry-category">
+                
+            </span>
 
-                        var uInt8Array = new Uint8Array(rawLength);
+            
 
-                        for (var i = 0; i < rawLength; ++i) {
-                            uInt8Array[i] = raw.charCodeAt(i);
-                        }
+            
 
-                        return new Blob([uInt8Array], { type: contentType });
-                    }
-                    function downloadFile(fileName, content) {
-                        var aLink = document.createElement('a');
-                        var blob = base64Img2Blob(content);
-                        var evt = document.createEvent("MouseEvents");
-                        evt.initEvent("click", false, false);//initEvent 不加后两个参数在FF下会报错
-                        aLink.download = fileName;
-                        aLink.href = URL.createObjectURL(blob);
-                        console.log()
-                        aLink.dispatchEvent(evt);
-                    }
-                }
-            </script>
-            <!-- Post Prev & Next Nav -->
-            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
-    <!-- Prev Nav -->
-    
-        <a href="/2016/12/06/react-native之环境搭建2/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            下一篇
-        </a>
-    
-
-    <!-- Section Spacer -->
-    <div class="section-spacer"></div>
-
-    <!-- Next Nav -->
-    
-        <a href="/2016/11/22/FLEX布局模式的理解/" id="post_nav-older" class="next-content">
-            上一篇
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_forward</i>
-            </button>
-        </a>
-    
-</nav>
-
+            <!-- Post Views -->
+            <span class="post_entry-views">
+            </span>
         </div>
     </div>
+</div>
 
+            
+            
+        
+    
+
+    
+    <!-- Index nav -->
+        <nav class="material-nav mdl-cell mdl-cell--12-col">
+            <a class="extend prev" rel="prev" href="/page/6/"><button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">arrow_back</i></button></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span>
+        </nav>
+    
+
+    
+        <script type="text/ls-javascript" id="thumbnail-script">
+    var randomNum;
+
+    var locatePost = $('.locate-thumbnail-symbol').next();
+    for(var i = 0; i < 10; i++) {
+        randomNum = Math.floor(Math.random() * 19 + 1);
+
+        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
+        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+
+        locatePost = locatePost.next();
+    }
+</script>
+
+    
+</div>
 
 
                     

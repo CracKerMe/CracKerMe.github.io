@@ -1,6 +1,10 @@
 # CracKerMe.github.io
 a blog build with hexo, 
 
+- 2018-07-26 19:01:14
+
+Add an article about vueJS
+
 - 2018-07-26 00:41:13：
 
 add two articles & make more contents about Ali interview
