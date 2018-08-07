@@ -12,7 +12,7 @@
     
     <title>
         
-            react native之环境搭建2 | 
+            移动端video视频播放优化实践 | 
         
         爱尚|轻博客
     </title>
@@ -35,8 +35,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="AppleSun">
-    <meta name="description" itemprop="description" content="Window平台配置Android环境（本人以win10操作系统介绍，当前RN0.30.0）内附安装包合集和详细安装指南，带你避开那些坑。">
-    <meta name="keywords" content="null,js">
+    <meta name="description" itemprop="description" content="遇到的挑战移动端HTML5使用原生&amp;lt;video&amp;gt;标签播放视频，要做到两个基本原则，速度快和体验佳，先来分析一下这两个问题。
+下载速度以一个8s短视频为例，wifi环境下提供的高清视频达到1000kbps，文件大小大约1MB；非wifi环境下提供的低码率视频是500kbps左右，文件大小大约500KB；参考QzoneTouch多普勒测速，2g网络的平均速度是14KB/s，那么下载一个低码率视频耗时35s；那么要想流畅播放视频，就需要一个加载等待的过程，这个过程要有明确的反馈，不能让用户有“坏掉了”的感觉。">
+    <meta name="keywords" content="null,html5">
 
     <!-- Site Verification -->
     
@@ -65,26 +66,28 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://crackerme.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="react native之环境搭建2 | 爱尚|轻博客">
+    <meta property="og:title" content="移动端video视频播放优化实践 | 爱尚|轻博客">
     <meta property="og:image" content="/img/favicon.png" />
-    <meta property="og:description" content="Window平台配置Android环境（本人以win10操作系统介绍，当前RN0.30.0）内附安装包合集和详细安装指南，带你避开那些坑。">
-    <meta property="og:article:tag" content="js"> 
+    <meta property="og:description" content="遇到的挑战移动端HTML5使用原生&amp;lt;video&amp;gt;标签播放视频，要做到两个基本原则，速度快和体验佳，先来分析一下这两个问题。
+下载速度以一个8s短视频为例，wifi环境下提供的高清视频达到1000kbps，文件大小大约1MB；非wifi环境下提供的低码率视频是500kbps左右，文件大小大约500KB；参考QzoneTouch多普勒测速，2g网络的平均速度是14KB/s，那么下载一个低码率视频耗时35s；那么要想流畅播放视频，就需要一个加载等待的过程，这个过程要有明确的反馈，不能让用户有“坏掉了”的感觉。">
+    <meta property="og:article:tag" content="html5"> 
 
     
-        <meta property="article:published_time" content="12月 06, 2016" />
-        <meta property="article:modified_time" content="4月 28, 2017" />
+        <meta property="article:published_time" content="8月 08, 2018" />
+        <meta property="article:modified_time" content="8月 08, 2018" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="react native之环境搭建2 | 爱尚|轻博客">
-    <meta name="twitter:description" content="Window平台配置Android环境（本人以win10操作系统介绍，当前RN0.30.0）内附安装包合集和详细安装指南，带你避开那些坑。">
+    <meta name="twitter:title" content="移动端video视频播放优化实践 | 爱尚|轻博客">
+    <meta name="twitter:description" content="遇到的挑战移动端HTML5使用原生&amp;lt;video&amp;gt;标签播放视频，要做到两个基本原则，速度快和体验佳，先来分析一下这两个问题。
+下载速度以一个8s短视频为例，wifi环境下提供的高清视频达到1000kbps，文件大小大约1MB；非wifi环境下提供的低码率视频是500kbps左右，文件大小大约500KB；参考QzoneTouch多普勒测速，2g网络的平均速度是14KB/s，那么下载一个低码率视频耗时35s；那么要想流畅播放视频，就需要一个加载等待的过程，这个过程要有明确的反馈，不能让用户有“坏掉了”的感觉。">
     <meta name="twitter:image" content="/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://crackerme.github.io" />
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://crackerme.github.io/2016/12/06/react-native之环境搭建2/index.html" />
+        <link rel="canonical" href="https://crackerme.github.io/2018/08/08/移动端video视频播放优化实践/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -110,11 +113,12 @@
         },
         "description": "间歇性凌云壮志，持续性混吃等死"
     },
-    "headline": "react native之环境搭建2",
-    "url": "https://crackerme.github.io/2016/12/06/react-native之环境搭建2/index.html",
-    "datePublished": "12月 06, 2016",
-    "dateModified": "4月 28, 2017",
-    "description": "Window平台配置Android环境（本人以win10操作系统介绍，当前RN0.30.0）内附安装包合集和详细安装指南，带你避开那些坑。",
+    "headline": "移动端video视频播放优化实践",
+    "url": "https://crackerme.github.io/2018/08/08/移动端video视频播放优化实践/index.html",
+    "datePublished": "8月 08, 2018",
+    "dateModified": "8月 08, 2018",
+    "description": "遇到的挑战移动端HTML5使用原生&amp;lt;video&amp;gt;标签播放视频，要做到两个基本原则，速度快和体验佳，先来分析一下这两个问题。
+下载速度以一个8s短视频为例，wifi环境下提供的高清视频达到1000kbps，文件大小大约1MB；非wifi环境下提供的低码率视频是500kbps左右，文件大小大约500KB；参考QzoneTouch多普勒测速，2g网络的平均速度是14KB/s，那么下载一个低码率视频耗时35s；那么要想流畅播放视频，就需要一个加载等待的过程，这个过程要有明确的反馈，不能让用户有“坏掉了”的感觉。",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://crackerme.github.io"
@@ -339,7 +343,7 @@
 
     
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Window平台配置Android环境"><span class="post-toc-number">1.</span> <span class="post-toc-text">Window平台配置Android环境</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#安装Chocolatey（包管理器）"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">安装Chocolatey（包管理器）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#安装Python-2"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">安装Python 2</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#安装Node"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">安装Node</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#React-Native命令行工具"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">React Native命令行工具</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#安装git"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">安装git</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装JDK和JRE（1-7版本以上）"><span class="post-toc-number">2.</span> <span class="post-toc-text">安装JDK和JRE（1.7版本以上）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#怎么样算成功？"><span class="post-toc-number">2.0.1.</span> <span class="post-toc-text">怎么样算成功？</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装Android-Studio-2-0或者更高版本。"><span class="post-toc-number">3.</span> <span class="post-toc-text">安装Android Studio 2.0或者更高版本。</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装过程中，请注意-您的程序安装目录以及SDK存放目录"><span class="post-toc-number">4.</span> <span class="post-toc-text">安装过程中，请注意 您的程序安装目录以及SDK存放目录</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#怎么样算成功？-1"><span class="post-toc-number">4.0.1.</span> <span class="post-toc-text">怎么样算成功？</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#PS：不得不说，RN确实有很多坑，所以-选择RN，就得做好与坑斗争下去的准备"><span class="post-toc-number">5.</span> <span class="post-toc-text">PS：不得不说，RN确实有很多坑，所以 选择RN，就得做好与坑斗争下去的准备</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#win平台RN所有需要下载安装的软件包：http-yunpan-cn-c6bM2erEZ6iK8-访问密码-3b06"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">win平台RN所有需要下载安装的软件包：http://yunpan.cn/c6bM2erEZ6iK8 访问密码 3b06</span></a></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#遇到的挑战"><span class="post-toc-number">1.</span> <span class="post-toc-text">遇到的挑战</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#下载速度"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">下载速度</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#多普勒测速数据参考"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">多普勒测速数据参考</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#用户体验"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">用户体验</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#分析原因"><span class="post-toc-number">2.</span> <span class="post-toc-text">分析原因</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#事件差异"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">事件差异</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#PC"><span class="post-toc-number">2.1.1.</span> <span class="post-toc-text">PC</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#iOS"><span class="post-toc-number">2.1.2.</span> <span class="post-toc-text">iOS</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Android"><span class="post-toc-number">2.1.3.</span> <span class="post-toc-text">Android</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#一些常用且需要重点关注的-lt-video-gt-事件"><span class="post-toc-number">2.1.4.</span> <span class="post-toc-text">一些常用且需要重点关注的&lt;video&gt;事件</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#属性差异"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">属性差异</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#其他怪异bug和不友好表现"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">其他怪异bug和不友好表现</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#最佳实践"><span class="post-toc-number">3.</span> <span class="post-toc-text">最佳实践</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#视频初始化"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">视频初始化</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#自动播放"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">自动播放</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#点击播放"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">点击播放</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#iOS6"><span class="post-toc-number">3.3.1.</span> <span class="post-toc-text">iOS6+</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#iOS-lt-6"><span class="post-toc-number">3.3.2.</span> <span class="post-toc-text">iOS &lt; 6</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Android-1"><span class="post-toc-number">3.3.3.</span> <span class="post-toc-text">Android</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#循环播放"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">循环播放</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#监控下载进度"><span class="post-toc-number">3.5.</span> <span class="post-toc-text">监控下载进度</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#全部下载后再播放"><span class="post-toc-number">3.6.</span> <span class="post-toc-text">全部下载后再播放</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#统计播放时间和播放次数"><span class="post-toc-number">3.7.</span> <span class="post-toc-text">统计播放时间和播放次数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#异常处理"><span class="post-toc-number">3.8.</span> <span class="post-toc-text">异常处理</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#参考数据"><span class="post-toc-number">4.</span> <span class="post-toc-text">参考数据</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#参考资料"><span class="post-toc-number">5.</span> <span class="post-toc-text">参考资料</span></a></li></ol>
         <!--
         <li class="mdl-menu__item">
             Some Action
@@ -377,7 +381,7 @@
         
     
             <p class="article-headline-p">
-                react native之环境搭建2
+                移动端video视频播放优化实践
             </p>
         </div>
 
@@ -396,7 +400,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>AppleSun</strong>
-        <span>12月 06, 2016</span>
+        <span>8月 08, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -420,7 +424,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/js/">js</a>
+        <a class="post_tag-link" href="/tags/html5/">html5</a>
     </ul>
     
 
@@ -432,61 +436,931 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h2 id="Window平台配置Android环境"><a href="#Window平台配置Android环境" class="headerlink" title="Window平台配置Android环境"></a>Window平台配置Android环境</h2><p>（本人以win10操作系统介绍，当前RN0.30.0）<br>内附安装包合集和详细安装指南，带你避开那些坑。</p>
+        <h2 id="遇到的挑战"><a href="#遇到的挑战" class="headerlink" title="遇到的挑战"></a>遇到的挑战</h2><p>移动端HTML5使用原生<strong>&lt;video&gt;</strong>标签播放视频，要做到两个基本原则，速度快和体验佳，先来分析一下这两个问题。</p>
+<h3 id="下载速度"><a href="#下载速度" class="headerlink" title="下载速度"></a>下载速度</h3><p>以一个8s短视频为例，wifi环境下提供的高清视频达到1000kbps，文件大小大约1MB；非wifi环境下提供的低码率视频是500kbps左右，文件大小大约500KB；参考QzoneTouch多普勒测速，2g网络的平均速度是14KB/s，那么下载一个低码率视频耗时35s；那么要想流畅播放视频，就需要一个加载等待的过程，这个过程要有明确的反馈，不能让用户有“坏掉了”的感觉。</p>
 <a id="more"></a>
-<h3 id="安装Chocolatey（包管理器）"><a href="#安装Chocolatey（包管理器）" class="headerlink" title="安装Chocolatey（包管理器）"></a>安装Chocolatey（包管理器）</h3><ul>
-<li>以管理员身份打开 命令提示符窗口，运行以下代码</li>
+<h4 id="多普勒测速数据参考"><a href="#多普勒测速数据参考" class="headerlink" title="多普勒测速数据参考"></a>多普勒测速数据参考</h4><table>
+<thead>
+<tr>
+<th>#</th>
+<th>dns(s)</th>
+<th>conn(s)</th>
+<th>rtt(s)</th>
+<th>tran(kb/s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2g</td>
+<td>3.85785</td>
+<td>2.33482</td>
+<td>2.57478</td>
+<td>14.0374</td>
+</tr>
+<tr>
+<td>3g</td>
+<td>1.60643</td>
+<td>0.743109</td>
+<td>0.608047</td>
+<td>60.1967</td>
+</tr>
+<tr>
+<td>wifi</td>
+<td>0.986921</td>
+<td>0.550208</td>
+<td>0.444332</td>
+<td>70.8728</td>
+</tr>
+</tbody>
+</table>
+<h3 id="用户体验"><a href="#用户体验" class="headerlink" title="用户体验"></a>用户体验</h3><p>视频是否可以自动播放，是否能循环播放，是否能显示下载进度，播放的时候如何隐藏控制条，暂停的时候又能显示出来呢。这些问题看上去貌似简单，但是由于PC/iOS/Android这些不同平台、不同的浏览器内核、甚至相同内核的不同版本，所实现的&lt;video&gt;属性、方法和事件差异较大，解决兼容性问题又给开发造成了很大困扰。</p>
+<h2 id="分析原因"><a href="#分析原因" class="headerlink" title="分析原因"></a>分析原因</h2><h3 id="事件差异"><a href="#事件差异" class="headerlink" title="事件差异"></a>事件差异</h3><p>下面是播放一个短视频，在不同平台触发事件和获取属性的差异表现。</p>
+<h4 id="PC"><a href="#PC" class="headerlink" title="PC"></a>PC</h4><table>
+<thead>
+<tr>
+<th>#</th>
+<th>event</th>
+<th>readyState</th>
+<th>currentTime (s)</th>
+<th>buffered (s)</th>
+<th>duration (s)</th>
+<th>视频状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>loadstart</td>
+<td>NOTHING</td>
+<td>0</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>2</td>
+<td>suspend</td>
+<td>NOTHING</td>
+<td>0</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>3</td>
+<td>play</td>
+<td>NOTHING</td>
+<td>0</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>4</td>
+<td>waiting</td>
+<td>NOTHING</td>
+<td>0</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>5</td>
+<td>durationchange</td>
+<td>METADATA</td>
+<td>0</td>
+<td>5.35</td>
+<td>7.91</td>
+<td>获取到视频长度</td>
+</tr>
+<tr>
+<td>6</td>
+<td>loadedmetadata</td>
+<td>METADATA</td>
+<td>0</td>
+<td>0.66</td>
+<td>7.91</td>
+<td>获取到元数据</td>
+</tr>
+<tr>
+<td>7</td>
+<td>loadeddata</td>
+<td>ENOUGHDATA</td>
+<td>0</td>
+<td>0.66</td>
+<td>7.91</td>
+<td>–</td>
+</tr>
+<tr>
+<td>8</td>
+<td>canplay</td>
+<td>ENOUGH_DATA</td>
+<td>0</td>
+<td>0.66</td>
+<td>7.91</td>
+<td>–</td>
+</tr>
+<tr>
+<td>9</td>
+<td>playing</td>
+<td>ENOUGH_DATA</td>
+<td>0</td>
+<td>0.66</td>
+<td>7.91</td>
+<td>开始播放</td>
+</tr>
+<tr>
+<td>10</td>
+<td>canplaythrough</td>
+<td>ENOUGH_DATA</td>
+<td>0</td>
+<td>0.66</td>
+<td>7.91</td>
+<td>可以流畅播放</td>
+</tr>
+<tr>
+<td>11</td>
+<td>progress</td>
+<td>ENOUGH_DATA</td>
+<td>0.11</td>
+<td>3.68</td>
+<td>7.91</td>
+<td>持续下载</td>
+</tr>
+<tr>
+<td>12</td>
+<td>timeupdate</td>
+<td>ENOUGH_DATA</td>
+<td>0.14</td>
+<td>4.44</td>
+<td>7.91</td>
+<td>播放进度变化</td>
+</tr>
+<tr>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+</tr>
+<tr>
+<td>23</td>
+<td>progress</td>
+<td>ENOUGH_DATA</td>
+<td>1.77</td>
+<td>7.91</td>
+<td>7.91</td>
+<td>下载完毕</td>
+</tr>
+<tr>
+<td>24</td>
+<td>suspend</td>
+<td>ENOUGH_DATA</td>
+<td>1.77</td>
+<td>7.91</td>
+<td>7.91</td>
+<td>–</td>
+</tr>
+<tr>
+<td>25</td>
+<td>timeupdate</td>
+<td>ENOUGH_DATA</td>
+<td>1.9</td>
+<td>7.91</td>
+<td>7.91</td>
+<td>继续播放中</td>
+</tr>
+<tr>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+</tr>
+<tr>
+<td>48</td>
+<td>timeupdate</td>
+<td>ENOUGH_DATA</td>
+<td>7.7</td>
+<td>7.91</td>
+<td>7.91</td>
+<td>–</td>
+</tr>
+<tr>
+<td>49</td>
+<td>timeupdate</td>
+<td>ENOUGH_DATA</td>
+<td>0</td>
+<td>7.91</td>
+<td>7.91</td>
+<td>–</td>
+</tr>
+<tr>
+<td>50</td>
+<td>seeking</td>
+<td>METADATA</td>
+<td>0</td>
+<td>7.91</td>
+<td>7.91</td>
+<td>–</td>
+</tr>
+<tr>
+<td>51</td>
+<td>waiting</td>
+<td>METADATA</td>
+<td>0</td>
+<td>7.91</td>
+<td>7.91</td>
+<td>–</td>
+</tr>
+<tr>
+<td>52</td>
+<td>timeupdate</td>
+<td>ENOUGH_DATA</td>
+<td>0</td>
+<td>7.91</td>
+<td>7.91</td>
+<td>–</td>
+</tr>
+<tr>
+<td>53</td>
+<td>seeked</td>
+<td>ENOUGH_DATA</td>
+<td>0</td>
+<td>7.91</td>
+<td>7.91</td>
+<td>播放完毕进度回到起点</td>
+</tr>
+<tr>
+<td>54</td>
+<td>canplay</td>
+<td>ENOUGH_DATA</td>
+<td>0</td>
+<td>7.91</td>
+<td>7.91</td>
+<td>–</td>
+</tr>
+<tr>
+<td>55</td>
+<td>playing</td>
+<td>ENOUGH_DATA</td>
+<td>0</td>
+<td>7.91</td>
+<td>7.91</td>
+<td>循环播放</td>
+</tr>
+<tr>
+<td>56</td>
+<td>canplaythrough</td>
+<td>ENOUGH_DATA</td>
+<td>0</td>
+<td>7.91</td>
+<td>7.91</td>
+<td>–</td>
+</tr>
+<tr>
+<td>57</td>
+<td>timeupdate</td>
+<td>ENOUGH_DATA</td>
+<td>0.19</td>
+<td>7.91</td>
+<td>7.91</td>
+<td>–</td>
+</tr>
+<tr>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+</tr>
+</tbody>
+</table>
+<h4 id="iOS"><a href="#iOS" class="headerlink" title="iOS"></a>iOS</h4><table>
+<thead>
+<tr>
+<th>#</th>
+<th>event</th>
+<th>readyState</th>
+<th>currentTime (s)</th>
+<th>buffered (s)</th>
+<th>duration (s)</th>
+<th>视频状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>loadstart</td>
+<td>NOTHING</td>
+<td>0</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>2</td>
+<td>play</td>
+<td>NOTHING</td>
+<td>0</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>3</td>
+<td>waiting</td>
+<td>NOTHING</td>
+<td>0</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>4</td>
+<td>durationchange</td>
+<td>METADATA</td>
+<td>0</td>
+<td>–</td>
+<td>7.91</td>
+<td>获取到视频长度</td>
+</tr>
+<tr>
+<td>5</td>
+<td>loadedmetadata</td>
+<td>METADATA</td>
+<td>0</td>
+<td>–</td>
+<td>7.91</td>
+<td>获取到元数据</td>
+</tr>
+<tr>
+<td>6</td>
+<td>loadeddata</td>
+<td>ENOUGHDATA</td>
+<td>0</td>
+<td>–</td>
+<td>7.91</td>
+<td>–</td>
+</tr>
+<tr>
+<td>7</td>
+<td>canplay</td>
+<td>ENOUGH_DATA</td>
+<td>0</td>
+<td>7.91</td>
+<td>7.91</td>
+<td>–</td>
+</tr>
+<tr>
+<td>8</td>
+<td>canplaythrough</td>
+<td>ENOUGH_DATA</td>
+<td>0</td>
+<td>7.91</td>
+<td>7.91</td>
+<td>可以流畅播放</td>
+</tr>
+<tr>
+<td>9</td>
+<td>playing</td>
+<td>ENOUGH_DATA</td>
+<td>0</td>
+<td>7.91</td>
+<td>7.91</td>
+<td>开始播放</td>
+</tr>
+<tr>
+<td>10</td>
+<td>progress</td>
+<td>ENOUGH_DATA</td>
+<td>0</td>
+<td>7.91</td>
+<td>7.91</td>
+<td>下载完毕</td>
+</tr>
+<tr>
+<td>11</td>
+<td>suspend</td>
+<td>ENOUGH_DATA</td>
+<td>0</td>
+<td>7.91</td>
+<td>7.91</td>
+<td>–</td>
+</tr>
+<tr>
+<td>12</td>
+<td>timeupdate</td>
+<td>ENOUGH_DATA</td>
+<td>0.02</td>
+<td>7.91</td>
+<td>7.91</td>
+<td>播放进度变化</td>
+</tr>
+<tr>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+</tr>
+<tr>
+<td>43</td>
+<td>timeupdate</td>
+<td>ENOUGH_DATA</td>
+<td>7.8</td>
+<td>7.91</td>
+<td>7.91</td>
+<td>–</td>
+</tr>
+<tr>
+<td>44</td>
+<td>timeupdate</td>
+<td>ENOUGH_DATA</td>
+<td>0</td>
+<td>7.91</td>
+<td>7.91</td>
+<td>–</td>
+</tr>
+<tr>
+<td>45</td>
+<td>seeked</td>
+<td>ENOUGH_DATA</td>
+<td>0</td>
+<td>7.91</td>
+<td>7.91</td>
+<td>播放完毕进度回到起点</td>
+</tr>
+<tr>
+<td>46</td>
+<td>timeupdate</td>
+<td>ENOUGH_DATA</td>
+<td>0.22</td>
+<td>7.91</td>
+<td>7.91</td>
+<td>循环播放</td>
+</tr>
+<tr>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+</tr>
+</tbody>
+</table>
+<h4 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h4><table>
+<thead>
+<tr>
+<th>#</th>
+<th>event</th>
+<th>readyState</th>
+<th>currentTime (s)</th>
+<th>buffered (s)</th>
+<th>duration (s)</th>
+<th>视频状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>loadstart</td>
+<td>NOTHING</td>
+<td>0</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>2</td>
+<td>play</td>
+<td>NOTHING</td>
+<td>0</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>3</td>
+<td>waiting</td>
+<td>NOTHING</td>
+<td>0</td>
+<td>0</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>4</td>
+<td>durationchange</td>
+<td>ENOUGH_DATA</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>–</td>
+</tr>
+<tr>
+<td>5</td>
+<td>durationchange</td>
+<td>ENOUGH_DATA</td>
+<td>0</td>
+<td>0</td>
+<td>7.91</td>
+<td>获取到视频长度</td>
+</tr>
+<tr>
+<td>6</td>
+<td>loadedmetadata</td>
+<td>ENOUGH_DATA</td>
+<td>0</td>
+<td>0</td>
+<td>7.91</td>
+<td>获取到元数据</td>
+</tr>
+<tr>
+<td>7</td>
+<td>loadeddata</td>
+<td>ENOUGHDATA</td>
+<td>0</td>
+<td>0</td>
+<td>7.91</td>
+<td>–</td>
+</tr>
+<tr>
+<td>8</td>
+<td>canplay</td>
+<td>ENOUGH_DATA</td>
+<td>0</td>
+<td>0</td>
+<td>7.91</td>
+<td>–</td>
+</tr>
+<tr>
+<td>9</td>
+<td>canplaythrough</td>
+<td>ENOUGH_DATA</td>
+<td>0</td>
+<td>0</td>
+<td>7.91</td>
+<td>–</td>
+</tr>
+<tr>
+<td>10</td>
+<td>playing</td>
+<td>ENOUGH_DATA</td>
+<td>0</td>
+<td>0</td>
+<td>7.91</td>
+<td>–</td>
+</tr>
+<tr>
+<td>11</td>
+<td>timeupdate</td>
+<td>ENOUGH_DATA</td>
+<td>0</td>
+<td>0</td>
+<td>7.91</td>
+<td>–</td>
+</tr>
+<tr>
+<td>12</td>
+<td>progress</td>
+<td>ENOUGH_DATA</td>
+<td>0</td>
+<td>3.57</td>
+<td>7.91</td>
+<td>下载中</td>
+</tr>
+<tr>
+<td>13</td>
+<td>timeupdate</td>
+<td>ENOUGH_DATA</td>
+<td>0.2</td>
+<td>6.89</td>
+<td>7.91</td>
+<td>开始播放</td>
+</tr>
+<tr>
+<td>14</td>
+<td>progress</td>
+<td>ENOUGH_DATA</td>
+<td>0</td>
+<td>7.91</td>
+<td>7.91</td>
+<td>下载完毕</td>
+</tr>
+<tr>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+</tr>
+<tr>
+<td>49</td>
+<td>timeupdate</td>
+<td>ENOUGH_DATA</td>
+<td>7.79</td>
+<td>7.91</td>
+<td>7.91</td>
+<td>–</td>
+</tr>
+<tr>
+<td>50</td>
+<td>progress</td>
+<td>ENOUGH_DATA</td>
+<td>7.87</td>
+<td>7.91</td>
+<td>7.91</td>
+<td>–</td>
+</tr>
+<tr>
+<td>51</td>
+<td>timeupdate</td>
+<td>ENOUGH_DATA</td>
+<td>0</td>
+<td>7.91</td>
+<td>7.91</td>
+<td>–</td>
+</tr>
+<tr>
+<td>52</td>
+<td>seeking</td>
+<td>ENOUGH_DATA</td>
+<td>0</td>
+<td>7.91</td>
+<td>7.91</td>
+<td>播放完毕进度回到起点</td>
+</tr>
+<tr>
+<td>53</td>
+<td>timeupdate</td>
+<td>ENOUGH_DATA</td>
+<td>0</td>
+<td>7.91</td>
+<td>7.91</td>
+<td>–</td>
+</tr>
+<tr>
+<td>54</td>
+<td>seeked</td>
+<td>ENOUGH_DATA</td>
+<td>0</td>
+<td>7.91</td>
+<td>7.91</td>
+<td>循环播放失败卡住了</td>
+</tr>
+<tr>
+<td>55</td>
+<td>progress</td>
+<td>ENOUGH_DATA</td>
+<td>0</td>
+<td>7.91</td>
+<td>7.91</td>
+<td>–</td>
+</tr>
+<tr>
+<td>56</td>
+<td>stalled</td>
+<td>ENOUGH_DATA</td>
+<td>0</td>
+<td>7.91</td>
+<td>7.91</td>
+<td>–</td>
+</tr>
+</tbody>
+</table>
+<h4 id="一些常用且需要重点关注的-lt-video-gt-事件"><a href="#一些常用且需要重点关注的-lt-video-gt-事件" class="headerlink" title="一些常用且需要重点关注的&lt;video&gt;事件"></a>一些常用且需要重点关注的&lt;video&gt;事件</h4><table>
+<thead>
+<tr>
+<th>event</th>
+<th>iOS</th>
+<th>Android</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><strong><strong><strong>**</strong></strong></strong></strong></td>
+<td><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>***</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></td>
+<td><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>***</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></td>
+</tr>
+<tr>
+<td>play</td>
+<td>只是要播放视频，响应的是video.play()方法，并不代表已经开始播放</td>
+<td>和iOS一样，仅是响应video.play()方法</td>
+</tr>
+<tr>
+<td>durationchange</td>
+<td>会执行一次，一定会获取到视频的duration</td>
+<td>可能会执行多次，只有最后一次才能获取到真实的duration，前面的duration都是0；但低版本Android可能获取到的duration是0或1；（本文提到的低版本Android大部分是4.1以下）</td>
+</tr>
+<tr>
+<td>canplay</td>
+<td>可以认为是视频元素没有问题，可以运行，没有更多含义了，基本用不上</td>
+<td>同iOS</td>
+</tr>
+<tr>
+<td>canplaythrough</td>
+<td>会有明确的缓冲，表示可以流畅播放了；</td>
+<td>没有什么用，视频仍然会卡住，数据可能还没有开始加载；</td>
+</tr>
+<tr>
+<td>playing</td>
+<td>明确表示播放开始了；</td>
+<td>依然没有用，视频可能并没有开始播放；</td>
+</tr>
+<tr>
+<td>progress</td>
+<td>有明确的下载，可以获取到当前的buffer，并且全部下载完毕后不在触发；</td>
+<td>不一定有明确的数据下载，并且全部下载完毕后依然继续触发；</td>
+</tr>
+<tr>
+<td>timeupdate</td>
+<td>会有明确的进度变化，可以获取到currentTime；</td>
+<td>进度不一定变化，currentTime可能总是0，但是第一次有currentTime变化的timeupdate事件一定代表了视频开始播放了；</td>
+</tr>
+<tr>
+<td>error</td>
+<td>iOS中会有明确的错误抛出；</td>
+<td>Android中某些浏览器会莫名其妙的抛出error；</td>
+</tr>
+<tr>
+<td>stalled</td>
+<td>网络状况不佳，导致视频下载中断；</td>
+<td>在没有play之前，也可能会抛出该事件。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="属性差异"><a href="#属性差异" class="headerlink" title="属性差异"></a>属性差异</h3><table>
+<thead>
+<tr>
+<th>attributes</th>
+<th>iOS</th>
+<th>android</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><strong><strong><strong>**</strong></strong></strong></strong></td>
+<td><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>***</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></td>
+<td><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>***</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></td>
+</tr>
+<tr>
+<td>poster 封面图片</td>
+<td>支持，但是加载速度明显比在&lt;img&gt;中要慢；</td>
+<td>不一定支持（浏览器厂商的实现标准不统一）；</td>
+</tr>
+<tr>
+<td>preload 预加载</td>
+<td>iPhone不支持；</td>
+<td>可能支持；</td>
+</tr>
+<tr>
+<td>autoplay 自动播放</td>
+<td>iPhone Safari中不支持，但在webview中可能被开启；iOS开发文档明确说明蜂窝网络下不允许autoplay；</td>
+<td>可能支持；</td>
+</tr>
+<tr>
+<td>loop 循环播放</td>
+<td>支持</td>
+<td>可能支持；</td>
+</tr>
+<tr>
+<td>controls 控制条</td>
+<td>支持，但是需要开始播放了才显示</td>
+<td>基本都支持显示或者不显示</td>
+</tr>
+<tr>
+<td>width和height</td>
+<td>一定给出明确的属性设置，切不能为0；</td>
+<td>如果不设置，仅仅通过CSS样式去控制视频大小，可能会导致标签失效。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="其他怪异bug和不友好表现"><a href="#其他怪异bug和不友好表现" class="headerlink" title="其他怪异bug和不友好表现"></a>其他怪异bug和不友好表现</h3><table>
+<thead>
+<tr>
+<th>iOS</th>
+<th>android</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>*</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></td>
+<td><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>*</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></td>
+</tr>
+<tr>
+<td>物理位置覆盖在&lt;video&gt;区域上的元素，click和touch等事件会失效，比如一个<a>链接如果覆盖在&lt;video&gt;上，那么点击后没有任何效果。</a></td>
+<td>–</td>
+</tr>
+<tr>
+<td>iOS8.0+中，单页面播放视频超过16个，再播放的视频全部MediaError解码异常无法播放。</td>
+<td>–</td>
+</tr>
+<tr>
+<td>iPhone的Safari会弹出一个全屏的播放器来播放视频，iPad则支持内联播放。iOS7+ 如果webview（比如微信）开启了<code>webview.allowsInlineMediaPlayback = YES;</code>，可以通过设置<code>webkit-playsinline</code>属性支持内联播放；</td>
+<td>支持内联播放，但某些厂商会用自己的播放器劫持原生的视频播放；</td>
+</tr>
+<tr>
+<td>下载视频时，会先发送一个2字节的请求来获取视频元数据（比如时长），然后再不断的发送分包续传（206）请求来下载视频，抓包显示请求数和请求量至少有一倍的冗余（x2），这个严重的bug在iOS8中有明显的修复，但是分包的206请求仍然会有冗余数据的下载，浪费了流量。</td>
+<td>比iOS的处理方式好，没有第一个2字节请求，没有流量损耗；</td>
+</tr>
+<tr>
+<td>–</td>
+<td>低版本Android（&lt;=4.0.4）中，&lt;video&gt;如果在有相对和决定定位的层中，可能会导致整个页面错位。</td>
+</tr>
+<tr>
+<td>–</td>
+<td>某些浏览器厂商会劫持&lt;video&gt;，用其“自己”的播放器来播放视频，“破坏”了产品本身的播放体验，那么只能case by case的解决了。</td>
+</tr>
+<tr>
+<td>加载视频时没有进度提示，视觉上看不出是播放完了还是卡住了；</td>
+<td>加载视频时，大都会显示一个自带的loading UI（菊花）。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="最佳实践"><a href="#最佳实践" class="headerlink" title="最佳实践"></a>最佳实践</h2><h3 id="视频初始化"><a href="#视频初始化" class="headerlink" title="视频初始化"></a>视频初始化</h3><p>如果将一个&lt;video&gt;直接显示在页面中，那么就会看到各种五花八门的播放器初始效果；</p>
+<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2018080801.jpg" alt=""></p>
+<p>这显然不是一个好的视觉体验，那么通常的做法是制作一个模拟的视频播放视图，比如一个封面加一个播放按钮。</p>
+<p>而真实的&lt;video&gt;视频元素要隐藏起来，如何隐藏呢？最好不要用<code>{display: none}</code>或者<code>{width:0;height:0;}</code>的方式，因为这样视频元素会处于未激活的状态，给后续的处理带来麻烦。最佳的方式是将视频设置成1×1像素大小，放在视觉边缘的位置。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--iOS--&gt;</span><br><span class="line">&lt;video webkit-playsinline width=&quot;1&quot; height=&quot;1&quot; class=&quot;vplayinside notaplink&quot; x-webkit-airplay controls loop=&quot;loop&quot; src=&quot;&lt;%=src%&gt;&quot;&gt;&lt;/video&gt; </span><br><span class="line">&lt;!--Android--&gt;</span><br><span class="line">&lt;video width=&quot;1&quot; height=&quot;1&quot; controls loop=&quot;loop&quot; src=&quot;&lt;%=src%&gt;&quot;&gt;&lt;/video&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="自动播放"><a href="#自动播放" class="headerlink" title="自动播放"></a>自动播放</h3><p>autoplay的支持依赖内核和网络状况，比如iPhone在蜂窝网络下明确禁用了autoplay；</p>
+<p>经过试验，在没有明确的用户操作的情况下，直接通过<code>video.play()</code>也是无法激活播放的；</p>
+<p>并且在产品设计上，自动播放也不是一个舒服的用户体验，所以产品设计上尽量避免使用自动播放。</p>
+<h3 id="点击播放"><a href="#点击播放" class="headerlink" title="点击播放"></a>点击播放</h3><p>之前提到，视频最好通过1px大小隐藏起来，那么这时如何触发播放呢？</p>
+<p>经过试验，当在明确的用户操作（touch、click）时，通过这些用户行为事件的回调函数，用<code>video.play()</code>是可以触发视频播放的，那么能否在用户操作后，再去同步的创建和播放视频呢？答案是肯定的，这无疑是一个视频元素初始化的最佳实践，但是有些差异需要注意。</p>
+<h4 id="iOS6"><a href="#iOS6" class="headerlink" title="iOS6+"></a>iOS6+</h4><p>可以在用户的touch时间中动态创建并播放视频。</p>
+<h4 id="iOS-lt-6"><a href="#iOS-lt-6" class="headerlink" title="iOS &lt; 6"></a>iOS &lt; 6</h4><p>可以在用户的touch时间中动态创建视频，但不能播放；要再追加一个click事件来启动播放；也就是说，给伪造的视频播放按钮同时绑定tap和click事件，在tap的时候创建，在之后300毫秒的click中去播放。</p>
+<h4 id="Android-1"><a href="#Android-1" class="headerlink" title="Android"></a>Android</h4><p>大部分高版本Android可以像iOS6+那样去处理，但是低版本的不行，必须要通过click事件去传递<code>video.play()</code>，为了保持兼容，最好是用帮tap和click两个事件来分别完成视频的初始化和播放。</p>
+<p>我们还发现，有些低版本Android中，无法通过<code>video.play()</code>来播放视频，必须有真实的用户点击视频元素才能播放；这种情况，有一个技巧就是在tap的时候初始化并放大视频覆盖在播放视图中，让300毫秒后的真实点击行为穿透点击在视频元素上来实现播放。</p>
+<h3 id="循环播放"><a href="#循环播放" class="headerlink" title="循环播放"></a>循环播放</h3><p>如果视频需要循环播放，那么就增加<code>loop</code>属性，是否能循环播放就看浏览器是否支持了，因为还没有找到hack技巧来强制循环播放；</p>
+<p>即使，在不支持循环播放的Android中，通过监听<code>seeked</code>事件知道了播放进度到了终点或起点暂停了，此时也无法通过<code>video.play()</code>来让视频重新播放。</p>
+<h3 id="监控下载进度"><a href="#监控下载进度" class="headerlink" title="监控下载进度"></a>监控下载进度</h3><p>如何获取视频时长和已经下载的时长？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// 视频时长</span><br><span class="line">var duration = video.duration</span><br><span class="line">// 获取视频已经下载的时长</span><br><span class="line">function getEnd(video) &#123;</span><br><span class="line">	var end = 0</span><br><span class="line">	try &#123;</span><br><span class="line">		end = video.buffered.end(0) || 0</span><br><span class="line">		end = parseInt(end * 1000 + 1) / 1000</span><br><span class="line">	&#125; catch(e) &#123;&#125;  </span><br><span class="line">	return end</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>progress事件表示视频在加载，但是它的触发频率和时机并不规律，最佳做法是通过一个定时器去实时获取end，当end &gt;= duration时，表示已经下载完毕，再终止定时器。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var timer = setInterval(function() &#123;</span><br><span class="line">	var end = getEnd(video),</span><br><span class="line">		duration = video.duration</span><br><span class="line">	if(end &lt; duration) &#123;return&#125;</span><br><span class="line">	clearInterval(timer)</span><br><span class="line">&#125;, 1000)</span><br></pre></td></tr></table></figure>
+<h3 id="全部下载后再播放"><a href="#全部下载后再播放" class="headerlink" title="全部下载后再播放"></a>全部下载后再播放</h3><p>假设播放短视频，如果网络不佳，会造成播放断断续续，在iOS中这种停顿还没有一个明确的等待提示，这不是一个好的体验，那么是否可以将视频全部下载完毕再播放呢？</p>
+<p>在iOS中，可以在视频刚开始下载的时候马上暂停，此时下载还将继续，可以做一个loading的菊花告知视频正在加载，然后等到视频全部下载完再开始播放。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">$(video).one(&apos;loadeddata&apos;, function() &#123;</span><br><span class="line">	// 暂停，但下载还在继续  </span><br><span class="line">	video.pause()   </span><br><span class="line">	// 启动定时器检测视频下载进度  </span><br><span class="line">	var timer = setInterval(function() &#123;</span><br><span class="line">		var end = getEnd(video),</span><br><span class="line">			duration = video.duration</span><br><span class="line">		if(end &lt; duration) &#123;return&#125;</span><br><span class="line">		var width = $(video).parent().width()</span><br><span class="line">		// 下载完了，开始播放吧</span><br><span class="line">		$(video).attr&#123;width: width, height: width&#125;</span><br><span class="line">		video.play()</span><br><span class="line">		clearInterval(timer)</span><br><span class="line">	&#125;, 1000)&#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p> 缓冲播放——边下边播时，选择开始播放的最佳时间点</p>
+<p>当视频越来越长或者网络慢时，等待视频全部下载完再播放也不是好的体验，最好能边下边播，缓冲到流畅状态就开始播放，那什么时候播放才是最佳时间点呢？</p>
+<p>在iOS中，canplaythrough事件就是这个最佳时间点，它是通过动态计算缓冲量和下载速度得出的视频可以流畅播放的状态反馈。</p>
+<blockquote>
+<p>canplaythrough event: The user agent estimates that if playback were to be started now, the media resource could be rendered at the current playback rate all the way to its end without having to stop for further buffering.</p>
+</blockquote>
+<p>注意：下载完再播放和缓冲播放只适用于iOS。</p>
+<h3 id="统计播放时间和播放次数"><a href="#统计播放时间和播放次数" class="headerlink" title="统计播放时间和播放次数"></a>统计播放时间和播放次数</h3><p>要统计实际的播放时间，要累加timeupdate事件变化的时间，再减去中间可能暂停的时间。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">$video.on(&apos;playing&apos;, function() &#123;</span><br><span class="line">	// 开始播放是打点</span><br><span class="line">	$video.attr(&apos;data-updateTime&apos;, +new Date())</span><br><span class="line">&#125;)</span><br><span class="line">$video.on(&apos;pause&apos;, function() &#123;</span><br><span class="line">    // 暂停播放时清除打点</span><br><span class="line">    $video.removeAttr(&apos;data-updateTime&apos;)&#125;)</span><br><span class="line">    // 累加播放时间</span><br><span class="line">    $video.on(&apos;timeupdate&apos;, function(event) &#123;</span><br><span class="line">        var $video = $(event.target),</span><br><span class="line">            updateTime = parseInt($video.attr(&apos;data-updateTime&apos;) || 0),      						playingTime = parseInt($video.attr(&apos;data-playingTime&apos;) || 0),</span><br><span class="line">            times = parseInt($video.attr(&apos;data-times&apos;) || 0),</span><br><span class="line">            newtimes = 0,</span><br><span class="line">            video = $video.get(0),</span><br><span class="line">            duration = parseFloat($video.attr(&apos;data-duration&apos;) || 0),</span><br><span class="line">            now = +new Date()   </span><br><span class="line">        // 播放时间  </span><br><span class="line">        playingTime = playingTime + now - updateTime</span><br><span class="line">        // 播放次数</span><br><span class="line">        newtimes = Math.ceil(playingTime / 1000 / duration)</span><br><span class="line">        $video.attr(&apos;data-playingTime&apos;, playingTime)</span><br><span class="line">        $video.attr(&apos;data-updateTime&apos;, now)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h3><p>对error事件做详细的上报；</p>
+<p>对stalled事件做统计上报，并提示用户网络慢等。</p>
+<h2 id="参考数据"><a href="#参考数据" class="headerlink" title="参考数据"></a>参考数据</h2><p>微视触屏版iOS视频测速</p>
+<table>
+<thead>
+<tr>
+<th>网络环境</th>
+<th>视频码率</th>
+<th>获取到视频时长 时间点(s)</th>
+<th>开始流畅播放 时间点(s)</th>
+<th>全部下载完毕 时间点(s)</th>
+<th>视频长度(s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>wifi</td>
+<td>1000kbps</td>
+<td>2.86</td>
+<td>3.97</td>
+<td>5.85</td>
+<td>8.69</td>
+</tr>
+<tr>
+<td>非wifi</td>
+<td>500kbps</td>
+<td>4.56</td>
+<td>8</td>
+<td>10.62</td>
+<td>8.67</td>
+</tr>
+</tbody>
+</table>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li>HTML5 Video Events and API检测工具 <a href="http://www.w3.org/2010/05/video/mediaevents.html" target="_blank" rel="noopener">http://www.w3.org/2010/05/video/mediaevents.html</a></li>
+<li>W3C video 标准 <a href="http://www.w3.org/TR/html5/embedded-content-0.html#the-video-element" target="_blank" rel="noopener">http://www.w3.org/TR/html5/embedded-content-0.html#the-video-element</a></li>
+<li>如何在iOS7+的webview中内联播放视频 <a href="http://darktalker.com/2014/play-video-inline-iphone-ios7" target="_blank" rel="noopener">http://darktalker.com/2014/play-video-inline-iphone-ios7</a></li>
+<li>视频事件流水查看工具 <a href="http://z.weishi.qq.com/app/video.html" target="_blank" rel="noopener">http://z.weishi.qq.com/app/video.html</a></li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@powershell -NoProfile -ExecutionPolicy Bypass -Command &quot;iex ((new-object net.webclient).DownloadString(&apos;https://chocolatey.org/install.ps1&apos;))&quot; &amp;&amp; SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin</span><br></pre></td></tr></table></figure>
-<h3 id="安装Python-2"><a href="#安装Python-2" class="headerlink" title="安装Python 2"></a>安装Python 2</h3><ul>
-<li>打开命令提示符，通过Chocolatey安装Python</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">choco install python2</span><br></pre></td></tr></table></figure>
-<h3 id="安装Node"><a href="#安装Node" class="headerlink" title="安装Node"></a>安装Node</h3><ul>
-<li>自行去官网下载安装</li>
-</ul>
-<p>由于“墙”的原因，我们不得不使用特别手段加速下载过程<br>执行下面两条命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry https://registry.npm.taobao.org --global</span><br><span class="line">npm config set disturl https://npm.taobao.org/dist --global</span><br></pre></td></tr></table></figure>
-<h3 id="React-Native命令行工具"><a href="#React-Native命令行工具" class="headerlink" title="React Native命令行工具"></a>React Native命令行工具</h3><ul>
-<li>用于执行创建、初始化、更新项目、运行打包服务（packager）等任务</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g react-native-cli</span><br></pre></td></tr></table></figure>
-<h3 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h3><p><a href="http://yunpan.cn/c6bvpDreetNkh" target="_blank" rel="noopener">http://yunpan.cn/c6bvpDreetNkh</a> 访问密码 8168</p>
-<hr>
-<p>以上说的都很简单，下面才是最困扰RN开发者环境配置的难题。</p>
-<h2 id="安装JDK和JRE（1-7版本以上）"><a href="#安装JDK和JRE（1-7版本以上）" class="headerlink" title="安装JDK和JRE（1.7版本以上）"></a>安装JDK和JRE（1.7版本以上）</h2><p><a href="http://yunpan.cn/c6bMKRqdE2F2w" target="_blank" rel="noopener">http://yunpan.cn/c6bMKRqdE2F2w</a> 访问密码 162a<br><strong>重点来了</strong></p>
-<ul>
-<li>请记住您安装的路径</li>
-<li>我的电脑右击–&gt;属性–&gt;高级系统设置–&gt;环境变量–&gt;点击系统变量的新建系统变量<ul>
-<li>变量名JAVA_HOME 变量值 为你的jdk安装目录</li>
-</ul>
-</li>
-</ul>
-<h4 id="怎么样算成功？"><a href="#怎么样算成功？" class="headerlink" title="怎么样算成功？"></a>怎么样算成功？</h4><p>在命令行输入 <code>java -version</code>可以看到您的版本号而不是报错，证明安装成功</p>
-<h2 id="安装Android-Studio-2-0或者更高版本。"><a href="#安装Android-Studio-2-0或者更高版本。" class="headerlink" title="安装Android Studio 2.0或者更高版本。"></a>安装Android Studio 2.0或者更高版本。</h2><p><a href="http://yunpan.cn/c6b67gKDau7h" target="_blank" rel="noopener">http://yunpan.cn/c6b67gKDau7hq</a> 访问密码 f188</p>
-<h2 id="安装过程中，请注意-您的程序安装目录以及SDK存放目录"><a href="#安装过程中，请注意-您的程序安装目录以及SDK存放目录" class="headerlink" title="安装过程中，请注意 您的程序安装目录以及SDK存放目录"></a>安装过程中，请注意 您的程序安装目录以及SDK存放目录</h2><ul>
-<li>我的电脑右击–&gt;属性–&gt;高级系统设置–&gt;环境变量–&gt;点击系统变量的新建系统变量<ul>
-<li>变量名ANDROID_HOME 变量值 为你的SDK存放目录</li>
-</ul>
-</li>
-<li>修改系统变量path，在后面新增 变量值 Android SDK的tools和platform-tools目录（注意 ; 分隔开）</li>
-<li>进入SDKManager(可通过Android Studio菜单Tools-Android-SDK Manager)，确保以下项目已经安装并更新到最新：<ul>
-<li>Tools/Android SDK Tools (24.3.3)</li>
-<li>Tools/Android SDK Platform-tools (22)</li>
-<li>Tools/Android SDK Build-tools (23.0.1)（这个必须版本严格匹配23.0.1）</li>
-<li>Android 6.0 (API 23)/SDK Platform (1)</li>
-<li>Extras/Android Support Library(23.0.1)</li>
-<li>Extras/Local Maven repository for Support Libraries(之前叫做Android Support Repository)</li>
-<li>推荐使用腾讯Bugly的镜像加速下载。查看说明<a href="http://android-mirror.bugly.qq.com:8080/include/usage.html" target="_blank" rel="noopener">http://android-mirror.bugly.qq.com:8080/include/usage.html</a><br>如图所示: <img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016080801.png" alt="img"></li>
-</ul>
-</li>
-</ul>
-<h4 id="怎么样算成功？-1"><a href="#怎么样算成功？-1" class="headerlink" title="怎么样算成功？"></a>怎么样算成功？</h4><p>关闭所有命令提示行后，在命令行输入 <code>adb devices</code>可以看到当前连接计算机的安卓真机或者虚拟机设备即成功。</p>
-<hr>
-<p>接下来就是激动人心的项目创建环节</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">react-native init projectName</span><br><span class="line">cd projectName</span><br><span class="line">react-native run-android</span><br><span class="line">react-native start</span><br></pre></td></tr></table></figure>
-<h2 id="PS：不得不说，RN确实有很多坑，所以-选择RN，就得做好与坑斗争下去的准备"><a href="#PS：不得不说，RN确实有很多坑，所以-选择RN，就得做好与坑斗争下去的准备" class="headerlink" title="PS：不得不说，RN确实有很多坑，所以 选择RN，就得做好与坑斗争下去的准备"></a>PS：不得不说，RN确实有很多坑，所以 选择RN，就得做好与坑斗争下去的准备</h2><h3 id="win平台RN所有需要下载安装的软件包：http-yunpan-cn-c6bM2erEZ6iK8-访问密码-3b06"><a href="#win平台RN所有需要下载安装的软件包：http-yunpan-cn-c6bM2erEZ6iK8-访问密码-3b06" class="headerlink" title="win平台RN所有需要下载安装的软件包：http://yunpan.cn/c6bM2erEZ6iK8 访问密码 3b06"></a>win平台RN所有需要下载安装的软件包：<a href="http://yunpan.cn/c6bM2erEZ6iK8" target="_blank" rel="noopener">http://yunpan.cn/c6bM2erEZ6iK8</a> 访问密码 3b06</h3><p>网盘链接失效请及时告知我</p>
-<p><strong>Yours Sincerely SunPing</strong></p>
 
     
 
@@ -549,21 +1423,13 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2016/12/12/我在nodeJS遇到的坑/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            下一篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2016/12/03/react-native之环境搭建1/" id="post_nav-older" class="next-content">
+        <a href="/2018/08/07/前端一部分内容总结/" id="post_nav-older" class="next-content">
             上一篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">

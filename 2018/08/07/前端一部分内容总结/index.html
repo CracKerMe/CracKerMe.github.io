@@ -12,7 +12,7 @@
     
     <title>
         
-            react native之环境搭建2 | 
+            前端一部分内容总结 | 
         
         爱尚|轻博客
     </title>
@@ -35,8 +35,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="AppleSun">
-    <meta name="description" itemprop="description" content="Window平台配置Android环境（本人以win10操作系统介绍，当前RN0.30.0）内附安装包合集和详细安装指南，带你避开那些坑。">
-    <meta name="keywords" content="null,js">
+    <meta name="description" itemprop="description" content="无限期更新前端的一些坑，一些记录，一些冷知识
+
+大概从 17 年的六月份开始记录吧，也已经一年了，其中也包含了一些很简单的知识，以前还觉得挺难的，现在看起来有点谜之感慨…
+">
+    <meta name="keywords" content="null,分享">
 
     <!-- Site Verification -->
     
@@ -65,26 +68,32 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://crackerme.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="react native之环境搭建2 | 爱尚|轻博客">
+    <meta property="og:title" content="前端一部分内容总结 | 爱尚|轻博客">
     <meta property="og:image" content="/img/favicon.png" />
-    <meta property="og:description" content="Window平台配置Android环境（本人以win10操作系统介绍，当前RN0.30.0）内附安装包合集和详细安装指南，带你避开那些坑。">
-    <meta property="og:article:tag" content="js"> 
+    <meta property="og:description" content="无限期更新前端的一些坑，一些记录，一些冷知识
+
+大概从 17 年的六月份开始记录吧，也已经一年了，其中也包含了一些很简单的知识，以前还觉得挺难的，现在看起来有点谜之感慨…
+">
+    <meta property="og:article:tag" content="分享"> 
 
     
-        <meta property="article:published_time" content="12月 06, 2016" />
-        <meta property="article:modified_time" content="4月 28, 2017" />
+        <meta property="article:published_time" content="8月 07, 2018" />
+        <meta property="article:modified_time" content="8月 07, 2018" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="react native之环境搭建2 | 爱尚|轻博客">
-    <meta name="twitter:description" content="Window平台配置Android环境（本人以win10操作系统介绍，当前RN0.30.0）内附安装包合集和详细安装指南，带你避开那些坑。">
+    <meta name="twitter:title" content="前端一部分内容总结 | 爱尚|轻博客">
+    <meta name="twitter:description" content="无限期更新前端的一些坑，一些记录，一些冷知识
+
+大概从 17 年的六月份开始记录吧，也已经一年了，其中也包含了一些很简单的知识，以前还觉得挺难的，现在看起来有点谜之感慨…
+">
     <meta name="twitter:image" content="/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://crackerme.github.io" />
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://crackerme.github.io/2016/12/06/react-native之环境搭建2/index.html" />
+        <link rel="canonical" href="https://crackerme.github.io/2018/08/07/前端一部分内容总结/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -110,11 +119,14 @@
         },
         "description": "间歇性凌云壮志，持续性混吃等死"
     },
-    "headline": "react native之环境搭建2",
-    "url": "https://crackerme.github.io/2016/12/06/react-native之环境搭建2/index.html",
-    "datePublished": "12月 06, 2016",
-    "dateModified": "4月 28, 2017",
-    "description": "Window平台配置Android环境（本人以win10操作系统介绍，当前RN0.30.0）内附安装包合集和详细安装指南，带你避开那些坑。",
+    "headline": "前端一部分内容总结",
+    "url": "https://crackerme.github.io/2018/08/07/前端一部分内容总结/index.html",
+    "datePublished": "8月 07, 2018",
+    "dateModified": "8月 07, 2018",
+    "description": "无限期更新前端的一些坑，一些记录，一些冷知识
+
+大概从 17 年的六月份开始记录吧，也已经一年了，其中也包含了一些很简单的知识，以前还觉得挺难的，现在看起来有点谜之感慨…
+",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://crackerme.github.io"
@@ -339,7 +351,7 @@
 
     
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Window平台配置Android环境"><span class="post-toc-number">1.</span> <span class="post-toc-text">Window平台配置Android环境</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#安装Chocolatey（包管理器）"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">安装Chocolatey（包管理器）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#安装Python-2"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">安装Python 2</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#安装Node"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">安装Node</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#React-Native命令行工具"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">React Native命令行工具</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#安装git"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">安装git</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装JDK和JRE（1-7版本以上）"><span class="post-toc-number">2.</span> <span class="post-toc-text">安装JDK和JRE（1.7版本以上）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#怎么样算成功？"><span class="post-toc-number">2.0.1.</span> <span class="post-toc-text">怎么样算成功？</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装Android-Studio-2-0或者更高版本。"><span class="post-toc-number">3.</span> <span class="post-toc-text">安装Android Studio 2.0或者更高版本。</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装过程中，请注意-您的程序安装目录以及SDK存放目录"><span class="post-toc-number">4.</span> <span class="post-toc-text">安装过程中，请注意 您的程序安装目录以及SDK存放目录</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#怎么样算成功？-1"><span class="post-toc-number">4.0.1.</span> <span class="post-toc-text">怎么样算成功？</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#PS：不得不说，RN确实有很多坑，所以-选择RN，就得做好与坑斗争下去的准备"><span class="post-toc-number">5.</span> <span class="post-toc-text">PS：不得不说，RN确实有很多坑，所以 选择RN，就得做好与坑斗争下去的准备</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#win平台RN所有需要下载安装的软件包：http-yunpan-cn-c6bM2erEZ6iK8-访问密码-3b06"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">win平台RN所有需要下载安装的软件包：http://yunpan.cn/c6bM2erEZ6iK8 访问密码 3b06</span></a></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#JavaScript"><span class="post-toc-number">1.</span> <span class="post-toc-text">JavaScript</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Vue-js"><span class="post-toc-number">2.</span> <span class="post-toc-text">Vue.js</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#GitHub"><span class="post-toc-number">3.</span> <span class="post-toc-text">GitHub</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#CSS"><span class="post-toc-number">4.</span> <span class="post-toc-text">CSS</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#VSCode"><span class="post-toc-number">5.</span> <span class="post-toc-text">VSCode</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#其他"><span class="post-toc-number">6.</span> <span class="post-toc-text">其他</span></a></li></ol>
         <!--
         <li class="mdl-menu__item">
             Some Action
@@ -377,7 +389,7 @@
         
     
             <p class="article-headline-p">
-                react native之环境搭建2
+                前端一部分内容总结
             </p>
         </div>
 
@@ -396,7 +408,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>AppleSun</strong>
-        <span>12月 06, 2016</span>
+        <span>8月 07, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -420,7 +432,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/js/">js</a>
+        <a class="post_tag-link" href="/tags/分享/">分享</a>
     </ul>
     
 
@@ -432,61 +444,170 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h2 id="Window平台配置Android环境"><a href="#Window平台配置Android环境" class="headerlink" title="Window平台配置Android环境"></a>Window平台配置Android环境</h2><p>（本人以win10操作系统介绍，当前RN0.30.0）<br>内附安装包合集和详细安装指南，带你避开那些坑。</p>
+        <p>无限期更新前端的一些坑，一些记录，一些冷知识</p>
+<blockquote>
+<p>大概从 17 年的六月份开始记录吧，也已经一年了，其中也包含了一些很简单的知识，以前还觉得挺难的，现在看起来有点谜之感慨…</p>
+</blockquote>
 <a id="more"></a>
-<h3 id="安装Chocolatey（包管理器）"><a href="#安装Chocolatey（包管理器）" class="headerlink" title="安装Chocolatey（包管理器）"></a>安装Chocolatey（包管理器）</h3><ul>
-<li>以管理员身份打开 命令提示符窗口，运行以下代码</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@powershell -NoProfile -ExecutionPolicy Bypass -Command &quot;iex ((new-object net.webclient).DownloadString(&apos;https://chocolatey.org/install.ps1&apos;))&quot; &amp;&amp; SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin</span><br></pre></td></tr></table></figure>
-<h3 id="安装Python-2"><a href="#安装Python-2" class="headerlink" title="安装Python 2"></a>安装Python 2</h3><ul>
-<li>打开命令提示符，通过Chocolatey安装Python</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">choco install python2</span><br></pre></td></tr></table></figure>
-<h3 id="安装Node"><a href="#安装Node" class="headerlink" title="安装Node"></a>安装Node</h3><ul>
-<li>自行去官网下载安装</li>
-</ul>
-<p>由于“墙”的原因，我们不得不使用特别手段加速下载过程<br>执行下面两条命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry https://registry.npm.taobao.org --global</span><br><span class="line">npm config set disturl https://npm.taobao.org/dist --global</span><br></pre></td></tr></table></figure>
-<h3 id="React-Native命令行工具"><a href="#React-Native命令行工具" class="headerlink" title="React Native命令行工具"></a>React Native命令行工具</h3><ul>
-<li>用于执行创建、初始化、更新项目、运行打包服务（packager）等任务</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g react-native-cli</span><br></pre></td></tr></table></figure>
-<h3 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h3><p><a href="http://yunpan.cn/c6bvpDreetNkh" target="_blank" rel="noopener">http://yunpan.cn/c6bvpDreetNkh</a> 访问密码 8168</p>
-<hr>
-<p>以上说的都很简单，下面才是最困扰RN开发者环境配置的难题。</p>
-<h2 id="安装JDK和JRE（1-7版本以上）"><a href="#安装JDK和JRE（1-7版本以上）" class="headerlink" title="安装JDK和JRE（1.7版本以上）"></a>安装JDK和JRE（1.7版本以上）</h2><p><a href="http://yunpan.cn/c6bMKRqdE2F2w" target="_blank" rel="noopener">http://yunpan.cn/c6bMKRqdE2F2w</a> 访问密码 162a<br><strong>重点来了</strong></p>
-<ul>
-<li>请记住您安装的路径</li>
-<li>我的电脑右击–&gt;属性–&gt;高级系统设置–&gt;环境变量–&gt;点击系统变量的新建系统变量<ul>
-<li>变量名JAVA_HOME 变量值 为你的jdk安装目录</li>
-</ul>
+<h2 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h2><ul>
+<li><p>所有对象都有 <code>__proto__</code> 属性，都指向创造对象的函数对象的 <code>prototype</code>。</p>
+</li>
+<li><p>上传文件要使用 <code>formdata</code> 包装。</p>
+</li>
+<li><p><code>Promise.prototype.catch</code> 方法是 <code>.then(null, rejection)</code> 的别名。</p>
+</li>
+<li><p>同一个 EventTarget 注册了多个相同的 EventListener，那么重复的实例会被抛弃。所以这么做不会使得 EventListener 被调用两次，也不需要用 removeEventListener 手动清除多余的EventListener，因为重复的都被自动抛弃了。</p>
+</li>
+<li><p>当使用 <code>addEventListener()</code> 为一个元素注册事件的时候，句柄里的 <code>this</code> 值是该元素的引用。其与传递给句柄的 <code>event</code> 参数的 <code>currentTarget</code> 属性的值一样,而 <code>target</code> 是直接接受事件的子元素。</p>
+</li>
+<li><p><code>scrollIntoView()</code> 使 div 底部滚动到视窗。</p>
+</li>
+<li><p>使用 const 的对象和数组的内容是可以被修改的，但数据结构不可变。</p>
+</li>
+<li><p>在 webpack 里，所有的文件都是模块。loader 的作用就是把文件转换成 webpack 可以识别的模块。</p>
+</li>
+<li><p>关于事件循环，执行下一个 task 之前总会清空 microtask。</p>
+</li>
+<li><p>npm 新旧版本覆盖可能会造成迷之问题，这个时候可以试试 node_module 整个删掉重装。</p>
+</li>
+<li><p>*、/ 和 - 操作符都是数字运算专用的。当这些运算符与字符串一起使用时，会强制转换字符串为数字类型的值。</p>
+</li>
+<li><p><code>document.title</code> 可以直接修改当前 html 的标题。</p>
+</li>
+<li><p>利用对象浅拷贝修改对象，指向同一对象的两个变量修改对象的效果一样。</p>
+</li>
+<li><p>脑洞题：1 和 2 只用一次的情况下怎么得到 4  答案：1&lt;&lt;2。</p>
+</li>
+<li><p>连等赋值从右到左。</p>
+</li>
+<li><p><code>compositionstart</code> 事件触发于一段文字的输入之前（类似于 keydown 事件，但是该事件仅在若干可见字符的输入之前，而这些可见字符的输入可能需要一连串的键盘操作、语音识别或者点击输入法的备选词）。</p>
+</li>
+<li><p><code>void 0</code>（void后面加任何东西）用于生成一个绝对的 <code>undefined</code>（不会被重定义），但跟函数会有副作用</p>
+</li>
+<li><p>注意 <code>localStorage</code> 保存的只能是字符串，所以是没有 <code>null</code> 的。</p>
+</li>
+<li><p>坑一个</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">typeof [] === &apos;object&apos; // true</span><br><span class="line">typeof null === &apos;object&apos; // true</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>import 同步，require异步（待补充）</p>
+</li>
+<li><p><code>new()</code> 做了些什么？</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> Base();</span><br><span class="line"><span class="keyword">var</span> obj  = &#123;&#125;;</span><br><span class="line">obj.__proto__ = Base.prototype;</span><br><span class="line">Base.call(obj);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>stage 0 到 4 的含义：</p>
+<blockquote>
+<p>stage 0 is “i’ve got a crazy idea”,<br>stage 1 is “this idea might not be stupid”,<br>stage 2 is “let’s use polyfills and transpilers to play with it”,<br>stage 3 is “let’s let browsers implement it and see how it goes”,<br>stage 4 is “now it’s javascript”.    </p>
+</blockquote>
+</li>
+<li><p><code>Object.getOwnPropertyNames(obj).length === 0</code> 判断 <code>obj</code> 是不是空对象。</p>
+</li>
+<li><p><code>getBoundingClientRect()</code> 用于获取元素宽高以及距离页面边框距离，十分方便。</p>
+</li>
+<li><p><code>&amp;&amp;</code> 的使用场景：左边为真继续执行右边，如 <code>isDog &amp;&amp; bark()</code>。</p>
+</li>
+<li><p><code>||</code> 的使用场景：左边为假继续执行右边，如 <code>let i = value || defalutValue</code>。</p>
 </li>
 </ul>
-<h4 id="怎么样算成功？"><a href="#怎么样算成功？" class="headerlink" title="怎么样算成功？"></a>怎么样算成功？</h4><p>在命令行输入 <code>java -version</code>可以看到您的版本号而不是报错，证明安装成功</p>
-<h2 id="安装Android-Studio-2-0或者更高版本。"><a href="#安装Android-Studio-2-0或者更高版本。" class="headerlink" title="安装Android Studio 2.0或者更高版本。"></a>安装Android Studio 2.0或者更高版本。</h2><p><a href="http://yunpan.cn/c6b67gKDau7h" target="_blank" rel="noopener">http://yunpan.cn/c6b67gKDau7hq</a> 访问密码 f188</p>
-<h2 id="安装过程中，请注意-您的程序安装目录以及SDK存放目录"><a href="#安装过程中，请注意-您的程序安装目录以及SDK存放目录" class="headerlink" title="安装过程中，请注意 您的程序安装目录以及SDK存放目录"></a>安装过程中，请注意 您的程序安装目录以及SDK存放目录</h2><ul>
-<li>我的电脑右击–&gt;属性–&gt;高级系统设置–&gt;环境变量–&gt;点击系统变量的新建系统变量<ul>
-<li>变量名ANDROID_HOME 变量值 为你的SDK存放目录</li>
-</ul>
+<h2 id="Vue-js"><a href="#Vue-js" class="headerlink" title="Vue.js"></a>Vue.js</h2><ul>
+<li><p>v-model 会自动 bind 一个值，其变量名为 value。</p>
 </li>
-<li>修改系统变量path，在后面新增 变量值 Android SDK的tools和platform-tools目录（注意 ; 分隔开）</li>
-<li>进入SDKManager(可通过Android Studio菜单Tools-Android-SDK Manager)，确保以下项目已经安装并更新到最新：<ul>
-<li>Tools/Android SDK Tools (24.3.3)</li>
-<li>Tools/Android SDK Platform-tools (22)</li>
-<li>Tools/Android SDK Build-tools (23.0.1)（这个必须版本严格匹配23.0.1）</li>
-<li>Android 6.0 (API 23)/SDK Platform (1)</li>
-<li>Extras/Android Support Library(23.0.1)</li>
-<li>Extras/Local Maven repository for Support Libraries(之前叫做Android Support Repository)</li>
-<li>推荐使用腾讯Bugly的镜像加速下载。查看说明<a href="http://android-mirror.bugly.qq.com:8080/include/usage.html" target="_blank" rel="noopener">http://android-mirror.bugly.qq.com:8080/include/usage.html</a><br>如图所示: <img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016080801.png" alt="img"></li>
-</ul>
+<li><p>多个特性的元素应该分多行撰写，每个特性一行。以下为 vscode 里 vetur 的设置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&quot;vetur.format.defaultFormatterOptions&quot;: &#123;</span><br><span class="line">    &quot;js-beautify-html&quot;: &#123;</span><br><span class="line">      &quot;wrap_attributes&quot;: &quot;force&quot; </span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>组件 destroy 时触发自定义指令的 unbind，destory 的时机：diff 之后的 patch,如 v-if，v-for（key不同时，先销毁原来的，再挂载新的（推测））</p>
+</li>
+<li><p>自定义组件 v-model watch 自动匹配（存疑</p>
+</li>
+<li><p>组件的 data 属性要用函数返回的原因：创建实例时如果 data 是一个对象的话，所有实例都会引用同一个对象，而对象返回不会有此问题。在浏览器中可以这么做是因为根实例只有一个。</p>
+</li>
+<li><p>.vue 文件中使用 <code>/deep/</code> 覆盖子组件 css</p>
 </li>
 </ul>
-<h4 id="怎么样算成功？-1"><a href="#怎么样算成功？-1" class="headerlink" title="怎么样算成功？"></a>怎么样算成功？</h4><p>关闭所有命令提示行后，在命令行输入 <code>adb devices</code>可以看到当前连接计算机的安卓真机或者虚拟机设备即成功。</p>
-<hr>
-<p>接下来就是激动人心的项目创建环节</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">react-native init projectName</span><br><span class="line">cd projectName</span><br><span class="line">react-native run-android</span><br><span class="line">react-native start</span><br></pre></td></tr></table></figure>
-<h2 id="PS：不得不说，RN确实有很多坑，所以-选择RN，就得做好与坑斗争下去的准备"><a href="#PS：不得不说，RN确实有很多坑，所以-选择RN，就得做好与坑斗争下去的准备" class="headerlink" title="PS：不得不说，RN确实有很多坑，所以 选择RN，就得做好与坑斗争下去的准备"></a>PS：不得不说，RN确实有很多坑，所以 选择RN，就得做好与坑斗争下去的准备</h2><h3 id="win平台RN所有需要下载安装的软件包：http-yunpan-cn-c6bM2erEZ6iK8-访问密码-3b06"><a href="#win平台RN所有需要下载安装的软件包：http-yunpan-cn-c6bM2erEZ6iK8-访问密码-3b06" class="headerlink" title="win平台RN所有需要下载安装的软件包：http://yunpan.cn/c6bM2erEZ6iK8 访问密码 3b06"></a>win平台RN所有需要下载安装的软件包：<a href="http://yunpan.cn/c6bM2erEZ6iK8" target="_blank" rel="noopener">http://yunpan.cn/c6bM2erEZ6iK8</a> 访问密码 3b06</h3><p>网盘链接失效请及时告知我</p>
-<p><strong>Yours Sincerely SunPing</strong></p>
+<h2 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h2><ul>
+<li>从 commit 关闭 issues 的方法：commit 信息写 <code>Fixes #33</code>，其他关键字还有 <code>close closes closed fix fixes fixed resolve resolves resolved</code></li>
+<li><code>git reset --soft HEAD^</code> 回退一次 commit</li>
+</ul>
+<h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><ul>
+<li><p>div 的默认宽度是父元素宽的 100%</p>
+</li>
+<li><p>逐帧动画 <code>animation: animate-name 3s steps(每次循环的帧数) infinite;</code></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">keyframes</span> animate-name&#123;</span><br><span class="line">    <span class="selector-tag">from</span>&#123;</span><br><span class="line">    &lt;!--原位--&gt;</span><br><span class="line">        <span class="selector-tag">background-position</span>: 0 0; </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-tag">to</span>&#123;</span><br><span class="line">    &lt;!--最后一帧--&gt;</span><br><span class="line">        <span class="selector-tag">background-position</span>: <span class="selector-tag">-1540px</span> 0 ;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>“Break out” of a parent’s containing width to take the full screen of a page w/this nice utility class:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.full-width</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100vw</span>;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">50%</span>;</span><br><span class="line">  <span class="attribute">right</span>: <span class="number">50%</span>;</span><br><span class="line">  <span class="attribute">margin-left</span>: -<span class="number">50vw</span>;</span><br><span class="line">  <span class="attribute">margin-right</span>: -<span class="number">50vw</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>行内元素与下一个元素中间有空格（正常排版）,会引起一些诡异的缝隙，常见的例如元素之间有间隔，或看起来空了一行（像加了padding）</p>
+</li>
+<li><p>pre 标签设置自动换行  <code>white-space: pre-wrap;</code></p>
+</li>
+<li><p>隐藏一个元素，同时让这个元素的宽度可获取：设置 <code>overflow: hidden</code> 可以根据元素高度裁剪视区，设置 <code>height: 0; overflow: hidden</code> 虽然文档流中占用了位置，由于高度为 0，最终表现特征达到了我们期望的 <code>display: none</code>。此时该元素 <code>clientHeight</code>、<code>offsetHeight</code> 为 0，但是 <code>scrollHeight</code> 是有值的。<code>scrollHeight</code> 是一个元素没有滚动条时的所有内容高度,当一个元素没有滚动条时 <code>scrollHeight === offsetHeight</code>。</p>
+</li>
+<li><p>当 Render Tree 中部分或全部元素的尺寸、结构、或某些属性发生改变时，浏览器重新渲染部分或全部文档的过程称为回流。</p>
+</li>
+<li><p>当页面中元素样式的改变并不影响它在文档流中的位置时（例如：color、background-color、visibility等），浏览器会将新样式赋予给元素并重新绘制它，这个过程称为重绘。</p>
+</li>
+<li><p>回流必将引起重绘，重绘不一定会引起回流。</p>
+</li>
+<li><p>移动端优化常用 CSS 属性：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">user-select: none; // 禁止文字被选中</span><br><span class="line">outline:none; // 去除点击外边框,点击无轮廓</span><br><span class="line">-webkit-touch-callout: none; // 长按链接不弹出菜单</span><br><span class="line">-webkit-tap-highlight-color: rgba(0,0,0,0); // 去除点击高亮</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>@keyframes 的属性要前后对应，否则不形成动画</p>
+</li>
+<li><p>img 元素图像自适应居中，与 <code>background-size</code> 效果一样</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">object-fit: cover;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>&lt;img /&gt;</code> 标签千万记得写宽高，不然会花式塌陷</p>
+</li>
+<li><p><code>flex-grow</code> 所在元素如果未定宽度的话，宽度会被子元素撑开</p>
+</li>
+<li><p>一个英文单词默认不换行，无论多长，所以要设置 <code>word break</code></p>
+</li>
+<li><p>多行文字居中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.mulit_line&#123; </span><br><span class="line">    border:1px dashed #cccccc; </span><br><span class="line">    padding-left:5px;</span><br><span class="line">&#125;</span><br><span class="line">.mulit_line span&#123; </span><br><span class="line">    display:inline-block; </span><br><span class="line">    line-height:14px; </span><br><span class="line">    vertical-align:middle;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>safari 中控制惯性滚动 -webkit-overflow-scroll</p>
+</li>
+<li><p>滚动条样式可能使滚动条强制显示（未确定）</p>
+</li>
+<li><p>flex 布局不换行加 <code>flex-shrink: 0;</code> 实现 div 不压缩无限并排，可以用于 swiper 等场景。</p>
+</li>
+<li><p>巧用猫头鹰选择器 <em> + </em> </p>
+</li>
+<li><p><code>float</code> 自带 <code>display: block</code></p>
+</li>
+<li><p>鼠标禁用 <code>.disabled { pointer-events: none; }</code></p>
+</li>
+<li><p>注意 :last-child 与 :last-of-type 的区别</p>
+</li>
+<li><p>::after 表示法是在 CSS3 中引入的，:: 符号是用来区分伪类和伪元素的。支持CSS3的浏览器同时也都支持 CSS2 中引入的表示法 :after。</p>
+</li>
+<li><p>父元素如果存在 transform 属性，子元素的 position: fixed 属性无效</p>
+</li>
+<li><p>less 中的 calc 问题：<code>height: calc(~&quot;100% - 50px&quot;);</code></p>
+</li>
+<li><p>vh 在部分浏览器中包含地址栏部分，小心使用。</p>
+</li>
+</ul>
+<h2 id="VSCode"><a href="#VSCode" class="headerlink" title="VSCode"></a>VSCode</h2><ul>
+<li>alt + shift + 鼠标点击 纵向选择</li>
+<li>vetur 分号问题: 安装 prettier，然后配置 <code>&quot;prettier.singleQuote&quot;:true,&quot;prettier.semi&quot;: false</code></li>
+<li>可以使用插件 document this 方便写注释</li>
+<li>html tag 属性分行 wrap_attributes:force</li>
+<li>选定变量后按 F12 找到定义位置</li>
+</ul>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ul>
+<li>魔法隧道用 webpack 代理会 502</li>
+<li>在组件化编程中，悼念被同名组件浪费了几个钟的 debug 时间[蜡烛]</li>
+<li>局域网连不通的话，先试试，开共享，关闭防火墙</li>
+<li>局域网连不通的话，还可以试试，在 webpack.config.js 文件的 devServer 里加上<code>host:&#39;0.0.0.0&#39;</code>。</li>
+<li>iOS 的回弹效果，动的是 body 部分，html 是不动的</li>
+<li>学习一个语言之前先看规范</li>
+<li>safari 的 formdata 只支持 append，其他方法需要 polyfill</li>
+<li>rc 的意思是 run commands</li>
+<li>导航栏高度 88px，标签栏高度 98px（iphone5和6常用）</li>
+<li>关于 HTTP 304 Not Modified，简单来说，请求内容没有发生变化的时候，根据设置，服务器可能直接取缓存返回</li>
+</ul>
+<p>转载自 <a href="https://github.com/ssshooter/Front-End-EXP" target="_blank" rel="noopener">https://github.com/ssshooter/Front-End-EXP</a></p>
 
     
 
@@ -549,7 +670,7 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2016/12/12/我在nodeJS遇到的坑/" id="post_nav-newer" class="prev-content">
+        <a href="/2018/08/08/移动端video视频播放优化实践/" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -563,7 +684,7 @@
 
     <!-- Next Nav -->
     
-        <a href="/2016/12/03/react-native之环境搭建1/" id="post_nav-older" class="next-content">
+        <a href="/2018/07/26/vue响应数据原理/" id="post_nav-older" class="next-content">
             上一篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
