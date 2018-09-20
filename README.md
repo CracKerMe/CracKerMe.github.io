@@ -1,4 +1,6 @@
 # CracKerMe.github.io
+Change CDN links from `7xjdah.com1.z0.glb.clouddn.com` => `image.awebman.cn`
+
 add article about how to crack webstorm
 
 - 2018-09-18 01:20:33

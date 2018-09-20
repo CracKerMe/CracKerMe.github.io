@@ -72,7 +72,7 @@
 
     
         <meta property="article:published_time" content="10月 14, 2016" />
-        <meta property="article:modified_time" content="4月 28, 2017" />
+        <meta property="article:modified_time" content="9月 21, 2018" />
     
 
     <!-- The Twitter Card protocol -->
@@ -113,7 +113,7 @@
     "headline": "JS数组操作方法2",
     "url": "https://crackerme.github.io/2016/10/14/JS数组操作方法2/index.html",
     "datePublished": "10月 14, 2016",
-    "dateModified": "4月 28, 2017",
+    "dateModified": "9月 21, 2018",
     "description": "JavaScript为操作已经包含在数组中的项提供了很多方法。比如push()、pop()、shift()和unshift()实现数组的增删操作、sort()和reverse()对数组项进行排序操作。今天学习操作数组的其他方法：concat()、slice()和splice()。",
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -391,7 +391,7 @@
 
     <!-- Author Avatar -->
     <div id="author-avatar">
-        <img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051107.jpg" width="44px" height="44px" alt="Author Avatar"/>
+        <img src="http://image.awebman.cn/pic2016051107.jpg" width="44px" height="44px" alt="Author Avatar"/>
     </div>
     <!-- Author Name & Date -->
     <div>
@@ -449,55 +449,55 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// push()方法</span><br><span class="line">var arr = [&apos;a&apos;,&apos;b&apos;];</span><br><span class="line">console.log(arr); // [&quot;a&quot;, &quot;b&quot;]</span><br><span class="line">arr.push([&apos;c&apos;,&apos;d&apos;],[1,2,3]);</span><br><span class="line">console.log(arr); // [&quot;a&quot;, &quot;b&quot;, Array[2], Array[3]]</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// concat()</span><br><span class="line">var arr = [&apos;a&apos;,&apos;b&apos;];</span><br><span class="line">console.log(arr); // [&quot;a&quot;, &quot;b&quot;]</span><br><span class="line">var arr2 = arr.concat([&apos;c&apos;,&apos;d&apos;],[1,2,3]);</span><br><span class="line">console.log(arr2); // [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, 1, 2, 3]</span><br></pre></td></tr></table></figure>
 <p>Chrome输出的结果（push() vs. concat()）:</p>
-<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016061528.png" alt="img"></p>
+<p><img src="http://image.awebman.cn/pic2016061528.png" alt="img"></p>
 <p>push()传递的参数是数组时，将整个数组传给原数组末尾，如示例中得到的结果[“a”, “b”, Array[2], Array[3]]，而concat()传递的参数是数组时，将参数中数组的每一个数组项添加到原数组的末尾，如示例中得到的结果[“a”, “b”, “c”, “d”, 1, 2, 3]。</p>
 <h3 id="slice-方法"><a href="#slice-方法" class="headerlink" title="slice()方法"></a>slice()方法</h3><p>concat()方法可以在原数组基础上创建一个副本数组，其实slice()方法它也能基于当前数组创建一个新数组，而且对原数组也并不会有任何影响。</p>
 <p>slice()接受一个或两个参数，即要返回项的起始和结束位置。当只给slice()传递一个参数时，该方法返回从该参数指定位置开始到当前数组末尾的所有项。如下面示例：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// 测试数组函数，将输出数组的length和第个key:value</span><br><span class="line">var test = function(array) &#123;</span><br><span class="line">  console.log(&apos;length:&apos;+ array.length);</span><br><span class="line">  array.forEach(function(element, index, array) &#123;</span><br><span class="line">    console.log(index + &apos;:&apos; + element);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br><span class="line">var arr = [0,1,2,3,4,5,6];</span><br><span class="line">test(arr); </span><br><span class="line">var arr2 = arr.slice(3);</span><br><span class="line">test(arr);</span><br><span class="line">test(arr2);</span><br></pre></td></tr></table></figure>
 <p>Chrome输出的结果如下：</p>
-<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016061529.png" alt="img"></p>
+<p><img src="http://image.awebman.cn/pic2016061529.png" alt="img"></p>
 <p>假设将数组arr的每个数组项存放在一个小格子中，并且按数组的索引号从左向右存放。slice()方法执行之后，将会按传递的参数之前的值从格子中移除，如下图所示：</p>
-<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016061530.png" alt="img"></p>
+<p><img src="http://image.awebman.cn/pic2016061530.png" alt="img"></p>
 <p>slice()还可以传两个参数，该方法返回起始和结束位置之间的项，但不包括结束位置的项，如：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var arr = [0,1,2,3,4,5,6];</span><br><span class="line">test(arr);</span><br><span class="line">var arr2 = arr.slice(2,5);</span><br><span class="line">test(arr);</span><br><span class="line">test(arr2);</span><br></pre></td></tr></table></figure>
 <p>Chrome输出的结果如下：</p>
-<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016061531.png" alt="img"></p>
+<p><img src="http://image.awebman.cn/pic2016061531.png" alt="img"></p>
 <p>同样使用小格子存放的方式来演示整个处理过程：</p>
-<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016061532.png" alt="img"></p>
+<p><img src="http://image.awebman.cn/pic2016061532.png" alt="img"></p>
 <p>slice()传递的参数还可以是负值。当参数中有一个负值时，则用数组长度加上该数来确定相应的位置。比如传递的值是-3，数组的length为6，此时slice(-3)对应的就是slice(3)。或者可以从数组的末尾开始计算起，最末尾的是-1。来看看示例：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var arr = [0,1,2,3,4,5,6];</span><br><span class="line">test(arr);</span><br><span class="line">var arr2 = arr.slice(-3);</span><br><span class="line">test(arr);</span><br><span class="line">test(arr2);</span><br></pre></td></tr></table></figure>
 <p>Chrome输出的结果如下：</p>
-<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016061533.png" alt="img"></p>
+<p><img src="http://image.awebman.cn/pic2016061533.png" alt="img"></p>
 <p>同样使用小格子存放的方式来演示整个处理过程：</p>
-<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016061534.png" alt="img"></p>
+<p><img src="http://image.awebman.cn/pic2016061534.png" alt="img"></p>
 <p>当然第二个参数也可以是负数，而且还可以正数和负数混合使用。但有一点需要特别注意：slice()传递的两个参数时，第一个参数和第二个参数位置相同或者第一个参数在第二个参数之后时，得到的新数组是一个空值（负值也是类似，但负值与数值长度之和再作对比）。简言之，结束位置小于或等于开始位置，将返回一个空数组。如下面的示例：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var arr = [0,1,2,3,4,5,6];</span><br><span class="line">test(arr);</span><br><span class="line">var arr2 = arr.slice(-3,4);</span><br><span class="line">test(arr);</span><br><span class="line">test(arr2);</span><br></pre></td></tr></table></figure>
 <p>Chrome输出的结果如下：</p>
-<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016061535.png" alt="img"></p>
+<p><img src="http://image.awebman.cn/pic2016061535.png" alt="img"></p>
 <p>slice()方法和concat()方法类似，会在原数组上构建一个新数组，并不会影响原数组。</p>
-<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016061536.png" alt="img"></p>
+<p><img src="http://image.awebman.cn/pic2016061536.png" alt="img"></p>
 <p>splice()方法在处理数组的各方法中恐怕是最强大的了，它有很多种用法：</p>
 <p>删除： 可以删除任意数量的数组项<br>插入： 可以向指定位置插入任意数量的数组项<br>替换： 可以向指定位置插入任意数量的数组项，且同时删除任意数量的数组项</p>
 <h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><p>在splice()方法中指定两个参数，第一个参数是指定开始删除数组项位置，第二个数是指删除数组项的个数。如下面这个示例：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var arr = [0,2,3,4,5,6];</span><br><span class="line">test(arr);</span><br><span class="line">var arr2 = arr.splice(2,3);</span><br><span class="line">test(arr);</span><br><span class="line">test(arr2);</span><br></pre></td></tr></table></figure>
 <p>Chrome输出的结果如下：</p>
-<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016061537.png" alt="img"></p>
+<p><img src="http://image.awebman.cn/pic2016061537.png" alt="img"></p>
 <p>从示例中不难看出，splice()方法做删除动作之后，将会影响原数组(比如示例中的arr)，并且将原数组中删除掉的数组项重构成一个新数组(比如示例中新得到的数组arr2)。</p>
 <h3 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h3><p>splice()方法指定三个参数，第一个参数为插入的起始位置，第二个参数为0(要删除的数组项数量，因为删除数量是为0，所以不做删除)，第三个参数是要插入的数组项。如果要插入多个项，可以再传入第四、第五、以至任意多个项。如下面的示例：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var arr = [0,1,2,3,4,5,6];</span><br><span class="line">test(arr);</span><br><span class="line">var arr2 = arr.splice(2,0,&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,&apos;d&apos;);</span><br><span class="line">test(arr);</span><br><span class="line">test(arr2);</span><br></pre></td></tr></table></figure>
 <p>Chrome输出的结果如下：</p>
-<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016061538.png" alt="img"></p>
+<p><img src="http://image.awebman.cn/pic2016061538.png" alt="img"></p>
 <p>上例从第二个位置开始插入字符串a、b、c、d字符串。从而原数组增加新的四个数组项，数组arr的length就变成了11；由于删除数量是0，所以返回给新数组arr2是空值（也就是一个空数组）。</p>
 <h3 id="替换"><a href="#替换" class="headerlink" title="替换"></a>替换</h3><p>splice()方法做替换其实和做插入非常类似，只是将第二参数设置为大于0（删除数的数量）。如下例所示：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var arr = [0,1,2,3,4,5,6];</span><br><span class="line">test(arr);</span><br><span class="line">var arr2 = arr.splice(2,4,&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,&apos;d&apos;);</span><br><span class="line">test(arr);</span><br><span class="line">test(arr2);</span><br></pre></td></tr></table></figure>
 <p>Chrome输出的结果如下：</p>
-<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016061539.png" alt="img"></p>
+<p><img src="http://image.awebman.cn/pic2016061539.png" alt="img"></p>
 <p>结果告诉我们，在原数组arr上第二个位置开始删除了2、3、4和5个数组项，并且用a、b、c、d这几个值替换到删除掉的几个数组项的位置。同时把删除掉的几个数组项重新构成了新数组arr2。</p>
 <p>splice()方法始终会返回一个数组，该数组中包含从原始数组中删除的项（如果没有删除任何项，则返回一个空数组）。</p>
 <p>splice()方法和slice()方法类似，起始位置可以是负值，当起始位置为负值时，则用数组长度length加上该数来确定相应的位置。如下所示：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var arr = [0,1,2,3,4,5,6];</span><br><span class="line">test(arr);</span><br><span class="line">var arr2 = arr.splice(-2,4,&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,&apos;d&apos;);</span><br><span class="line">test(arr);</span><br><span class="line">test(arr2);</span><br></pre></td></tr></table></figure>
 <p>Chrome输出的结果如下：</p>
-<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016061540.png" alt="img"></p>
+<p><img src="http://image.awebman.cn/pic2016061540.png" alt="img"></p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>文章介绍了数组的三个操作方法concat()、slice()和splice()。concat()和slice()方法都不会影响原数组，会在原数组上构建出一个新数组。其中concat()方法在原数组末尾添加所传的数组项（简单点看有类似于push()方法），构建一个新数组；slice()方法可以从指定的位置开始删除指定的数组项，并且将删除的数组项构建成一个新数组。splice()方法就更强大了，可以对一个数组做删除、插入和替换。而且splice()方法还会影响原数组，并且将返回的值构建出一个新数组。</p>
 <p><strong>Yours Sincerely SunPing</strong></p>
 
@@ -614,7 +614,7 @@
 
     <!-- Sidebar Avatar -->
     <div class="sidebar-image">
-        <img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051107.jpg" alt="AppleSun's avatar">
+        <img src="http://image.awebman.cn/pic2016051107.jpg" alt="AppleSun's avatar">
     </div>
 
     <!-- Sidebar Email -->

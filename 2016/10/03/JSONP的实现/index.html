@@ -74,7 +74,7 @@ JSONPJSONP 的原理非常简单，为了克服跨域问题，利用没有跨域
 
     
         <meta property="article:published_time" content="10月 03, 2016" />
-        <meta property="article:modified_time" content="4月 29, 2017" />
+        <meta property="article:modified_time" content="9月 21, 2018" />
     
 
     <!-- The Twitter Card protocol -->
@@ -116,7 +116,7 @@ JSONPJSONP 的原理非常简单，为了克服跨域问题，利用没有跨域
     "headline": "JSONP的实现",
     "url": "https://crackerme.github.io/2016/10/03/JSONP的实现/index.html",
     "datePublished": "10月 03, 2016",
-    "dateModified": "4月 29, 2017",
+    "dateModified": "9月 21, 2018",
     "description": "JSONP 是解决跨域问题的一种方案，不同于 JSON，其并不是一种数据交换格式，而只是一种绕过跨域的技巧
 JSONPJSONP 的原理非常简单，为了克服跨域问题，利用没有跨域限制的 script 标签加载预设的 callback 将内容传递给 js。一般来说我们约定通过一个参数来告诉服务器 JSONP 返回时应该调用的回调函数名，然后拼接出对应的 js。已微博 API 为例，这个参数名是 _cb。",
     "mainEntityOfPage": {
@@ -395,7 +395,7 @@ JSONPJSONP 的原理非常简单，为了克服跨域问题，利用没有跨域
 
     <!-- Author Avatar -->
     <div id="author-avatar">
-        <img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051107.jpg" width="44px" height="44px" alt="Author Avatar"/>
+        <img src="http://image.awebman.cn/pic2016051107.jpg" width="44px" height="44px" alt="Author Avatar"/>
     </div>
     <!-- Author Name & Date -->
     <div>
@@ -439,7 +439,7 @@ JSONPJSONP 的原理非常简单，为了克服跨域问题，利用没有跨域
         <p>JSONP 是<code>解决跨域问题</code>的一种方案，不同于 JSON，其并不是一种数据交换格式，而只是一种绕过跨域的技巧</p>
 <h3 id="JSONP"><a href="#JSONP" class="headerlink" title="JSONP"></a>JSONP</h3><p>JSONP 的原理非常简单，为了克服跨域问题，<strong>利用没有跨域限制的 script 标签加载预设的 callback 将内容传递给 js</strong>。一般来说我们约定通过一个参数来告诉服务器 JSONP 返回时应该调用的回调函数名，然后拼接出对应的 js。已微博 API 为例，这个参数名是 _cb。</p>
 <a id="more"></a>
-<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016080814.png" alt="img"></p>
+<p><img src="http://image.awebman.cn/pic2016080814.png" alt="img"></p>
 <p>写一个简单的示例：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">function JSONP(url,params,callbackKey,callbackFn)&#123;</span><br><span class="line">	//在参数里限定 callback 的名字</span><br><span class="line">	params = params || &#123;&#125;</span><br><span class="line">	params[callbackKey] = &quot;jsonpCallback&quot;</span><br><span class="line">	//预留callbackFn</span><br><span class="line">	window.jsonpCallback = callbackFn</span><br><span class="line">	const paramKeys = Object.keys(params)</span><br><span class="line">	const paramString = paramKeys</span><br><span class="line">	.map(key =&gt; `$&#123;key&#125;=$&#123;params[key]&#125;`)</span><br><span class="line">	.join(&apos;&amp;&apos;)</span><br><span class="line">	//插入 DOM 元素</span><br><span class="line">	const script = document.createElement(&apos;script&apos;)</span><br><span class="line">	script.setAttribute(&apos;src&apos;,`$&#123;url&#125;?$&#123;paraString&#125;`)</span><br><span class="line">	document.body.appendChild(script)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>For Example:</p>
@@ -569,7 +569,7 @@ JSONPJSONP 的原理非常简单，为了克服跨域问题，利用没有跨域
 
     <!-- Sidebar Avatar -->
     <div class="sidebar-image">
-        <img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051107.jpg" alt="AppleSun's avatar">
+        <img src="http://image.awebman.cn/pic2016051107.jpg" alt="AppleSun's avatar">
     </div>
 
     <!-- Sidebar Email -->

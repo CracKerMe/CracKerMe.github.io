@@ -74,7 +74,7 @@
 
     
         <meta property="article:published_time" content="8月 08, 2018" />
-        <meta property="article:modified_time" content="8月 08, 2018" />
+        <meta property="article:modified_time" content="9月 21, 2018" />
     
 
     <!-- The Twitter Card protocol -->
@@ -116,7 +116,7 @@
     "headline": "移动端video视频播放优化实践",
     "url": "https://crackerme.github.io/2018/08/08/移动端video视频播放优化实践/index.html",
     "datePublished": "8月 08, 2018",
-    "dateModified": "8月 08, 2018",
+    "dateModified": "9月 21, 2018",
     "description": "遇到的挑战移动端HTML5使用原生&amp;lt;video&amp;gt;标签播放视频，要做到两个基本原则，速度快和体验佳，先来分析一下这两个问题。
 下载速度以一个8s短视频为例，wifi环境下提供的高清视频达到1000kbps，文件大小大约1MB；非wifi环境下提供的低码率视频是500kbps左右，文件大小大约500KB；参考QzoneTouch多普勒测速，2g网络的平均速度是14KB/s，那么下载一个低码率视频耗时35s；那么要想流畅播放视频，就需要一个加载等待的过程，这个过程要有明确的反馈，不能让用户有“坏掉了”的感觉。",
     "mainEntityOfPage": {
@@ -395,7 +395,7 @@
 
     <!-- Author Avatar -->
     <div id="author-avatar">
-        <img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051107.jpg" width="44px" height="44px" alt="Author Avatar"/>
+        <img src="http://image.awebman.cn/pic2016051107.jpg" width="44px" height="44px" alt="Author Avatar"/>
     </div>
     <!-- Author Name & Date -->
     <div>
@@ -1291,7 +1291,7 @@
 </tbody>
 </table>
 <h2 id="最佳实践"><a href="#最佳实践" class="headerlink" title="最佳实践"></a>最佳实践</h2><h3 id="视频初始化"><a href="#视频初始化" class="headerlink" title="视频初始化"></a>视频初始化</h3><p>如果将一个&lt;video&gt;直接显示在页面中，那么就会看到各种五花八门的播放器初始效果；</p>
-<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2018080801.jpg" alt=""></p>
+<p><img src="http://image.awebman.cn/pic2018080801.jpg" alt=""></p>
 <p>这显然不是一个好的视觉体验，那么通常的做法是制作一个模拟的视频播放视图，比如一个封面加一个播放按钮。</p>
 <p>而真实的&lt;video&gt;视频元素要隐藏起来，如何隐藏呢？最好不要用<code>{display: none}</code>或者<code>{width:0;height:0;}</code>的方式，因为这样视频元素会处于未激活的状态，给后续的处理带来麻烦。最佳的方式是将视频设置成1×1像素大小，放在视觉边缘的位置。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--iOS--&gt;</span><br><span class="line">&lt;video webkit-playsinline width=&quot;1&quot; height=&quot;1&quot; class=&quot;vplayinside notaplink&quot; x-webkit-airplay controls loop=&quot;loop&quot; src=&quot;&lt;%=src%&gt;&quot;&gt;&lt;/video&gt; </span><br><span class="line">&lt;!--Android--&gt;</span><br><span class="line">&lt;video width=&quot;1&quot; height=&quot;1&quot; controls loop=&quot;loop&quot; src=&quot;&lt;%=src%&gt;&quot;&gt;&lt;/video&gt;</span><br></pre></td></tr></table></figure>
@@ -1475,7 +1475,7 @@
 
     <!-- Sidebar Avatar -->
     <div class="sidebar-image">
-        <img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051107.jpg" alt="AppleSun's avatar">
+        <img src="http://image.awebman.cn/pic2016051107.jpg" alt="AppleSun's avatar">
     </div>
 
     <!-- Sidebar Email -->

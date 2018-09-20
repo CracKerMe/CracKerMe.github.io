@@ -72,7 +72,7 @@
 
     
         <meta property="article:published_time" content="7月 26, 2018" />
-        <meta property="article:modified_time" content="7月 26, 2018" />
+        <meta property="article:modified_time" content="9月 21, 2018" />
     
 
     <!-- The Twitter Card protocol -->
@@ -113,7 +113,7 @@
     "headline": "vue响应数据原理",
     "url": "https://crackerme.github.io/2018/07/26/vue响应数据原理/index.html",
     "datePublished": "7月 26, 2018",
-    "dateModified": "7月 26, 2018",
+    "dateModified": "9月 21, 2018",
     "description": "Vue 的最独特的特征之一 ，是 非非侵入性的响应式系统。数据模型仅仅是普通的Javascript对象。但修改它们的时候，试图会更新。了解其工作原理就显得尤为重要。",
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -391,7 +391,7 @@
 
     <!-- Author Avatar -->
     <div id="author-avatar">
-        <img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051107.jpg" width="44px" height="44px" alt="Author Avatar"/>
+        <img src="http://image.awebman.cn/pic2016051107.jpg" width="44px" height="44px" alt="Author Avatar"/>
     </div>
     <!-- Author Name & Date -->
     <div>
@@ -436,7 +436,7 @@
 <a id="more"></a>
 <p>如何追踪变化</p>
 <p>当你把一个普通的 JavaScript 对象传给 Vue 实例的 <code>data</code> 选项，Vue 将遍历此对象所有的属性，并使用 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty" target="_blank" rel="noopener">Object.defineProperty</a> 把这些属性全部转为 getter/setter。</p>
-<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2018072601.png" alt=""></p>
+<p><img src="http://image.awebman.cn/pic2018072601.png" alt=""></p>
 <p>Object.defineProperty 兼容性如上图所示，这也就是为什么 Vue 不支持 IE8 以及更低版本浏览器的原因。</p>
 <p>这些 getter/setter 对用户来说是不可见的，但是在内部它们让 Vue 追踪依赖，在属性被访问和修改时通知变化。每个组件实例都有相应的 <strong>watcher</strong> 实例对象，它会在组件渲染的过程中把属性记录为依赖，之后当依赖项的 <code>setter</code> 被调用时，会通知 <code>watcher</code> 重新计算，从而致使它关联的组件得以更新。</p>
 <p>Vue <strong>不能检测到对象属性的添加或删除</strong>。由于 Vue 会在初始化实例时对属性执行 <code>getter/setter</code> 转化过程，所以属性必须在 <code>data</code> 对象上存在才能让 Vue 转换它，这样才能让它是响应的。</p>
@@ -472,7 +472,7 @@
 <li>获取新的值并且进行observe，保证数据响应式；</li>
 <li>通过dep对象通知所有观察者去更新数据，从而达到响应式效果。</li>
 </ol>
-<p>在Observer类中，我们可以看到在getter时，dep会收集相关依赖，即收集依赖的watcher，然后在setter操作时候通过dep去通知watcher,此时watcher就执行变化，我们用一张图描述这三者之间的关系：<br><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2018072602.png" alt="关系图"></p>
+<p>在Observer类中，我们可以看到在getter时，dep会收集相关依赖，即收集依赖的watcher，然后在setter操作时候通过dep去通知watcher,此时watcher就执行变化，我们用一张图描述这三者之间的关系：<br><img src="http://image.awebman.cn/pic2018072602.png" alt="关系图"></p>
 <p>从图我们可以简单理解：Dep可以看做是书店，Watcher就是书店订阅者，而Observer就是书店的书，订阅者在书店订阅书籍，就可以添加订阅者信息，一旦有新书就会通过书店给订阅者发送消息。</p>
 <h2 id="3、Watcher"><a href="#3、Watcher" class="headerlink" title="3、Watcher"></a>3、Watcher</h2><p>Watcher是一个观察者对象。依赖收集以后Watcher对象会被保存在Dep的subs中，数据变动的时候Dep会通知Watcher实例，然后由Watcher实例回调cb进行视图的更新。</p>
 <p><a href="https://github.com/huangzhuangjia/Vue-learn/blob/master/core/observer/watcher.js" target="_blank" rel="noopener">src/core/observer/watcher.js</a></p>
@@ -480,7 +480,7 @@
 <h2 id="4、Dep"><a href="#4、Dep" class="headerlink" title="4、Dep"></a>4、Dep</h2><p>被Observer的data在触发 <strong>getter</strong> 时，<strong>Dep</strong> 就会收集依赖的 <strong>Watcher</strong> ，其实 <strong>Dep</strong> 就像刚才说的是一个书店，可以接受多个订阅者的订阅，当有新书时即在data变动时，就会通过 <strong>Dep</strong> 给 <strong>Watcher</strong>发通知进行更新。</p>
 <p><a href="https://github.com/huangzhuangjia/Vue-learn/blob/master/core/observer/dep.js" target="_blank" rel="noopener">src/core/observer/dep.js</a></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">export default class Dep &#123;</span><br><span class="line">  static target: ?Watcher;</span><br><span class="line">  id: number;</span><br><span class="line">  subs: Array&lt;Watcher&gt;;</span><br><span class="line">  constructor () &#123;</span><br><span class="line">    this.id = uid++</span><br><span class="line">    this.subs = []</span><br><span class="line">  &#125;</span><br><span class="line">  /*添加一个观察者对象*/</span><br><span class="line">  addSub (sub: Watcher) &#123;</span><br><span class="line">    this.subs.push(sub)</span><br><span class="line">  &#125;</span><br><span class="line">  /*移除一个观察者对象*/</span><br><span class="line">  removeSub (sub: Watcher) &#123;</span><br><span class="line">    remove(this.subs, sub)</span><br><span class="line">  &#125;</span><br><span class="line">  /*依赖收集，当存在Dep.target的时候添加观察者对象*/</span><br><span class="line">  depend () &#123;</span><br><span class="line">    if (Dep.target) &#123;</span><br><span class="line">      Dep.target.addDep(this)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  /*通知所有订阅者*/</span><br><span class="line">  notify () &#123;</span><br><span class="line">    // stabilize the subscriber list first</span><br><span class="line">    const subs = this.subs.slice()</span><br><span class="line">    for (let i = 0, l = subs.length; i &lt; l; i++) &#123;</span><br><span class="line">      subs[i].update()</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>其实在 <strong>Vue</strong> 中初始化渲染时，视图上绑定的数据就会实例化一个 <strong>Watcher</strong>，依赖收集就是是通过属性的 <strong>getter</strong> 函数完成的，文章一开始讲到的 <strong>Observer</strong> 、<strong>Watcher</strong> 、<strong>Dep</strong> 都与依赖收集相关。其中 <strong>Observer</strong> 与 <strong>Dep</strong> 是一对一的关系， <strong>Dep</strong> 与 <strong>Watcher</strong> 是多对多的关系，<strong>Dep</strong> 则是 <strong>Observer</strong> 和 <strong>Watcher</strong> 之间的纽带。依赖收集完成后，当属性变化会执行被 <strong>Observer</strong> 对象的 <strong>dep.notify()</strong> 方法，这个方法会遍历订阅者（Watcher）列表向其发送消息， <strong>Watcher</strong> 会执行 <strong>run</strong>方法去更新视图，我们再来看一张图总结一下：<br><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2018072603.png" alt="关系图"></p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>其实在 <strong>Vue</strong> 中初始化渲染时，视图上绑定的数据就会实例化一个 <strong>Watcher</strong>，依赖收集就是是通过属性的 <strong>getter</strong> 函数完成的，文章一开始讲到的 <strong>Observer</strong> 、<strong>Watcher</strong> 、<strong>Dep</strong> 都与依赖收集相关。其中 <strong>Observer</strong> 与 <strong>Dep</strong> 是一对一的关系， <strong>Dep</strong> 与 <strong>Watcher</strong> 是多对多的关系，<strong>Dep</strong> 则是 <strong>Observer</strong> 和 <strong>Watcher</strong> 之间的纽带。依赖收集完成后，当属性变化会执行被 <strong>Observer</strong> 对象的 <strong>dep.notify()</strong> 方法，这个方法会遍历订阅者（Watcher）列表向其发送消息， <strong>Watcher</strong> 会执行 <strong>run</strong>方法去更新视图，我们再来看一张图总结一下：<br><img src="http://image.awebman.cn/pic2018072603.png" alt="关系图"></p>
 <ol>
 <li>在 <strong>Vue</strong> 中模板编译过程中的指令或者数据绑定都会实例化一个 <strong>Watcher</strong> 实例，实例化过程中会触发 <strong>get()</strong> 将自身指向 <strong>Dep.target</strong>;</li>
 <li>data在 <strong>Observer</strong> 时执行 <strong>getter</strong> 会触发 <strong>dep.depend()</strong> 进行依赖收集;依赖收集的结果：1、data在 <strong>Observer</strong> 时闭包的dep实例的subs添加观察它的 <strong>Watcher</strong> 实例；2. <strong>Watcher</strong> 的deps中添加观察对象 <strong>Observer</strong> 时的闭包dep；</li>
@@ -601,7 +601,7 @@
 
     <!-- Sidebar Avatar -->
     <div class="sidebar-image">
-        <img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051107.jpg" alt="AppleSun's avatar">
+        <img src="http://image.awebman.cn/pic2016051107.jpg" alt="AppleSun's avatar">
     </div>
 
     <!-- Sidebar Email -->

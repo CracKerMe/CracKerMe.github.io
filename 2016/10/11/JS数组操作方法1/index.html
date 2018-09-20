@@ -72,7 +72,7 @@
 
     
         <meta property="article:published_time" content="10月 11, 2016" />
-        <meta property="article:modified_time" content="4月 28, 2017" />
+        <meta property="article:modified_time" content="9月 21, 2018" />
     
 
     <!-- The Twitter Card protocol -->
@@ -113,7 +113,7 @@
     "headline": "JS数组操作方法1",
     "url": "https://crackerme.github.io/2016/10/11/JS数组操作方法1/index.html",
     "datePublished": "10月 11, 2016",
-    "dateModified": "4月 28, 2017",
+    "dateModified": "9月 21, 2018",
     "description": "数组是JavaScript中常见的一个对象，它有一些经典的操作，比如数组的增、删、改、查。在这篇文章中主要整理这方面的相关操作方法。",
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -391,7 +391,7 @@
 
     <!-- Author Avatar -->
     <div id="author-avatar">
-        <img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051107.jpg" width="44px" height="44px" alt="Author Avatar"/>
+        <img src="http://image.awebman.cn/pic2016051107.jpg" width="44px" height="44px" alt="Author Avatar"/>
     </div>
     <!-- Author Name & Date -->
     <div>
@@ -472,19 +472,19 @@
 <p>push()方法可以接收任意数量的参数，把它们逐个添加到数组的末尾，并返回修改后数组的长度。如：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var arr = []; //创建一个空数组</span><br><span class="line">console.log(arr); // []</span><br><span class="line">console.log(&quot;入栈&quot;); // 入栈</span><br><span class="line">arr.push(1); // 将1添加到数组arr中</span><br><span class="line">console.log(arr); // [1]</span><br><span class="line">arr.push(2); //将2添加到数组arr中</span><br><span class="line">console.log(arr); //[1,2]</span><br><span class="line">arr.push([3,4]); // 将数组[3,4]添加到arr中</span><br><span class="line">console.log(arr); // [1,2,[3,4]]</span><br><span class="line">console.log(arr.length); // 3</span><br></pre></td></tr></table></figure>
 <p>在Chrome浏览器控制台输出的效果如下图所示：</p>
-<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016061524.png" alt="img"></p>
+<p><img src="http://image.awebman.cn/pic2016061524.png" alt="img"></p>
 <h3 id="pop-方法"><a href="#pop-方法" class="headerlink" title="pop()方法"></a>pop()方法</h3><p>pop()方法刚好和push()方法相反。pop()方法删除数组的最后一个元素，把数组的长度减1，并且返回它被删除元素的值，如果数组变为空，则该方法不改变数组，返回undefine值。如下代码演示：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1,2,3,4]; //创建一个数组</span><br><span class="line">console.log(arr); // [1,2,3,4]</span><br><span class="line">console.log(arr.length); // 4</span><br><span class="line">console.log(&quot;出栈，后进先出&quot;); // 出栈，后进先出</span><br><span class="line">arr.pop();</span><br><span class="line">console.log(arr); //  // [1,2,3]</span><br><span class="line">arr.pop();</span><br><span class="line">console.log(arr); // [1,2]</span><br><span class="line">arr.pop();</span><br><span class="line">console.log(arr); // [1]</span><br><span class="line">arr.pop();</span><br><span class="line">console.log(arr); // []</span><br></pre></td></tr></table></figure>
 <p>在Chrome浏览器控制台输出的效果如下图所示：</p>
-<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016061525.png" alt="img"></p>
+<p><img src="http://image.awebman.cn/pic2016061525.png" alt="img"></p>
 <h3 id="unshift-方法"><a href="#unshift-方法" class="headerlink" title="unshift()方法"></a>unshift()方法</h3><p>unshift()方法是向数组的开头添加一个或多个元素，并且返回新的长度。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var arr = []; //创建一个空的数组</span><br><span class="line">console.log(arr); // []</span><br><span class="line">console.log(&quot;入队&quot;); // 入队</span><br><span class="line">arr.unshift(1,2,3,4); // 将1,2,3,4推入到数组arr</span><br><span class="line">console.log(arr); // [1,2,3,4]</span><br><span class="line">console.log(arr.length); // 4</span><br></pre></td></tr></table></figure>
 <p>在Chrome浏览器控制台输出的效果如下图所示：</p>
-<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016061526.png" alt="img"></p>
+<p><img src="http://image.awebman.cn/pic2016061526.png" alt="img"></p>
 <h3 id="shift-方法"><a href="#shift-方法" class="headerlink" title="shift()方法"></a>shift()方法</h3><p>shift()方法和unshift()方法恰恰相反。该方法用于把数组的第一个元素从其中删除，并返回被删除的值。如果数组是空的，shift()方法将不进行任何操作，返回undefined的值。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1,2,3,4]; // 创建一个数组</span><br><span class="line">console.log(arr); // [1,2,3,4]</span><br><span class="line">arr.shift(); // 取得第一项</span><br><span class="line">console.log(arr); // [2,3,4]</span><br><span class="line">arr.shift(); // 取得第一项</span><br><span class="line">console.log(arr); // [3,4]</span><br><span class="line">arr.shift(); // 取得第一项</span><br><span class="line">console.log(arr); // [4]</span><br><span class="line">arr.shift(); // 取得第一项</span><br><span class="line">console.log(arr); // []</span><br></pre></td></tr></table></figure>
 <p>在Chrome浏览器控制台输出的效果如下图所示：</p>
-<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016061527.png" alt="img"></p>
+<p><img src="http://image.awebman.cn/pic2016061527.png" alt="img"></p>
 <h3 id="关于concat-、slice-和splice-方法的相关介绍可以关注我的下一篇博文。"><a href="#关于concat-、slice-和splice-方法的相关介绍可以关注我的下一篇博文。" class="headerlink" title="关于concat()、slice()和splice()方法的相关介绍可以关注我的下一篇博文。"></a>关于concat()、slice()和splice()方法的相关介绍可以关注我的下一篇博文。</h3><p><strong>Yours Sincerely SunPing</strong></p>
 
     
@@ -600,7 +600,7 @@
 
     <!-- Sidebar Avatar -->
     <div class="sidebar-image">
-        <img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051107.jpg" alt="AppleSun's avatar">
+        <img src="http://image.awebman.cn/pic2016051107.jpg" alt="AppleSun's avatar">
     </div>
 
     <!-- Sidebar Email -->

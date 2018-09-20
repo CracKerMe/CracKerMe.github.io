@@ -72,7 +72,7 @@
 
     
         <meta property="article:published_time" content="7月 01, 2016" />
-        <meta property="article:modified_time" content="4月 28, 2017" />
+        <meta property="article:modified_time" content="9月 21, 2018" />
     
 
     <!-- The Twitter Card protocol -->
@@ -113,7 +113,7 @@
     "headline": "JS面向对象面试题1",
     "url": "https://crackerme.github.io/2016/07/01/JS面向对象面试题1/index.html",
     "datePublished": "7月 01, 2016",
-    "dateModified": "4月 28, 2017",
+    "dateModified": "9月 21, 2018",
     "description": "学习JS过程中，迷茫的我们会考虑研究一些面试题来测试自己对于这块知识是否真的搞懂了，在浏览过程中，看见歇一歇比较有代表性的js 问题，由于很容易让人轻视，所以能 全部答对的少之又少。让我们来瞧瞧这些题目吧！题目：",
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -391,7 +391,7 @@
 
     <!-- Author Avatar -->
     <div id="author-avatar">
-        <img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051107.jpg" width="44px" height="44px" alt="Author Avatar"/>
+        <img src="http://image.awebman.cn/pic2016051107.jpg" width="44px" height="44px" alt="Author Avatar"/>
     </div>
     <!-- Author Name & Date -->
     <div>
@@ -462,7 +462,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function aa()&#123;</span><br><span class="line">	this.name=&quot;apple&quot;</span><br><span class="line">&#125;</span><br><span class="line">var bbb = new aa();</span><br><span class="line">alert(bbb.name)</span><br></pre></td></tr></table></figure>
 <h5 id="解读第四题："><a href="#解读第四题：" class="headerlink" title="解读第四题："></a>解读第四题：</h5><p>问getName()，由于上面的Foo()的函数暴露在正割函数底部，所以，在此执行getName()，得到的结果依然是“1”，上面一题对了，这一题是真的送分。<strong>拿下！！！</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Foo().getName()/*结果为4*/</span><br></pre></td></tr></table></figure>
-<h2 id="在解答下面问题前，有必要先了解-JS运算优先级排序"><a href="#在解答下面问题前，有必要先了解-JS运算优先级排序" class="headerlink" title="在解答下面问题前，有必要先了解 JS运算优先级排序"></a>在解答下面问题前，有必要先了解 JS运算优先级排序</h2><p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051620.png" alt="img"><br><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051621.png" alt="img"><br><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051622.png" alt="img"><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_Precedence" target="_blank" rel="noopener">参考资料</a></p>
+<h2 id="在解答下面问题前，有必要先了解-JS运算优先级排序"><a href="#在解答下面问题前，有必要先了解-JS运算优先级排序" class="headerlink" title="在解答下面问题前，有必要先了解 JS运算优先级排序"></a>在解答下面问题前，有必要先了解 JS运算优先级排序</h2><p><img src="http://image.awebman.cn/pic2016051620.png" alt="img"><br><img src="http://image.awebman.cn/pic2016051621.png" alt="img"><br><img src="http://image.awebman.cn/pic2016051622.png" alt="img"><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_Precedence" target="_blank" rel="noopener">参考资料</a></p>
 <h5 id="解读第五题："><a href="#解读第五题：" class="headerlink" title="解读第五题："></a>解读第五题：</h5><p>问new Foo.getName(),首先我们得明白一点，就是 先拆分 问题 到底想叫我们做什么！！！</p>
 <p>经过对于 JS面对对象的学习，知道js运算优先级，不难看出，这里可以看成是 new function(){}，所以先考虑后面的函数部分Foo.getName()的执行结果通过匹配题干可知为“2”，此时等同于</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">new function()&#123;</span><br><span class="line">alert(2)&#125;</span><br></pre></td></tr></table></figure>
@@ -474,11 +474,11 @@
 <h4 id="构造函数返回值"><a href="#构造函数返回值" class="headerlink" title="构造函数返回值"></a>构造函数返回值</h4><p>在传统语言中，构造函数不应该有返回值，实际执行的返回值就是此构造函数的实例化对象。</p>
 <p>而在js中构造函数可以有返回值也可以没有。</p>
 <ul>
-<li>没有返回值则按照其他语言一样返回实例化对象。<br><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051623.png" alt="img"></li>
-<li>若有返回值则检查其返回值是否为引用类型。如果是非引用类型，如基本类型（string,number,boolean,null,undefined）则与无返回值相同，实际返回其实例化对象。<br><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051624.png" alt="img"></li>
+<li>没有返回值则按照其他语言一样返回实例化对象。<br><img src="http://image.awebman.cn/pic2016051623.png" alt="img"></li>
+<li>若有返回值则检查其返回值是否为引用类型。如果是非引用类型，如基本类型（string,number,boolean,null,undefined）则与无返回值相同，实际返回其实例化对象。<br><img src="http://image.awebman.cn/pic2016051624.png" alt="img"></li>
 <li>若返回值是引用类型，则实际返回值为这个引用类型。</li>
 </ul>
-<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051625.png" alt="img"></p>
+<p><img src="http://image.awebman.cn/pic2016051625.png" alt="img"></p>
 <h5 id="解读第七题："><a href="#解读第七题：" class="headerlink" title="解读第七题："></a>解读第七题：</h5><p>问new new Foo().getName()，考虑优先级，先<code>new Foo()</code>在与后面的<code>getName()</code>，最后给这个整体<code>new</code>,上一题如果做对了，这一题也就摆明了送分 ,<code>new function(){alert(&quot;3&quot;)}</code>,结果依然为“3”。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">new new Foo().getName()/*结果为3*/</span><br></pre></td></tr></table></figure>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>就知识点而言，要掌握 运算符，排序，构造函数返回值，this的指向等知识，灵活运用，即可很快捷很准确地完成该试题。不知道看完之后，你是否也有所想法，在下方留言区告诉我吧。</p>
@@ -596,7 +596,7 @@
 
     <!-- Sidebar Avatar -->
     <div class="sidebar-image">
-        <img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051107.jpg" alt="AppleSun's avatar">
+        <img src="http://image.awebman.cn/pic2016051107.jpg" alt="AppleSun's avatar">
     </div>
 
     <!-- Sidebar Email -->

@@ -72,7 +72,7 @@
 
     
         <meta property="article:published_time" content="6月 08, 2016" />
-        <meta property="article:modified_time" content="7月 02, 2018" />
+        <meta property="article:modified_time" content="9月 21, 2018" />
     
 
     <!-- The Twitter Card protocol -->
@@ -113,7 +113,7 @@
     "headline": "gulp入门教程",
     "url": "https://crackerme.github.io/2016/06/08/gulp入门教程/index.html",
     "datePublished": "6月 08, 2016",
-    "dateModified": "7月 02, 2018",
+    "dateModified": "9月 21, 2018",
     "description": "自动化构建工具的使用简而言之，通过配置好task任务，使用强大的插件，管道般的顺畅操作，即可自动构建代码，极大地提高效率，让我们来揭开gulp的神秘面纱",
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -391,7 +391,7 @@
 
     <!-- Author Avatar -->
     <div id="author-avatar">
-        <img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051107.jpg" width="44px" height="44px" alt="Author Avatar"/>
+        <img src="http://image.awebman.cn/pic2016051107.jpg" width="44px" height="44px" alt="Author Avatar"/>
     </div>
     <!-- Author Name & Date -->
     <div>
@@ -432,7 +432,7 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h2 id="自动化构建工具的使用"><a href="#自动化构建工具的使用" class="headerlink" title="自动化构建工具的使用"></a>自动化构建工具的使用</h2><h4 id="简而言之，通过配置好task任务，使用强大的插件，管道般的顺畅操作，即可自动构建代码，极大地提高效率，让我们来揭开gulp的神秘面纱"><a href="#简而言之，通过配置好task任务，使用强大的插件，管道般的顺畅操作，即可自动构建代码，极大地提高效率，让我们来揭开gulp的神秘面纱" class="headerlink" title="简而言之，通过配置好task任务，使用强大的插件，管道般的顺畅操作，即可自动构建代码，极大地提高效率，让我们来揭开gulp的神秘面纱"></a>简而言之，通过配置好task任务，使用强大的插件，管道般的顺畅操作，即可自动构建代码，极大地提高效率，让我们来揭开gulp的神秘面纱</h4><p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016080810.png" alt="img"></p>
+        <h2 id="自动化构建工具的使用"><a href="#自动化构建工具的使用" class="headerlink" title="自动化构建工具的使用"></a>自动化构建工具的使用</h2><h4 id="简而言之，通过配置好task任务，使用强大的插件，管道般的顺畅操作，即可自动构建代码，极大地提高效率，让我们来揭开gulp的神秘面纱"><a href="#简而言之，通过配置好task任务，使用强大的插件，管道般的顺畅操作，即可自动构建代码，极大地提高效率，让我们来揭开gulp的神秘面纱" class="headerlink" title="简而言之，通过配置好task任务，使用强大的插件，管道般的顺畅操作，即可自动构建代码，极大地提高效率，让我们来揭开gulp的神秘面纱"></a>简而言之，通过配置好task任务，使用强大的插件，管道般的顺畅操作，即可自动构建代码，极大地提高效率，让我们来揭开gulp的神秘面纱</h4><p><img src="http://image.awebman.cn/pic2016080810.png" alt="img"></p>
 <a id="more"></a>
 <h3 id="明确目标"><a href="#明确目标" class="headerlink" title="明确目标"></a>明确目标</h3><h5 id="我们能通过gulp做什么？"><a href="#我们能通过gulp做什么？" class="headerlink" title="我们能通过gulp做什么？"></a>我们能通过gulp做什么？</h5><ul>
 <li>压缩html，css，js 等文件（分别使用 gulp-htmlmin，gulp-cssmin，gulp-jsmin）;</li>
@@ -460,12 +460,12 @@
 <p>如何 使用呢？ 举例说明 ：</p>
 <p>local.js的路径为 <code>save/src/js/local.js</code> ,</p>
 <p>我现在需要完成的任务为：讲压缩好的js代码放到 <code>save/desk/js/</code>中；</p>
-<p>按照理解，先找到src 下面的js文件，然后进行压缩，然后选择存放路径；<br><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051601.png" alt="img"><br>既然缕清思路，具体怎么实现呢？在gulpfile.js文件中</p>
+<p>按照理解，先找到src 下面的js文件，然后进行压缩，然后选择存放路径；<br><img src="http://image.awebman.cn/pic2016051601.png" alt="img"><br>既然缕清思路，具体怎么实现呢？在gulpfile.js文件中</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require(&apos;gulp&apos;);</span><br><span class="line"></span><br><span class="line">var jsmin = require(&apos;gulp-jsmin&apos;);</span><br><span class="line"></span><br><span class="line">gulp.task(&apos;jsmin&apos;,function()&#123;</span><br><span class="line"></span><br><span class="line">gulp.src(&apos;src/js/local.js&apos;)</span><br><span class="line">	</span><br><span class="line">.pipe(jsmin())</span><br><span class="line">		</span><br><span class="line">.pipe(gulp.dest(&apos;desk/js/&apos;))</span><br><span class="line">		</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>接下来 在终端中调用 <code>gulp jsmin</code> 就会在该路径下生成 js 的压缩文件</p>
 <h2 id="cssmin，htmlmin-同上"><a href="#cssmin，htmlmin-同上" class="headerlink" title="cssmin，htmlmin 同上"></a>cssmin，htmlmin 同上</h2><hr>
 <h2 id="Q-如何利用gulp编译less并压缩修改名称？"><a href="#Q-如何利用gulp编译less并压缩修改名称？" class="headerlink" title="Q:如何利用gulp编译less并压缩修改名称？"></a>Q:如何利用gulp编译less并压缩修改名称？</h2><h3 id="A-提高了要求，必要需要更多元素（gulp-less-gulp-rename）的加入"><a href="#A-提高了要求，必要需要更多元素（gulp-less-gulp-rename）的加入" class="headerlink" title="A:提高了要求，必要需要更多元素（gulp-less,gulp-rename）的加入"></a>A:提高了要求，必要需要更多元素（gulp-less,gulp-rename）的加入</h3><p>目标：test.less的路径为 <code>save/src/css/test.less</code> ,</p>
-<p>我现在需要完成的任务为：讲less转译成css并压缩，重新命名的代码放到 <code>save/desk/css/</code>中；<br><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051602.png" alt="img"></p>
+<p>我现在需要完成的任务为：讲less转译成css并压缩，重新命名的代码放到 <code>save/desk/css/</code>中；<br><img src="http://image.awebman.cn/pic2016051602.png" alt="img"></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require(&apos;gulp&apos;);</span><br><span class="line"></span><br><span class="line">var less = require(&apos;gulp-less&apos;);</span><br><span class="line"></span><br><span class="line">var rename = require(&apos;gulp-rename&apos;);</span><br><span class="line"></span><br><span class="line">var cssmin = require(&apos;gulp-cssmin&apos;);</span><br><span class="line"></span><br><span class="line">gulp.task(&apos;cssgo&apos;,function()&#123;</span><br><span class="line"></span><br><span class="line">gulp.src(&apos;src/css/*.less&apos;)</span><br><span class="line">	</span><br><span class="line">.pipe(less())</span><br><span class="line">	</span><br><span class="line">.pipe(cssmin())</span><br><span class="line">	</span><br><span class="line">.pipe(rename(&#123;suffix: &apos;.min&apos;&#125;))</span><br><span class="line">	</span><br><span class="line">.pipe(gulp.dest(&apos;desk/css/&apos;))</span><br><span class="line">	</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>最终运行结果为： <code>test.min.css</code></p>
 <h3 id="怎么样，你运行成功了么？"><a href="#怎么样，你运行成功了么？" class="headerlink" title="怎么样，你运行成功了么？"></a>怎么样，你运行成功了么？</h3><p>更多的 知识点 靠你自己去挖掘；希望你看了这篇文档能有所收获！</p>
@@ -584,7 +584,7 @@
 
     <!-- Sidebar Avatar -->
     <div class="sidebar-image">
-        <img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051107.jpg" alt="AppleSun's avatar">
+        <img src="http://image.awebman.cn/pic2016051107.jpg" alt="AppleSun's avatar">
     </div>
 
     <!-- Sidebar Email -->

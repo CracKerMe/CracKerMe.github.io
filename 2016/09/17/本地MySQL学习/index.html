@@ -72,7 +72,7 @@
 
     
         <meta property="article:published_time" content="9月 17, 2016" />
-        <meta property="article:modified_time" content="4月 28, 2017" />
+        <meta property="article:modified_time" content="9月 21, 2018" />
     
 
     <!-- The Twitter Card protocol -->
@@ -113,7 +113,7 @@
     "headline": "本地MySQL学习",
     "url": "https://crackerme.github.io/2016/09/17/本地MySQL学习/index.html",
     "datePublished": "9月 17, 2016",
-    "dateModified": "4月 28, 2017",
+    "dateModified": "9月 21, 2018",
     "description": "要想做一名人见人爱花见花开的称职的前端开发工程师，就得 了解 后端以及数据库的基础知识。介于此，我们必须得学习一定的知识便于今后的开发工作。所以，今天来开启点亮我们的数据库天赋树.(tips:本页面使用的 XAMPP for OS X 5.6.14，PHP版本为：5.6.14，MySQL版本为：mysqlnd 5.0.11。windows操作系统以及真实的操作环境，请根据实际情况进行操作)",
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -391,7 +391,7 @@
 
     <!-- Author Avatar -->
     <div id="author-avatar">
-        <img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051107.jpg" width="44px" height="44px" alt="Author Avatar"/>
+        <img src="http://image.awebman.cn/pic2016051107.jpg" width="44px" height="44px" alt="Author Avatar"/>
     </div>
     <!-- Author Name & Date -->
     <div>
@@ -445,23 +445,23 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$sqli = new mysqli(&quot;localhost&quot;,&quot;root&quot;,&quot;&quot;,&quot;shh160&quot;);</span><br><span class="line">if($sqli-&gt;connect_errno)&#123;</span><br><span class="line">	die($mysqli-&gt;connect_error);</span><br><span class="line">&#125;</span><br><span class="line">$sql = &quot;SQL语句 增 查 改 删&quot;;</span><br><span class="line">$sqli-&gt;query(&quot;set names utf8&quot;);</span><br><span class="line">$result = $sqli-&gt;query($sql);</span><br><span class="line">	coding...数据的操作在这里；</span><br><span class="line">$sqli-&gt;close();</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<h1 id="可视化操作数据库："><a href="#可视化操作数据库：" class="headerlink" title="可视化操作数据库："></a>可视化操作数据库：</h1><p><a href="http://127.0.0.1/phpmyadmin/" target="_blank" rel="noopener">点我打开phpmysql</a>，看到如下界面，先简单介绍这个界面。左边是你的数据库名称，，我们需要打交道的便是SQL的部分，，还有注意我箭头标识的编码方式。<br><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016061501.png" alt="img"></p>
-<h3 id="新建一个数据库"><a href="#新建一个数据库" class="headerlink" title="新建一个数据库"></a>新建一个数据库</h3><p>点击左边的<code>New</code>，当你的中文输出时出现不正常显示时，最好将编码方式统一选择为<code>utf8_unicode_ci</code>.<br><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016061502.png" alt="img"></p>
+<h1 id="可视化操作数据库："><a href="#可视化操作数据库：" class="headerlink" title="可视化操作数据库："></a>可视化操作数据库：</h1><p><a href="http://127.0.0.1/phpmyadmin/" target="_blank" rel="noopener">点我打开phpmysql</a>，看到如下界面，先简单介绍这个界面。左边是你的数据库名称，，我们需要打交道的便是SQL的部分，，还有注意我箭头标识的编码方式。<br><img src="http://image.awebman.cn/pic2016061501.png" alt="img"></p>
+<h3 id="新建一个数据库"><a href="#新建一个数据库" class="headerlink" title="新建一个数据库"></a>新建一个数据库</h3><p>点击左边的<code>New</code>，当你的中文输出时出现不正常显示时，最好将编码方式统一选择为<code>utf8_unicode_ci</code>.<br><img src="http://image.awebman.cn/pic2016061502.png" alt="img"></p>
 <h3 id="新建一个表单"><a href="#新建一个表单" class="headerlink" title="新建一个表单"></a>新建一个表单</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE students(id int(10) PRIMARY KEY AUTO_INCREMENT,name CHAR(10) DEFAULT &apos;用户&apos;,sex CHAR(3) DEFAULT &apos;男&apos;,age int(3) DEFAULT 18);</span><br></pre></td></tr></table></figure>
-<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016061503.png" alt="img"><br><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016061504.png" alt="img"></p>
+<p><img src="http://image.awebman.cn/pic2016061503.png" alt="img"><br><img src="http://image.awebman.cn/pic2016061504.png" alt="img"></p>
 <h5 id="从-2张图-对比来看，似乎我们已经知道了我上面的代码每一字节所代表的含义了，很好。还差点什么？—缺少数据。"><a href="#从-2张图-对比来看，似乎我们已经知道了我上面的代码每一字节所代表的含义了，很好。还差点什么？—缺少数据。" class="headerlink" title="从 2张图 对比来看，似乎我们已经知道了我上面的代码每一字节所代表的含义了，很好。还差点什么？—缺少数据。"></a>从 2张图 对比来看，似乎我们已经知道了我上面的代码每一字节所代表的含义了，很好。还差点什么？—缺少数据。</h5><h3 id="新建数据（增）"><a href="#新建数据（增）" class="headerlink" title="新建数据（增）"></a>新建数据（增）</h3><p>回到SQL界面，咱们接着来，<strong>增加数据</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO students(id, name, sex, age) VALUES (NULL,&quot;张三&quot;,&quot;女&quot;,30),(NULL,&quot;李四&quot;,&quot;人妖&quot;,23);</span><br></pre></td></tr></table></figure>
-<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016061505.png" alt="img"><br><strong>文字总结如下：</strong></p>
+<p><img src="http://image.awebman.cn/pic2016061505.png" alt="img"><br><strong>文字总结如下：</strong></p>
 <ol>
 <li>INSERT INTO 表名（字段1，字段2）VALUES(字段1的值，字段2的值)，(字段1的值，字段2的值)，(字段1的值，字段2的值)；</li>
 </ol>
 <h3 id="查找数据（查）"><a href="#查找数据（查）" class="headerlink" title="查找数据（查）"></a>查找数据（查）</h3><p>为了更好滴 让大家感受到 查找数据的便捷与具体实现，我 对表内数据实现了大量的添加，现数据库表单内容如下：</p>
-<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016061506.png" alt="img"></p>
+<p><img src="http://image.awebman.cn/pic2016061506.png" alt="img"></p>
 <ul>
 <li>要求1，找到所有姓孙的<br>其实这里属于模糊搜索法， 运用like 搜索，通过在关键字后面添加”%”，完成以什么开头的查询</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM students WHERE name LIKE &quot;孙%&quot;;</span><br></pre></td></tr></table></figure>
-<p><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016061507.png" alt="img"></p>
+<p><img src="http://image.awebman.cn/pic2016061507.png" alt="img"></p>
 <p>下面不在截图举例！</p>
 <ul>
 <li>要求2，找到所有以孙结尾的<br>通过在关键字前面添加”%”，完成以什么开头的查询</li>
@@ -606,7 +606,7 @@
 
     <!-- Sidebar Avatar -->
     <div class="sidebar-image">
-        <img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051107.jpg" alt="AppleSun's avatar">
+        <img src="http://image.awebman.cn/pic2016051107.jpg" alt="AppleSun's avatar">
     </div>
 
     <!-- Sidebar Email -->

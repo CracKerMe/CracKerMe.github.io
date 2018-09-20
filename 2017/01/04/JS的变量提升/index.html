@@ -72,7 +72,7 @@
 
     
         <meta property="article:published_time" content="1月 04, 2017" />
-        <meta property="article:modified_time" content="4月 28, 2017" />
+        <meta property="article:modified_time" content="9月 21, 2018" />
     
 
     <!-- The Twitter Card protocol -->
@@ -113,7 +113,7 @@
     "headline": "JS的变量提升",
     "url": "https://crackerme.github.io/2017/01/04/JS的变量提升/index.html",
     "datePublished": "1月 04, 2017",
-    "dateModified": "4月 28, 2017",
+    "dateModified": "9月 21, 2018",
     "description": "很多面试题喜欢在函数执行这一块下功夫，作为 开发者如果不能很好滴 掌握js的执行原理，在面试过程中肯定会被秀的体无完肤，基于此我去找了变量提升相关内容，一起学习。",
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -391,7 +391,7 @@
 
     <!-- Author Avatar -->
     <div id="author-avatar">
-        <img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051107.jpg" width="44px" height="44px" alt="Author Avatar"/>
+        <img src="http://image.awebman.cn/pic2016051107.jpg" width="44px" height="44px" alt="Author Avatar"/>
     </div>
     <!-- Author Name & Date -->
     <div>
@@ -436,12 +436,12 @@
 <a id="more"></a>
 <h2 id="JavaScript代码的运行规则"><a href="#JavaScript代码的运行规则" class="headerlink" title="JavaScript代码的运行规则"></a>JavaScript代码的运行规则</h2><p>在JavaScript代码运行之前其实是有一个<em>编译阶段</em>的。编译之后才是<strong>从上到下，一行一行解释执行</strong>。这样一来也给初学者造成很大的误解。初学者会觉得JavaScript的代码是从上到下，一行一行的解释执行的。按这样的思路，在有些情况下就会造成惨案：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">name = &quot;AppleSun&quot;;</span><br><span class="line">var name;</span><br><span class="line">console.log(name);</span><br></pre></td></tr></table></figure>
-<p>按照代码从上到下一行一行解释执行的说法，有些同学可能会觉得<code>console.log(name)</code>输出的值是<code>undefined</code>。那是因为<code>name = &quot;AppleSun&quot;</code>在<code>var name</code>之前，变量<code>name</code>被重新定义了，而且没有给其赋值，所以认为此时<code>name</code>的值是<code>undefined</code>。输出的也应该是undefined。但事实上输出的值是<code>&quot;AppleSun&quot;</code>。下图是Chrome浏览器调试器下的输出结果：<br><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016071901.png" alt="img"></p>
+<p>按照代码从上到下一行一行解释执行的说法，有些同学可能会觉得<code>console.log(name)</code>输出的值是<code>undefined</code>。那是因为<code>name = &quot;AppleSun&quot;</code>在<code>var name</code>之前，变量<code>name</code>被重新定义了，而且没有给其赋值，所以认为此时<code>name</code>的值是<code>undefined</code>。输出的也应该是undefined。但事实上输出的值是<code>&quot;AppleSun&quot;</code>。下图是Chrome浏览器调试器下的输出结果：<br><img src="http://image.awebman.cn/pic2016071901.png" alt="img"></p>
 <p><strong>在看一段代码</strong>:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">console.log(name);</span><br><span class="line">var name = &quot;AppleSun&quot;;</span><br></pre></td></tr></table></figure>
-<p>当初我就以为它输出的结果是<code>Uncaught ReferenceError: name is not defined(…)</code>。因为变量<code>name</code>在没有声明的情况下就被使用了。而事实上呢，并如如此，它输出的结果是<code>undefined</code>。如下图所示：<br><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016071902.png" alt="img"></p>
+<p>当初我就以为它输出的结果是<code>Uncaught ReferenceError: name is not defined(…)</code>。因为变量<code>name</code>在没有声明的情况下就被使用了。而事实上呢，并如如此，它输出的结果是<code>undefined</code>。如下图所示：<br><img src="http://image.awebman.cn/pic2016071902.png" alt="img"></p>
 <p>为什么会这样呢？因为JavaScript代码运行时，它把变量和函数的声明提升至作用域的顶端。而这个阶段就发生了变量提升。同时JavaScript在编译阶段的工作之一就是将变量与其作用域进行关联。那么要彻底的理解JavaScript声明提升，需要对JavaScript的变量作用域有一定的了解。</p>
-<h2 id="JavaScript变量作用域"><a href="#JavaScript变量作用域" class="headerlink" title="JavaScript变量作用域"></a>JavaScript变量作用域</h2><p>对于JavaScript的初学者来说，变量作用域是最令人感到困惑的一部分。有关于JavaScript中变量的作用域，本文不做介绍，因为要说清楚它，需要大幅篇幅，而且对于我这样的新手也道不清说不明。拿张图向大家简单的展示一下：<br><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016071903.png" alt="img"></p>
+<h2 id="JavaScript变量作用域"><a href="#JavaScript变量作用域" class="headerlink" title="JavaScript变量作用域"></a>JavaScript变量作用域</h2><p>对于JavaScript的初学者来说，变量作用域是最令人感到困惑的一部分。有关于JavaScript中变量的作用域，本文不做介绍，因为要说清楚它，需要大幅篇幅，而且对于我这样的新手也道不清说不明。拿张图向大家简单的展示一下：<br><img src="http://image.awebman.cn/pic2016071903.png" alt="img"></p>
 <h4 id="在JavaScript中，变量有4种基本方式进入作用域："><a href="#在JavaScript中，变量有4种基本方式进入作用域：" class="headerlink" title="在JavaScript中，变量有4种基本方式进入作用域："></a>在JavaScript中，变量有4种基本方式进入作用域：</h4><ul>
 <li>语言自身定义(Language-defined)：所有的作用域默认都会包含<code>this</code>和<code>arguments</code></li>
 <li>函数形参(Formal parameters)：函数有名字的形参会进入到函数体的作用域中</li>
@@ -485,7 +485,7 @@
 <h5 id="上面的事例比较简单，咱们来一个稍微复杂的示例："><a href="#上面的事例比较简单，咱们来一个稍微复杂的示例：" class="headerlink" title="上面的事例比较简单，咱们来一个稍微复杂的示例："></a>上面的事例比较简单，咱们来一个稍微复杂的示例：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var foo = 1;</span><br><span class="line">function bar () &#123;</span><br><span class="line">    if (!foo) &#123;</span><br><span class="line">        var foo = 10;</span><br><span class="line">    &#125;</span><br><span class="line">    console.log(foo);</span><br><span class="line">&#125;</span><br><span class="line">bar();</span><br><span class="line">var foo = 1;</span><br></pre></td></tr></table></figure>
 <p>答案是<code>10</code>。你一定觉得非常奇怪，<code>foo</code>等于<code>1</code>,if条件<code>!foo</code>应该是<code>false</code>，也就是说if代码块的代码是不会被执行。返回的值应该是<code>undefined</code>呀，怎么就变成<code>10</code>了呢？实际上，正如前面所说，变量<code>foo</code>被提升到了<code>bar()</code>函数最顶部，那么程序就变成这样：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function bar () &#123;</span><br><span class="line">    console.log(foo); // =&gt; undefined</span><br><span class="line">    if (!foo) &#123;</span><br><span class="line">        var foo = 10;</span><br><span class="line">        console.log(foo); // =&gt; 10</span><br><span class="line">    &#125;</span><br><span class="line">    console.log(foo); // =&gt; 10</span><br><span class="line">&#125;</span><br><span class="line">bar();</span><br></pre></td></tr></table></figure>
-<p><code>bar()</code>函数运行后，输出的值是<code>undefined</code> <code>10</code> <code>10</code>,如下图所示：<br><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016071904.png" alt="img"></p>
+<p><code>bar()</code>函数运行后，输出的值是<code>undefined</code> <code>10</code> <code>10</code>,如下图所示：<br><img src="http://image.awebman.cn/pic2016071904.png" alt="img"></p>
 <p>说明当在函数内使用var声明变量的时候，这个变量的声明被提升到了bar()函数的最顶部（最开始处），所以这个例子等同于：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var foo = 1;</span><br><span class="line">function bar () &#123;</span><br><span class="line">    var foo; // 定义局部变量foo</span><br><span class="line">    if (!foo) &#123; // foo是undefined (false),那么!foo就是true，所以会执行if语句块</span><br><span class="line">        foo = 10;</span><br><span class="line">    &#125;</span><br><span class="line">    console.log(foo);</span><br><span class="line">&#125;</span><br><span class="line">bar(); // =&gt; 输出的结果是10</span><br></pre></td></tr></table></figure>
 <p>这样一来就明白了，结果为啥会是10了吧。</p>
@@ -495,7 +495,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var foo=1;</span><br><span class="line">function bar()&#123;</span><br><span class="line">    if(!foo)&#123;</span><br><span class="line">        foo=10;</span><br><span class="line">    &#125;</span><br><span class="line">    console.log(foo);</span><br><span class="line">&#125;</span><br><span class="line">bar(); // =&gt; 1</span><br></pre></td></tr></table></figure>
 <p>因为<code>bar()</code>中的变量<code>foo</code>没有使用<code>var</code>声明，变量不再提升。所以<code>(!foo)</code>会到函数外寻找定义的合局变量<code>foo</code>，结果是<code>1</code>，那<code>!foo</code>返回的值是<code>false</code>，也就不会执行if语句块内的代码。最终得到的结果是<code>1</code>。如果这个时候没有定义全局变量<code>foo</code>，就会报错。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function bar()&#123;</span><br><span class="line">    if(!foo)&#123;</span><br><span class="line">        foo=10;</span><br><span class="line">    &#125;</span><br><span class="line">    console.log(foo);</span><br><span class="line">&#125;</span><br><span class="line">bar(); // =&gt; Uncaught ReferenceError: foo is not defined(…)</span><br></pre></td></tr></table></figure>
-<p>如下图所示：<br><img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016071905.png" alt="img"><br>也就是说，只有在有var声明的变量才会被提升到函数最顶部。</p>
+<p>如下图所示：<br><img src="http://image.awebman.cn/pic2016071905.png" alt="img"><br>也就是说，只有在有var声明的变量才会被提升到函数最顶部。</p>
 <h2 id="函数声明提升"><a href="#函数声明提升" class="headerlink" title="函数声明提升"></a>函数声明提升</h2><p>函数在声明时也会像变量一样被提升。不同的是，函数表达式不会被提升。</p>
 <h2 id="函数声明"><a href="#函数声明" class="headerlink" title="函数声明"></a>函数声明</h2><p>函数声明提升</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">foo();</span><br><span class="line">function foo() &#123;</span><br><span class="line">    console.log(n);</span><br><span class="line">    var n = 2;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -643,7 +643,7 @@
 
     <!-- Sidebar Avatar -->
     <div class="sidebar-image">
-        <img src="http://7xjdah.com1.z0.glb.clouddn.com/pic2016051107.jpg" alt="AppleSun's avatar">
+        <img src="http://image.awebman.cn/pic2016051107.jpg" alt="AppleSun's avatar">
     </div>
 
     <!-- Sidebar Email -->
