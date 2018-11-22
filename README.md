@@ -1,4 +1,8 @@
 # CracKerMe.github.io
+add article about share cleanMyMac X
+
+- 2018-11-22 08:49:00
+
 Change CDN links from `7xjdah.com1.z0.glb.clouddn.com` => `image.awebman.cn`
 
 add article about how to crack webstorm
