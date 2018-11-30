@@ -1,4 +1,7 @@
 # CracKerMe.github.io
+- 2018-11-30 13:40:33
+add juejin weixin program from team mobai.
+
 add article about share cleanMyMac X
 
 - 2018-11-22 08:49:00
