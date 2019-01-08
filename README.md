@@ -1,4 +1,8 @@
 # CracKerMe.github.io
+- 2019-01-08 20:54:16
+
+  切换awebman.top的域名为awebman.com.  awebman.top 绑定的VPS到期了
+
 - 2018-12-25 19:28:45
 
   Add blog about how to open a new window not afraid of chrome forbidden
